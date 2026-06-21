@@ -1,0 +1,4 @@
+# ads.txt — AdSense publisher verification
+# REPLACE pub-XXXXXXXXXXXXXXXX with your real AdSense publisher ID
+# (find it at https://adsense.google.com/adsense/new/u/0/home)
+google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0

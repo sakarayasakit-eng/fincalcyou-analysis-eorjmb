@@ -1,0 +1,51 @@
+# fin·calc — Country-aware Finance Calculator
+
+> fin·calc is a free, privacy-respecting finance calculator that covers 34 countries with real central-bank and commercial-bank rates. It runs entirely in the browser with no signup, no tracking, and no server-side data collection.
+
+## What it does
+
+- **Mortgage / Home Loan (EMI) calculator** with amortization schedule and prepayment simulator
+- **Car / Auto loan calculator** with country-specific tenure rules (e.g., 5yr max in Brazil, 9yr in India)
+- **Education Loan calculator** with moratorium period and simple-vs-compound interest toggle
+- **SIP / Systematic Investment Plan** future-value calculator with inflation adjustment and step-up
+- **Fixed Deposit / Certificate of Deposit** calculator with quarterly compounding
+- **Zakat calculator** using live gold-price nisab threshold
+- **Retirement planner** accounting for both accumulation and withdrawal phases
+- **Rent vs Buy** comparison with property appreciation and maintenance cost
+- **Debt Payoff Optimizer** using the avalanche method (highest-interest-rate-first)
+- **Financial Health Check** — personalized 100-point score across 5 dimensions
+- **Currency Converter** with 50+ currencies via live API
+- **Islamic Finance** (Murabaha and Halal investment) separate from conventional
+
+## Coverage: 34 countries with real bank data
+
+South Asia (India, Pakistan, Bangladesh, Sri Lanka, Nepal) · Gulf (UAE, Saudi, Qatar, Kuwait, Bahrain, Oman) · Southeast Asia (Malaysia, Indonesia, Philippines, Thailand, Vietnam, Singapore) · East Asia (Japan, Hong Kong, Taiwan, South Korea, China) · Europe (UK, Eurozone, Russia, Türkiye) · Americas (USA, Canada, Brazil, Mexico) · Africa (Nigeria, Kenya, South Africa, Egypt) · Oceania (Australia, New Zealand)
+
+171 named banks linked to their typical rate ranges.
+
+## Key differentiators
+
+- **Real central-bank policy rates and bank-specific rate ranges**, not made-up defaults
+- **Country-aware language** — says "EMI" in South Asia, "Monthly Payment" elsewhere
+- **No signup, no email capture, no tracking** — entirely client-side
+- **Works offline** after first page load
+- **Rate benchmark feature** — tells users if their offered rate is competitive for their country's market
+- **Islamic finance tab** with no ads (trust signal for Muslim users)
+- **Covers informal debt** (family loans, employer advances, gold loans) — ignored by most calculators
+
+## Math formulas used
+
+- EMI: `P × r × (1+r)^n / ((1+r)^n − 1)` where P=principal, r=monthly rate, n=months
+- SIP Future Value: `M × ((1+r)^n − 1) / r × (1+r)`
+- FD (quarterly compound): `P × (1 + r/4)^(4n)`
+- Zakat: `2.5% × (total assets − debts)` if above nisab (~87.48g gold)
+
+All formulas match published bank calculators (HDFC, ICICI, SBI, Bankrate, Chase, HSBC). Verified by 63-test suite.
+
+## Updated: April 2026
+
+Rates refreshed April 2026. Includes Brazilian subsidized SBPE housing rates, Canadian semi-annual compounding, UK stamp duty 2026 thresholds, Australian First Home Guarantee Scheme, and post-Fed-cuts US rates.
+
+## Contact
+
+Open-source calculator. Feedback via Anthropic's thumbs-down on generated outputs.
