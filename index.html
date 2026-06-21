@@ -4088,10 +4088,62 @@
 
     document.getElementById('currencySearch').addEventListener('input', (e) => renderCurrencies(e.target.value));
 
+    // ================================================================
+    // AUTO-DETECT VISITOR COUNTRY (privacy-friendly: uses the browser's
+    // own timezone + locale, no GPS prompt, no IP lookup, no tracking).
+    // Only used as the default when the visitor hasn't already chosen
+    // or saved a country, and is always overridable by ?cur= and the
+    // currency picker.
+    // ================================================================
+    function detectCurrencyCode() {
+      const TZ_CUR = {
+        'Asia/Kolkata':'INR','Asia/Calcutta':'INR','Asia/Karachi':'PKR','Asia/Dhaka':'BDT',
+        'Asia/Colombo':'LKR','Asia/Kathmandu':'NPR','Asia/Dubai':'AED','Asia/Riyadh':'SAR',
+        'Asia/Qatar':'QAR','Asia/Bahrain':'BHD','Asia/Kuwait':'KWD','Asia/Muscat':'OMR',
+        'Asia/Singapore':'SGD','Asia/Kuala_Lumpur':'MYR','Asia/Jakarta':'IDR','Asia/Manila':'PHP',
+        'Asia/Bangkok':'THB','Asia/Ho_Chi_Minh':'VND','Asia/Hong_Kong':'HKD','Asia/Taipei':'TWD',
+        'Asia/Seoul':'KRW','Asia/Tokyo':'JPY','Asia/Shanghai':'CNY',
+        'Africa/Lagos':'NGN','Africa/Nairobi':'KES','Africa/Johannesburg':'ZAR','Africa/Cairo':'EGP',
+        'Europe/London':'GBP','Europe/Istanbul':'TRY','Europe/Moscow':'RUB',
+        'America/New_York':'USD','America/Chicago':'USD','America/Los_Angeles':'USD',
+        'America/Denver':'USD','America/Phoenix':'USD','America/Anchorage':'USD','Pacific/Honolulu':'USD',
+        'America/Toronto':'CAD','America/Vancouver':'CAD','America/Edmonton':'CAD','America/Winnipeg':'CAD',
+        'Australia/Sydney':'AUD','Australia/Melbourne':'AUD','Australia/Brisbane':'AUD',
+        'Australia/Perth':'AUD','Australia/Adelaide':'AUD','Pacific/Auckland':'NZD',
+        'America/Sao_Paulo':'BRL','America/Mexico_City':'MXN'
+      };
+      const EUR_TZ = ['Europe/Berlin','Europe/Paris','Europe/Madrid','Europe/Rome','Europe/Amsterdam',
+        'Europe/Brussels','Europe/Vienna','Europe/Dublin','Europe/Lisbon','Europe/Athens','Europe/Helsinki',
+        'Europe/Bratislava','Europe/Ljubljana','Europe/Vilnius','Europe/Riga','Europe/Tallinn',
+        'Europe/Luxembourg','Europe/Malta','Europe/Nicosia'];
+      try {
+        const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        if (tz) {
+          if (TZ_CUR[tz]) return TZ_CUR[tz];
+          if (EUR_TZ.indexOf(tz) !== -1) return 'EUR';
+        }
+      } catch (e) {}
+      const REGION_CUR = {IN:'INR',PK:'PKR',BD:'BDT',LK:'LKR',NP:'NPR',AE:'AED',SA:'SAR',QA:'QAR',
+        BH:'BHD',KW:'KWD',OM:'OMR',US:'USD',GB:'GBP',CA:'CAD',AU:'AUD',NZ:'NZD',SG:'SGD',MY:'MYR',
+        ID:'IDR',PH:'PHP',TH:'THB',VN:'VND',HK:'HKD',TW:'TWD',KR:'KRW',JP:'JPY',CN:'CNY',NG:'NGN',
+        KE:'KES',ZA:'ZAR',EG:'EGP',TR:'TRY',RU:'RUB',BR:'BRL',MX:'MXN',DE:'EUR',FR:'EUR',ES:'EUR',
+        IT:'EUR',NL:'EUR',IE:'EUR',PT:'EUR',AT:'EUR',BE:'EUR',GR:'EUR',FI:'EUR'};
+      try {
+        const loc = navigator.language || (navigator.languages && navigator.languages[0]);
+        if (loc) {
+          const region = (loc.split('-')[1] || '').toUpperCase();
+          if (region && REGION_CUR[region]) return REGION_CUR[region];
+        }
+      } catch (e) {}
+      return null;
+    }
+
     try {
-      const saved = localStorage.getItem('fincalc_cur');
-      if (saved) {
-        const found = currencies.find(c => c.code === saved);
+      let initialCode = null;
+      try { initialCode = localStorage.getItem('fincalc_cur'); } catch (e) {}
+      if (!initialCode) initialCode = detectCurrencyCode(); // auto-detect when no saved choice
+      if (initialCode) {
+        const found = currencies.find(c => c.code === initialCode);
         if (found) {
           currentCur = found;
           document.getElementById('currencyBtn').textContent = `${found.flag} ${found.sym} ${found.code}`;
@@ -7011,70 +7063,4 @@
       const extra = +document.getElementById('dExtra').value;
       if (loans.length === 0) {
         body.innerHTML = '<p>Enter at least one loan above to see your strategy.</p>';
-        return;
-      }
-
-      const sorted = [...loans].sort((a, b) => b.rate - a.rate);
-      const winner = sorted[0];
-      const totalDebt = loans.reduce((s, l) => s + l.balance, 0);
-      const totalMin = loans.reduce((s, l) => s + l.minPayment, 0);
-
-      let text = `<p>You're carrying <b>${fmtMoney(totalDebt)}</b> in total debt across ${loans.length} loan${loans.length > 1 ? 's' : ''}, paying minimums of <b>${fmtMoney(totalMin)}</b>/month.</p>`;
-      text += `<p><b>The math says:</b> put your extra payment on Loan ${winner.index} (the highest interest rate at ${winner.rate.toFixed(1)}%). Once it's gone, take everything you were paying on it (the minimum + extra) and roll it onto the next-highest-rate loan. This is the avalanche method.</p>`;
-
-      if (extra <= 0) {
-        text += `<p>👆 You haven't entered an "extra payment" amount yet. Even ${fmtMoney(totalMin * 0.1)}/month extra (just 10% more than your current minimums) would dramatically shorten how long you're in debt.</p>`;
-      } else {
-        text += `<p>With your extra <b>${fmtMoney(extra)}</b>/month, see the savings figure below — that's real money the bank doesn't get to keep, and freedom you get back.</p>`;
-      }
-
-      text += `<p><b>Why not "snowball" (smallest balance first)?</b> Snowball feels emotionally satisfying — you knock out small loans fast. But on average it costs more in interest than avalanche. If you need momentum to stay motivated, snowball is fine. If you want to save the most money, avalanche wins.</p>`;
-
-      body.innerHTML = text;
-    }
-
-    // Hook into existing calculators — re-run interpretation when values change
-    function refreshInterpretations() {
-      try {
-        buildEmiInterpretation();
-        buildCarInterpretation();
-        buildSipInterpretation();
-        buildFdInterpretation();
-        buildEduInterpretation();
-        buildDebtInterpretation();
-      } catch (e) {
-        // Defensive — if any single calc errors, others continue
-        console.warn('Interpretation refresh:', e);
-      }
-    }
-    // Listen on every input change in the relevant tabs
-    ['emiAmt','emiRate','emiYears',
-     'carPrice','carDown','carRate','carYears',
-     'sipAmt','sipRate','sipYears',
-     'fdAmt','fdRate','fdYears',
-     'eduAmt','eduRate','eduMorat','eduYears',
-     'd1Amt','d1Rate','d1Emi','d2Amt','d2Rate','d2Emi','d3Amt','d3Rate','d3Emi','dExtra']
-      .forEach(id => {
-        const el = document.getElementById(id);
-        if (el) el.addEventListener('input', refreshInterpretations);
-      });
-    document.getElementById('eduSimpleInt')?.addEventListener('change', refreshInterpretations);
-
-    // Initial population
-    refreshInterpretations();
-
-    // Refresh interpretations on tab switch (in case user came in via deep link)
-    document.querySelectorAll('.tab').forEach(t => {
-      t.addEventListener('click', () => setTimeout(refreshInterpretations, 50));
-    });
-    // Refresh after currency changes (debounced — currency picker triggers many ops)
-    let _interpretRefreshTimer = null;
-    document.getElementById('currencyBtn')?.addEventListener('click', () => {
-      clearTimeout(_interpretRefreshTimer);
-      _interpretRefreshTimer = setTimeout(refreshInterpretations, 300);
-    });
-  </script>
-
-  <div class="toast" id="toast"></div>
-</body>
-</html>
+   
