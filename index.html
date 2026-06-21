@@ -5990,6 +5990,41 @@
     applyCountryProfile();
 
     // ================================================================
+    // IP-BASED COUNTRY DETECTION (reflects where the visitor actually is,
+    // like Google does — more reliable than timezone, which a VPN or a
+    // manually-set clock can throw off). Runs only when the visitor hasn't
+    // already chosen a country (no saved choice, no ?cur= link). One
+    // anonymous request to a free geo endpoint; no cookies, no tracking.
+    // ================================================================
+    const GEO_REGION_CUR = {IN:'INR',PK:'PKR',BD:'BDT',LK:'LKR',NP:'NPR',AE:'AED',SA:'SAR',QA:'QAR',
+      BH:'BHD',KW:'KWD',OM:'OMR',US:'USD',GB:'GBP',CA:'CAD',AU:'AUD',NZ:'NZD',SG:'SGD',MY:'MYR',
+      ID:'IDR',PH:'PHP',TH:'THB',VN:'VND',HK:'HKD',TW:'TWD',KR:'KRW',JP:'JPY',CN:'CNY',NG:'NGN',
+      KE:'KES',ZA:'ZAR',EG:'EGP',TR:'TRY',RU:'RUB',BR:'BRL',MX:'MXN',JO:'JOD',LB:'LBP',
+      DE:'EUR',FR:'EUR',ES:'EUR',IT:'EUR',NL:'EUR',IE:'EUR',PT:'EUR',AT:'EUR',BE:'EUR',GR:'EUR',FI:'EUR'};
+    async function detectByIp() {
+      try {
+        if (localStorage.getItem('fincalc_cur')) return;            // respect saved choice
+        if (new URLSearchParams(location.search).get('cur')) return; // respect deep-link
+        const res = await fetch('https://get.geojs.io/v1/ip/country.json');
+        if (!res.ok) return;
+        const data = await res.json();
+        const region = ((data && data.country) || '').toUpperCase();
+        const code = GEO_REGION_CUR[region];
+        if (!code) return;
+        const found = currencies.find(c => c.code === code);
+        if (found && found.code !== currentCur.code) {
+          currentCur = found;
+          document.getElementById('currencyBtn').textContent = `${found.flag} ${found.sym} ${found.code}`;
+          document.querySelectorAll('.cur').forEach(el => el.textContent = found.sym);
+          applyCountryProfile();
+          if (typeof applySmartDefaults === 'function') applySmartDefaults();
+          if (typeof recomputeAll === 'function') recomputeAll();
+        }
+      } catch (e) {}
+    }
+    detectByIp();
+
+    // ================================================================
     // WIRE AMOUNT INPUTS — lets user type exact amounts
     // ================================================================
     [
@@ -7033,34 +7068,3 @@
       const P = +document.getElementById('fdAmt').value;
       const rA = +document.getElementById('fdRate').value;
       const yr = +document.getElementById('fdYears').value;
-      if (!P || !rA || !yr) return;
-      const maturity = P * Math.pow(1 + rA / 400, yr * 4);
-      const earned = maturity - P;
-      const effectivePct = (earned / P) * 100;
-
-      let text = `<p>Lock <b>${fmtMoney(P)}</b> for ${yr} years at ${rA}% p.a. → <b>${fmtMoney(maturity)}</b> at maturity.</p>`;
-      text += `<p>You'll earn <b>${fmtMoney(earned)}</b> in interest — about <b>${effectivePct.toFixed(1)}%</b> total growth on your principal.</p>`;
-      text += `<p><b>Reality check:</b> if inflation in your country runs ${(rA - 1).toFixed(1)}%+ during this period, your real (inflation-adjusted) gain is much smaller than the headline rate. FDs are best for short-term certainty, not long-term wealth.</p>`;
-      text += `<p><b>Tax matters:</b> in most countries, FD interest is fully taxed as income. If your tax bracket is 30%, your effective FD rate drops from ${rA}% to about ${(rA * 0.7).toFixed(1)}%.</p>`;
-
-      body.innerHTML = text;
-    }
-
-    function buildEduInterpretation() {
-      const body = document.getElementById('eduInterpretBody');
-      if (!body) return;
-      const P = +document.getElementById('eduAmt').value;
-      const rA = +document.getElementById('eduRate').value;
-      const moratYears = +document.getElementById('eduMorat').value;
-      const yr = +document.getElementById('eduYears').value;
-      const simple = document.getElementById('eduSimpleInt')?.checked;
-      if (!P || !rA || !yr) return;
-      const grownP = simple ? P + P * (rA / 100) * moratYears : P * Math.pow(1 + rA / 100, moratYears);
-      const moratInterest = grownP - P;
-      const n = yr * 12;
-      const r = rA / 12 / 100;
-      const emi = (grownP * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
-      const totalPaid = emi * n;
-
-      let text = `<p>You're borrowing <b>${fmtMoney(P)}</b> for studies. Because you don't pay during your ${moratYears}-year study period, interest builds up — by graduation, your loan has grown to <b>${fmtMoney(grownP)}</b>.</p>`;
-      text += `<p>That extra <b>${fmtMoney(moratInterest)}</b> is interest you didn't borr
