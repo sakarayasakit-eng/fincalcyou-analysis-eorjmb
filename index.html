@@ -4088,13 +4088,8 @@
 
     document.getElementById('currencySearch').addEventListener('input', (e) => renderCurrencies(e.target.value));
 
-    // ================================================================
-    // AUTO-DETECT VISITOR COUNTRY (privacy-friendly: uses the browser's
-    // own timezone + locale, no GPS prompt, no IP lookup, no tracking).
-    // Only used as the default when the visitor hasn't already chosen
-    // or saved a country, and is always overridable by ?cur= and the
-    // currency picker.
-    // ================================================================
+    // Auto-detect visitor country (privacy-friendly: browser timezone + locale,
+    // no GPS prompt, no network). Only a default; overridable by ?cur= and picker.
     function detectCurrencyCode() {
       const TZ_CUR = {
         'Asia/Kolkata':'INR','Asia/Calcutta':'INR','Asia/Karachi':'PKR','Asia/Dhaka':'BDT',
@@ -4118,10 +4113,7 @@
         'Europe/Luxembourg','Europe/Malta','Europe/Nicosia'];
       try {
         const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
-        if (tz) {
-          if (TZ_CUR[tz]) return TZ_CUR[tz];
-          if (EUR_TZ.indexOf(tz) !== -1) return 'EUR';
-        }
+        if (tz) { if (TZ_CUR[tz]) return TZ_CUR[tz]; if (EUR_TZ.indexOf(tz) !== -1) return 'EUR'; }
       } catch (e) {}
       const REGION_CUR = {IN:'INR',PK:'PKR',BD:'BDT',LK:'LKR',NP:'NPR',AE:'AED',SA:'SAR',QA:'QAR',
         BH:'BHD',KW:'KWD',OM:'OMR',US:'USD',GB:'GBP',CA:'CAD',AU:'AUD',NZ:'NZD',SG:'SGD',MY:'MYR',
@@ -4130,10 +4122,7 @@
         IT:'EUR',NL:'EUR',IE:'EUR',PT:'EUR',AT:'EUR',BE:'EUR',GR:'EUR',FI:'EUR'};
       try {
         const loc = navigator.language || (navigator.languages && navigator.languages[0]);
-        if (loc) {
-          const region = (loc.split('-')[1] || '').toUpperCase();
-          if (region && REGION_CUR[region]) return REGION_CUR[region];
-        }
+        if (loc) { const region = (loc.split('-')[1] || '').toUpperCase(); if (region && REGION_CUR[region]) return REGION_CUR[region]; }
       } catch (e) {}
       return null;
     }
@@ -4141,7 +4130,7 @@
     try {
       let initialCode = null;
       try { initialCode = localStorage.getItem('fincalc_cur'); } catch (e) {}
-      if (!initialCode) initialCode = detectCurrencyCode(); // auto-detect when no saved choice
+      if (!initialCode) initialCode = detectCurrencyCode();
       if (initialCode) {
         const found = currencies.find(c => c.code === initialCode);
         if (found) {
@@ -4193,9 +4182,7 @@
         if (firstNode && firstNode.nodeType === 3) firstNode.nodeValue = prefix;
       }
 
-      // Country-aware Islamic finance: only surface Zakat/Murabaha where it's
-      // culturally relevant (Muslim-majority + large-minority markets). Hidden
-      // elsewhere so the heading/tab don't show Zakat to audiences that don't use it.
+      // Country-aware Islamic finance: surface Zakat/Murabaha only where relevant.
       const ISLAMIC_CODES = ['PKR','BDT','AED','SAR','QAR','KWD','OMR','BHD','JOD','LBP','EGP','TRY','AFN','IRR','MYR','IDR','NGN','INR','LKR'];
       const showIslamic = ISLAMIC_CODES.includes(currentCur.code);
       const islamicTab = document.getElementById('tabIslamic');
@@ -5989,13 +5976,8 @@
 
     applyCountryProfile();
 
-    // ================================================================
-    // IP-BASED COUNTRY DETECTION (reflects where the visitor actually is,
-    // like Google does — more reliable than timezone, which a VPN or a
-    // manually-set clock can throw off). Runs only when the visitor hasn't
-    // already chosen a country (no saved choice, no ?cur= link). One
-    // anonymous request to a free geo endpoint; no cookies, no tracking.
-    // ================================================================
+    // IP-based country detection (reflects real location, like Google). Runs only
+    // when no saved choice / no ?cur=. One anonymous request; no cookies/tracking.
     const GEO_REGION_CUR = {IN:'INR',PK:'PKR',BD:'BDT',LK:'LKR',NP:'NPR',AE:'AED',SA:'SAR',QA:'QAR',
       BH:'BHD',KW:'KWD',OM:'OMR',US:'USD',GB:'GBP',CA:'CAD',AU:'AUD',NZ:'NZD',SG:'SGD',MY:'MYR',
       ID:'IDR',PH:'PHP',TH:'THB',VN:'VND',HK:'HKD',TW:'TWD',KR:'KRW',JP:'JPY',CN:'CNY',NG:'NGN',
@@ -6003,8 +5985,8 @@
       DE:'EUR',FR:'EUR',ES:'EUR',IT:'EUR',NL:'EUR',IE:'EUR',PT:'EUR',AT:'EUR',BE:'EUR',GR:'EUR',FI:'EUR'};
     async function detectByIp() {
       try {
-        if (localStorage.getItem('fincalc_cur')) return;            // respect saved choice
-        if (new URLSearchParams(location.search).get('cur')) return; // respect deep-link
+        if (localStorage.getItem('fincalc_cur')) return;
+        if (new URLSearchParams(location.search).get('cur')) return;
         const res = await fetch('https://get.geojs.io/v1/ip/country.json');
         if (!res.ok) return;
         const data = await res.json();
@@ -6767,13 +6749,8 @@
       const grid = document.getElementById('welcomeCountryGrid');
       if (grid && grid.children.length === 0) {
         const popular = ['INR','USD','GBP','PKR','AED','BDT','SAR','MYR','IDR','CAD','AUD','SGD','EUR','PHP','TRY','ZAR','EGP','NGN','BRL','MXN','JPY','CNY','HKD','LKR'];
-        // Lead with the visitor's auto-detected country so the onboarding
-        // isn't always India-first.
         const detected = detectCurrencyCode();
-        if (detected && popular.includes(detected)) {
-          popular.splice(popular.indexOf(detected), 1);
-          popular.unshift(detected);
-        }
+        if (detected && popular.includes(detected)) { popular.splice(popular.indexOf(detected), 1); popular.unshift(detected); }
         const lookup = {};
         currencies.forEach(c => { lookup[c.code] = c; });
         const html = popular.filter(code => lookup[code]).map(code => {
@@ -7068,3 +7045,128 @@
       const P = +document.getElementById('fdAmt').value;
       const rA = +document.getElementById('fdRate').value;
       const yr = +document.getElementById('fdYears').value;
+      if (!P || !rA || !yr) return;
+      const maturity = P * Math.pow(1 + rA / 400, yr * 4);
+      const earned = maturity - P;
+      const effectivePct = (earned / P) * 100;
+
+      let text = `<p>Lock <b>${fmtMoney(P)}</b> for ${yr} years at ${rA}% p.a. → <b>${fmtMoney(maturity)}</b> at maturity.</p>`;
+      text += `<p>You'll earn <b>${fmtMoney(earned)}</b> in interest — about <b>${effectivePct.toFixed(1)}%</b> total growth on your principal.</p>`;
+      text += `<p><b>Reality check:</b> if inflation in your country runs ${(rA - 1).toFixed(1)}%+ during this period, your real (inflation-adjusted) gain is much smaller than the headline rate. FDs are best for short-term certainty, not long-term wealth.</p>`;
+      text += `<p><b>Tax matters:</b> in most countries, FD interest is fully taxed as income. If your tax bracket is 30%, your effective FD rate drops from ${rA}% to about ${(rA * 0.7).toFixed(1)}%.</p>`;
+
+      body.innerHTML = text;
+    }
+
+    function buildEduInterpretation() {
+      const body = document.getElementById('eduInterpretBody');
+      if (!body) return;
+      const P = +document.getElementById('eduAmt').value;
+      const rA = +document.getElementById('eduRate').value;
+      const moratYears = +document.getElementById('eduMorat').value;
+      const yr = +document.getElementById('eduYears').value;
+      const simple = document.getElementById('eduSimpleInt')?.checked;
+      if (!P || !rA || !yr) return;
+      const grownP = simple ? P + P * (rA / 100) * moratYears : P * Math.pow(1 + rA / 100, moratYears);
+      const moratInterest = grownP - P;
+      const n = yr * 12;
+      const r = rA / 12 / 100;
+      const emi = (grownP * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+      const totalPaid = emi * n;
+
+      let text = `<p>You're borrowing <b>${fmtMoney(P)}</b> for studies. Because you don't pay during your ${moratYears}-year study period, interest builds up — by graduation, your loan has grown to <b>${fmtMoney(grownP)}</b>.</p>`;
+      text += `<p>That extra <b>${fmtMoney(moratInterest)}</b> is interest you didn't borrow but now owe. After studies, you'll pay <b>${fmtMoney(emi)}</b> per month for ${yr} years — totalling <b>${fmtMoney(totalPaid)}</b>.</p>`;
+
+      if (moratYears > 0 && !simple) {
+        const simpleGrown = P + P * (rA / 100) * moratYears;
+        const saving = grownP - simpleGrown;
+        if (saving > 1000) {
+          text += `<p>💡 <b>Ask your bank about simple interest.</b> If they allow it during studies (many education loans do), your loan would grow to ${fmtMoney(simpleGrown)} instead of ${fmtMoney(grownP)} — saving you <b>${fmtMoney(saving)}</b>.</p>`;
+        }
+      }
+
+      text += `<p><b>Even better:</b> if you or your parents can pay just the interest during studies (around ${fmtMoney(P * rA / 100 / 12)}/month), the principal stays at ${fmtMoney(P)} when repayment starts. This is the single most powerful trick for cutting student-loan cost.</p>`;
+
+      body.innerHTML = text;
+    }
+
+    function buildDebtInterpretation() {
+      const body = document.getElementById('debtInterpretBody');
+      if (!body) return;
+      const loans = [];
+      for (let i = 1; i <= 3; i++) {
+        const amt = +document.getElementById(`d${i}Amt`).value;
+        const rate = +document.getElementById(`d${i}Rate`).value;
+        const emi = +document.getElementById(`d${i}Emi`).value;
+        if (amt > 0 && emi > 0) loans.push({ balance: amt, rate, minPayment: emi, index: i });
+      }
+      const extra = +document.getElementById('dExtra').value;
+      if (loans.length === 0) {
+        body.innerHTML = '<p>Enter at least one loan above to see your strategy.</p>';
+        return;
+      }
+
+      const sorted = [...loans].sort((a, b) => b.rate - a.rate);
+      const winner = sorted[0];
+      const totalDebt = loans.reduce((s, l) => s + l.balance, 0);
+      const totalMin = loans.reduce((s, l) => s + l.minPayment, 0);
+
+      let text = `<p>You're carrying <b>${fmtMoney(totalDebt)}</b> in total debt across ${loans.length} loan${loans.length > 1 ? 's' : ''}, paying minimums of <b>${fmtMoney(totalMin)}</b>/month.</p>`;
+      text += `<p><b>The math says:</b> put your extra payment on Loan ${winner.index} (the highest interest rate at ${winner.rate.toFixed(1)}%). Once it's gone, take everything you were paying on it (the minimum + extra) and roll it onto the next-highest-rate loan. This is the avalanche method.</p>`;
+
+      if (extra <= 0) {
+        text += `<p>👆 You haven't entered an "extra payment" amount yet. Even ${fmtMoney(totalMin * 0.1)}/month extra (just 10% more than your current minimums) would dramatically shorten how long you're in debt.</p>`;
+      } else {
+        text += `<p>With your extra <b>${fmtMoney(extra)}</b>/month, see the savings figure below — that's real money the bank doesn't get to keep, and freedom you get back.</p>`;
+      }
+
+      text += `<p><b>Why not "snowball" (smallest balance first)?</b> Snowball feels emotionally satisfying — you knock out small loans fast. But on average it costs more in interest than avalanche. If you need momentum to stay motivated, snowball is fine. If you want to save the most money, avalanche wins.</p>`;
+
+      body.innerHTML = text;
+    }
+
+    // Hook into existing calculators — re-run interpretation when values change
+    function refreshInterpretations() {
+      try {
+        buildEmiInterpretation();
+        buildCarInterpretation();
+        buildSipInterpretation();
+        buildFdInterpretation();
+        buildEduInterpretation();
+        buildDebtInterpretation();
+      } catch (e) {
+        // Defensive — if any single calc errors, others continue
+        console.warn('Interpretation refresh:', e);
+      }
+    }
+    // Listen on every input change in the relevant tabs
+    ['emiAmt','emiRate','emiYears',
+     'carPrice','carDown','carRate','carYears',
+     'sipAmt','sipRate','sipYears',
+     'fdAmt','fdRate','fdYears',
+     'eduAmt','eduRate','eduMorat','eduYears',
+     'd1Amt','d1Rate','d1Emi','d2Amt','d2Rate','d2Emi','d3Amt','d3Rate','d3Emi','dExtra']
+      .forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.addEventListener('input', refreshInterpretations);
+      });
+    document.getElementById('eduSimpleInt')?.addEventListener('change', refreshInterpretations);
+
+    // Initial population
+    refreshInterpretations();
+
+    // Refresh interpretations on tab switch (in case user came in via deep link)
+    document.querySelectorAll('.tab').forEach(t => {
+      t.addEventListener('click', () => setTimeout(refreshInterpretations, 50));
+    });
+    // Refresh after currency changes (debounced — currency picker triggers many ops)
+    let _interpretRefreshTimer = null;
+    document.getElementById('currencyBtn')?.addEventListener('click', () => {
+      clearTimeout(_interpretRefreshTimer);
+      _interpretRefreshTimer = setTimeout(refreshInterpretations, 300);
+    });
+  </script>
+
+  <div class="toast" id="toast"></div>
+</body>
+</html>
