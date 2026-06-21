@@ -1353,7 +1353,7 @@
     </header>
 
     <h1>Money math, <em>finally</em> readable.</h1>
-    <p class="sub">Loan, savings, investment and Zakat calculators that know your country's central bank rate.</p>
+    <p class="sub" id="heroSub">Loan, savings, investment and Zakat calculators that know your country's central bank rate.</p>
 
     <!-- COUNTRY CONTEXT BAR (rate awareness) -->
     <div class="country-bar" id="countryBar">
@@ -1458,7 +1458,7 @@
           <span class="t-title">Rent vs Buy</span>
           <span class="t-sub">which wins</span>
         </button>
-        <button class="tab islamic" data-tab="islamic">
+        <button class="tab islamic" data-tab="islamic" id="tabIslamic">
           <span class="icon">☪</span>
           <span class="t-title">Islamic</span>
           <span class="t-sub">Zakat · Murabaha</span>
@@ -4193,6 +4193,26 @@
         if (firstNode && firstNode.nodeType === 3) firstNode.nodeValue = prefix;
       }
 
+      // Country-aware Islamic finance: only surface Zakat/Murabaha where it's
+      // culturally relevant (Muslim-majority + large-minority markets). Hidden
+      // elsewhere so the heading/tab don't show Zakat to audiences that don't use it.
+      const ISLAMIC_CODES = ['PKR','BDT','AED','SAR','QAR','KWD','OMR','BHD','JOD','LBP','EGP','TRY','AFN','IRR','MYR','IDR','NGN','INR','LKR'];
+      const showIslamic = ISLAMIC_CODES.includes(currentCur.code);
+      const islamicTab = document.getElementById('tabIslamic');
+      if (islamicTab) {
+        islamicTab.style.display = showIslamic ? '' : 'none';
+        if (!showIslamic && islamicTab.classList.contains('active')) {
+          const emiTab = document.querySelector('[data-tab="emi"]');
+          if (emiTab) emiTab.click();
+        }
+      }
+      const heroSub = document.getElementById('heroSub');
+      if (heroSub) {
+        heroSub.textContent = showIslamic
+          ? "Loan, savings, investment and Zakat calculators that know your country's central bank rate."
+          : "Loan, savings, investment and retirement calculators that know your country's central bank rate.";
+      }
+
       if (!p) {
         // No profile — show generic message
         document.getElementById('cbFlag').textContent = currentCur.flag;
@@ -6712,11 +6732,19 @@
       const grid = document.getElementById('welcomeCountryGrid');
       if (grid && grid.children.length === 0) {
         const popular = ['INR','USD','GBP','PKR','AED','BDT','SAR','MYR','IDR','CAD','AUD','SGD','EUR','PHP','TRY','ZAR','EGP','NGN','BRL','MXN','JPY','CNY','HKD','LKR'];
+        // Lead with the visitor's auto-detected country so the onboarding
+        // isn't always India-first.
+        const detected = detectCurrencyCode();
+        if (detected && popular.includes(detected)) {
+          popular.splice(popular.indexOf(detected), 1);
+          popular.unshift(detected);
+        }
         const lookup = {};
         currencies.forEach(c => { lookup[c.code] = c; });
         const html = popular.filter(code => lookup[code]).map(code => {
           const c = lookup[code];
-          return `<button type="button" class="welcome-country-btn" data-cur-code="${c.code}">
+          const sel = (code === detected) ? ' style="border-color:var(--accent);"' : '';
+          return `<button type="button" class="welcome-country-btn" data-cur-code="${c.code}"${sel}>
             <span class="flag">${c.flag}</span>
             <span>${c.code}</span>
           </button>`;
@@ -7035,32 +7063,4 @@
       const totalPaid = emi * n;
 
       let text = `<p>You're borrowing <b>${fmtMoney(P)}</b> for studies. Because you don't pay during your ${moratYears}-year study period, interest builds up — by graduation, your loan has grown to <b>${fmtMoney(grownP)}</b>.</p>`;
-      text += `<p>That extra <b>${fmtMoney(moratInterest)}</b> is interest you didn't borrow but now owe. After studies, you'll pay <b>${fmtMoney(emi)}</b> per month for ${yr} years — totalling <b>${fmtMoney(totalPaid)}</b>.</p>`;
-
-      if (moratYears > 0 && !simple) {
-        const simpleGrown = P + P * (rA / 100) * moratYears;
-        const saving = grownP - simpleGrown;
-        if (saving > 1000) {
-          text += `<p>💡 <b>Ask your bank about simple interest.</b> If they allow it during studies (many education loans do), your loan would grow to ${fmtMoney(simpleGrown)} instead of ${fmtMoney(grownP)} — saving you <b>${fmtMoney(saving)}</b>.</p>`;
-        }
-      }
-
-      text += `<p><b>Even better:</b> if you or your parents can pay just the interest during studies (around ${fmtMoney(P * rA / 100 / 12)}/month), the principal stays at ${fmtMoney(P)} when repayment starts. This is the single most powerful trick for cutting student-loan cost.</p>`;
-
-      body.innerHTML = text;
-    }
-
-    function buildDebtInterpretation() {
-      const body = document.getElementById('debtInterpretBody');
-      if (!body) return;
-      const loans = [];
-      for (let i = 1; i <= 3; i++) {
-        const amt = +document.getElementById(`d${i}Amt`).value;
-        const rate = +document.getElementById(`d${i}Rate`).value;
-        const emi = +document.getElementById(`d${i}Emi`).value;
-        if (amt > 0 && emi > 0) loans.push({ balance: amt, rate, minPayment: emi, index: i });
-      }
-      const extra = +document.getElementById('dExtra').value;
-      if (loans.length === 0) {
-        body.innerHTML = '<p>Enter at least one loan above to see your strategy.</p>';
-   
+      text += `<p>That extra <b>${fmtMoney(moratInterest)}</b> is interest you didn't borr
