@@ -301,6 +301,9 @@
     .tabs-wrap {
       overflow-x: auto; -webkit-overflow-scrolling: touch;
       margin-bottom: 18px; padding-bottom: 4px;
+      scroll-snap-type: x proximity;
+      -webkit-mask-image: linear-gradient(to right, #000 90%, transparent 100%);
+              mask-image: linear-gradient(to right, #000 90%, transparent 100%);
     }
     .tabs-wrap::-webkit-scrollbar { display: none; }
     .tabs {
@@ -308,6 +311,7 @@
     }
     .tab {
       flex: 0 0 auto;
+      scroll-snap-align: start;
       min-width: 100px;
       padding: 12px 14px;
       background: var(--card); border: 1px solid var(--line);
@@ -333,6 +337,13 @@
     .tab.active.convert {
       background: var(--accent); border-color: var(--accent);
       box-shadow: 0 6px 20px rgba(94,234,212,0.25);
+    }
+    @media (max-width: 560px) {
+      .tabs { gap: 6px; }
+      .tab { min-width: 60px; padding: 9px 7px; align-items: center; text-align: center; gap: 1px; }
+      .tab .icon { font-size: 19px; margin-bottom: 2px; }
+      .tab .t-title { font-size: 10px; line-height: 1.15; }
+      .tab .t-sub { display: none; }
     }
 
     .card {
