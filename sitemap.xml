@@ -2,8 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://fincalcyou.netlify.app/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://fincalcyou.netlify.app/pages/index.html</loc><priority>0.9</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/adcb-mortgage-calculator.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/aed-to-inr-converter.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/aed-to-pkr-converter.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/axis-home-loan-emi-calculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/bank-alfalah-car-finance-calculator.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/cad-to-inr-converter.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/car-finance-calculator-bahrain.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/car-finance-calculator-qatar.html</loc><priority>0.8</priority></url>
@@ -38,9 +41,12 @@
   <url><loc>https://fincalcyou.netlify.app/pages/car-loan-calculator-usa.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/car-loan-calculator-vietnam.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/central-bank-rates-2026.html</loc><priority>0.8</priority></url>
-  <url><loc>https://fincalcyou.netlify.app/pages/credito-hipotecario-mexico.html</loc><priority>0.9</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/credito-hipotecario-mexico.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/dib-mortgage-calculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/emirates-nbd-mortgage-calculator.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/eur-to-try-converter.html</loc><priority>0.8</priority></url>
-  <url><loc>https://fincalcyou.netlify.app/pages/financiamento-imobiliario-brasil.html</loc><priority>0.9</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/fab-mortgage-calculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/financiamento-imobiliario-brasil.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/fixed-deposit-calculator-australia.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/fixed-deposit-calculator-bahrain.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/fixed-deposit-calculator-bangladesh.html</loc><priority>0.8</priority></url>
@@ -78,41 +84,53 @@
   <url><loc>https://fincalcyou.netlify.app/pages/gbp-to-inr-converter.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/gbp-to-ngn-converter.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/gbp-to-pkr-converter.html</loc><priority>0.8</priority></url>
-  <url><loc>https://fincalcyou.netlify.app/pages/home-finance-calculator-bahrain.html</loc><priority>0.9</priority></url>
-  <url><loc>https://fincalcyou.netlify.app/pages/home-finance-calculator-kuwait.html</loc><priority>0.9</priority></url>
-  <url><loc>https://fincalcyou.netlify.app/pages/home-finance-calculator-qatar.html</loc><priority>0.9</priority></url>
-  <url><loc>https://fincalcyou.netlify.app/pages/home-finance-calculator-saudi-arabia.html</loc><priority>0.9</priority></url>
-  <url><loc>https://fincalcyou.netlify.app/pages/home-loan-calculator-australia.html</loc><priority>0.9</priority></url>
-  <url><loc>https://fincalcyou.netlify.app/pages/home-loan-calculator-bangladesh.html</loc><priority>0.9</priority></url>
-  <url><loc>https://fincalcyou.netlify.app/pages/home-loan-calculator-kenya.html</loc><priority>0.9</priority></url>
-  <url><loc>https://fincalcyou.netlify.app/pages/home-loan-calculator-malaysia.html</loc><priority>0.9</priority></url>
-  <url><loc>https://fincalcyou.netlify.app/pages/home-loan-calculator-philippines.html</loc><priority>0.9</priority></url>
-  <url><loc>https://fincalcyou.netlify.app/pages/home-loan-calculator-singapore.html</loc><priority>0.9</priority></url>
-  <url><loc>https://fincalcyou.netlify.app/pages/home-loan-calculator-south-africa.html</loc><priority>0.9</priority></url>
-  <url><loc>https://fincalcyou.netlify.app/pages/home-loan-calculator-thailand.html</loc><priority>0.9</priority></url>
-  <url><loc>https://fincalcyou.netlify.app/pages/home-loan-calculator-vietnam.html</loc><priority>0.9</priority></url>
-  <url><loc>https://fincalcyou.netlify.app/pages/home-loan-emi-calculator-india.html</loc><priority>0.9</priority></url>
-  <url><loc>https://fincalcyou.netlify.app/pages/home-loan-emi-pakistan.html</loc><priority>0.9</priority></url>
-  <url><loc>https://fincalcyou.netlify.app/pages/housing-loan-calculator-sri-lanka.html</loc><priority>0.9</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/hbl-car-finance-calculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/hdfc-fd-calculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/hdfc-home-loan-emi-calculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/home-finance-calculator-bahrain.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/home-finance-calculator-kuwait.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/home-finance-calculator-qatar.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/home-finance-calculator-saudi-arabia.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/home-loan-calculator-australia.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/home-loan-calculator-bangladesh.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/home-loan-calculator-kenya.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/home-loan-calculator-malaysia.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/home-loan-calculator-philippines.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/home-loan-calculator-singapore.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/home-loan-calculator-south-africa.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/home-loan-calculator-thailand.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/home-loan-calculator-vietnam.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/home-loan-emi-calculator-india.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/home-loan-emi-pakistan.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/housing-loan-calculator-sri-lanka.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/how-to-calculate-emi.html</loc><priority>0.8</priority></url>
-  <url><loc>https://fincalcyou.netlify.app/pages/konut-kredisi-hesaplama.html</loc><priority>0.9</priority></url>
-  <url><loc>https://fincalcyou.netlify.app/pages/kpr-calculator-indonesia.html</loc><priority>0.9</priority></url>
-  <url><loc>https://fincalcyou.netlify.app/pages/loan-calculator-nigeria.html</loc><priority>0.9</priority></url>
-  <url><loc>https://fincalcyou.netlify.app/pages/mortgage-calculator-canada.html</loc><priority>0.9</priority></url>
-  <url><loc>https://fincalcyou.netlify.app/pages/mortgage-calculator-china.html</loc><priority>0.9</priority></url>
-  <url><loc>https://fincalcyou.netlify.app/pages/mortgage-calculator-egypt.html</loc><priority>0.9</priority></url>
-  <url><loc>https://fincalcyou.netlify.app/pages/mortgage-calculator-eurozone.html</loc><priority>0.9</priority></url>
-  <url><loc>https://fincalcyou.netlify.app/pages/mortgage-calculator-hong-kong.html</loc><priority>0.9</priority></url>
-  <url><loc>https://fincalcyou.netlify.app/pages/mortgage-calculator-japan.html</loc><priority>0.9</priority></url>
-  <url><loc>https://fincalcyou.netlify.app/pages/mortgage-calculator-new-zealand.html</loc><priority>0.9</priority></url>
-  <url><loc>https://fincalcyou.netlify.app/pages/mortgage-calculator-russia.html</loc><priority>0.9</priority></url>
-  <url><loc>https://fincalcyou.netlify.app/pages/mortgage-calculator-south-korea.html</loc><priority>0.9</priority></url>
-  <url><loc>https://fincalcyou.netlify.app/pages/mortgage-calculator-taiwan.html</loc><priority>0.9</priority></url>
-  <url><loc>https://fincalcyou.netlify.app/pages/mortgage-calculator-uae.html</loc><priority>0.9</priority></url>
-  <url><loc>https://fincalcyou.netlify.app/pages/mortgage-calculator-uk.html</loc><priority>0.9</priority></url>
-  <url><loc>https://fincalcyou.netlify.app/pages/mortgage-calculator-usa.html</loc><priority>0.9</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/icici-fd-calculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/icici-home-loan-emi-calculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/india-financial-calculators.html</loc><priority>0.9</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/indonesia-financial-calculators.html</loc><priority>0.9</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/konut-kredisi-hesaplama.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/kpr-calculator-indonesia.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/loan-calculator-nigeria.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/meezan-car-finance-calculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/mortgage-calculator-canada.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/mortgage-calculator-china.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/mortgage-calculator-egypt.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/mortgage-calculator-eurozone.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/mortgage-calculator-hong-kong.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/mortgage-calculator-japan.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/mortgage-calculator-new-zealand.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/mortgage-calculator-russia.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/mortgage-calculator-south-korea.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/mortgage-calculator-taiwan.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/mortgage-calculator-uae.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/mortgage-calculator-uk.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/mortgage-calculator-usa.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/nigeria-financial-calculators.html</loc><priority>0.9</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/pakistan-financial-calculators.html</loc><priority>0.9</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/sar-to-inr-converter.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/sar-to-pkr-converter.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/sbi-fd-calculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/sbi-home-loan-emi-calculator.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/sip-calculator-australia.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/sip-calculator-bahrain.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/sip-calculator-bangladesh.html</loc><priority>0.8</priority></url>
@@ -148,6 +166,8 @@
   <url><loc>https://fincalcyou.netlify.app/pages/sip-calculator-usa.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/sip-calculator-vietnam.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/tasit-kredisi-hesaplama.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/uae-financial-calculators.html</loc><priority>0.9</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/ubl-car-finance-calculator.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/usd-to-bdt-converter.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/usd-to-egp-converter.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/usd-to-inr-converter.html</loc><priority>0.8</priority></url>
