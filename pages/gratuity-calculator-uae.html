@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width,initial-scale=1" /><meta name="theme-color" content="#0a1628" />
+  <title>UAE Gratuity Calculator 2026 — End of Service Benefit (Free)</title><meta name="description" content="Free UAE end-of-service gratuity calculator. Enter your basic salary and years of service for your 2022-law gratuity estimate. No signup, instant." /><meta name="keywords" content="gratuity calculator uae, end of service calculator uae, eosb calculator, uae gratuity calculation, dubai gratuity calculator" />
+  <link rel="canonical" href="https://fincalcyou.netlify.app/pages/gratuity-calculator-uae.html" />
+  <meta property="og:type" content="website" /><meta property="og:url" content="https://fincalcyou.netlify.app/pages/gratuity-calculator-uae.html" /><meta property="og:title" content="UAE Gratuity Calculator 2026 — End of Service Benefit (Free)" /><meta property="og:description" content="Free UAE end-of-service gratuity calculator. Enter your basic salary and years of service for your 2022-law gratuity estimate. No signup, instant." />
+  <meta property="og:image" content="https://fincalcyou.netlify.app/og-image.png" /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta property="og:site_name" content="fin·calc" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:image" content="https://fincalcyou.netlify.app/og-image.png" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is gratuity calculated in the UAE?","acceptedAnswer":{"@type":"Answer","text":"Under the 2022 UAE Labour Law, you get 21 days of basic salary for each of the first 5 years and 30 days for each year after, based on basic salary only, capped at 2 years' total pay. At least 1 year of service is required."}},{"@type":"Question","name":"Is gratuity based on basic or total salary?","acceptedAnswer":{"@type":"Answer","text":"Basic salary only \u2014 housing, transport and other allowances are excluded from the end-of-service gratuity calculation."}},{"@type":"Question","name":"Do I get gratuity if I resign?","acceptedAnswer":{"@type":"Answer","text":"Under the 2022 law, unlimited-style contracts pay full gratuity on the 21/30-day basis after 1 year, whether you resign or are terminated, subject to notice and the legal conditions. Confirm your specific case with MOHRE."}},{"@type":"Question","name":"Is there a maximum gratuity?","acceptedAnswer":{"@type":"Answer","text":"Yes \u2014 total end-of-service gratuity is capped at the equivalent of 2 years' basic salary."}}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://fincalcyou.netlify.app/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://fincalcyou.netlify.app/pages/"},{"@type":"ListItem","position":3,"name":"UAE Gratuity Calculator — End of Service Benefit","item":"https://fincalcyou.netlify.app/pages/gratuity-calculator-uae.html"}]}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="landing.css" />
+  <style>.calc{background:var(--card,#111f38);border:1px solid var(--line,#23344f);border-radius:16px;padding:16px;margin:6px 0}.calc label{display:block;font-size:12px;color:var(--muted,#9fb3cc);text-transform:uppercase;letter-spacing:.05em;margin:10px 0 4px}.calc input{width:100%;background:var(--bg,#0a1628);border:1px solid var(--line,#23344f);border-radius:10px;color:var(--ink,#eaf1fb);font-size:16px;font-weight:600;padding:10px}.gr-out{margin-top:16px;font-size:13px;color:var(--muted,#9fb3cc)}.gr-out strong{display:block;font-size:30px;color:var(--accent,#5eead4);font-weight:800}</style>
+</head>
+<body>
+  <main>
+    <header><a href="../index.html" class="brand">fin<span class="dot">·</span>calc</a><nav><a href="../index.html">Home</a><a href="index.html">Guides</a></nav></header>
+    <h1>UAE Gratuity Calculator — End of Service Benefit</h1>
+    <p class="sub">Estimate your UAE end-of-service gratuity from your basic salary and years of service, per the 2022 Labour Law. Free, instant, no signup.</p>
+    <section>
+      <div class="calc">
+        <label for="basic">Monthly basic salary (AED)</label>
+        <input id="basic" type="number" value="10000" min="0">
+        <label for="yrs">Years of service</label>
+        <input id="yrs" type="number" value="6" min="0" step="0.1">
+        <div class="gr-out">Estimated end-of-service gratuity<strong id="grout">AED 0</strong><span id="grnote"></span></div>
+      </div>
+      <p class="note">Estimate based on UAE Labour Law (2022): 21 days' basic pay per year for the first 5 years, 30 days per year after, capped at 2 years' total basic pay. Requires at least 1 year of service. This is an estimate — verify with MOHRE / your employer.</p>
+    </section>
+    <section><h2>How UAE gratuity is calculated</h2>
+      <ul><li><strong>First 5 years:</strong> 21 days of basic salary for each year.</li>
+      <li><strong>After 5 years:</strong> 30 days of basic salary for each additional year.</li>
+      <li><strong>Cap:</strong> total gratuity cannot exceed 2 years' basic salary.</li>
+      <li>Based on <strong>basic salary</strong> only (excludes housing/transport allowances).</li></ul>
+    </section>
+    <script>
+    (function(){
+      var b=document.getElementById('basic'),y=document.getElementById('yrs'),o=document.getElementById('grout'),n=document.getElementById('grnote');
+      function calc(){
+        var basic=+b.value,yr=+y.value; if(!(basic>=0&&yr>=0))return;
+        if(yr<1){o.textContent='AED 0';n.textContent=' — at least 1 year of service is required.';return;}
+        var daily=basic/30, first=Math.min(yr,5), beyond=Math.max(0,yr-5);
+        var g=first*21*daily+beyond*30*daily, cap=basic*24;
+        if(g>cap)g=cap;
+        o.textContent='AED '+Math.round(g).toLocaleString();
+        n.textContent=g===cap?' (capped at 2 years\' basic salary)':'';
+      }
+      b.addEventListener('input',calc);y.addEventListener('input',calc);calc();
+    })();
+    </script>
+    <section><h2>Frequently Asked Questions</h2>
+      <h3>How is gratuity calculated in the UAE?</h3>
+      <p>Under the 2022 UAE Labour Law, you get 21 days of basic salary for each of the first 5 years and 30 days for each year after, based on basic salary only, capped at 2 years' total pay. At least 1 year of service is required.</p>
+      <h3>Is gratuity based on basic or total salary?</h3>
+      <p>Basic salary only — housing, transport and other allowances are excluded from the end-of-service gratuity calculation.</p>
+      <h3>Do I get gratuity if I resign?</h3>
+      <p>Under the 2022 law, unlimited-style contracts pay full gratuity on the 21/30-day basis after 1 year, whether you resign or are terminated, subject to notice and the legal conditions. Confirm your specific case with MOHRE.</p>
+      <h3>Is there a maximum gratuity?</h3>
+      <p>Yes — total end-of-service gratuity is capped at the equivalent of 2 years' basic salary.</p>
+    </section>
+    <section><h2>Related calculators</h2><ul>
+        <li><a href="mortgage-calculator-uae.html">Mortgage Calculator — UAE</a></li>
+        <li><a href="uae-financial-calculators.html">All UAE calculators</a></li>
+        <li><a href="car-loan-calculator-uae.html">Car Loan — UAE</a></li>
+      </ul></section>
+    <footer><p>fin·calc · Made for better financial decisions. Free. No signup. No tracking.</p></footer>
+  </main>
+</body>
+</html>
