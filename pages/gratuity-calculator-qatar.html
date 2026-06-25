@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width,initial-scale=1" /><meta name="theme-color" content="#0a1628" />
+  <title>Qatar Gratuity Calculator 2026 — End of Service Benefit (Free)</title><meta name="description" content="Free Qatar end-of-service gratuity calculator. Enter basic salary and years of service for your estimate per Qatar Labour Law (3 weeks/year). No signup." /><meta name="keywords" content="gratuity calculator qatar, end of service calculator qatar, qatar gratuity calculation, eosb qatar" />
+  <link rel="canonical" href="https://fincalcyou.netlify.app/pages/gratuity-calculator-qatar.html" />
+  <meta property="og:type" content="website" /><meta property="og:url" content="https://fincalcyou.netlify.app/pages/gratuity-calculator-qatar.html" /><meta property="og:title" content="Qatar Gratuity Calculator 2026 — End of Service Benefit (Free)" /><meta property="og:description" content="Free Qatar end-of-service gratuity calculator. Enter basic salary and years of service for your estimate per Qatar Labour Law (3 weeks/year). No signup." />
+  <meta property="og:image" content="https://fincalcyou.netlify.app/og-image.png" /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta property="og:site_name" content="fin·calc" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:image" content="https://fincalcyou.netlify.app/og-image.png" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is gratuity calculated in Qatar?","acceptedAnswer":{"@type":"Answer","text":"Qatar Labour Law sets a minimum of 3 weeks' basic salary per year of service, for employees completing at least one year. Contracts may specify more."}},{"@type":"Question","name":"Is it based on basic or total salary?","acceptedAnswer":{"@type":"Answer","text":"The legal minimum uses basic salary; some contracts use a more generous definition \u2014 check your agreement."}},{"@type":"Question","name":"Do I get gratuity if I resign?","acceptedAnswer":{"@type":"Answer","text":"Gratuity is generally payable after one year of continuous service on ending employment, subject to the law, contract and notice."}},{"@type":"Question","name":"When is gratuity paid?","acceptedAnswer":{"@type":"Answer","text":"At the end of employment, as part of your final settlement under Qatar Labour Law."}}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://fincalcyou.netlify.app/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://fincalcyou.netlify.app/pages/"},{"@type":"ListItem","position":3,"name":"Qatar Gratuity Calculator — End of Service","item":"https://fincalcyou.netlify.app/pages/gratuity-calculator-qatar.html"}]}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="landing.css" />
+  <style>.calc{background:var(--card,#111f38);border:1px solid var(--line,#23344f);border-radius:16px;padding:16px;margin:6px 0}.calc label{display:block;font-size:12px;color:var(--muted,#9fb3cc);text-transform:uppercase;letter-spacing:.05em;margin:10px 0 4px}.calc input{width:100%;background:var(--bg,#0a1628);border:1px solid var(--line,#23344f);border-radius:10px;color:var(--ink,#eaf1fb);font-size:16px;font-weight:600;padding:10px}.gr-out{margin-top:16px;font-size:13px;color:var(--muted,#9fb3cc)}.gr-out strong{display:block;font-size:30px;color:var(--accent,#5eead4);font-weight:800}</style>
+</head>
+<body>
+  <main>
+    <header><a href="../index.html" class="brand">fin<span class="dot">·</span>calc</a><nav><a href="../index.html">Home</a><a href="index.html">Guides</a></nav></header>
+    <h1>Qatar Gratuity Calculator — End of Service</h1>
+    <p class="sub">Estimate your Qatar end-of-service gratuity from basic salary and years of service, per Qatar Labour Law. Free, instant, no signup.</p>
+    <section>
+      <div class="calc">
+        <label for="qbasic">Monthly basic salary (QAR)</label>
+        <input id="qbasic" type="number" value="10000" min="0">
+        <label for="qyrs">Years of service</label>
+        <input id="qyrs" type="number" value="6" min="0" step="0.1">
+        <div class="gr-out">Estimated end-of-service gratuity<strong id="qgrout">QR 0</strong><span id="qgrnote"></span></div>
+      </div>
+      <p class="note">Estimate per Qatar Labour Law: a minimum of 3 weeks' basic salary for each year of service, for employees completing at least one year. Your contract may set a higher rate. Verify with your employer / MADLSA.</p>
+    </section>
+    <section><h2>How Qatar gratuity is calculated</h2>
+      <ul><li><strong>Minimum:</strong> 3 weeks (21 days) of basic salary per year of service.</li>
+      <li>Requires at least <strong>1 year</strong> of continuous service.</li>
+      <li>Based on <strong>basic salary</strong>; contracts may be more generous.</li></ul>
+    </section>
+    <script>
+    (function(){
+      var b=document.getElementById('qbasic'),y=document.getElementById('qyrs'),o=document.getElementById('qgrout'),n=document.getElementById('qgrnote');
+      function calc(){
+        var basic=+b.value,yr=+y.value; if(!(basic>=0&&yr>=0))return;
+        if(yr<1){o.textContent='QR 0';n.textContent=' — at least 1 year of service is required.';return;}
+        var daily=basic/30, g=yr*21*daily;
+        o.textContent='QR '+Math.round(g).toLocaleString(); n.textContent=' (minimum, 3 weeks/year)';
+      }
+      b.addEventListener('input',calc);y.addEventListener('input',calc);calc();
+    })();
+    </script>
+    <section><h2>Frequently Asked Questions</h2>
+      <h3>How is gratuity calculated in Qatar?</h3>
+      <p>Qatar Labour Law sets a minimum of 3 weeks' basic salary per year of service, for employees completing at least one year. Contracts may specify more.</p>
+      <h3>Is it based on basic or total salary?</h3>
+      <p>The legal minimum uses basic salary; some contracts use a more generous definition — check your agreement.</p>
+      <h3>Do I get gratuity if I resign?</h3>
+      <p>Gratuity is generally payable after one year of continuous service on ending employment, subject to the law, contract and notice.</p>
+      <h3>When is gratuity paid?</h3>
+      <p>At the end of employment, as part of your final settlement under Qatar Labour Law.</p>
+    </section>
+    <section><h2>Related calculators</h2><ul>
+        <li><a href="home-finance-calculator-qatar.html">Home Finance — Qatar</a></li>
+        <li><a href="gratuity-calculator-uae.html">UAE Gratuity Calculator</a></li>
+        <li><a href="end-of-service-calculator-saudi-arabia.html">Saudi End of Service</a></li>
+      </ul></section>
+    <footer><p>fin·calc · Made for better financial decisions. Free. No signup. No tracking.</p></footer>
+  </main>
+</body>
+</html>

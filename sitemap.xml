@@ -12,6 +12,9 @@
   <url><loc>https://fincalcyou.netlify.app/pages/aed-to-pkr-converter.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/axis-home-loan-emi-calculator.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/bank-alfalah-car-finance-calculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/bca-kpr-calculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/bri-kpr-calculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/btn-kpr-calculator.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/cad-to-inr-converter.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/car-finance-calculator-bahrain.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/car-finance-calculator-qatar.html</loc><priority>0.8</priority></url>
@@ -90,8 +93,10 @@
   <url><loc>https://fincalcyou.netlify.app/pages/gbp-to-inr-converter.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/gbp-to-ngn-converter.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/gbp-to-pkr-converter.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/gratuity-calculator-qatar.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/gratuity-calculator-uae.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/hbl-car-finance-calculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/hbl-home-financing-calculator.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/hdfc-fd-calculator.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/hdfc-home-loan-emi-calculator.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/home-finance-calculator-bahrain.html</loc><priority>0.8</priority></url>
@@ -109,6 +114,9 @@
   <url><loc>https://fincalcyou.netlify.app/pages/home-loan-calculator-vietnam.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/home-loan-emi-calculator-india.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/home-loan-emi-pakistan.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/home-loan-on-1-lakh-salary.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/home-loan-on-30000-salary.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/home-loan-on-50000-salary.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/housing-loan-calculator-sri-lanka.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/how-to-calculate-emi.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/icici-fd-calculator.html</loc><priority>0.8</priority></url>
@@ -118,7 +126,10 @@
   <url><loc>https://fincalcyou.netlify.app/pages/konut-kredisi-hesaplama.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/kpr-calculator-indonesia.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/loan-calculator-nigeria.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/mandiri-kpr-calculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/mcb-home-financing-calculator.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/meezan-car-finance-calculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/meezan-home-financing-calculator.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/mera-pakistan-mera-ghar-calculator.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/mortgage-calculator-canada.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/mortgage-calculator-china.html</loc><priority>0.8</priority></url>
