@@ -17,11 +17,35 @@
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="landing.css" />
   <style>.calc{background:var(--card,#111f38);border:1px solid var(--line,#23344f);border-radius:16px;padding:16px;margin:6px 0}.calc label{display:block;font-size:12px;color:var(--muted,#9fb3cc);text-transform:uppercase;letter-spacing:.05em;margin:10px 0 4px}.calc input{width:100%;background:var(--bg,#0a1628);border:1px solid var(--line,#23344f);border-radius:10px;color:var(--ink,#eaf1fb);font-size:16px;font-weight:600;padding:10px}.gr-out{margin-top:16px;font-size:13px;color:var(--muted,#9fb3cc)}.gr-out strong{display:block;font-size:30px;color:var(--accent,#5eead4);font-weight:800}</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://fincalcyou.netlify.app/#organization","name":"fin·calc","url":"https://fincalcyou.netlify.app/","logo":"https://fincalcyou.netlify.app/og-image.png"},{"@type":"WebSite","@id":"https://fincalcyou.netlify.app/#website","url":"https://fincalcyou.netlify.app/","name":"fin·calc","publisher":{"@id":"https://fincalcyou.netlify.app/#organization"},"potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://fincalcyou.netlify.app/pages/?q={search_term_string}"},"query-input":"required name=search_term_string"}}]}</script>
 </head>
 <body>
   <main>
     <header><a href="../index.html" class="brand">fin<span class="dot">·</span>calc</a><nav><a href="../index.html">Home</a><a href="index.html">Guides</a></nav></header>
     <h1>UAE Gratuity Calculator — End of Service Benefit</h1>
+<style id="fc-embed-css">
+.fc-embed{display:block;background:#111f38;border:1px solid #23344f;border-radius:16px;padding:16px;margin:14px 0;color:#eaf1fb;font-family:Inter,-apple-system,Segoe UI,Roboto,sans-serif}
+.fc-embed .fc-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:560px){.fc-embed .fc-grid{grid-template-columns:1fr}}
+.fc-embed label{display:block;font-size:11px;color:#9fb3cc;margin-bottom:5px;text-transform:uppercase;letter-spacing:.05em}
+.fc-embed .fc-in{display:flex;align-items:center;gap:6px;background:#0a1628;border:1px solid #23344f;border-radius:9px;padding:7px 9px}
+.fc-embed .fc-in span{color:#9fb3cc;font-size:13px}
+.fc-embed .fc-in input{flex:1;width:100%;background:transparent;border:0;color:#eaf1fb;font-size:15px;font-weight:600;outline:none}
+.fc-embed .fc-head{font-size:12px;color:#9fb3cc;margin-top:16px}
+.fc-embed .fc-head strong{display:block;font-size:30px;color:#5eead4;font-weight:800;line-height:1.1;margin-top:2px}
+.fc-embed .fc-mini{display:flex;gap:18px;margin-top:10px;font-size:12px;color:#9fb3cc;flex-wrap:wrap}
+.fc-embed .fc-mini b{display:block;color:#eaf1fb;font-size:15px}
+.fc-embed .fc-note{font-size:11px;color:#9fb3cc;margin-top:8px}
+</style>
+<fc-gratuity class="fc-embed" data-fincalc-embed="gratuity" data-rule="uae"><div class="fc-grid"><div><label>Monthly salary (basic)</label><div class="fc-in"><span>AED</span><input data-f="salary" type="number" step="any" value="15000"></div></div><div><label>Years of service</label><div class="fc-in"><input data-f="years" type="number" step="any" value="5"><span>yrs</span></div></div></div><input type="hidden"><div class="fc-head">End-of-service / gratuity<strong data-o="headline">AED 51,781</strong></div><div class="fc-mini"><div>Years<b data-o="a">5</b></div><div>Monthly salary<b data-o="b">AED 15,000</b></div></div><div class="fc-note">Calculated live on this page · UAE: 21 days/yr (first 5), 30 days/yr after. <a href="https://fincalcyou.netlify.app/?cur=AED&tab=islamic" style="color:#5eead4">Open the full tool &rarr;</a></div></fc-gratuity>
+<script>(function(){
+function _emi(P,r,y){var n=y*12,m=r/1200;return m===0?P/n:P*m*Math.pow(1+m,n)/(Math.pow(1+m,n)-1);}
+function gv(el,f){var x=el.querySelector('[data-f="'+f+'"]');return x?+x.value:0;}
+function so(el,o,v){var x=el.querySelector('[data-o="'+o+'"]');if(x)x.textContent=v;}
+function nf(cur){try{return new Intl.NumberFormat(undefined,{style:'currency',currency:cur,maximumFractionDigits:0});}catch(e){return new Intl.NumberFormat('en',{maximumFractionDigits:0});}}
+var EL=document.currentScript.previousElementSibling,CUR="AED",NF=nf(CUR);function money(v){return NF.format(Math.round(v));}var RULE=EL.getAttribute('data-rule');
+   function calc(){var monthly=gv(EL,'salary'),years=gv(EL,'years');if(!(monthly>0&&years>=0))return;var daily=monthly*12/365,weekly=monthly*12/52,g;if(RULE==='uae'){g=years<=5?21*daily*years:21*daily*5+30*daily*(years-5);g=Math.min(g,monthly*24);}else if(RULE==='saudi'){g=years<=5?0.5*monthly*years:0.5*monthly*5+1*monthly*(years-5);}else{g=3*weekly*years;}so(EL,'headline',money(g));so(EL,'b',money(monthly));}
+   EL.addEventListener('input',calc);})();</script>
     <p class="sub">Estimate your UAE end-of-service gratuity from your basic salary and years of service, per the 2022 Labour Law. Free, instant, no signup.</p>
     <section>
       <div class="calc">

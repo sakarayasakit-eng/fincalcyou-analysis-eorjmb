@@ -28,6 +28,7 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://fincalcyou.netlify.app/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://fincalcyou.netlify.app/pages/"},{"@type":"ListItem","position":3,"name":"EUR to TRY Converter & Türkiye Remittance Guide","item":"https://fincalcyou.netlify.app/pages/eur-to-try-converter.html"}]}
   </script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://fincalcyou.netlify.app/#organization","name":"fin·calc","url":"https://fincalcyou.netlify.app/","logo":"https://fincalcyou.netlify.app/og-image.png"},{"@type":"WebSite","@id":"https://fincalcyou.netlify.app/#website","url":"https://fincalcyou.netlify.app/","name":"fin·calc","publisher":{"@id":"https://fincalcyou.netlify.app/#organization"},"potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://fincalcyou.netlify.app/pages/?q={search_term_string}"},"query-input":"required name=search_term_string"}}]}</script>
 </head>
 <body>
   <main>
@@ -37,7 +38,32 @@
     </header>
     <h1>EUR to TRY Converter & Türkiye Remittance Guide</h1>
     <p class="sub">Convert EUR to TRY at the live mid-market rate, and find the cheapest way to send money to Türkiye. No signup, no tracking.</p>
-    <a href="../index.html?tab=convert" class="cta">Open the Calculator →</a>
+    <style id="fc-embed-css">
+.fc-embed{display:block;background:#111f38;border:1px solid #23344f;border-radius:16px;padding:16px;margin:14px 0;color:#eaf1fb;font-family:Inter,-apple-system,Segoe UI,Roboto,sans-serif}
+.fc-embed .fc-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:560px){.fc-embed .fc-grid{grid-template-columns:1fr}}
+.fc-embed label{display:block;font-size:11px;color:#9fb3cc;margin-bottom:5px;text-transform:uppercase;letter-spacing:.05em}
+.fc-embed .fc-in{display:flex;align-items:center;gap:6px;background:#0a1628;border:1px solid #23344f;border-radius:9px;padding:7px 9px}
+.fc-embed .fc-in span{color:#9fb3cc;font-size:13px}
+.fc-embed .fc-in input{flex:1;width:100%;background:transparent;border:0;color:#eaf1fb;font-size:15px;font-weight:600;outline:none}
+.fc-embed .fc-head{font-size:12px;color:#9fb3cc;margin-top:16px}
+.fc-embed .fc-head strong{display:block;font-size:30px;color:#5eead4;font-weight:800;line-height:1.1;margin-top:2px}
+.fc-embed .fc-mini{display:flex;gap:18px;margin-top:10px;font-size:12px;color:#9fb3cc;flex-wrap:wrap}
+.fc-embed .fc-mini b{display:block;color:#eaf1fb;font-size:15px}
+.fc-embed .fc-note{font-size:11px;color:#9fb3cc;margin-top:8px}
+</style>
+<fc-convert class="fc-embed" data-fincalc-embed="convert" data-from="EUR" data-to="TRY" data-rate="36.95652173913043"><div class="fc-grid"><div><label>Amount</label><div class="fc-in"><span>EUR</span><input data-f="amount" type="number" step="any" value="1000"></div></div><div><label>Converted (TRY)</label><div class="fc-in"><span>TRY</span><input data-f="_out" type="text" value="36956.52" readonly></div></div></div><div class="fc-head">1000 EUR =<strong data-o="headline">₺36.957</strong></div><div class="fc-mini"><div>Rate<b data-o="a">1 EUR = 36.9565 TRY</b></div><div>Source<b data-o="src">indicative (June 2026)</b></div></div><div class="fc-note">Indicative reference rate; live rate loads in your browser when available. <a href="https://fincalcyou.netlify.app/?tab=convert" style="color:#5eead4">Open the converter &rarr;</a></div></fc-convert>
+<script>(function(){
+function _emi(P,r,y){var n=y*12,m=r/1200;return m===0?P/n:P*m*Math.pow(1+m,n)/(Math.pow(1+m,n)-1);}
+function gv(el,f){var x=el.querySelector('[data-f="'+f+'"]');return x?+x.value:0;}
+function so(el,o,v){var x=el.querySelector('[data-o="'+o+'"]');if(x)x.textContent=v;}
+function nf(cur){try{return new Intl.NumberFormat(undefined,{style:'currency',currency:cur,maximumFractionDigits:0});}catch(e){return new Intl.NumberFormat('en',{maximumFractionDigits:0});}}
+var EL=document.currentScript.previousElementSibling,CUR="EUR",NF=nf(CUR);function money(v){return NF.format(Math.round(v));}var FROM=EL.getAttribute('data-from'),TO=EL.getAttribute('data-to'),RATE=+EL.getAttribute('data-rate');
+   var nfTo=nf(TO);function moneyTo(v){return nfTo.format(Math.round(v*100)/100);} 
+   function calc(){var amt=gv(EL,'amount');if(!(amt>=0))return;so(EL,'headline',moneyTo(amt*RATE));so(EL,'a','1 '+FROM+' = '+(Math.round(RATE*10000)/10000)+' '+TO);}
+   EL.addEventListener('input',calc);
+   // try live refresh (best-effort; falls back to baked indicative rate)
+   fetch('https://api.exchangerate.host/latest?base='+FROM+'&symbols='+TO).then(function(r){return r.json();}).then(function(j){if(j&&j.rates&&j.rates[TO]>0){RATE=j.rates[TO];EL.setAttribute('data-rate',RATE);calc();var n=EL.querySelector('[data-o="src"]');if(n)n.textContent='live rate';}}).catch(function(){});})();</script>
     <section>
       <h2>Get the live EUR → TRY rate</h2>
       <p>Exchange rates move every minute, so this page won't quote a fixed number — open the converter above for the current mid-market EUR/TRY rate. The mid-market rate is the "real" rate; what your recipient gets depends on the provider's margin and fees below.</p>
