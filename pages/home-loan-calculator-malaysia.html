@@ -56,6 +56,7 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://fincalcyou.netlify.app/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://fincalcyou.netlify.app/pages/"},{"@type":"ListItem","position":3,"name":"Home Loan Calculator — Malaysia","item":"https://fincalcyou.netlify.app/pages/home-loan-calculator-malaysia.html"}]}
   </script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://fincalcyou.netlify.app/#organization","name":"fin·calc","url":"https://fincalcyou.netlify.app/","logo":"https://fincalcyou.netlify.app/og-image.png"},{"@type":"WebSite","@id":"https://fincalcyou.netlify.app/#website","url":"https://fincalcyou.netlify.app/","name":"fin·calc","publisher":{"@id":"https://fincalcyou.netlify.app/#organization"},"potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://fincalcyou.netlify.app/pages/?q={search_term_string}"},"query-input":"required name=search_term_string"}}]}</script>
 </head>
 <body>
   <main>
@@ -70,7 +71,71 @@
     <h1>Home Loan Calculator — Malaysia</h1>
     <p class="sub">Calculate your Malaysian home loan installment in MYR — conventional or Islamic financing. Current BNM-linked rates, total interest, and MRTA guidance. No signup.</p>
 
-    <a href="../index.html?cur=MYR&amp;tab=emi&amp;amount=500000&amp;rate=4.3&amp;years=30" class="cta">🏠 Open the Calculator →</a>
+    <style id="fc-embed-css">
+.fc-embed{display:block;background:#111f38;border:1px solid #23344f;border-radius:16px;padding:16px;margin:14px 0;color:#eaf1fb;font-family:Inter,-apple-system,Segoe UI,Roboto,sans-serif}
+.fc-embed .fc-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+@media(max-width:560px){.fc-embed .fc-grid{grid-template-columns:1fr}}
+.fc-embed label{display:block;font-size:11px;color:#9fb3cc;margin-bottom:5px;text-transform:uppercase;letter-spacing:.05em}
+.fc-embed .fc-in{display:flex;align-items:center;gap:6px;background:#0a1628;border:1px solid #23344f;border-radius:9px;padding:7px 9px}
+.fc-embed .fc-in span{color:#9fb3cc;font-size:13px}
+.fc-embed .fc-in input{flex:1;width:100%;background:transparent;border:0;color:#eaf1fb;font-size:15px;font-weight:600;outline:none}
+.fc-embed input[type=range]{width:100%;margin-top:8px;accent-color:#5eead4}
+.fc-embed .fc-res{margin-top:16px}
+.fc-embed .fc-head{font-size:12px;color:#9fb3cc}
+.fc-embed .fc-head strong{display:block;font-size:30px;color:#5eead4;font-weight:800;line-height:1.1;margin-top:2px}
+.fc-embed .fc-mini{display:flex;gap:18px;margin-top:10px;font-size:12px;color:#9fb3cc;flex-wrap:wrap}
+.fc-embed .fc-mini b{display:block;color:#eaf1fb;font-size:15px}
+.fc-embed .fc-bar{height:12px;border-radius:7px;overflow:hidden;display:flex;border:1px solid #23344f;margin-top:12px}
+.fc-embed .fc-bar i{display:block;height:100%}
+.fc-embed .fc-note{font-size:11px;color:#9fb3cc;margin-top:8px}
+</style>
+<fc-emi class="fc-embed" data-fincalc-embed="emi">
+  <div class="fc-grid">
+    <div><label>Loan amount</label><div class="fc-in"><span>RM</span><input data-f="amount" type="number" min="1" step="any" value="500000"></div></div>
+    <div><label>Rate (% p.a.)</label><div class="fc-in"><input data-f="rate" type="number" min="0" step="0.05" value="4.3"><span>%</span></div></div>
+    <div><label>Tenure (years)</label><div class="fc-in"><input data-f="years" type="number" min="1" step="1" value="30"><span>yrs</span></div></div>
+  </div>
+  <div class="fc-res">
+    <div class="fc-head">Your monthly payment<strong data-o="headline">RM 2,474</strong></div>
+    <div class="fc-mini">
+      <div>Principal<b data-o="a">RM 500,000</b></div>
+      <div>Total interest<b data-o="b">RM 390,769</b></div>
+      <div>Total<b data-o="total">RM 890,769</b></div>
+    </div>
+    <div class="fc-bar"><i data-bar="a" style="width:56.1%;background:#5eead4"></i><i data-bar="b" style="width:43.9%;background:#a78bfa"></i></div>
+    <div class="fc-note">Calculated live on this page · reference rates June 2026. <a href="../index.html?cur=MYR&tab=emi&amount=500000&rate=4.3&years=30" style="color:#5eead4">Open the full tool →</a></div>
+  </div>
+</fc-emi>
+<script>
+(function(){
+  var CFG={"type":"emi","cur":"MYR","locale":"ms-MY","def":{"amount":500000,"rate":4.3,"years":30}};
+  function emi(P,r,y){var n=Math.round(y*12),m=r/1200,e;if(m===0){e=P/n;}else{var g=Math.pow(1+m,n);e=P*m*g/(g-1);}var t=e*n;return{headline:e,a:P,b:t-P,total:t,aPct:Math.max(2,Math.min(98,P/t*100))};}
+  function fd(P,r,y){var k=4,M=P*Math.pow(1+r/(100*k),k*y);return{headline:M,a:P,b:M-P,total:M,aPct:Math.max(2,Math.min(98,P/M*100))};}
+  function sip(M,r,y){var i=r/1200,n=Math.round(y*12),inv=M*n,fv=i===0?inv:M*((Math.pow(1+i,n)-1)/i)*(1+i);return{headline:fv,a:inv,b:fv-inv,total:fv,aPct:Math.max(2,Math.min(98,inv/fv*100))};}
+  var ENG={emi:emi,fd:fd,sip:sip}[CFG.type];
+  var nf;try{nf=new Intl.NumberFormat(CFG.locale,{style:'currency',currency:CFG.cur,maximumFractionDigits:0});}catch(e){nf=new Intl.NumberFormat('en',{maximumFractionDigits:0});}
+  function money(v){return nf.format(Math.round(v));}
+  customElements.define(CFG.type==='emi'?'fc-emi':CFG.type==='fd'?'fc-fd':'fc-sip', class extends HTMLElement{
+    connectedCallback(){
+      var el=this,get=function(f){return el.querySelector('[data-f="'+f+'"]');},out=function(o){return el.querySelector('[data-o="'+o+'"]');};
+      var sp=new URLSearchParams(location.search),map={amount:'amount',rate:'rate',years:'years',tenure:'years'};
+      Object.keys(map).forEach(function(k){if(sp.has(k)){var v=parseFloat(sp.get(k));if(isFinite(v)&&v>0)get(map[k]).value=v;}});
+      function calc(push){
+        var P=+get('amount').value,r=+get('rate').value,y=+get('years').value;
+        if(!(P>0&&r>=0&&y>0))return;
+        var o=ENG(P,r,y);
+        out('headline').textContent=money(o.headline);
+        out('a').textContent=money(o.a);out('b').textContent=money(o.b);out('total').textContent=money(o.total);
+        el.querySelector('[data-bar="a"]').style.width=o.aPct.toFixed(1)+'%';
+        el.querySelector('[data-bar="b"]').style.width=(100-o.aPct).toFixed(1)+'%';
+        if(push){var u=new URLSearchParams();u.set('amount',P);u.set('rate',r);u.set('tenure',y);history.replaceState(null,'',location.pathname+'?'+u.toString());}
+      }
+      el.addEventListener('input',function(){calc(true);});
+      calc(sp.toString().length>0);
+    }
+  });
+})();
+</script>
 
     <section>
       <h2>Current Malaysia home loan rates (April 2026)</h2>
