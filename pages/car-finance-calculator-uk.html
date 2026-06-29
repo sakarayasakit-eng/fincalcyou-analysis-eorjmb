@@ -28,6 +28,7 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://fincalcyou.netlify.app/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://fincalcyou.netlify.app/pages/"},{"@type":"ListItem","position":3,"name":"Car Loan Calculator — UK","item":"https://fincalcyou.netlify.app/pages/car-finance-calculator-uk.html"}]}
   </script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://fincalcyou.netlify.app/#organization","name":"fin·calc","url":"https://fincalcyou.netlify.app/","logo":"https://fincalcyou.netlify.app/og-image.png"},{"@type":"WebSite","@id":"https://fincalcyou.netlify.app/#website","url":"https://fincalcyou.netlify.app/","name":"fin·calc","publisher":{"@id":"https://fincalcyou.netlify.app/#organization"},"potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://fincalcyou.netlify.app/pages/?q={search_term_string}"},"query-input":"required name=search_term_string"}}]}</script>
 </head>
 <body>
   <main>
@@ -37,7 +38,70 @@
     </header>
     <h1>Car Loan Calculator — UK</h1>
     <p class="sub">Estimate your monthly car-loan installment in GBP using UK's typical auto-finance rates, and see the full interest cost. No signup, no tracking.</p>
-    <a href="../index.html?cur=GBP&amp;tab=car&amp;amount=100000&amp;rate=8.0&amp;years=5" class="cta">Open the Calculator →</a>
+    <style id="fc-embed-css">
+.fc-embed{display:block;background:#111f38;border:1px solid #23344f;border-radius:16px;padding:16px;margin:14px 0;color:#eaf1fb;font-family:Inter,-apple-system,Segoe UI,Roboto,sans-serif}
+.fc-embed .fc-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:560px){.fc-embed .fc-grid{grid-template-columns:1fr}}
+.fc-embed label{display:block;font-size:11px;color:#9fb3cc;margin-bottom:5px;text-transform:uppercase;letter-spacing:.05em}
+.fc-embed .fc-in{display:flex;align-items:center;gap:6px;background:#0a1628;border:1px solid #23344f;border-radius:9px;padding:7px 9px}
+.fc-embed .fc-in span{color:#9fb3cc;font-size:13px}
+.fc-embed .fc-in input{flex:1;width:100%;background:transparent;border:0;color:#eaf1fb;font-size:15px;font-weight:600;outline:none}
+.fc-embed .fc-head{font-size:12px;color:#9fb3cc;margin-top:16px}
+.fc-embed .fc-head strong{display:block;font-size:30px;color:#5eead4;font-weight:800;line-height:1.1;margin-top:2px}
+.fc-embed .fc-mini{display:flex;gap:18px;margin-top:10px;font-size:12px;color:#9fb3cc;flex-wrap:wrap}
+.fc-embed .fc-mini b{display:block;color:#eaf1fb;font-size:15px}
+.fc-embed .fc-bar{height:12px;border-radius:7px;overflow:hidden;display:flex;border:1px solid #23344f;margin-top:12px}
+.fc-embed .fc-bar i{display:block;height:100%}
+.fc-embed .fc-note{font-size:11px;color:#9fb3cc;margin-top:8px}
+</style>
+<fc-car class="fc-embed" data-fincalc-embed="car">
+  <div class="fc-grid">
+    <div><label>Car price</label><div class="fc-in"><span>£</span><input data-f="amount" type="number" min="1" step="any" value="100000"></div></div>
+    <div><label>Down payment (%)</label><div class="fc-in"><input data-f="dp" type="number" min="0" max="90" step="1" value="20"><span>%</span></div></div>
+    <div><label>Rate (% p.a.)</label><div class="fc-in"><input data-f="rate" type="number" min="0" step="0.05" value="8"><span>%</span></div></div>
+    <div><label>Tenure (years)</label><div class="fc-in"><input data-f="years" type="number" min="1" step="1" value="5"><span>yrs</span></div></div>
+  </div>
+  <div class="fc-head">Monthly installment<strong data-o="headline">£1,622</strong></div>
+  <div class="fc-mini">
+    <div>Financed<b data-o="a">£80,000</b></div>
+    <div>Total markup / interest<b data-o="b">£17,327</b></div>
+    <div>Total payable<b data-o="total">£97,327</b></div>
+  </div>
+  <div class="fc-bar"><i data-bar="a" style="width:82.2%;background:#5eead4"></i><i data-bar="b" style="width:17.8%;background:#a78bfa"></i></div>
+  <div class="fc-note">Calculated live on this page · reference rates June 2026. <a href="../index.html?cur=GBP&tab=car" style="color:#5eead4">Open the full tool &rarr;</a></div>
+</fc-car>
+<script>
+(function(){
+  var CFG={"tab":"car","cur":"GBP","locale":"en-GB"};
+  function emi(P,r,y){var n=Math.round(y*12),m=r/1200,e;if(m===0){e=P/n;}else{var g=Math.pow(1+m,n);e=P*m*g/(g-1);}var t=e*n;return{e:e,t:t,interest:t-P,pPct:Math.max(2,Math.min(98,P/t*100))};}
+  function car(price,dp,r,y){var fin=price*(1-dp/100),x=emi(fin,r,y);return{headline:x.e,a:fin,b:x.interest,total:x.t,aPct:Math.max(2,Math.min(98,fin/x.t*100))};}
+  function edu(P,r,ry,my){var grown=P*(1+r/100*my),x=emi(grown,r,ry);return{headline:x.e,a:grown,b:x.t-grown,total:x.t,aPct:Math.max(2,Math.min(98,grown/x.t*100))};}
+  function zakat(w){var due=w*0.025;return{headline:due,a:w,b:w-due,total:due,aPct:2.5};}
+  var nf;try{nf=new Intl.NumberFormat(CFG.locale,{style:'currency',currency:CFG.cur,maximumFractionDigits:0});}catch(e){nf=new Intl.NumberFormat('en',{maximumFractionDigits:0});}
+  function money(v){return nf.format(Math.round(v));}
+  customElements.define('fc-'+CFG.tab, class extends HTMLElement{
+    connectedCallback(){
+      var el=this,get=function(f){return el.querySelector('[data-f="'+f+'"]');},out=function(o){return el.querySelector('[data-o="'+o+'"]');};
+      var sp=new URLSearchParams(location.search);
+      ['amount','rate','years'].forEach(function(k){if(sp.has(k)&&get(k)){var v=parseFloat(sp.get(k));if(isFinite(v)&&v>0)get(k).value=v;}});
+      if(sp.has('tenure')&&get('years')){var tv=parseFloat(sp.get('tenure'));if(isFinite(tv)&&tv>0)get('years').value=tv;}
+      function calc(push){
+        var o,amount=+get('amount').value;
+        if(CFG.tab==='car'){var dp=+get('dp').value,r=+get('rate').value,y=+get('years').value;if(!(amount>0&&r>=0&&y>0&&dp>=0&&dp<100))return;o=car(amount,dp,r,y);}
+        else if(CFG.tab==='edu'){var r2=+get('rate').value,y2=+get('years').value,mo=+get('mor').value;if(!(amount>0&&r2>=0&&y2>0&&mo>=0))return;o=edu(amount,r2,y2,mo);}
+        else{if(!(amount>=0))return;o=zakat(amount);}
+        out('headline').textContent=money(o.headline);out('a').textContent=money(o.a);out('b').textContent=money(o.b);
+        if(out('total'))out('total').textContent=money(o.total);
+        var ba=el.querySelector('[data-bar="a"]'),bb=el.querySelector('[data-bar="b"]');
+        if(ba){ba.style.width=o.aPct.toFixed(1)+'%';bb.style.width=(100-o.aPct).toFixed(1)+'%';}
+        if(push){var u=new URLSearchParams();u.set('amount',amount);if(get('rate'))u.set('rate',+get('rate').value);if(get('years'))u.set('tenure',+get('years').value);history.replaceState(null,'',location.pathname+'?'+u.toString());}
+      }
+      el.addEventListener('input',function(){calc(true);});
+      calc(sp.toString().length>0);
+    }
+  });
+})();
+</script>
     <section>
       <h2>Local rates &amp; providers</h2>
       <p>HP rates ≈ 7–10% APR, PCP rates ≈ 6–9% APR. PCP has a final balloon payment; HP pays off fully. Typical tenure 3–5 years. Dealers and banks both offer financing.</p>
