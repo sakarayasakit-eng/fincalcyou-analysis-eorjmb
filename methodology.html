@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width,initial-scale=1" /><meta name="theme-color" content="#0a1628" />
+  <title>Methodology — How fin·calc Calculates & Sources Rates</title><meta name="description" content="How fin·calc sources central-bank and bank rates, the exact formulas it uses, and how the math is verified against 63 published bank examples." />
+  <link rel="canonical" href="https://fincalcyou.netlify.app/methodology.html" />
+  <meta property="og:type" content="website" /><meta property="og:url" content="https://fincalcyou.netlify.app/methodology.html" /><meta property="og:title" content="Methodology — How fin·calc Calculates & Sources Rates" /><meta property="og:description" content="How fin·calc sources central-bank and bank rates, the exact formulas it uses, and how the math is verified against 63 published bank examples." />
+  <meta property="og:image" content="https://fincalcyou.netlify.app/og-image.png" /><meta property="og:site_name" content="fin·calc" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:image" content="https://fincalcyou.netlify.app/og-image.png" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"fin·calc","url":"https://fincalcyou.netlify.app/","logo":"https://fincalcyou.netlify.app/og-image.png","description":"Free, privacy-first financial calculators for 34 countries with real central-bank rates.","email":"sakarayasakit@gmail.com"}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="pages/landing.css" />
+</head>
+<body>
+  <main>
+    <header><a href="index.html" class="brand">fin<span class="dot">·</span>calc</a><nav><a href="index.html">Home</a><a href="pages/index.html">Guides</a><a href="about.html">About</a></nav></header>
+    <h1>Methodology</h1>
+    <p class="sub">How fin·calc sources its rates, which formulas it uses, and how the math is verified.</p>
+    <section><h2>The formulas we use</h2>
+      <p>Every calculation uses the standard, bank-grade formulas — the same ones lenders and exam boards use:</p>
+      <ul>
+        <li><strong>Loan / EMI:</strong> P × r × (1+r)ⁿ ÷ ((1+r)ⁿ − 1), where P is the principal, r the monthly rate (annual ÷ 12 ÷ 100), and n the number of months.</li>
+        <li><strong>SIP future value:</strong> M × ((1+r)ⁿ − 1) ÷ r × (1+r).</li>
+        <li><strong>Fixed deposit:</strong> P × (1 + r/4)^(4n) for quarterly compounding.</li>
+        <li><strong>Murabaha:</strong> (financed + financed × margin%) ÷ months.</li>
+        <li><strong>Zakat:</strong> 2.5% × (zakatable assets − immediate debts), if above the nisab.</li>
+      </ul></section>
+    <section><h2>How rates are sourced</h2>
+      <p>Default rates come from each country's central-bank publications and typical commercial-bank offerings, reviewed periodically (last refreshed for 2026). We cover 34 economies and link 171 named banks. Central-bank rates change frequently — every page shows the figures as reference estimates and advises you to verify with your bank. You can always override any rate manually.</p>
+      <p>See the live reference: <a href="pages/central-bank-rates-2026.html">central-bank &amp; loan rates across 34 countries</a>.</p></section>
+    <section><h2>How the math is verified</h2>
+      <p>The calculator math is independently verified against <strong>63 published bank examples</strong> and cross-checked to within rounding. Only the suggested default rates may drift over time; the formulas themselves are exact. A "Check calculator math" panel on the homepage shows worked examples you can reproduce in any reputable calculator.</p></section>
+    <section><h2>Limitations &amp; disclaimer</h2>
+      <p>fin·calc provides estimates for educational purposes — not personalised financial advice. Tax (capital gains, interest-income tax, allowances), subsidy eligibility, and individual credit factors are not applied and vary by person. For decisions, consult a qualified, licensed advisor and confirm current rates with your bank.</p></section>
+    <footer><p>fin·calc · <a href="about.html">About</a> · <a href="methodology.html">Methodology</a> · <a href="editorial-policy.html">Editorial policy</a> · <a href="privacy.html">Privacy</a> · <a href="mailto:sakarayasakit@gmail.com">Contact</a></p></footer>
+  </main>
+</body>
+</html>

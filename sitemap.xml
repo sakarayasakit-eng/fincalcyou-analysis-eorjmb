@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://fincalcyou.netlify.app/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://fincalcyou.netlify.app/pages/index.html</loc><priority>0.9</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/about.html</loc><priority>0.5</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/methodology.html</loc><priority>0.5</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/editorial-policy.html</loc><priority>0.4</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/contact.html</loc><priority>0.3</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/1-crore-home-loan-emi-calculator.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/1.5-crore-home-loan-emi-calculator.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/2-crore-home-loan-emi-calculator.html</loc><priority>0.8</priority></url>
@@ -117,6 +121,7 @@
   <url><loc>https://fincalcyou.netlify.app/pages/gbp-to-inr-converter.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/gbp-to-ngn-converter.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/gbp-to-pkr-converter.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/glossary.html</loc><priority>0.7</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/gratuity-calculator-qatar.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/gratuity-calculator-uae.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/gtbank-loan-calculator.html</loc><priority>0.8</priority></url>
@@ -256,6 +261,22 @@
   <url><loc>https://fincalcyou.netlify.app/pages/vehicle-finance-south-africa.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/wells-fargo-mortgage-calculator.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/westpac-home-loan-calculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/what-is-amortization.html</loc><priority>0.7</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/what-is-compound-interest.html</loc><priority>0.7</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/what-is-down-payment.html</loc><priority>0.7</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/what-is-eblr.html</loc><priority>0.7</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/what-is-emi.html</loc><priority>0.7</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/what-is-fixed-deposit.html</loc><priority>0.7</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/what-is-foir.html</loc><priority>0.7</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/what-is-ijarah.html</loc><priority>0.7</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/what-is-ltv.html</loc><priority>0.7</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/what-is-moratorium.html</loc><priority>0.7</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/what-is-murabaha.html</loc><priority>0.7</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/what-is-mutual-fund.html</loc><priority>0.7</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/what-is-nisab.html</loc><priority>0.7</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/what-is-repo-rate.html</loc><priority>0.7</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/what-is-sip.html</loc><priority>0.7</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/what-is-zakat.html</loc><priority>0.7</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/zakat-calculator-2026.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/zakat-calculator-bahrain.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/zakat-calculator-bangladesh.html</loc><priority>0.8</priority></url>
