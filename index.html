@@ -1367,7 +1367,7 @@
     <p class="sub" id="heroSub">Loan, savings, investment and Zakat calculators that know your country's central bank rate.</p>
 
     <!-- COUNTRY CONTEXT BAR (rate awareness) -->
-    <div class="country-bar" id="countryBar">
+    <div class="country-bar" id="countryBar" style="visibility:hidden">
       <span class="flag" id="cbFlag">🇮🇳</span>
       <div class="cb-info">
         <b id="cbName">India · Reserve Bank of India</b>
@@ -4525,6 +4525,10 @@
       document.getElementById('sipRate').value = p.investmentReturn;
       document.getElementById('fdRate').value = p.savingsRate;
       document.getElementById('goalRate').value = p.investmentReturn;
+
+      // Reveal the country bar only once it has been localized, so the static
+      // India default never flashes before auto-detection swaps it in.
+      document.getElementById('countryBar').style.visibility = 'visible';
     }
 
     // ================================================================
