@@ -4311,6 +4311,7 @@
       let initialCode = null;
       try { initialCode = localStorage.getItem('fincalc_cur'); } catch (e) {}
       if (!initialCode) initialCode = detectCurrencyCode();
+      if (!initialCode) initialCode = 'USD'; // neutral global default (was implicitly INR via currencies[0])
       if (initialCode) {
         const found = currencies.find(c => c.code === initialCode);
         if (found) {
