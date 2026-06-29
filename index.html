@@ -1368,10 +1368,10 @@
 
     <!-- COUNTRY CONTEXT BAR (rate awareness) -->
     <div class="country-bar" id="countryBar" style="visibility:hidden">
-      <span class="flag" id="cbFlag">🇮🇳</span>
+      <span class="flag" id="cbFlag">🇺🇸</span>
       <div class="cb-info">
-        <b id="cbName">India · Reserve Bank of India</b>
-        <span>Repo rate <span class="rate" id="cbPolicy">5.25%</span> · Typical home loan <span class="rate" id="cbLoan">8.00%</span> · Savings <span class="rate" id="cbSavings">6.50%</span></span><br />
+        <b id="cbName">United States · Federal Reserve</b>
+        <span>Policy rate <span class="rate" id="cbPolicy">3.75%</span> · Typical home loan <span class="rate" id="cbLoan">6.50%</span> · Savings <span class="rate" id="cbSavings">4.00%</span></span><br />
         <span class="as-of" id="cbAsOf">Reference rates as of June 2026. Verify current rates with your bank.</span>
         <div class="bank-picker" id="bankPickerWrap" style="margin-top:8px;display:none;">
           <label for="bankPicker" style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;font-weight:600;margin-right:6px;">Your bank:</label>
@@ -1502,10 +1502,10 @@
       </button>
 
       <div class="field number-first">
-        <label>Loan amount<button type="button" class="help-icon" data-help="loan-amount" aria-label="What is loan amount">?</button> <span class="value"><span class="cur">$</span><span id="emiAmtV">10,00,000</span></span></label>
+        <label>Loan amount<button type="button" class="help-icon" data-help="loan-amount" aria-label="What is loan amount">?</button> <span class="value"><span class="cur">$</span><span id="emiAmtV">1,000,000</span></span></label>
         <input type="range" id="emiAmt" min="10000" max="20000000" step="10000" value="1000000" />
         <div class="amt-input-wrap">
-          <span class="amt-cur cur">₹</span>
+          <span class="amt-cur cur">$</span>
           <input type="number" class="amt-input" id="emiAmtInput" inputmode="numeric" />
           <span class="amt-hint">type exact</span>
         </div>
@@ -1581,7 +1581,7 @@
           Common dilemma. This tool compares paying off your loan early vs investing the same amount — using your actual loan rate and an expected investment return.
         </div>
         <div class="field">
-          <label>Lump sum available <span class="value"><span class="cur">$</span><span id="piAmtV">1,00,000</span></span></label>
+          <label>Lump sum available <span class="value"><span class="cur">$</span><span id="piAmtV">100,000</span></span></label>
           <input type="range" id="piAmt" min="5000" max="10000000" step="5000" value="100000" />
         </div>
         <div class="field">
@@ -1632,19 +1632,19 @@
       </button>
 
       <div class="field number-first">
-        <label>Car price <span class="value"><span class="cur">$</span><span id="carPriceV">8,00,000</span></span></label>
+        <label>Car price <span class="value"><span class="cur">$</span><span id="carPriceV">800,000</span></span></label>
         <input type="range" id="carPrice" min="50000" max="20000000" step="10000" value="800000" />
         <div class="amt-input-wrap">
-          <span class="amt-cur cur">₹</span>
+          <span class="amt-cur cur">$</span>
           <input type="number" class="amt-input" id="carPriceInput" inputmode="numeric" />
           <span class="amt-hint">type exact</span>
         </div>
       </div>
       <div class="field">
-        <label>Down payment<button type="button" class="help-icon" data-help="down-payment" aria-label="What is down payment">?</button> <span class="value"><span class="cur">$</span><span id="carDownV">2,00,000</span> · <span id="carDownPctV">25</span>%</span></label>
+        <label>Down payment<button type="button" class="help-icon" data-help="down-payment" aria-label="What is down payment">?</button> <span class="value"><span class="cur">$</span><span id="carDownV">200,000</span> · <span id="carDownPctV">25</span>%</span></label>
         <input type="range" id="carDown" min="0" max="10000000" step="5000" value="200000" />
         <div class="amt-input-wrap">
-          <span class="amt-cur cur">₹</span>
+          <span class="amt-cur cur">$</span>
           <input type="number" class="amt-input" id="carDownInput" inputmode="numeric" />
           <span class="amt-hint">type exact</span>
         </div>
@@ -1729,10 +1729,10 @@
       </button>
 
       <div class="field number-first">
-        <label>Loan amount (tuition + living) <span class="value"><span class="cur">$</span><span id="eduAmtV">20,00,000</span></span></label>
+        <label>Loan amount (tuition + living) <span class="value"><span class="cur">$</span><span id="eduAmtV">2,000,000</span></span></label>
         <input type="range" id="eduAmt" min="50000" max="50000000" step="50000" value="2000000" />
         <div class="amt-input-wrap">
-          <span class="amt-cur cur">₹</span>
+          <span class="amt-cur cur">$</span>
           <input type="number" class="amt-input" id="eduAmtInput" inputmode="numeric" />
           <span class="amt-hint">type exact</span>
         </div>
@@ -1811,7 +1811,7 @@
         <div style="background:var(--bg); border:1px solid var(--line); border-radius:12px; padding:12px;">
           <div style="font-weight:700; color:var(--accent); margin-bottom:8px; font-size:13px;">Loan 1</div>
           <div class="field" style="margin-bottom:8px;">
-            <label style="font-size:12px;">Balance <span class="value" style="font-size:13px;"><span class="cur">$</span><span id="d1AmtV">5,00,000</span></span></label>
+            <label style="font-size:12px;">Balance <span class="value" style="font-size:13px;"><span class="cur">$</span><span id="d1AmtV">500,000</span></span></label>
             <input type="range" id="d1Amt" min="0" max="50000000" step="10000" value="500000" />
           </div>
           <div class="field" style="margin-bottom:0;">
@@ -1825,7 +1825,7 @@
         <div style="background:var(--bg); border:1px solid var(--line); border-radius:12px; padding:12px;">
           <div style="font-weight:700; color:var(--accent-2); margin-bottom:8px; font-size:13px;">Loan 2</div>
           <div class="field" style="margin-bottom:8px;">
-            <label style="font-size:12px;">Balance <span class="value" style="font-size:13px;"><span class="cur">$</span><span id="d2AmtV">2,00,000</span></span></label>
+            <label style="font-size:12px;">Balance <span class="value" style="font-size:13px;"><span class="cur">$</span><span id="d2AmtV">200,000</span></span></label>
             <input type="range" id="d2Amt" min="0" max="50000000" step="10000" value="200000" />
           </div>
           <div class="field" style="margin-bottom:0;">
@@ -1854,7 +1854,7 @@
         <label>Extra monthly payment you can afford <span class="value"><span class="cur">$</span><span id="dExtraV">5,000</span></span></label>
         <input type="range" id="dExtra" min="0" max="500000" step="500" value="5000" />
         <div class="amt-input-wrap">
-          <span class="amt-cur cur">₹</span>
+          <span class="amt-cur cur">$</span>
           <input type="number" class="amt-input" id="dExtraInput" inputmode="numeric" />
           <span class="amt-hint">type exact</span>
         </div>
@@ -1912,7 +1912,7 @@
         <label>Monthly investment <span class="value"><span class="cur">$</span><span id="sipAmtV">10,000</span></span></label>
         <input type="range" id="sipAmt" min="500" max="500000" step="500" value="10000" />
         <div class="amt-input-wrap">
-          <span class="amt-cur cur">₹</span>
+          <span class="amt-cur cur">$</span>
           <input type="number" class="amt-input" id="sipAmtInput" inputmode="numeric" />
           <span class="amt-hint">type exact</span>
         </div>
@@ -2041,10 +2041,10 @@
       </button>
 
       <div class="field number-first">
-        <label>Deposit amount <span class="value"><span class="cur">$</span><span id="fdAmtV">1,00,000</span></span></label>
+        <label>Deposit amount <span class="value"><span class="cur">$</span><span id="fdAmtV">100,000</span></span></label>
         <input type="range" id="fdAmt" min="1000" max="10000000" step="1000" value="100000" />
         <div class="amt-input-wrap">
-          <span class="amt-cur cur">₹</span>
+          <span class="amt-cur cur">$</span>
           <input type="number" class="amt-input" id="fdAmtInput" inputmode="numeric" />
           <span class="amt-hint">type exact</span>
         </div>
@@ -2095,10 +2095,10 @@
       </div>
 
       <div class="field">
-        <label>Target amount <span class="value"><span class="cur">$</span><span id="goalAmtV">10,00,000</span></span></label>
+        <label>Target amount <span class="value"><span class="cur">$</span><span id="goalAmtV">1,000,000</span></span></label>
         <input type="range" id="goalAmt" min="10000" max="50000000" step="10000" value="1000000" />
         <div class="amt-input-wrap">
-          <span class="amt-cur cur">₹</span>
+          <span class="amt-cur cur">$</span>
           <input type="number" class="amt-input" id="goalAmtInput" inputmode="numeric" />
           <span class="amt-hint">type exact</span>
         </div>
@@ -2147,11 +2147,11 @@
 
         <div class="field">
           <label>Your monthly take-home income (after tax)
-            <span class="value"><span class="cur">$</span><span id="hcIncomeV">1,00,000</span></span>
+            <span class="value"><span class="cur">$</span><span id="hcIncomeV">100,000</span></span>
           </label>
           <input type="range" id="hcIncome" min="5000" max="5000000" step="1000" value="100000" />
           <div class="amt-input-wrap">
-            <span class="amt-cur cur">₹</span>
+            <span class="amt-cur cur">$</span>
             <input type="number" class="amt-input" id="hcIncomeInput" inputmode="numeric" />
             <span class="amt-hint">type exact</span>
           </div>
@@ -2163,7 +2163,7 @@
           </label>
           <input type="range" id="hcSpouse" min="0" max="5000000" step="1000" value="0" />
           <div class="amt-input-wrap">
-            <span class="amt-cur cur">₹</span>
+            <span class="amt-cur cur">$</span>
             <input type="number" class="amt-input" id="hcSpouseInput" inputmode="numeric" />
             <span class="amt-hint">type exact</span>
           </div>
@@ -2175,7 +2175,7 @@
           </label>
           <input type="range" id="hcExpenses" min="0" max="2000000" step="1000" value="50000" />
           <div class="amt-input-wrap">
-            <span class="amt-cur cur">₹</span>
+            <span class="amt-cur cur">$</span>
             <input type="number" class="amt-input" id="hcExpensesInput" inputmode="numeric" />
             <span class="amt-hint">type exact</span>
           </div>
@@ -2187,7 +2187,7 @@
           </label>
           <input type="range" id="hcEmis" min="0" max="500000" step="500" value="0" />
           <div class="amt-input-wrap">
-            <span class="amt-cur cur">₹</span>
+            <span class="amt-cur cur">$</span>
             <input type="number" class="amt-input" id="hcEmisInput" inputmode="numeric" />
             <span class="amt-hint">type exact</span>
           </div>
@@ -2199,7 +2199,7 @@
           </label>
           <input type="range" id="hcSip" min="0" max="500000" step="500" value="0" />
           <div class="amt-input-wrap">
-            <span class="amt-cur cur">₹</span>
+            <span class="amt-cur cur">$</span>
             <input type="number" class="amt-input" id="hcSipInput" inputmode="numeric" />
             <span class="amt-hint">type exact</span>
           </div>
@@ -2211,7 +2211,7 @@
           </label>
           <input type="range" id="hcPropInvest" min="0" max="1000000" step="1000" value="0" />
           <div class="amt-input-wrap">
-            <span class="amt-cur cur">₹</span>
+            <span class="amt-cur cur">$</span>
             <input type="number" class="amt-input" id="hcPropInvestInput" inputmode="numeric" />
             <span class="amt-hint">type exact</span>
           </div>
@@ -2228,7 +2228,7 @@
           </label>
           <input type="range" id="hcSavings" min="0" max="50000000" step="5000" value="50000" />
           <div class="amt-input-wrap">
-            <span class="amt-cur cur">₹</span>
+            <span class="amt-cur cur">$</span>
             <input type="number" class="amt-input" id="hcSavingsInput" inputmode="numeric" />
             <span class="amt-hint">type exact</span>
           </div>
@@ -2240,7 +2240,7 @@
           </label>
           <input type="range" id="hcStocks" min="0" max="500000000" step="10000" value="0" />
           <div class="amt-input-wrap">
-            <span class="amt-cur cur">₹</span>
+            <span class="amt-cur cur">$</span>
             <input type="number" class="amt-input" id="hcStocksInput" inputmode="numeric" />
             <span class="amt-hint">type exact</span>
           </div>
@@ -2252,7 +2252,7 @@
           </label>
           <input type="range" id="hcProperty" min="0" max="1000000000" step="100000" value="0" />
           <div class="amt-input-wrap">
-            <span class="amt-cur cur">₹</span>
+            <span class="amt-cur cur">$</span>
             <input type="number" class="amt-input" id="hcPropertyInput" inputmode="numeric" />
             <span class="amt-hint">type exact</span>
           </div>
@@ -2264,7 +2264,7 @@
           </label>
           <input type="range" id="hcCreditCard" min="0" max="2000000" step="1000" value="0" />
           <div class="amt-input-wrap">
-            <span class="amt-cur cur">₹</span>
+            <span class="amt-cur cur">$</span>
             <input type="number" class="amt-input" id="hcCreditCardInput" inputmode="numeric" />
             <span class="amt-hint">type exact</span>
           </div>
@@ -2276,7 +2276,7 @@
           </label>
           <input type="range" id="hcInformal" min="0" max="10000000" step="5000" value="0" />
           <div class="amt-input-wrap">
-            <span class="amt-cur cur">₹</span>
+            <span class="amt-cur cur">$</span>
             <input type="number" class="amt-input" id="hcInformalInput" inputmode="numeric" />
             <span class="amt-hint">type exact</span>
           </div>
@@ -2381,7 +2381,7 @@
         <div style="background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px;">
           <div style="font-weight:700;color:var(--accent);margin-bottom:10px;font-size:14px;">Loan A</div>
           <div class="field">
-            <label style="font-size:12px;">Amount <span class="value" style="font-size:13px;"><span class="cur">$</span><span id="cmpAmtAV">10,00,000</span></span></label>
+            <label style="font-size:12px;">Amount <span class="value" style="font-size:13px;"><span class="cur">$</span><span id="cmpAmtAV">1,000,000</span></span></label>
             <input type="range" id="cmpAmtA" min="10000" max="100000000" step="10000" value="1000000" />
           </div>
           <div class="field">
@@ -2398,7 +2398,7 @@
         <div style="background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px;">
           <div style="font-weight:700;color:var(--accent-2);margin-bottom:10px;font-size:14px;">Loan B</div>
           <div class="field">
-            <label style="font-size:12px;">Amount <span class="value" style="font-size:13px;"><span class="cur">$</span><span id="cmpAmtBV">10,00,000</span></span></label>
+            <label style="font-size:12px;">Amount <span class="value" style="font-size:13px;"><span class="cur">$</span><span id="cmpAmtBV">1,000,000</span></span></label>
             <input type="range" id="cmpAmtB" min="10000" max="100000000" step="10000" value="1000000" />
           </div>
           <div class="field">
@@ -2445,7 +2445,7 @@
         <b>The 28/36 rule (universal):</b> Housing loan payment should be ≤ 28% of gross income. Total debt payments (all loans) ≤ 36%. Some banks allow up to 45–50% for high-earners with strong credit. Use the slider below to match your local bank's policy.
       </div>
       <div class="field">
-        <label>Monthly gross income <span class="value"><span class="cur">$</span><span id="affIncomeV">1,00,000</span></span></label>
+        <label>Monthly gross income <span class="value"><span class="cur">$</span><span id="affIncomeV">100,000</span></span></label>
         <input type="range" id="affIncome" min="10000" max="5000000" step="5000" value="100000" />
       </div>
       <div class="field">
@@ -2497,19 +2497,19 @@
         <div style="font-size:12px; color:var(--accent); font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:10px;">🏠 If you buy</div>
 
         <div class="field">
-          <label>Property price <span class="value"><span class="cur">$</span><span id="rbPriceV">80,00,000</span></span></label>
+          <label>Property price <span class="value"><span class="cur">$</span><span id="rbPriceV">8,000,000</span></span></label>
           <input type="range" id="rbPrice" min="500000" max="500000000" step="100000" value="8000000" />
           <div class="amt-input-wrap">
-            <span class="amt-cur cur">₹</span>
+            <span class="amt-cur cur">$</span>
             <input type="number" class="amt-input" id="rbPriceInput" inputmode="numeric" />
             <span class="amt-hint">type exact</span>
           </div>
         </div>
         <div class="field">
-          <label>Down payment <span class="value"><span id="rbDownPctV">20</span>% · <span class="cur">$</span><span id="rbDownAmtV">16,00,000</span></span></label>
+          <label>Down payment <span class="value"><span id="rbDownPctV">20</span>% · <span class="cur">$</span><span id="rbDownAmtV">1,600,000</span></span></label>
           <input type="range" id="rbDownPct" min="5" max="100" step="1" value="20" />
           <div class="amt-input-wrap">
-            <span class="amt-cur cur">₹</span>
+            <span class="amt-cur cur">$</span>
             <input type="number" class="amt-input" id="rbDownAmtInput" inputmode="numeric" placeholder="or type exact amount" />
             <span class="amt-hint">exact amount</span>
           </div>
@@ -2532,7 +2532,7 @@
           <label>Monthly rent for the same place <span class="value"><span class="cur">$</span><span id="rbRentV">30,000</span></span></label>
           <input type="range" id="rbRent" min="1000" max="1000000" step="1000" value="30000" />
           <div class="amt-input-wrap">
-            <span class="amt-cur cur">₹</span>
+            <span class="amt-cur cur">$</span>
             <input type="number" class="amt-input" id="rbRentInput" inputmode="numeric" />
             <span class="amt-hint">type exact</span>
           </div>
@@ -2600,11 +2600,11 @@
           <b>Zakat</b> is 2.5% annual alms on wealth above the <em>nisab</em> threshold. Calculated once per lunar year (<em>hawl</em>).
         </div>
         <div class="field">
-          <label>Cash &amp; bank balance <span class="value"><span class="cur">$</span><span id="zCashV">5,00,000</span></span></label>
+          <label>Cash &amp; bank balance <span class="value"><span class="cur">$</span><span id="zCashV">500,000</span></span></label>
           <input type="range" id="zCash" min="0" max="10000000" step="5000" value="500000" />
         </div>
         <div class="field">
-          <label>Gold value <span class="value"><span class="cur">$</span><span id="zGoldV">2,00,000</span></span></label>
+          <label>Gold value <span class="value"><span class="cur">$</span><span id="zGoldV">200,000</span></span></label>
           <input type="range" id="zGold" min="0" max="5000000" step="5000" value="200000" />
         </div>
         <div class="field">
@@ -2612,7 +2612,7 @@
           <input type="range" id="zOther" min="0" max="5000000" step="5000" value="50000" />
         </div>
         <div class="field">
-          <label>Investments / stocks <span class="value"><span class="cur">$</span><span id="zInvV">1,00,000</span></span></label>
+          <label>Investments / stocks <span class="value"><span class="cur">$</span><span id="zInvV">100,000</span></span></label>
           <input type="range" id="zInv" min="0" max="10000000" step="5000" value="100000" />
         </div>
         <div class="field">
@@ -2635,11 +2635,11 @@
           <b>Murabaha</b>: The bank buys the asset and resells it to you at a transparent profit margin, paid in fixed installments. No interest, no riba.
         </div>
         <div class="field">
-          <label>Asset price <span class="value"><span class="cur">$</span><span id="mPriceV">25,00,000</span></span></label>
+          <label>Asset price <span class="value"><span class="cur">$</span><span id="mPriceV">2,500,000</span></span></label>
           <input type="range" id="mPrice" min="50000" max="50000000" step="50000" value="2500000" />
         </div>
         <div class="field">
-          <label>Your down payment <span class="value"><span class="cur">$</span><span id="mDownV">5,00,000</span></span></label>
+          <label>Your down payment <span class="value"><span class="cur">$</span><span id="mDownV">500,000</span></span></label>
           <input type="range" id="mDown" min="0" max="20000000" step="10000" value="500000" />
         </div>
         <div class="field">
@@ -2763,7 +2763,7 @@
       <p>No. All calculations run entirely in your browser. Nothing is sent to any server. There's no signup, no email capture, no tracking cookies. You can verify this by opening your browser's network tab — you'll see no POST requests. The app continues to work offline after the first page load.</p>
 
       <h3>Why compare loan rates from multiple banks?</h3>
-      <p>Even a 0.5% difference on a 20-year home loan saves you substantial money over the life of the loan. On a ₹50 lakh / $500k / £400k loan, 0.5% difference is equivalent to tens of thousands of currency units. fin·calc's Rate Benchmark feature analyzes your offered rate against 340 named banks across 34 countries and tells you instantly if it's competitive, average, or expensive for your market.</p>
+      <p>Even a 0.5% difference on a 20-year home loan saves you substantial money over the life of the loan. On a $500k / £400k / ₹50 lakh loan, 0.5% difference is equivalent to tens of thousands of currency units. fin·calc's Rate Benchmark feature analyzes your offered rate against 340 named banks across 34 countries and tells you instantly if it's competitive, average, or expensive for your market.</p>
 
       <h3>What is the difference between "EMI" and "monthly payment"?</h3>
       <p>They are the same thing, mathematically. "EMI" (Equated Monthly Installment) is the term used in India, Pakistan, Bangladesh, Sri Lanka, and Nepal. "Monthly payment" or "monthly repayment" is the universal English equivalent used in the US, UK, Canada, Australia, and elsewhere. fin·calc displays whichever term is natural for your selected country.</p>
@@ -2796,7 +2796,7 @@
     <div class="modal-card">
       <h3>Calculator math — worked examples</h3>
       <p style="color:var(--muted);font-size:13px;margin-bottom:16px;">
-        Each result below is computed live by this calculator. Cross-check with any reputable online calculator — the numbers should match to within ₹1 (rounding only).
+        Each result below is computed live by this calculator. Cross-check with any reputable online calculator — the numbers should match to within 1 currency unit (rounding only).
       </p>
       <div id="selfTestResults" style="font-family:'JetBrains Mono',monospace;font-size:12px;line-height:1.8;"></div>
       <p style="color:var(--muted);font-size:12px;margin-top:16px;">
