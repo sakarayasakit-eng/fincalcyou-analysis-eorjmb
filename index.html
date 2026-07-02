@@ -1372,7 +1372,7 @@
       <div class="cb-info">
         <b id="cbName">United States · Federal Reserve</b>
         <span>Policy rate <span class="rate" id="cbPolicy">3.75%</span> · Typical home loan <span class="rate" id="cbLoan">6.50%</span> · Savings <span class="rate" id="cbSavings">4.00%</span></span><br />
-        <span class="as-of" id="cbAsOf">Reference rates as of June 2026. Verify current rates with your bank.</span>
+        <span class="as-of" id="cbAsOf">Reference rates as of July 2026. Verify current rates with your bank.</span>
         <div class="bank-picker" id="bankPickerWrap" style="margin-top:8px;display:none;">
           <label for="bankPicker" style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;font-weight:600;margin-right:6px;">Your bank:</label>
           <select id="bankPicker" style="background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-family:inherit;font-size:12px;font-weight:600;cursor:pointer;max-width:200px;">
@@ -2743,13 +2743,13 @@
       <p>This calculator adjusts defaults based on your selected country. Your country's central bank rate, typical commercial bank loan rates, and product names all update automatically. You can always override the rate manually using the slider or the exact-amount input box — no guessing.</p>
 
       <h2>How the rates are sourced</h2>
-      <p>Defaults come from each country's central bank publications and typical commercial bank offerings, refreshed June 2026. This covers 34 economies across South Asia, the Gulf, Southeast Asia, Europe, the Americas, and Africa. For each country we link major banks with their typical home and car loan rate ranges — pick your bank from the dropdown to snap to its range.</p>
+      <p>Defaults come from each country's central bank publications and typical commercial bank offerings, refreshed July 2026. This covers 34 economies across South Asia, the Gulf, Southeast Asia, Europe, the Americas, and Africa. For each country we link major banks with their typical home and car loan rate ranges — pick your bank from the dropdown to snap to its range.</p>
 
       <h2>Zakat explained</h2>
       <p><strong>Zakat</strong> is one of the Five Pillars of Islam — a 2.5% annual alms paid on wealth above the <em>nisab</em> threshold (approx. 87.48g of gold) held for a full lunar year. Includes cash, gold, silver, stocks, and business assets; debts owed by you are subtracted. The calculator uses live gold prices to set the nisab in your local currency automatically.</p>
 
       <h2>Rate disclaimer &amp; known limitations</h2>
-      <p>Central bank rates change frequently. Values shown are reference estimates from June 2026 — verify with your bank before decisions. The calculator math is independently verified and accurate; only suggested defaults may drift over time. Tax implications (capital gains, interest income tax, tax-free account allowances) are not applied — they vary by individual, income, and residency. Subsidized housing schemes in many countries have eligibility rules this calculator does not check.</p>
+      <p>Central bank rates change frequently. Values shown are reference estimates from July 2026 — verify with your bank before decisions. The calculator math is independently verified and accurate; only suggested defaults may drift over time. Tax implications (capital gains, interest income tax, tax-free account allowances) are not applied — they vary by individual, income, and residency. Subsidized housing schemes in many countries have eligibility rules this calculator does not check.</p>
 
       <h2>Frequently Asked Questions</h2>
 
@@ -2772,7 +2772,7 @@
       <p>Because people dramatically underestimate total loan cost when they focus only on the monthly payment. On a 30-year 7% home loan, you typically pay back around twice the principal in total. On a 20-year 9% loan, about 2.1× the principal. Seeing the total upfront changes decisions — many users extend their down payment or shorten the tenure after seeing it.</p>
 
       <h3>How accurate are the country-specific default rates?</h3>
-      <p>Default rates are researched per country and reflect June 2026 central bank policies plus typical commercial bank margins. They are reference points — your actual offered rate will depend on your credit profile, down payment, and specific bank. Override the rate using the slider or the exact-amount input. The calculator's math itself is verified against 63 published bank examples.</p>
+      <p>Default rates are researched per country and reflect July 2026 central bank policies plus typical commercial bank margins. They are reference points — your actual offered rate will depend on your credit profile, down payment, and specific bank. Override the rate using the slider or the exact-amount input. The calculator's math itself is verified against 63 published bank examples.</p>
 
       <h3>What is the 28/36 rule shown in the Affordability tab?</h3>
       <p>A universal banking rule of thumb: housing loan payment should be at most 28% of your gross monthly income, and total debt payments (all loans combined) should not exceed 36%. Some lenders allow up to 45–50% for high-earners with strong credit scores, but going above 36% significantly increases financial stress and default risk.</p>
@@ -2873,10 +2873,10 @@
 
     // ================================================================
     // COUNTRY PROFILES — central bank rates & localized product names
-    // Rates are APPROXIMATE reference values as of June 2026.
+    // Rates are APPROXIMATE reference values as of July 2026.
     // Users can override via slider. The "use bank rate" chip snaps to default.
     // ================================================================
-    const ASOF = 'June 2026';
+    const ASOF = 'July 2026';
     const COUNTRY_PROFILES = {
       INR: {
         country: 'India',
@@ -3057,11 +3057,11 @@
       MYR: {
         country: 'Malaysia',
         centralBank: 'Bank Negara Malaysia (BNM)',
-        policyRate: 3.00,
-        loanRate: 4.25,
+        policyRate: 2.75,
+        loanRate: 4.00,
         carRate: 3.50,
         carTenureMax: 9,
-        savingsRate: 3.50,
+        savingsRate: 3.25,
         investmentReturn: 8.5,
         loanName: 'Home Loan',
         loanDesc: 'Monthly installment for conventional or Islamic home financing.',
@@ -3079,11 +3079,11 @@
       IDR: {
         country: 'Indonesia',
         centralBank: 'Bank Indonesia (BI)',
-        policyRate: 4.75,
-        loanRate: 9.50,
+        policyRate: 5.75,
+        loanRate: 10.50,
         carRate: 8.50,
         carTenureMax: 6,
-        savingsRate: 5.25,
+        savingsRate: 6.25,
         investmentReturn: 10.0,
         loanName: 'KPR (Home Loan)',
         loanDesc: 'Kredit Pemilikan Rumah — monthly installment for property financing.',
@@ -3101,11 +3101,11 @@
       NGN: {
         country: 'Nigeria',
         centralBank: 'Central Bank of Nigeria (CBN)',
-        policyRate: 27.50,
-        loanRate: 29.00,
+        policyRate: 26.50,
+        loanRate: 28.00,
         carRate: 27.00,
         carTenureMax: 4,
-        savingsRate: 14.00,
+        savingsRate: 13.00,
         investmentReturn: 18.0,
         loanName: 'Loan',
         loanDesc: 'Calculate monthly payment for conventional lending. Rates in Nigeria are high due to inflation targeting.',
@@ -3170,11 +3170,11 @@
       PHP: {
         country: 'Philippines',
         centralBank: 'Bangko Sentral ng Pilipinas (BSP)',
-        policyRate: 5.00,
-        loanRate: 7.50,
+        policyRate: 4.75,
+        loanRate: 7.25,
         carRate: 9.00,
         carTenureMax: 5,
-        savingsRate: 5.25,
+        savingsRate: 5.00,
         investmentReturn: 9.0,
         loanName: 'Home Loan',
         loanDesc: 'Monthly amortization on a Philippine home loan.',
@@ -3214,11 +3214,11 @@
       ZAR: {
         country: 'South Africa',
         centralBank: 'South African Reserve Bank (SARB)',
-        policyRate: 6.75,
-        loanRate: 10.25,
+        policyRate: 7.00,
+        loanRate: 10.50,
         carRate: 12.50,
         carTenureMax: 6,
-        savingsRate: 8.50,
+        savingsRate: 8.75,
         investmentReturn: 11.0,
         loanName: 'Home Loan (Bond)',
         loanDesc: 'Monthly bond repayment. Rate is usually prime ± a margin based on your credit.',
@@ -3239,11 +3239,11 @@
       RUB: {
         country: 'Russia',
         centralBank: 'Bank of Russia (CBR)',
-        policyRate: 15.00,
-        loanRate: 22.00,
+        policyRate: 14.25,
+        loanRate: 21.25,
         carRate: 24.00,
         carTenureMax: 5,
-        savingsRate: 16.00,
+        savingsRate: 15.25,
         investmentReturn: 18.0,
         loanName: 'Ипотека (Mortgage)',
         loanDesc: 'Monthly mortgage installment. Rates are high as CBR fights post-war inflation.',
@@ -3283,11 +3283,11 @@
       JPY: {
         country: 'Japan',
         centralBank: 'Bank of Japan (BoJ)',
-        policyRate: 0.75,
-        loanRate: 1.50,
+        policyRate: 1.00,
+        loanRate: 1.75,
         carRate: 2.50,
         carTenureMax: 7,
-        savingsRate: 0.40,
+        savingsRate: 0.65,
         investmentReturn: 6.0,
         loanName: '住宅ローン (Home Loan)',
         loanDesc: 'Monthly mortgage installment. Japan famously has ultra-low mortgage rates.',
@@ -3327,11 +3327,11 @@
       AUD: {
         country: 'Australia',
         centralBank: 'Reserve Bank of Australia (RBA)',
-        policyRate: 3.85,
-        loanRate: 6.00,
+        policyRate: 4.35,
+        loanRate: 6.50,
         carRate: 8.00,
         carTenureMax: 7,
-        savingsRate: 4.50,
+        savingsRate: 5.00,
         investmentReturn: 8.0,
         loanName: 'Home Loan',
         loanDesc: 'Monthly mortgage repayment. Variable rates track RBA cash rate; fixed is separate.',
@@ -3371,11 +3371,11 @@
       BRL: {
         country: 'Brazil',
         centralBank: 'Banco Central do Brasil (BCB)',
-        policyRate: 15.00,
-        loanRate: 12.00,
+        policyRate: 14.25,
+        loanRate: 11.25,
         carRate: 25.00,
         carTenureMax: 5,
-        savingsRate: 13.50,
+        savingsRate: 12.75,
         investmentReturn: 14.0,
         loanName: 'Financiamento Imobiliário',
         loanDesc: 'Monthly mortgage payment. SBPE and SFH programs have lower rates than free-market loans.',
@@ -3393,11 +3393,11 @@
       MXN: {
         country: 'Mexico',
         centralBank: 'Banco de México (Banxico)',
-        policyRate: 9.00,
-        loanRate: 11.50,
+        policyRate: 6.50,
+        loanRate: 9.00,
         carRate: 13.50,
         carTenureMax: 5,
-        savingsRate: 9.50,
+        savingsRate: 7.00,
         investmentReturn: 11.0,
         loanName: 'Crédito Hipotecario',
         loanDesc: 'Monthly mortgage payment. Infonavit loans subsidized for formal workers.',
@@ -3652,7 +3652,7 @@
     // [homeMin, homeMax, carMin, carMax] — percent per annum
     // Data verified against bank websites / CEIC / central bank sources
     // where possible. Users should ALWAYS confirm current rates with
-    // the bank directly. "As of June 2026, verify with bank."
+    // the bank directly. "As of July 2026, verify with bank."
     // ================================================================
     const BANKS = {
       INR: [
