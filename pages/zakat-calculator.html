@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>Zakat Calculator (2.5%) — Work Out Your Zakat in Any Currency</title>
+  <meta name="description" content="Free Zakat calculator. Work out the 2.5% Zakat due on your net wealth above the nisab threshold. Localized for 14 countries and currencies. No signup, no tracking." />
+  <meta name="keywords" content="zakat calculator, zakat 2.5 percent, nisab calculator, islamic zakat calculator, zakat on savings gold" />
+  <link rel="canonical" href="https://fincalcyou.netlify.app/pages/zakat-calculator.html" />
+  <link rel="alternate" hreflang="x-default" href="https://fincalcyou.netlify.app/pages/zakat-calculator.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://fincalcyou.netlify.app/pages/zakat-calculator.html" />
+  <meta property="og:title" content="Zakat Calculator (2.5%) — Work Out Your Zakat in Any Currency" />
+  <meta property="og:description" content="Free Zakat calculator. Work out the 2.5% Zakat due on your net wealth above the nisab threshold. Localized for 14 countries and currencies. No signup, no tracking." />
+  <meta property="og:image" content="https://fincalcyou.netlify.app/og-image.png" />
+  <meta property="og:site_name" content="fin·calc" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://fincalcyou.netlify.app/og-image.png" />
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much is Zakat?", "acceptedAnswer": {"@type": "Answer", "text": "2.5% of your net zakatable wealth, once it exceeds the nisab and has been held for one lunar year."}}, {"@type": "Question", "name": "Does this work for my country?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — choose your country below for your local currency and nisab reference across 14 countries."}}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://fincalcyou.netlify.app/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://fincalcyou.netlify.app/pages/"},{"@type":"ListItem","position":3,"name":"Zakat Calculator","item":"https://fincalcyou.netlify.app/pages/zakat-calculator.html"}]}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="landing.css" />
+</head>
+<body>
+  <main>
+    <header>
+      <a href="../index.html" class="brand">fin<span class="dot">·</span>calc</a>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="index.html">Guides</a>
+      </nav>
+    </header>
+
+    <h1>Zakat Calculator</h1>
+    <p class="intro">Work out the Zakat due on your wealth — 2.5% of your net zakatable assets (cash, gold, silver, investments and business assets, minus debts) held above the nisab threshold for one full lunar year.</p>
+
+<style id="fc-embed-css">
+.fc-embed{display:block;background:#ffffff;border:1px solid #e3e8ee;border-radius:16px;padding:16px;margin:14px 0;color:#1a2733;font-family:Inter,-apple-system,Segoe UI,Roboto,sans-serif}
+.fc-embed .fc-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+@media(max-width:560px){.fc-embed .fc-grid{grid-template-columns:1fr}}
+.fc-embed label{display:block;font-size:11px;color:#5c6b7a;margin-bottom:5px;text-transform:uppercase;letter-spacing:.05em}
+.fc-embed .fc-in{display:flex;align-items:center;gap:6px;background:#f4f6f7;border:1px solid #e3e8ee;border-radius:9px;padding:7px 9px}
+.fc-embed .fc-in span{color:#5c6b7a;font-size:13px}
+.fc-embed .fc-in input{flex:1;width:100%;background:transparent;border:0;color:#1a2733;font-size:15px;font-weight:600;outline:none}
+.fc-embed .fc-head{font-size:12px;color:#5c6b7a;margin-top:16px}
+.fc-embed .fc-head strong{display:block;font-size:28px;color:#0e7a4a;font-weight:800;line-height:1.15;margin-top:2px}
+.fc-embed .fc-mini{display:flex;gap:18px;margin-top:10px;font-size:12px;color:#5c6b7a;flex-wrap:wrap}
+.fc-embed .fc-mini b{display:block;color:#1a2733;font-size:15px}
+.fc-embed .fc-note{font-size:11px;color:#5c6b7a;margin-top:8px}
+</style>
+<div class="fc-embed" id="zak-embed">
+  <div class="fc-grid">
+    <div><label>Zakatable wealth</label><div class="fc-in"><span>$</span><input id="zak-w" type="number" value="50000"></div></div>
+    <div><label>Debts owed</label><div class="fc-in"><span>$</span><input id="zak-d" type="number" value="0"></div></div>
+  </div>
+  <div class="fc-head">Zakat due (2.5%)<strong id="zak-out">$0</strong></div>
+  <div class="fc-mini"><div>Net wealth<b id="zak-net">$0</b></div><div>Rate<b>2.5%</b></div></div>
+  <div class="fc-note">Zakat is 2.5% of net wealth held above the nisab threshold for one lunar year · <a href="../index.html?tab=islamic" style="color:#0e7a4a">Open the full tool &rarr;</a></div>
+</div>
+<script>
+(function(){var nf=new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0});function money(v){return nf.format(Math.round(v));}
+function calc(){var w=+document.getElementById('zak-w').value,d=+document.getElementById('zak-d').value;if(!(w>=0&&d>=0))return;var net=Math.max(0,w-d),due=net*0.025;
+document.getElementById('zak-out').textContent=money(due);document.getElementById('zak-net').textContent=money(net);}
+['zak-w','zak-d'].forEach(function(id){document.getElementById(id).addEventListener('input',calc);});calc();
+})();
+</script>
+
+    <section>
+      <h2>Choose your country for local rates</h2>
+      <p>Rates, currency and rules differ everywhere. Open the Zakat calculator tuned to your country:</p>
+      <div class="country-links">
+        <a href="zakat-calculator-bahrain.html">Bahrain</a>
+        <a href="zakat-calculator-bangladesh.html">Bangladesh</a>
+        <a href="zakat-calculator-egypt.html">Egypt</a>
+        <a href="zakat-calculator-india.html">India</a>
+        <a href="zakat-calculator-indonesia.html">Indonesia</a>
+        <a href="zakat-calculator-kenya.html">Kenya</a>
+        <a href="zakat-calculator-kuwait.html">Kuwait</a>
+        <a href="zakat-calculator-malaysia.html">Malaysia</a>
+        <a href="zakat-calculator-nigeria.html">Nigeria</a>
+        <a href="zakat-calculator-pakistan.html">Pakistan</a>
+        <a href="zakat-calculator-qatar.html">Qatar</a>
+        <a href="zakat-calculator-saudi-arabia.html">Saudi Arabia</a>
+        <a href="zakat-calculator-turkey.html">Türkiye</a>
+        <a href="zakat-calculator-uae.html">UAE</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>What counts toward Zakat</h2>
+      <p>Zakatable wealth includes cash and bank balances, gold and silver, shares and investments, and business assets. Debts you owe are subtracted. Zakat becomes due at <strong>2.5%</strong> once your net wealth stays above the <em>nisab</em> (roughly the value of 87.48g of gold) for a full lunar year (<em>hawl</em>).</p>
+    </section>
+    <section>
+      <h2>Nisab and timing</h2>
+      <p>The nisab threshold changes with the live gold/silver price and your local currency, so it is worth checking each year. Pick your country below to use a localized version with your currency and current nisab reference.</p>
+    </section>
+
+    <div class="cta-box">
+      <h3>Want the full interactive tool?</h3>
+      <p>The homepage version adds sliders, schedules and 14 calculators in one place.</p>
+      <a href="../index.html" class="cta-btn">Open the full calculator →</a>
+    </div>
+
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="q">How much is Zakat?</div>
+      <div class="a">2.5% of your net zakatable wealth, once it exceeds the nisab and has been held for one lunar year.</div>
+      <div class="q">Does this work for my country?</div>
+      <div class="a">Yes — choose your country below for your local currency and nisab reference across 14 countries.</div>
+    </section>
+
+    <section>
+      <h2>Other calculators</h2>
+      <ul>
+        <li><a href="home-loan-calculator.html">Home Loan &amp; Mortgage Calculator</a></li>
+        <li><a href="car-loan-calculator.html">Car Loan &amp; Auto Finance Calculator</a></li>
+        <li><a href="sip-calculator.html">SIP &amp; Monthly Investment Calculator</a></li>
+        <li><a href="fixed-deposit-calculator.html">Fixed Deposit &amp; CD Calculator</a></li>
+        <li><a href="education-loan-calculator.html">Education Loan Calculator</a></li>
+        <li><a href="retirement-calculator.html">Retirement Calculator</a></li>
+        <li><a href="rent-vs-buy-calculator.html">Rent vs Buy Calculator</a></li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>fin·calc · Made for better financial decisions. No signup. No tracking.</p>
+    </footer>
+  </main>
+</body>
+</html>

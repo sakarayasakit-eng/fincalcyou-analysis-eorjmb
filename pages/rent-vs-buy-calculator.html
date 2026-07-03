@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>Rent vs Buy Calculator — Which Is Cheaper Over Your Time Horizon</title>
+  <meta name="description" content="Free rent vs buy calculator. See whether renting or buying leaves you better off over the years you plan to stay, accounting for the home's future value. No signup." />
+  <meta name="keywords" content="rent vs buy calculator, rent or buy calculator, should i rent or buy, buy vs rent home, rent versus buy" />
+  <link rel="canonical" href="https://fincalcyou.netlify.app/pages/rent-vs-buy-calculator.html" />
+  <link rel="alternate" hreflang="x-default" href="https://fincalcyou.netlify.app/pages/rent-vs-buy-calculator.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://fincalcyou.netlify.app/pages/rent-vs-buy-calculator.html" />
+  <meta property="og:title" content="Rent vs Buy Calculator — Which Is Cheaper Over Your Time Horizon" />
+  <meta property="og:description" content="Free rent vs buy calculator. See whether renting or buying leaves you better off over the years you plan to stay, accounting for the home's future value. No signup." />
+  <meta property="og:image" content="https://fincalcyou.netlify.app/og-image.png" />
+  <meta property="og:site_name" content="fin·calc" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://fincalcyou.netlify.app/og-image.png" />
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does the calculator assume?", "acceptedAnswer": {"@type": "Answer", "text": "20% down, a 20-year loan, 5% yearly price growth, 5% rent rises and ~1%/yr upkeep. The full homepage tool lets you adjust all of these."}}, {"@type": "Question", "name": "Does this work for my country?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — pick your country below for a localized version with your currency and typical rates."}}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://fincalcyou.netlify.app/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://fincalcyou.netlify.app/pages/"},{"@type":"ListItem","position":3,"name":"Rent vs Buy Calculator","item":"https://fincalcyou.netlify.app/pages/rent-vs-buy-calculator.html"}]}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="landing.css" />
+</head>
+<body>
+  <main>
+    <header>
+      <a href="../index.html" class="brand">fin<span class="dot">·</span>calc</a>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="index.html">Guides</a>
+      </nav>
+    </header>
+
+    <h1>Rent vs Buy Calculator</h1>
+    <p class="intro">Over the next few years, will you come out ahead renting or buying? Enter the price, your rent and how long you'll stay — the calculator totals every cost of each path and subtracts what the home would be worth at the end.</p>
+
+<style id="fc-embed-css">
+.fc-embed{display:block;background:#ffffff;border:1px solid #e3e8ee;border-radius:16px;padding:16px;margin:14px 0;color:#1a2733;font-family:Inter,-apple-system,Segoe UI,Roboto,sans-serif}
+.fc-embed .fc-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+@media(max-width:560px){.fc-embed .fc-grid{grid-template-columns:1fr}}
+.fc-embed label{display:block;font-size:11px;color:#5c6b7a;margin-bottom:5px;text-transform:uppercase;letter-spacing:.05em}
+.fc-embed .fc-in{display:flex;align-items:center;gap:6px;background:#f4f6f7;border:1px solid #e3e8ee;border-radius:9px;padding:7px 9px}
+.fc-embed .fc-in span{color:#5c6b7a;font-size:13px}
+.fc-embed .fc-in input{flex:1;width:100%;background:transparent;border:0;color:#1a2733;font-size:15px;font-weight:600;outline:none}
+.fc-embed .fc-head{font-size:12px;color:#5c6b7a;margin-top:16px}
+.fc-embed .fc-head strong{display:block;font-size:28px;color:#0e7a4a;font-weight:800;line-height:1.15;margin-top:2px}
+.fc-embed .fc-mini{display:flex;gap:18px;margin-top:10px;font-size:12px;color:#5c6b7a;flex-wrap:wrap}
+.fc-embed .fc-mini b{display:block;color:#1a2733;font-size:15px}
+.fc-embed .fc-note{font-size:11px;color:#5c6b7a;margin-top:8px}
+</style>
+<div class="fc-embed" id="rvb-embed">
+  <div class="fc-grid">
+    <div><label>Property price</label><div class="fc-in"><span>$</span><input id="rvb-price" type="number" value="300000"></div></div>
+    <div><label>Monthly rent</label><div class="fc-in"><span>$</span><input id="rvb-rent" type="number" value="1500"></div></div>
+    <div><label>Home loan rate</label><div class="fc-in"><input id="rvb-rate" type="number" step="0.1" value="6.5"><span>%</span></div></div>
+    <div><label>Years staying</label><div class="fc-in"><input id="rvb-yr" type="number" value="7"><span>yrs</span></div></div>
+  </div>
+  <div class="fc-head">Over that time<strong id="rvb-out">&mdash;</strong></div>
+  <div class="fc-mini"><div>Renting net cost<b id="rvb-rnet">$0</b></div><div>Buying net cost<b id="rvb-bnet">$0</b></div></div>
+  <div class="fc-note">Assumes 20% down, a 20-year loan, 5% yearly price growth, 5% rent rises and ~1%/yr upkeep · <a href="../index.html?tab=rentbuy" style="color:#0e7a4a">Open the full tool &rarr;</a></div>
+</div>
+<script>
+(function(){var nf=new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0});function money(v){return nf.format(Math.round(v));}
+function calc(){var price=+document.getElementById('rvb-price').value,rent=+document.getElementById('rvb-rent').value,rate=+document.getElementById('rvb-rate').value,years=+document.getElementById('rvb-yr').value;
+if(!(price>0&&rent>0&&rate>=0&&years>0))return;var down=price*0.2,loan=price-down;var m=rate/1200,nT=240,g=Math.pow(1+m,nT),emi=m===0?loan/nT:loan*m*g/(g-1);
+var monthsPaid=Math.min(years*12,nT),maint=0,pv=price,i;for(i=0;i<years;i++){maint+=pv*0.01;pv*=1.05;}
+var buyCash=down+emi*monthsPaid+maint,homeVal=pv,buyNet=buyCash-homeVal;
+var rentTotal=0,ar=rent*12;for(i=0;i<years;i++){rentTotal+=ar;ar*=1.05;}
+var verdict=buyNet<rentNetGuard(rentTotal)?'🏠 Buying wins':(rentTotal<buyNet?'🏘 Renting wins':'≈ It\'s a tie');
+document.getElementById('rvb-out').textContent=verdict;document.getElementById('rvb-rnet').textContent=money(rentTotal);document.getElementById('rvb-bnet').textContent=money(buyNet);}
+function rentNetGuard(x){return x;}
+['rvb-price','rvb-rent','rvb-rate','rvb-yr'].forEach(function(id){document.getElementById(id).addEventListener('input',calc);});calc();
+})();
+</script>
+
+    <section>
+      <h2>Choose your country for local rates</h2>
+      <p>Rates, currency and rules differ everywhere. Open the rent vs buy calculator tuned to your country:</p>
+      <div class="country-links">
+        <a href="rent-vs-buy-calculator-india.html">India</a>
+        <a href="rent-vs-buy-calculator-uae.html">UAE</a>
+        <a href="rent-vs-buy-calculator-uk.html">United Kingdom</a>
+        <a href="rent-vs-buy-calculator-usa.html">United States</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>How the comparison works</h2>
+      <p>For <strong>buying</strong>, it adds up your down payment, loan payments and upkeep over your stay, then subtracts the home's value after price growth — that net figure is your true cost of owning. For <strong>renting</strong>, it totals every year's rent (with yearly increases). The lower net cost wins.</p>
+    </section>
+    <section>
+      <h2>It's not only about money</h2>
+      <p>The math often favors buying over long stays and renting over short ones — but flexibility, maintenance hassle and job mobility matter too. Use the number as a strong input, not the whole decision.</p>
+    </section>
+
+    <div class="cta-box">
+      <h3>Want the full interactive tool?</h3>
+      <p>The homepage version adds sliders, schedules and 14 calculators in one place.</p>
+      <a href="../index.html" class="cta-btn">Open the full calculator →</a>
+    </div>
+
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="q">What does the calculator assume?</div>
+      <div class="a">20% down, a 20-year loan, 5% yearly price growth, 5% rent rises and ~1%/yr upkeep. The full homepage tool lets you adjust all of these.</div>
+      <div class="q">Does this work for my country?</div>
+      <div class="a">Yes — pick your country below for a localized version with your currency and typical rates.</div>
+    </section>
+
+    <section>
+      <h2>Other calculators</h2>
+      <ul>
+        <li><a href="home-loan-calculator.html">Home Loan &amp; Mortgage Calculator</a></li>
+        <li><a href="car-loan-calculator.html">Car Loan &amp; Auto Finance Calculator</a></li>
+        <li><a href="sip-calculator.html">SIP &amp; Monthly Investment Calculator</a></li>
+        <li><a href="fixed-deposit-calculator.html">Fixed Deposit &amp; CD Calculator</a></li>
+        <li><a href="education-loan-calculator.html">Education Loan Calculator</a></li>
+        <li><a href="zakat-calculator.html">Zakat Calculator</a></li>
+        <li><a href="retirement-calculator.html">Retirement Calculator</a></li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>fin·calc · Made for better financial decisions. No signup. No tracking.</p>
+    </footer>
+  </main>
+</body>
+</html>

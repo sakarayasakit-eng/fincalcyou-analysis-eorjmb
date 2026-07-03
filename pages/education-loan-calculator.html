@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>Education Loan &amp; Student Loan Calculator — Monthly Payment After Studies</title>
+  <meta name="description" content="Free education/student loan calculator. See your monthly payment after graduation, including interest that builds up during your study (moratorium) period. Pick your country." />
+  <meta name="keywords" content="education loan calculator, student loan calculator, moratorium calculator, study loan EMI, student loan repayment" />
+  <link rel="canonical" href="https://fincalcyou.netlify.app/pages/education-loan-calculator.html" />
+  <link rel="alternate" hreflang="x-default" href="https://fincalcyou.netlify.app/pages/education-loan-calculator.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://fincalcyou.netlify.app/pages/education-loan-calculator.html" />
+  <meta property="og:title" content="Education Loan &amp; Student Loan Calculator — Monthly Payment After Studies" />
+  <meta property="og:description" content="Free education/student loan calculator. See your monthly payment after graduation, including interest that builds up during your study (moratorium) period. Pick your country." />
+  <meta property="og:image" content="https://fincalcyou.netlify.app/og-image.png" />
+  <meta property="og:site_name" content="fin·calc" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://fincalcyou.netlify.app/og-image.png" />
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a moratorium period?", "acceptedAnswer": {"@type": "Answer", "text": "The time during your studies when you don't make repayments. Interest still accrues and is added to your loan, so the balance grows before repayment starts."}}, {"@type": "Question", "name": "Does this work for my country?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — pick your country below for localized rates and schemes across India, Pakistan, the Philippines, UK and US. Others can enter their own rate."}}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://fincalcyou.netlify.app/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://fincalcyou.netlify.app/pages/"},{"@type":"ListItem","position":3,"name":"Education Loan &amp; Student Loan Calculator","item":"https://fincalcyou.netlify.app/pages/education-loan-calculator.html"}]}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="landing.css" />
+</head>
+<body>
+  <main>
+    <header>
+      <a href="../index.html" class="brand">fin<span class="dot">·</span>calc</a>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="index.html">Guides</a>
+      </nav>
+    </header>
+
+    <h1>Education Loan &amp; Student Loan Calculator</h1>
+    <p class="intro">See what you will actually repay on a student loan — including the interest that quietly builds up while you are still studying (the moratorium period) and gets added to your balance before repayment even begins.</p>
+
+<style id="fc-embed-css">
+.fc-embed{display:block;background:#ffffff;border:1px solid #e3e8ee;border-radius:16px;padding:16px;margin:14px 0;color:#1a2733;font-family:Inter,-apple-system,Segoe UI,Roboto,sans-serif}
+.fc-embed .fc-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+@media(max-width:560px){.fc-embed .fc-grid{grid-template-columns:1fr}}
+.fc-embed label{display:block;font-size:11px;color:#5c6b7a;margin-bottom:5px;text-transform:uppercase;letter-spacing:.05em}
+.fc-embed .fc-in{display:flex;align-items:center;gap:6px;background:#f4f6f7;border:1px solid #e3e8ee;border-radius:9px;padding:7px 9px}
+.fc-embed .fc-in span{color:#5c6b7a;font-size:13px}
+.fc-embed .fc-in input{flex:1;width:100%;background:transparent;border:0;color:#1a2733;font-size:15px;font-weight:600;outline:none}
+.fc-embed .fc-head{font-size:12px;color:#5c6b7a;margin-top:16px}
+.fc-embed .fc-head strong{display:block;font-size:28px;color:#0e7a4a;font-weight:800;line-height:1.15;margin-top:2px}
+.fc-embed .fc-mini{display:flex;gap:18px;margin-top:10px;font-size:12px;color:#5c6b7a;flex-wrap:wrap}
+.fc-embed .fc-mini b{display:block;color:#1a2733;font-size:15px}
+.fc-embed .fc-note{font-size:11px;color:#5c6b7a;margin-top:8px}
+</style>
+<div class="fc-embed" id="edu-embed">
+  <div class="fc-grid">
+    <div><label>Loan amount</label><div class="fc-in"><span>$</span><input id="edu-amt" type="number" value="50000"></div></div>
+    <div><label>Rate (% p.a.)</label><div class="fc-in"><input id="edu-rate" type="number" step="0.1" value="8"><span>%</span></div></div>
+    <div><label>Study years</label><div class="fc-in"><input id="edu-mor" type="number" value="4"><span>yrs</span></div></div>
+    <div><label>Repay years</label><div class="fc-in"><input id="edu-yr" type="number" value="10"><span>yrs</span></div></div>
+  </div>
+  <div class="fc-head">Monthly payment after studies<strong id="edu-out">$0</strong></div>
+  <div class="fc-mini"><div>Original loan<b id="edu-p">$0</b></div><div>Grows to<b id="edu-g">$0</b></div><div>Total repaid<b id="edu-t">$0</b></div></div>
+  <div class="fc-note">Interest compounds during the study period, then repayment begins. Calculated live on this page · <a href="../index.html?tab=edu" style="color:#0e7a4a">Open the full tool &rarr;</a></div>
+</div>
+<script>
+(function(){var nf=new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0});function money(v){return nf.format(Math.round(v));}
+function calc(){var P=+document.getElementById('edu-amt').value,r=+document.getElementById('edu-rate').value,mo=+document.getElementById('edu-mor').value,y=+document.getElementById('edu-yr').value;
+if(!(P>0&&r>=0&&y>0&&mo>=0))return;var grown=P*Math.pow(1+r/100,mo);var m=r/1200,n=Math.round(y*12),g=Math.pow(1+m,n),emi=m===0?grown/n:grown*m*g/(g-1),total=emi*n;
+document.getElementById('edu-out').textContent=money(emi);document.getElementById('edu-p').textContent=money(P);document.getElementById('edu-g').textContent=money(grown);document.getElementById('edu-t').textContent=money(total);}
+['edu-amt','edu-rate','edu-mor','edu-yr'].forEach(function(id){document.getElementById(id).addEventListener('input',calc);});calc();
+})();
+</script>
+
+    <section>
+      <h2>Choose your country for local rates</h2>
+      <p>Rates, currency and rules differ everywhere. Open the education loan calculator tuned to your country:</p>
+      <div class="country-links">
+        <a href="education-loan-calculator-india.html">India</a>
+        <a href="education-loan-calculator-pakistan.html">Pakistan</a>
+        <a href="education-loan-calculator-philippines.html">Philippines</a>
+        <a href="education-loan-calculator-uk.html">United Kingdom</a>
+        <a href="education-loan-calculator-usa.html">United States</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Why student loans cost more than they look</h2>
+      <p>During your study period you usually make no payments — but interest still accrues and is <strong>added to the principal</strong>. By graduation your balance can be noticeably higher than what you borrowed. This calculator compounds the loan through the study years, then computes the monthly payment on that larger amount.</p>
+    </section>
+    <section>
+      <h2>The single best money-saving move</h2>
+      <p>If you or your family can pay <strong>just the interest</strong> during your studies, the principal stays flat and you avoid the compound-growth trap entirely — often the biggest saving available on a student loan. Many banks also offer a lower simple-interest option during the moratorium; always ask.</p>
+    </section>
+
+    <div class="cta-box">
+      <h3>Want the full interactive tool?</h3>
+      <p>The homepage version adds sliders, schedules and 14 calculators in one place.</p>
+      <a href="../index.html" class="cta-btn">Open the full calculator →</a>
+    </div>
+
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="q">What is a moratorium period?</div>
+      <div class="a">The time during your studies when you don't make repayments. Interest still accrues and is added to your loan, so the balance grows before repayment starts.</div>
+      <div class="q">Does this work for my country?</div>
+      <div class="a">Yes — pick your country below for localized rates and schemes across India, Pakistan, the Philippines, UK and US. Others can enter their own rate.</div>
+    </section>
+
+    <section>
+      <h2>Other calculators</h2>
+      <ul>
+        <li><a href="home-loan-calculator.html">Home Loan &amp; Mortgage Calculator</a></li>
+        <li><a href="car-loan-calculator.html">Car Loan &amp; Auto Finance Calculator</a></li>
+        <li><a href="sip-calculator.html">SIP &amp; Monthly Investment Calculator</a></li>
+        <li><a href="fixed-deposit-calculator.html">Fixed Deposit &amp; CD Calculator</a></li>
+        <li><a href="zakat-calculator.html">Zakat Calculator</a></li>
+        <li><a href="retirement-calculator.html">Retirement Calculator</a></li>
+        <li><a href="rent-vs-buy-calculator.html">Rent vs Buy Calculator</a></li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>fin·calc · Made for better financial decisions. No signup. No tracking.</p>
+    </footer>
+  </main>
+</body>
+</html>

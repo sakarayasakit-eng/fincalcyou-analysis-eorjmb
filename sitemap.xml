@@ -298,4 +298,8 @@
   <url><loc>https://fincalcyou.netlify.app/pages/car-loan-calculator.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://fincalcyou.netlify.app/pages/sip-calculator.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://fincalcyou.netlify.app/pages/fixed-deposit-calculator.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/education-loan-calculator.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/zakat-calculator.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/retirement-calculator.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/rent-vs-buy-calculator.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
 </urlset>
