@@ -1,2 +1,5 @@
 # build artifacts
 *.zip
+
+# local Netlify CLI state
+.netlify/
