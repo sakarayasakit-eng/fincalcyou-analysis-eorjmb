@@ -1,0 +1,28 @@
+name: Refresh sitemap and notify search engines
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Update sitemap lastmod dates
+        run: node scripts/update-sitemap-lastmod.js
+
+      - name: Commit sitemap changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git diff --quiet sitemap.xml || (git add sitemap.xml && git commit -m "chore: refresh sitemap lastmod dates" && git push)
+
+      - name: Submit URLs to IndexNow (Bing, Yandex)
+        run: node scripts/submit-indexnow.js
