@@ -1,6 +1,9 @@
 # Netlify configuration: security + performance headers
 # These apply to all routes when deployed via Netlify
 
+[build]
+  functions = "netlify/functions"
+
 [[headers]]
   for = "/*"
   [headers.values]
