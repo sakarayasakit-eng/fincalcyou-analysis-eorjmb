@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>Car Loan &amp; Auto Finance Calculator (34 Countries) — Monthly Payment</title>
+  <meta name="description" content="Free car loan / auto finance calculator with country-specific rules and real bank rates for 34 countries. See your monthly payment and total interest. Pick your country." />
+  <meta name="keywords" content="car loan calculator, auto loan calculator, car finance calculator, vehicle loan calculator, monthly car payment, auto finance" />
+  <link rel="canonical" href="https://fincalcyou.netlify.app/pages/car-loan-calculator.html" />
+  <link rel="alternate" hreflang="x-default" href="https://fincalcyou.netlify.app/pages/car-loan-calculator.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://fincalcyou.netlify.app/pages/car-loan-calculator.html" />
+  <meta property="og:title" content="Car Loan &amp; Auto Finance Calculator (34 Countries) — Monthly Payment" />
+  <meta property="og:description" content="Free car loan / auto finance calculator with country-specific rules and real bank rates for 34 countries. See your monthly payment and total interest. Pick your country." />
+  <meta property="og:image" content="https://fincalcyou.netlify.app/og-image.png" />
+  <meta property="og:site_name" content="fin·calc" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://fincalcyou.netlify.app/og-image.png" />
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much down payment do I need?", "acceptedAnswer": {"@type": "Answer", "text": "Most experts recommend at least 20% to avoid being “upside-down” (owing more than the car is worth). Some countries set legal minimums; the calculator applies local rules when you pick your country."}}, {"@type": "Question", "name": "New or used — does the rate differ?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Used-car loans usually carry a higher rate and a shorter maximum term than new-car loans, because the collateral depreciates faster."}}, {"@type": "Question", "name": "Does this work for my country?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — choose your country below for localized rates, currency and tenure rules across 34 countries. Not listed? Enter your own rate manually."}}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://fincalcyou.netlify.app/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://fincalcyou.netlify.app/pages/"},{"@type":"ListItem","position":3,"name":"Car Loan &amp; Auto Finance Calculator","item":"https://fincalcyou.netlify.app/pages/car-loan-calculator.html"}]}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="landing.css" />
+</head>
+<body>
+  <main>
+    <header>
+      <a href="../index.html" class="brand">fin<span class="dot">·</span>calc</a>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="index.html">Guides</a>
+      </nav>
+    </header>
+
+    <h1>Car Loan &amp; Auto Finance Calculator</h1>
+    <p class="intro">Calculate the monthly payment on a new or used car loan in any of 34 countries, with local down-payment and maximum-tenure rules applied. Enter the amount, rate and term to see your payment and total cost.</p>
+
+<style id="fc-embed-css">
+.fc-embed{display:block;background:#ffffff;border:1px solid #e3e8ee;border-radius:16px;padding:16px;margin:14px 0;color:#1a2733;font-family:Inter,-apple-system,Segoe UI,Roboto,sans-serif}
+.fc-embed .fc-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:560px){.fc-embed .fc-grid{grid-template-columns:1fr}}
+.fc-embed label{display:block;font-size:11px;color:#5c6b7a;margin-bottom:5px;text-transform:uppercase;letter-spacing:.05em}
+.fc-embed .fc-in{display:flex;align-items:center;gap:6px;background:#f4f6f7;border:1px solid #e3e8ee;border-radius:9px;padding:7px 9px}
+.fc-embed .fc-in span{color:#5c6b7a;font-size:13px}
+.fc-embed .fc-in input{flex:1;width:100%;background:transparent;border:0;color:#1a2733;font-size:15px;font-weight:600;outline:none}
+.fc-embed .fc-head{font-size:12px;color:#5c6b7a;margin-top:16px}
+.fc-embed .fc-head strong{display:block;font-size:30px;color:#0e7a4a;font-weight:800;line-height:1.1;margin-top:2px}
+.fc-embed .fc-mini{display:flex;gap:18px;margin-top:10px;font-size:12px;color:#5c6b7a;flex-wrap:wrap}
+.fc-embed .fc-mini b{display:block;color:#1a2733;font-size:15px}
+.fc-embed .fc-bar{height:12px;border-radius:7px;overflow:hidden;display:flex;border:1px solid #e3e8ee;margin-top:12px}
+.fc-embed .fc-bar i{display:block;height:100%}
+.fc-embed .fc-note{font-size:11px;color:#5c6b7a;margin-top:8px}
+</style>
+<fc-car class="fc-embed" data-fincalc-embed="car">
+  <div class="fc-grid">
+    <div><label>Car price</label><div class="fc-in"><span>$</span><input data-f="amount" type="number" min="1" step="any" value="100000"></div></div>
+    <div><label>Down payment (%)</label><div class="fc-in"><input data-f="dp" type="number" min="0" max="90" step="1" value="20"><span>%</span></div></div>
+    <div><label>Rate (% p.a.)</label><div class="fc-in"><input data-f="rate" type="number" min="0" step="0.05" value="7.5"><span>%</span></div></div>
+    <div><label>Tenure (years)</label><div class="fc-in"><input data-f="years" type="number" min="1" step="1" value="5"><span>yrs</span></div></div>
+  </div>
+  <div class="fc-head">Monthly installment<strong data-o="headline">$1,603</strong></div>
+  <div class="fc-mini">
+    <div>Financed<b data-o="a">$80,000</b></div>
+    <div>Total markup / interest<b data-o="b">$16,182</b></div>
+    <div>Total payable<b data-o="total">$96,182</b></div>
+  </div>
+  <div class="fc-bar"><i data-bar="a" style="width:83.2%;background:#0e7a4a"></i><i data-bar="b" style="width:16.8%;background:#e0932f"></i></div>
+  <div class="fc-note">Calculated live on this page · reference rates June 2026. <a href="../index.html?cur=USD&tab=car" style="color:#0e7a4a">Open the full tool &rarr;</a></div>
+</fc-car>
+<script>
+(function(){
+  var CFG={"tab":"car","cur":"USD","locale":"en-US"};
+  function emi(P,r,y){var n=Math.round(y*12),m=r/1200,e;if(m===0){e=P/n;}else{var g=Math.pow(1+m,n);e=P*m*g/(g-1);}var t=e*n;return{e:e,t:t,interest:t-P,pPct:Math.max(2,Math.min(98,P/t*100))};}
+  function car(price,dp,r,y){var fin=price*(1-dp/100),x=emi(fin,r,y);return{headline:x.e,a:fin,b:x.interest,total:x.t,aPct:Math.max(2,Math.min(98,fin/x.t*100))};}
+  function edu(P,r,ry,my){var grown=P*(1+r/100*my),x=emi(grown,r,ry);return{headline:x.e,a:grown,b:x.t-grown,total:x.t,aPct:Math.max(2,Math.min(98,grown/x.t*100))};}
+  function zakat(w){var due=w*0.025;return{headline:due,a:w,b:w-due,total:due,aPct:2.5};}
+  var nf;try{nf=new Intl.NumberFormat(CFG.locale,{style:'currency',currency:CFG.cur,maximumFractionDigits:0});}catch(e){nf=new Intl.NumberFormat('en',{maximumFractionDigits:0});}
+  function money(v){return nf.format(Math.round(v));}
+  customElements.define('fc-'+CFG.tab, class extends HTMLElement{
+    connectedCallback(){
+      var el=this,get=function(f){return el.querySelector('[data-f="'+f+'"]');},out=function(o){return el.querySelector('[data-o="'+o+'"]');};
+      var sp=new URLSearchParams(location.search);
+      ['amount','rate','years'].forEach(function(k){if(sp.has(k)&&get(k)){var v=parseFloat(sp.get(k));if(isFinite(v)&&v>0)get(k).value=v;}});
+      if(sp.has('tenure')&&get('years')){var tv=parseFloat(sp.get('tenure'));if(isFinite(tv)&&tv>0)get('years').value=tv;}
+      function calc(push){
+        var o,amount=+get('amount').value;
+        if(CFG.tab==='car'){var dp=+get('dp').value,r=+get('rate').value,y=+get('years').value;if(!(amount>0&&r>=0&&y>0&&dp>=0&&dp<100))return;o=car(amount,dp,r,y);}
+        else if(CFG.tab==='edu'){var r2=+get('rate').value,y2=+get('years').value,mo=+get('mor').value;if(!(amount>0&&r2>=0&&y2>0&&mo>=0))return;o=edu(amount,r2,y2,mo);}
+        else{if(!(amount>=0))return;o=zakat(amount);}
+        out('headline').textContent=money(o.headline);out('a').textContent=money(o.a);out('b').textContent=money(o.b);
+        if(out('total'))out('total').textContent=money(o.total);
+        var ba=el.querySelector('[data-bar="a"]'),bb=el.querySelector('[data-bar="b"]');
+        if(ba){ba.style.width=o.aPct.toFixed(1)+'%';bb.style.width=(100-o.aPct).toFixed(1)+'%';}
+        if(push){var u=new URLSearchParams();u.set('amount',amount);if(get('rate'))u.set('rate',+get('rate').value);if(get('years'))u.set('tenure',+get('years').value);history.replaceState(null,'',location.pathname+'?'+u.toString());}
+      }
+      el.addEventListener('input',function(){calc(true);});
+      calc(sp.toString().length>0);
+    }
+  });
+})();
+</script>
+
+    <section>
+      <h2>Choose your country for local rates</h2>
+      <p>Rates, currency and rules differ everywhere. Open the car loan / auto finance calculator tuned to your country:</p>
+      <div class="country-links">
+        <a href="car-loan-calculator-australia.html">Australia</a>
+        <a href="car-finance-calculator-bahrain.html">Bahrain</a>
+        <a href="car-loan-calculator-bangladesh.html">Bangladesh</a>
+        <a href="car-loan-calculator-brazil.html">Brazil</a>
+        <a href="car-loan-calculator-canada.html">Canada</a>
+        <a href="car-loan-calculator-china.html">China</a>
+        <a href="car-loan-calculator-egypt.html">Egypt</a>
+        <a href="car-loan-calculator-hong-kong.html">Hong Kong</a>
+        <a href="car-loan-calculator-india.html">India</a>
+        <a href="car-loan-calculator-indonesia.html">Indonesia</a>
+        <a href="car-loan-calculator-japan.html">Japan</a>
+        <a href="car-loan-calculator-kenya.html">Kenya</a>
+        <a href="car-loan-calculator-kuwait.html">Kuwait</a>
+        <a href="car-loan-calculator-malaysia.html">Malaysia</a>
+        <a href="car-loan-calculator-mexico.html">Mexico</a>
+        <a href="car-loan-calculator-new-zealand.html">New Zealand</a>
+        <a href="car-loan-calculator-nigeria.html">Nigeria</a>
+        <a href="car-loan-calculator-pakistan.html">Pakistan</a>
+        <a href="car-loan-calculator-philippines.html">Philippines</a>
+        <a href="car-finance-calculator-qatar.html">Qatar</a>
+        <a href="car-loan-calculator-russia.html">Russia</a>
+        <a href="car-finance-calculator-saudi-arabia.html">Saudi Arabia</a>
+        <a href="car-loan-calculator-singapore.html">Singapore</a>
+        <a href="vehicle-finance-south-africa.html">South Africa</a>
+        <a href="car-loan-calculator-south-korea.html">South Korea</a>
+        <a href="car-loan-calculator-sri-lanka.html">Sri Lanka</a>
+        <a href="car-loan-calculator-taiwan.html">Taiwan</a>
+        <a href="car-loan-calculator-thailand.html">Thailand</a>
+        <a href="tasit-kredisi-hesaplama.html">Türkiye</a>
+        <a href="car-loan-calculator-uae.html">UAE</a>
+        <a href="car-finance-calculator-uk.html">United Kingdom</a>
+        <a href="car-loan-calculator-usa.html">United States</a>
+        <a href="car-loan-calculator-vietnam.html">Vietnam</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>How a car loan is calculated</h2>
+      <p>A car loan uses the same reducing-balance formula as a mortgage — <strong>P × r × (1+r)<sup>n</sup> ÷ ((1+r)<sup>n</sup> − 1)</strong> — applied to the amount you finance (car price minus your down payment). Some markets quote a “flat rate” instead; the reducing-balance equivalent is usually roughly double the flat number.</p>
+    </section>
+    <section>
+      <h2>Depreciation is the hidden cost</h2>
+      <p>Unlike a home, a car <strong>loses value</strong> — typically 15–25% in the first year and about 40–50% over three years. Borrowing heavily over a long term for a depreciating asset is one of the most expensive forms of common debt. A larger down payment (20%+) and a shorter term keep you from owing more than the car is worth.</p>
+    </section>
+    <section>
+      <h2>Rates and rules vary widely</h2>
+      <p>Auto-loan rates and maximum tenures are regulated differently everywhere — from ~3–5% in the Gulf and East Asia to 25%+ in high-inflation markets. Captive lenders (Toyota Financial, Ford Credit) often beat banks on promotional rates. Pick your country below for realistic local defaults.</p>
+    </section>
+
+    <div class="cta-box">
+      <h3>Want the full interactive tool?</h3>
+      <p>The homepage version adds amortization schedules, prepay-vs-invest, inflation adjustment and 14 calculators in one place.</p>
+      <a href="../index.html" class="cta-btn">Open the full calculator →</a>
+    </div>
+
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="q">How much down payment do I need?</div>
+      <div class="a">Most experts recommend at least 20% to avoid being “upside-down” (owing more than the car is worth). Some countries set legal minimums; the calculator applies local rules when you pick your country.</div>
+      <div class="q">New or used — does the rate differ?</div>
+      <div class="a">Yes. Used-car loans usually carry a higher rate and a shorter maximum term than new-car loans, because the collateral depreciates faster.</div>
+      <div class="q">Does this work for my country?</div>
+      <div class="a">Yes — choose your country below for localized rates, currency and tenure rules across 34 countries. Not listed? Enter your own rate manually.</div>
+    </section>
+
+    <section>
+      <h2>Other calculators</h2>
+      <ul>
+        <li><a href="home-loan-calculator.html">Home Loan &amp; Mortgage Calculator</a></li>
+        <li><a href="sip-calculator.html">SIP &amp; Monthly Investment Calculator</a></li>
+        <li><a href="fixed-deposit-calculator.html">Fixed Deposit &amp; CD Calculator</a></li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>fin·calc · Made for better financial decisions. No signup. No tracking.</p>
+    </footer>
+  </main>
+</body>
+</html>

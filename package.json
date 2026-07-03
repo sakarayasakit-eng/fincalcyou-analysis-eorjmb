@@ -1,0 +1,27 @@
+{
+  "name": "fincalcyou",
+  "version": "1.0.0",
+  "description": "One small addition: a year-by-year growth chart on the SIP tab.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sakarayasakit-eng/fincalcyou-analysis-eorjmb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/sakarayasakit-eng/fincalcyou-analysis-eorjmb/issues"
+  },
+  "homepage": "https://github.com/sakarayasakit-eng/fincalcyou-analysis-eorjmb#readme",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.110.0"
+  },
+  "devDependencies": {
+    "netlify-cli": "^26.1.0"
+  }
+}

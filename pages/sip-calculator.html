@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>SIP &amp; Monthly Investment Calculator (34 Countries) — Future Value</title>
+  <meta name="description" content="Free SIP / monthly investment calculator. See how a fixed monthly investment grows through compounding, using long-term market returns for 34 countries. Pick your country." />
+  <meta name="keywords" content="SIP calculator, monthly investment calculator, mutual fund calculator, dollar cost averaging calculator, compounding calculator, investment growth" />
+  <link rel="canonical" href="https://fincalcyou.netlify.app/pages/sip-calculator.html" />
+  <link rel="alternate" hreflang="x-default" href="https://fincalcyou.netlify.app/pages/sip-calculator.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://fincalcyou.netlify.app/pages/sip-calculator.html" />
+  <meta property="og:title" content="SIP &amp; Monthly Investment Calculator (34 Countries) — Future Value" />
+  <meta property="og:description" content="Free SIP / monthly investment calculator. See how a fixed monthly investment grows through compounding, using long-term market returns for 34 countries. Pick your country." />
+  <meta property="og:image" content="https://fincalcyou.netlify.app/og-image.png" />
+  <meta property="og:site_name" content="fin·calc" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://fincalcyou.netlify.app/og-image.png" />
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What return should I assume?", "acceptedAnswer": {"@type": "Answer", "text": "Use a long-term average for your market, not a recent hot year. The calculator pre-fills a realistic figure when you pick your country, and you can adjust it. Lower assumptions give safer plans."}}, {"@type": "Question", "name": "What is a step-up SIP?", "acceptedAnswer": {"@type": "Answer", "text": "Increasing your monthly amount each year (say by 10%) as your income grows. It dramatically increases the final value — the full tool on the homepage lets you model step-ups and inflation."}}, {"@type": "Question", "name": "Does this work for my country?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — pick your country below for a localized return assumption, currency and local platforms across 34 countries."}}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://fincalcyou.netlify.app/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://fincalcyou.netlify.app/pages/"},{"@type":"ListItem","position":3,"name":"SIP &amp; Monthly Investment Calculator","item":"https://fincalcyou.netlify.app/pages/sip-calculator.html"}]}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="landing.css" />
+</head>
+<body>
+  <main>
+    <header>
+      <a href="../index.html" class="brand">fin<span class="dot">·</span>calc</a>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="index.html">Guides</a>
+      </nav>
+    </header>
+
+    <h1>SIP &amp; Monthly Investment Calculator</h1>
+    <p class="intro">See how a fixed amount invested every month grows over time through compounding — based on long-term stock-market returns for your country. This is the engine behind SIPs, dollar-cost averaging and 401(k)/pension contributions.</p>
+
+<style id="fc-embed-css">
+.fc-embed{display:block;background:#ffffff;border:1px solid #e3e8ee;border-radius:16px;padding:16px;margin:14px 0;color:#1a2733;font-family:Inter,-apple-system,Segoe UI,Roboto,sans-serif}
+.fc-embed .fc-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+@media(max-width:560px){.fc-embed .fc-grid{grid-template-columns:1fr}}
+.fc-embed label{display:block;font-size:11px;color:#5c6b7a;margin-bottom:5px;text-transform:uppercase;letter-spacing:.05em}
+.fc-embed .fc-in{display:flex;align-items:center;gap:6px;background:#f4f6f7;border:1px solid #e3e8ee;border-radius:9px;padding:7px 9px}
+.fc-embed .fc-in span{color:#5c6b7a;font-size:13px}
+.fc-embed .fc-in input{flex:1;width:100%;background:transparent;border:0;color:#1a2733;font-size:15px;font-weight:600;outline:none}
+.fc-embed input[type=range]{width:100%;margin-top:8px;accent-color:#0e7a4a}
+.fc-embed .fc-res{margin-top:16px}
+.fc-embed .fc-head{font-size:12px;color:#5c6b7a}
+.fc-embed .fc-head strong{display:block;font-size:30px;color:#0e7a4a;font-weight:800;line-height:1.1;margin-top:2px}
+.fc-embed .fc-mini{display:flex;gap:18px;margin-top:10px;font-size:12px;color:#5c6b7a;flex-wrap:wrap}
+.fc-embed .fc-mini b{display:block;color:#1a2733;font-size:15px}
+.fc-embed .fc-bar{height:12px;border-radius:7px;overflow:hidden;display:flex;border:1px solid #e3e8ee;margin-top:12px}
+.fc-embed .fc-bar i{display:block;height:100%}
+.fc-embed .fc-note{font-size:11px;color:#5c6b7a;margin-top:8px}
+</style>
+<fc-sip class="fc-embed" data-fincalc-embed="sip">
+  <div class="fc-grid">
+    <div><label>Monthly investment</label><div class="fc-in"><span>$</span><input data-f="amount" type="number" min="1" step="any" value="10000"></div></div>
+    <div><label>Rate (% p.a.)</label><div class="fc-in"><input data-f="rate" type="number" min="0" step="0.05" value="10"><span>%</span></div></div>
+    <div><label>Duration (years)</label><div class="fc-in"><input data-f="years" type="number" min="1" step="1" value="15"><span>yrs</span></div></div>
+  </div>
+  <div class="fc-res">
+    <div class="fc-head">Future value<strong data-o="headline">$4,179,243</strong></div>
+    <div class="fc-mini">
+      <div>Invested<b data-o="a">$1,800,000</b></div>
+      <div>Returns<b data-o="b">$2,379,243</b></div>
+      <div>Total<b data-o="total">$4,179,243</b></div>
+    </div>
+    <div class="fc-bar"><i data-bar="a" style="width:43.1%;background:#0e7a4a"></i><i data-bar="b" style="width:56.9%;background:#e0932f"></i></div>
+    <div class="fc-note">Calculated live on this page · reference rates June 2026. <a href="../index.html?cur=USD&tab=sip&amount=10000&rate=10&years=15" style="color:#0e7a4a">Open the full tool →</a></div>
+  </div>
+</fc-sip>
+<script>
+(function(){
+  var CFG={"type":"sip","cur":"USD","locale":"en-US","def":{"amount":10000,"rate":10,"years":15}};
+  function emi(P,r,y){var n=Math.round(y*12),m=r/1200,e;if(m===0){e=P/n;}else{var g=Math.pow(1+m,n);e=P*m*g/(g-1);}var t=e*n;return{headline:e,a:P,b:t-P,total:t,aPct:Math.max(2,Math.min(98,P/t*100))};}
+  function fd(P,r,y){var k=4,M=P*Math.pow(1+r/(100*k),k*y);return{headline:M,a:P,b:M-P,total:M,aPct:Math.max(2,Math.min(98,P/M*100))};}
+  function sip(M,r,y){var i=r/1200,n=Math.round(y*12),inv=M*n,fv=i===0?inv:M*((Math.pow(1+i,n)-1)/i)*(1+i);return{headline:fv,a:inv,b:fv-inv,total:fv,aPct:Math.max(2,Math.min(98,inv/fv*100))};}
+  var ENG={emi:emi,fd:fd,sip:sip}[CFG.type];
+  var nf;try{nf=new Intl.NumberFormat(CFG.locale,{style:'currency',currency:CFG.cur,maximumFractionDigits:0});}catch(e){nf=new Intl.NumberFormat('en',{maximumFractionDigits:0});}
+  function money(v){return nf.format(Math.round(v));}
+  customElements.define(CFG.type==='emi'?'fc-emi':CFG.type==='fd'?'fc-fd':'fc-sip', class extends HTMLElement{
+    connectedCallback(){
+      var el=this,get=function(f){return el.querySelector('[data-f="'+f+'"]');},out=function(o){return el.querySelector('[data-o="'+o+'"]');};
+      var sp=new URLSearchParams(location.search),map={amount:'amount',rate:'rate',years:'years',tenure:'years'};
+      Object.keys(map).forEach(function(k){if(sp.has(k)){var v=parseFloat(sp.get(k));if(isFinite(v)&&v>0)get(map[k]).value=v;}});
+      function calc(push){
+        var P=+get('amount').value,r=+get('rate').value,y=+get('years').value;
+        if(!(P>0&&r>=0&&y>0))return;
+        var o=ENG(P,r,y);
+        out('headline').textContent=money(o.headline);
+        out('a').textContent=money(o.a);out('b').textContent=money(o.b);out('total').textContent=money(o.total);
+        el.querySelector('[data-bar="a"]').style.width=o.aPct.toFixed(1)+'%';
+        el.querySelector('[data-bar="b"]').style.width=(100-o.aPct).toFixed(1)+'%';
+        if(push){var u=new URLSearchParams();u.set('amount',P);u.set('rate',r);u.set('tenure',y);history.replaceState(null,'',location.pathname+'?'+u.toString());}
+      }
+      el.addEventListener('input',function(){calc(true);});
+      calc(sp.toString().length>0);
+    }
+  });
+})();
+</script>
+
+    <section>
+      <h2>Choose your country for local rates</h2>
+      <p>Rates, currency and rules differ everywhere. Open the SIP / monthly investment calculator tuned to your country:</p>
+      <div class="country-links">
+        <a href="sip-calculator-australia.html">Australia</a>
+        <a href="sip-calculator-bahrain.html">Bahrain</a>
+        <a href="sip-calculator-bangladesh.html">Bangladesh</a>
+        <a href="sip-calculator-brazil.html">Brazil</a>
+        <a href="sip-calculator-canada.html">Canada</a>
+        <a href="sip-calculator-china.html">China</a>
+        <a href="sip-calculator-egypt.html">Egypt</a>
+        <a href="sip-calculator-hong-kong.html">Hong Kong</a>
+        <a href="sip-calculator-india.html">India</a>
+        <a href="sip-calculator-indonesia.html">Indonesia</a>
+        <a href="sip-calculator-japan.html">Japan</a>
+        <a href="sip-calculator-kenya.html">Kenya</a>
+        <a href="sip-calculator-kuwait.html">Kuwait</a>
+        <a href="sip-calculator-malaysia.html">Malaysia</a>
+        <a href="sip-calculator-mexico.html">Mexico</a>
+        <a href="sip-calculator-new-zealand.html">New Zealand</a>
+        <a href="sip-calculator-nigeria.html">Nigeria</a>
+        <a href="sip-calculator-pakistan.html">Pakistan</a>
+        <a href="sip-calculator-philippines.html">Philippines</a>
+        <a href="sip-calculator-qatar.html">Qatar</a>
+        <a href="sip-calculator-russia.html">Russia</a>
+        <a href="sip-calculator-saudi-arabia.html">Saudi Arabia</a>
+        <a href="sip-calculator-singapore.html">Singapore</a>
+        <a href="sip-calculator-south-africa.html">South Africa</a>
+        <a href="sip-calculator-south-korea.html">South Korea</a>
+        <a href="sip-calculator-sri-lanka.html">Sri Lanka</a>
+        <a href="sip-calculator-taiwan.html">Taiwan</a>
+        <a href="sip-calculator-thailand.html">Thailand</a>
+        <a href="sip-calculator-turkey.html">Türkiye</a>
+        <a href="sip-calculator-uae.html">UAE</a>
+        <a href="sip-calculator-uk.html">United Kingdom</a>
+        <a href="sip-calculator-usa.html">United States</a>
+        <a href="sip-calculator-vietnam.html">Vietnam</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>How compounding builds wealth</h2>
+      <p>The future value of a monthly investment is <strong>M × ((1+r)<sup>n</sup> − 1) ÷ r × (1+r)</strong>, where M is the monthly amount, r is the monthly return and n is the number of months. The magic is compounding: the first ten years feel slow, but the last decade of a long plan does most of the work — which is why starting early beats investing more later.</p>
+    </section>
+    <section>
+      <h2>“SIP” is just automated investing</h2>
+      <p>A SIP (Systematic Investment Plan) is the South-Asian term for what the US calls dollar-cost averaging and Europe calls a savings plan: investing a fixed amount on a schedule regardless of market level. It removes timing risk and turns investing into a habit.</p>
+    </section>
+    <section>
+      <h2>Returns are assumptions, not promises</h2>
+      <p>The default return reflects long-term equity averages for your market — roughly 10% for the US S&amp;P 500, 12% for India's Nifty, less for lower-growth markets. Real returns vary wildly year to year (−20% one year, +30% the next); the projection only holds over long horizons.</p>
+    </section>
+
+    <div class="cta-box">
+      <h3>Want the full interactive tool?</h3>
+      <p>The homepage version adds amortization schedules, prepay-vs-invest, inflation adjustment and 14 calculators in one place.</p>
+      <a href="../index.html" class="cta-btn">Open the full calculator →</a>
+    </div>
+
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="q">What return should I assume?</div>
+      <div class="a">Use a long-term average for your market, not a recent hot year. The calculator pre-fills a realistic figure when you pick your country, and you can adjust it. Lower assumptions give safer plans.</div>
+      <div class="q">What is a step-up SIP?</div>
+      <div class="a">Increasing your monthly amount each year (say by 10%) as your income grows. It dramatically increases the final value — the full tool on the homepage lets you model step-ups and inflation.</div>
+      <div class="q">Does this work for my country?</div>
+      <div class="a">Yes — pick your country below for a localized return assumption, currency and local platforms across 34 countries.</div>
+    </section>
+
+    <section>
+      <h2>Other calculators</h2>
+      <ul>
+        <li><a href="home-loan-calculator.html">Home Loan &amp; Mortgage Calculator</a></li>
+        <li><a href="car-loan-calculator.html">Car Loan &amp; Auto Finance Calculator</a></li>
+        <li><a href="fixed-deposit-calculator.html">Fixed Deposit &amp; CD Calculator</a></li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>fin·calc · Made for better financial decisions. No signup. No tracking.</p>
+    </footer>
+  </main>
+</body>
+</html>

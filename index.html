@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <meta name="theme-color" content="#0a1628" />
+  <meta name="theme-color" content="#ffffff" />
 
   <!-- Content Security Policy: tight allow-list. Remove 'unsafe-inline' once CSS/JS are externalised. -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com https://*.googlesyndication.com https://www.googletagservices.com https://tpc.googlesyndication.com https://adservice.google.com https://*.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.googlesyndication.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.gstatic.com; connect-src 'self' https://api.exchangerate.host https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com; frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com; base-uri 'self'; form-action 'self'" />
@@ -205,7 +205,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
 
   <style>
+    /* NerdWallet-style light theme (default) */
     :root {
+      --bg: #f4f6f7;
+      --bg-2: #ffffff;
+      --ink: #1a2733;
+      --muted: #5c6b7a;
+      --accent: #0e7a4a;
+      --accent-2: #b45309;
+      --accent-3: #6d28d9;
+      --accent-4: #dc2626;
+      --card: #ffffff;
+      --line: rgba(16,38,58,0.10);
+      --danger: #dc2626;
+    }
+    .card { box-shadow: 0 1px 2px rgba(16,38,58,0.05), 0 2px 6px rgba(16,38,58,0.05); }
+    /* Optional dark mode (toggle) */
+    body.light-mode {
       --bg: #0a1628;
       --bg-2: #0f1f38;
       --ink: #eef3fb;
@@ -218,27 +234,12 @@
       --line: rgba(238,243,251,0.08);
       --danger: #f87171;
     }
-    body.light-mode {
-      --bg: #f7f8fb;
-      --bg-2: #ffffff;
-      --ink: #0a1628;
-      --muted: #546079;
-      --accent: #0891b2;
-      --accent-2: #d97706;
-      --accent-3: #7c3aed;
-      --accent-4: #dc2626;
-      --card: #ffffff;
-      --line: rgba(10,22,40,0.08);
-      --danger: #dc2626;
-    }
     body.light-mode::before {
       background:
-        radial-gradient(900px 500px at 90% -10%, rgba(8,145,178,0.06), transparent 60%),
-        radial-gradient(700px 400px at -10% 100%, rgba(217,119,6,0.04), transparent 60%) !important;
+        radial-gradient(900px 500px at 90% -10%, rgba(94,234,212,0.10), transparent 60%),
+        radial-gradient(700px 400px at -10% 100%, rgba(251,191,36,0.08), transparent 60%) !important;
     }
-    body.light-mode .card {
-      box-shadow: 0 1px 3px rgba(10,22,40,0.04);
-    }
+    body.light-mode .card { box-shadow: none; }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body { background: var(--bg); color: var(--ink); }
@@ -250,9 +251,7 @@
     }
     body::before {
       content: ''; position: fixed; inset: 0; z-index: 0; pointer-events: none;
-      background:
-        radial-gradient(900px 500px at 90% -10%, rgba(94,234,212,0.10), transparent 60%),
-        radial-gradient(700px 400px at -10% 100%, rgba(251,191,36,0.08), transparent 60%);
+      background: none;
     }
     main { position: relative; z-index: 1; max-width: 640px; margin: 0 auto; padding: 24px 18px 40px; }
 
@@ -1264,11 +1263,30 @@
     .currency-row b { font-family: 'JetBrains Mono', monospace; font-size: 13px; }
     .currency-row .flag { margin-right: 10px; font-size: 18px; }
     .currency-row .has-profile {
-      background: var(--accent); color: var(--bg);
+      background: var(--accent); color: #ffffff;
       padding: 2px 6px; border-radius: 4px;
       font-size: 9px; font-weight: 700;
       margin-left: 6px; letter-spacing: 0.05em;
     }
+    /* ===== NerdWallet-style typography + polish (override) ===== */
+    h1, .panel-head h2, .welcome-card h2, .content h2, .content h3 {
+      font-family: 'Inter', system-ui, sans-serif;
+      letter-spacing: -0.02em;
+    }
+    h1 { font-weight: 800; }
+    .panel-head h2 { font-weight: 700; }
+    .result-hero .big {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-weight: 800; letter-spacing: -0.025em;
+    }
+    .tab.active { box-shadow: 0 2px 8px rgba(16,38,58,0.12); }
+    .country-bar {
+      background: linear-gradient(135deg, rgba(14,122,74,0.07), rgba(14,122,74,0.03));
+    }
+    .cta-btn, .example-btn.fired { color: #ffffff; }
+    /* Primary buttons read as solid NerdWallet green on light theme */
+    body:not(.light-mode) .action-btn.active,
+    body:not(.light-mode) .welcome-btn.primary { color: #ffffff; }
   </style>
 </head>
 <body>

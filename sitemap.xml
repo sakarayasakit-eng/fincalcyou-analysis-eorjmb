@@ -294,4 +294,8 @@
   <url><loc>https://fincalcyou.netlify.app/pages/zakat-calculator-uae.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/pages/zenith-bank-loan-calculator.html</loc><priority>0.8</priority></url>
   <url><loc>https://fincalcyou.netlify.app/privacy.html</loc><priority>0.3</priority></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/home-loan-calculator.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/car-loan-calculator.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/sip-calculator.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://fincalcyou.netlify.app/pages/fixed-deposit-calculator.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
 </urlset>
