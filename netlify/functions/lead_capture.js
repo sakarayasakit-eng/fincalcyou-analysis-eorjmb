@@ -57,4 +57,3 @@ exports.handler = async (event) => {
         };
     }
 };
-# diagnostic: confirming auto-deploy trigger 2026-07-03T23:21:57Z
