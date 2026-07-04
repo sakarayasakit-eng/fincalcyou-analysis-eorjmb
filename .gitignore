@@ -1,6 +1,8 @@
 # build artifacts
 *.zip
-__pycache__/
-
-# local Netlify CLI state
-.netlify/
+# secrets / environment — NEVER commit these
+.env
+.env.*
+*.env
+.env.txt
+.claude/settings.local.json
