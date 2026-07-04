@@ -209,6 +209,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
 
   <style>
+    /* Skip-to-content link: hidden off-screen until keyboard-focused */
+    .skip-link {
+      position: absolute; left: -9999px; top: 0;
+      z-index: 9999;
+    }
+    .skip-link:focus {
+      left: 8px; top: 8px;
+      background: var(--accent); color: #fff;
+      padding: 10px 16px; border-radius: 8px;
+      font-weight: 700; text-decoration: none;
+      font-family: 'Inter', system-ui, sans-serif;
+    }
     /* NerdWallet-style light theme (default) */
     :root {
       --bg: #f4f6f7;
@@ -1294,11 +1306,12 @@
   </style>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to calculators</a>
 
   <!-- ============================================================ -->
   <!-- WELCOME MODAL — first-visit onboarding                      -->
   <!-- ============================================================ -->
-  <div class="welcome-overlay" id="welcomeOverlay" role="dialog" aria-labelledby="welcomeTitle">
+  <div class="welcome-overlay" id="welcomeOverlay" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle">
     <div class="welcome-card">
 
       <!-- Step 1: Pick goal -->
@@ -1371,7 +1384,7 @@
     </div>
   </div>
 
-  <main>
+  <main id="main-content">
     <header>
       <div class="brand">fin<span class="dot">·</span>calc</div>
       <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
@@ -1390,7 +1403,7 @@
 
     <!-- COUNTRY CONTEXT BAR (rate awareness) -->
     <div class="country-bar" id="countryBar" style="visibility:hidden">
-      <span class="flag" id="cbFlag">🇺🇸</span>
+      <span class="flag" id="cbFlag" aria-hidden="true">🇺🇸</span>
       <div class="cb-info">
         <b id="cbName">United States · Federal Reserve</b>
         <span>Policy rate <span class="rate" id="cbPolicy">3.75%</span> · Typical home loan <span class="rate" id="cbLoan">6.50%</span> · Savings <span class="rate" id="cbSavings">4.00%</span></span><br />
@@ -1522,10 +1535,10 @@
 
       <div class="field number-first">
         <label>Loan amount<button type="button" class="help-icon" data-help="loan-amount" aria-label="What is loan amount">?</button> <span class="value"><span class="cur">$</span><span id="emiAmtV">1,000,000</span></span></label>
-        <input type="range" id="emiAmt" min="10000" max="20000000" step="10000" value="1000000" />
+        <input type="range" id="emiAmt" aria-label="Loan amount" min="10000" max="20000000" step="10000" value="1000000" />
         <div class="amt-input-wrap">
           <span class="amt-cur cur">$</span>
-          <input type="number" class="amt-input" id="emiAmtInput" inputmode="numeric" />
+          <input type="number" class="amt-input" id="emiAmtInput" aria-label="Loan amount" inputmode="numeric" />
           <span class="amt-hint">type exact</span>
         </div>
       </div>
@@ -1534,15 +1547,15 @@
           Interest rate<button type="button" class="help-icon" data-help="interest-rate" aria-label="What is interest rate">?</button>
           <span><span class="rate-chip" id="emiRateChip">Use 8.75%</span><span class="value"><span id="emiRateV">8.5</span>%</span></span>
         </label>
-        <input type="range" id="emiRate" min="1" max="35" step="0.1" value="8.5" />
+        <input type="range" id="emiRate" aria-label="Interest rate" min="1" max="35" step="0.1" value="8.5" />
         <div id="emiRateBench" class="rate-bench" style="display:none;"></div>
       </div>
       <div class="field">
         <label>Tenure<button type="button" class="help-icon" data-help="tenure" aria-label="What is tenure">?</button> <span class="value"><span id="emiYearsV">20</span> years</span></label>
-        <input type="range" id="emiYears" min="1" max="30" step="1" value="20" />
+        <input type="range" id="emiYears" aria-label="Tenure" min="1" max="30" step="1" value="20" />
       </div>
 
-      <div class="result-hero">
+      <div class="result-hero" aria-live="polite">
         <div class="label" id="emiHeroLabel">Your Monthly EMI</div>
         <div class="big" style="font-weight: 800;"><span class="cur">$</span><span id="emiMonthly">0</span></div>
         <div style="font-size:13px; color:var(--muted); margin-top:8px;">
@@ -1584,7 +1597,7 @@
           Extra monthly payment <span class="rate-chip-sm" style="background: rgba(167,139,250,0.15); color:#a78bfa; font-size:10px; padding:2px 8px; border-radius:6px; margin-left:6px; font-family:'JetBrains Mono',monospace; font-weight:600;">PREPAYMENT</span>
           <span class="value"><span class="cur">$</span><span id="emiExtraV">0</span></span>
         </label>
-        <input type="range" id="emiExtra" min="0" max="100000" step="500" value="0" />
+        <input type="range" id="emiExtra" aria-label="Extra monthly payment" min="0" max="100000" step="500" value="0" />
       </div>
       <div class="grid-2" id="emiPrepaySavings" style="display:none;">
         <div class="stat"><div class="k">Time saved</div><div class="v accent" id="emiTimeSaved">—</div></div>
@@ -1601,15 +1614,15 @@
         </div>
         <div class="field">
           <label>Lump sum available <span class="value"><span class="cur">$</span><span id="piAmtV">100,000</span></span></label>
-          <input type="range" id="piAmt" min="5000" max="10000000" step="5000" value="100000" />
+          <input type="range" id="piAmt" aria-label="Lump sum available" min="5000" max="10000000" step="5000" value="100000" />
         </div>
         <div class="field">
           <label>Expected investment return <span class="value"><span id="piReturnV">12</span>%</span></label>
-          <input type="range" id="piReturn" min="0.5" max="25" step="0.1" value="12" />
+          <input type="range" id="piReturn" aria-label="Expected investment return" min="0.5" max="25" step="0.1" value="12" />
         </div>
         <div class="field">
           <label>Investment horizon (how long before you need it?) <span class="value"><span id="piHorizonV">10</span> years</span></label>
-          <input type="range" id="piHorizon" min="1" max="30" step="1" value="10" />
+          <input type="range" id="piHorizon" aria-label="Investment horizon (how long before you need it?)" min="1" max="30" step="1" value="10" />
         </div>
         <div id="piVerdict" style="margin-top:14px; padding:12px 14px; border-radius:10px; font-size:12.5px; line-height:1.6; display:none;"></div>
       </div>
@@ -1649,19 +1662,19 @@
 
       <div class="field number-first">
         <label>Car price <span class="value"><span class="cur">$</span><span id="carPriceV">800,000</span></span></label>
-        <input type="range" id="carPrice" min="50000" max="20000000" step="10000" value="800000" />
+        <input type="range" id="carPrice" aria-label="Car price" min="50000" max="20000000" step="10000" value="800000" />
         <div class="amt-input-wrap">
           <span class="amt-cur cur">$</span>
-          <input type="number" class="amt-input" id="carPriceInput" inputmode="numeric" />
+          <input type="number" class="amt-input" id="carPriceInput" aria-label="Car price" inputmode="numeric" />
           <span class="amt-hint">type exact</span>
         </div>
       </div>
       <div class="field">
         <label>Down payment<button type="button" class="help-icon" data-help="down-payment" aria-label="What is down payment">?</button> <span class="value"><span class="cur">$</span><span id="carDownV">200,000</span> · <span id="carDownPctV">25</span>%</span></label>
-        <input type="range" id="carDown" min="0" max="10000000" step="5000" value="200000" />
+        <input type="range" id="carDown" aria-label="Down payment" min="0" max="10000000" step="5000" value="200000" />
         <div class="amt-input-wrap">
           <span class="amt-cur cur">$</span>
-          <input type="number" class="amt-input" id="carDownInput" inputmode="numeric" />
+          <input type="number" class="amt-input" id="carDownInput" aria-label="Down payment" inputmode="numeric" />
           <span class="amt-hint">type exact</span>
         </div>
       </div>
@@ -1670,15 +1683,15 @@
           Interest rate
           <span><span class="rate-chip" id="carRateChip">Use 9.50%</span><span class="value"><span id="carRateV">9.5</span>%</span></span>
         </label>
-        <input type="range" id="carRate" min="1" max="60" step="0.1" value="9.5" />
+        <input type="range" id="carRate" aria-label="Interest rate" min="1" max="60" step="0.1" value="9.5" />
         <div id="carRateBench" class="rate-bench" style="display:none;"></div>
       </div>
       <div class="field">
         <label>Tenure <span class="value"><span id="carYearsV">5</span> years · max <span id="carMaxYears">7</span></span></label>
-        <input type="range" id="carYears" min="1" max="9" step="1" value="5" />
+        <input type="range" id="carYears" aria-label="Tenure" min="1" max="9" step="1" value="5" />
       </div>
 
-      <div class="result-hero">
+      <div class="result-hero" aria-live="polite">
         <div class="label" id="carHeroLabel">Your Monthly EMI</div>
         <div class="big" style="font-weight: 800;"><span class="cur">$</span><span id="carMonthly">0</span></div>
         <div style="font-size:13px; color:var(--muted); margin-top:8px;">
@@ -1746,27 +1759,27 @@
 
       <div class="field number-first">
         <label>Loan amount (tuition + living) <span class="value"><span class="cur">$</span><span id="eduAmtV">2,000,000</span></span></label>
-        <input type="range" id="eduAmt" min="50000" max="50000000" step="50000" value="2000000" />
+        <input type="range" id="eduAmt" aria-label="Loan amount (tuition + living)" min="50000" max="50000000" step="50000" value="2000000" />
         <div class="amt-input-wrap">
           <span class="amt-cur cur">$</span>
-          <input type="number" class="amt-input" id="eduAmtInput" inputmode="numeric" />
+          <input type="number" class="amt-input" id="eduAmtInput" aria-label="Loan amount (tuition + living)" inputmode="numeric" />
           <span class="amt-hint">type exact</span>
         </div>
       </div>
 
       <div class="field">
         <label>Interest rate <span class="value"><span id="eduRateV">10</span>%</span></label>
-        <input type="range" id="eduRate" min="1" max="25" step="0.1" value="10" />
+        <input type="range" id="eduRate" aria-label="Interest rate" min="1" max="25" step="0.1" value="10" />
       </div>
 
       <div class="field">
         <label>Study period / moratorium<button type="button" class="help-icon" data-help="moratorium" aria-label="What is moratorium">?</button> <span class="value"><span id="eduMoratV">3</span> years</span></label>
-        <input type="range" id="eduMorat" min="0" max="7" step="0.5" value="3" />
+        <input type="range" id="eduMorat" aria-label="Study period / moratorium" min="0" max="7" step="0.5" value="3" />
       </div>
 
       <div class="field">
         <label>Repayment tenure after studies <span class="value"><span id="eduYearsV">7</span> years</span></label>
-        <input type="range" id="eduYears" min="1" max="15" step="1" value="7" />
+        <input type="range" id="eduYears" aria-label="Repayment tenure after studies" min="1" max="15" step="1" value="7" />
       </div>
 
       <div class="field" style="display:flex; gap:10px; flex-wrap:wrap;">
@@ -1777,7 +1790,7 @@
       </div>
 
       <!-- RESULT -->
-      <div class="result-hero">
+      <div class="result-hero" aria-live="polite">
         <div class="label" id="eduHeroLabel">Your Monthly EMI (after studies)</div>
         <div class="big" style="font-weight: 800;"><span class="cur">$</span><span id="eduMonthly">0</span></div>
         <div style="font-size:13px; color:var(--muted); margin-top:8px;">
@@ -1828,12 +1841,12 @@
           <div style="font-weight:700; color:var(--accent); margin-bottom:8px; font-size:13px;">Loan 1</div>
           <div class="field" style="margin-bottom:8px;">
             <label style="font-size:12px;">Balance <span class="value" style="font-size:13px;"><span class="cur">$</span><span id="d1AmtV">500,000</span></span></label>
-            <input type="range" id="d1Amt" min="0" max="50000000" step="10000" value="500000" />
+            <input type="range" id="d1Amt" aria-label="Loan 1 balance" min="0" max="50000000" step="10000" value="500000" />
           </div>
           <div class="field" style="margin-bottom:0;">
             <label style="font-size:12px;">Rate % / Min EMI <span class="value" style="font-size:13px;"><span id="d1RateV">12</span>% · <span class="cur">$</span><span id="d1EmiV">0</span></span></label>
-            <input type="range" id="d1Rate" min="0" max="60" step="0.1" value="12" />
-            <input type="range" id="d1Emi" min="0" max="500000" step="500" value="10000" style="margin-top:6px;" />
+            <input type="range" id="d1Rate" aria-label="Loan 1 interest rate" min="0" max="60" step="0.1" value="12" />
+            <input type="range" id="d1Emi" aria-label="Loan 1 minimum EMI" min="0" max="500000" step="500" value="10000" style="margin-top:6px;" />
           </div>
         </div>
 
@@ -1842,12 +1855,12 @@
           <div style="font-weight:700; color:var(--accent-2); margin-bottom:8px; font-size:13px;">Loan 2</div>
           <div class="field" style="margin-bottom:8px;">
             <label style="font-size:12px;">Balance <span class="value" style="font-size:13px;"><span class="cur">$</span><span id="d2AmtV">200,000</span></span></label>
-            <input type="range" id="d2Amt" min="0" max="50000000" step="10000" value="200000" />
+            <input type="range" id="d2Amt" aria-label="Loan 2 balance" min="0" max="50000000" step="10000" value="200000" />
           </div>
           <div class="field" style="margin-bottom:0;">
             <label style="font-size:12px;">Rate % / Min EMI <span class="value" style="font-size:13px;"><span id="d2RateV">36</span>% · <span class="cur">$</span><span id="d2EmiV">0</span></span></label>
-            <input type="range" id="d2Rate" min="0" max="60" step="0.1" value="36" />
-            <input type="range" id="d2Emi" min="0" max="500000" step="500" value="8000" style="margin-top:6px;" />
+            <input type="range" id="d2Rate" aria-label="Loan 2 interest rate" min="0" max="60" step="0.1" value="36" />
+            <input type="range" id="d2Emi" aria-label="Loan 2 minimum EMI" min="0" max="500000" step="500" value="8000" style="margin-top:6px;" />
           </div>
         </div>
 
@@ -1856,27 +1869,27 @@
           <div style="font-weight:700; color:var(--accent-3); margin-bottom:8px; font-size:13px;">Loan 3 <span style="color:var(--muted); font-weight:400; font-size:11px;">(optional)</span></div>
           <div class="field" style="margin-bottom:8px;">
             <label style="font-size:12px;">Balance <span class="value" style="font-size:13px;"><span class="cur">$</span><span id="d3AmtV">0</span></span></label>
-            <input type="range" id="d3Amt" min="0" max="50000000" step="10000" value="0" />
+            <input type="range" id="d3Amt" aria-label="Loan 3 balance" min="0" max="50000000" step="10000" value="0" />
           </div>
           <div class="field" style="margin-bottom:0;">
             <label style="font-size:12px;">Rate % / Min EMI <span class="value" style="font-size:13px;"><span id="d3RateV">18</span>% · <span class="cur">$</span><span id="d3EmiV">0</span></span></label>
-            <input type="range" id="d3Rate" min="0" max="60" step="0.1" value="18" />
-            <input type="range" id="d3Emi" min="0" max="500000" step="500" value="0" style="margin-top:6px;" />
+            <input type="range" id="d3Rate" aria-label="Loan 3 interest rate" min="0" max="60" step="0.1" value="18" />
+            <input type="range" id="d3Emi" aria-label="Loan 3 minimum EMI" min="0" max="500000" step="500" value="0" style="margin-top:6px;" />
           </div>
         </div>
       </div>
 
       <div class="field">
         <label>Extra monthly payment you can afford <span class="value"><span class="cur">$</span><span id="dExtraV">5,000</span></span></label>
-        <input type="range" id="dExtra" min="0" max="500000" step="500" value="5000" />
+        <input type="range" id="dExtra" aria-label="Extra monthly payment you can afford" min="0" max="500000" step="500" value="5000" />
         <div class="amt-input-wrap">
           <span class="amt-cur cur">$</span>
-          <input type="number" class="amt-input" id="dExtraInput" inputmode="numeric" />
+          <input type="number" class="amt-input" id="dExtraInput" aria-label="Extra monthly payment you can afford" inputmode="numeric" />
           <span class="amt-hint">type exact</span>
         </div>
       </div>
 
-      <div class="result-hero">
+      <div class="result-hero" aria-live="polite">
         <div class="label">🏆 Pay extra on:</div>
         <div class="big" style="font-size:22px;" id="dWinner">—</div>
         <div style="font-size:13px; color:var(--muted); margin-top:10px;" id="dReason">—</div>
@@ -1887,7 +1900,7 @@
         <div class="stat"><div class="k">With avalanche (extra on highest rate)</div><div class="v accent" id="dAvalancheTotal">—</div></div>
       </div>
 
-      <div class="result-hero" style="margin-top:8px;">
+      <div class="result-hero" aria-live="polite" style="margin-top:8px;">
         <div class="label">You'll save</div>
         <div class="big" style="color:var(--accent);"><span class="cur">$</span><span id="dSavings">0</span></div>
         <div style="font-size:12px; color:var(--muted);">and be debt-free <span id="dMonthsSaved" style="color:var(--accent); font-weight:700;">— months</span> sooner</div>
@@ -1926,10 +1939,10 @@
 
       <div class="field number-first">
         <label>Monthly investment <span class="value"><span class="cur">$</span><span id="sipAmtV">10,000</span></span></label>
-        <input type="range" id="sipAmt" min="500" max="500000" step="500" value="10000" />
+        <input type="range" id="sipAmt" aria-label="Monthly investment" min="500" max="500000" step="500" value="10000" />
         <div class="amt-input-wrap">
           <span class="amt-cur cur">$</span>
-          <input type="number" class="amt-input" id="sipAmtInput" inputmode="numeric" />
+          <input type="number" class="amt-input" id="sipAmtInput" aria-label="Monthly investment" inputmode="numeric" />
           <span class="amt-hint">type exact</span>
         </div>
       </div>
@@ -1938,11 +1951,11 @@
           Expected return (p.a.)
           <span><span class="rate-chip" id="sipRateChip">Use 12%</span><span class="value"><span id="sipRateV">12</span>%</span></span>
         </label>
-        <input type="range" id="sipRate" min="1" max="30" step="0.5" value="12" />
+        <input type="range" id="sipRate" aria-label="Expected return (p.a.)" min="1" max="30" step="0.5" value="12" />
       </div>
       <div class="field">
         <label>Duration <span class="value"><span id="sipYearsV">10</span> years</span></label>
-        <input type="range" id="sipYears" min="1" max="40" step="1" value="10" />
+        <input type="range" id="sipYears" aria-label="Duration" min="1" max="40" step="1" value="10" />
       </div>
 
       <!-- Step-up and inflation toggles -->
@@ -1958,14 +1971,14 @@
       </div>
       <div class="field" id="sipStepFields" style="display:none;">
         <label>Annual step-up rate <span class="value"><span id="sipStepV">10</span>%</span></label>
-        <input type="range" id="sipStep" min="0" max="30" step="1" value="10" />
+        <input type="range" id="sipStep" aria-label="Annual step-up rate" min="0" max="30" step="1" value="10" />
       </div>
       <div class="field" id="sipInflFields" style="display:none;">
         <label>Expected inflation <span class="value"><span id="sipInflV">6</span>%</span></label>
-        <input type="range" id="sipInfl" min="0" max="25" step="0.1" value="6" />
+        <input type="range" id="sipInfl" aria-label="Expected inflation" min="0" max="25" step="0.1" value="6" />
       </div>
 
-      <div class="result-hero">
+      <div class="result-hero" aria-live="polite">
         <div class="label" id="sipFvLabel">Future value</div>
         <div class="big"><span class="cur">$</span><span id="sipFv">0</span></div>
       </div>
@@ -2058,10 +2071,10 @@
 
       <div class="field number-first">
         <label>Deposit amount <span class="value"><span class="cur">$</span><span id="fdAmtV">100,000</span></span></label>
-        <input type="range" id="fdAmt" min="1000" max="10000000" step="1000" value="100000" />
+        <input type="range" id="fdAmt" aria-label="Deposit amount" min="1000" max="10000000" step="1000" value="100000" />
         <div class="amt-input-wrap">
           <span class="amt-cur cur">$</span>
-          <input type="number" class="amt-input" id="fdAmtInput" inputmode="numeric" />
+          <input type="number" class="amt-input" id="fdAmtInput" aria-label="Deposit amount" inputmode="numeric" />
           <span class="amt-hint">type exact</span>
         </div>
       </div>
@@ -2070,14 +2083,14 @@
           Interest rate
           <span><span class="rate-chip" id="fdRateChip">Use 7%</span><span class="value"><span id="fdRateV">7</span>%</span></span>
         </label>
-        <input type="range" id="fdRate" min="1" max="25" step="0.1" value="7" />
+        <input type="range" id="fdRate" aria-label="Interest rate" min="1" max="25" step="0.1" value="7" />
       </div>
       <div class="field">
         <label>Tenure <span class="value"><span id="fdYearsV">5</span> years</span></label>
-        <input type="range" id="fdYears" min="1" max="20" step="1" value="5" />
+        <input type="range" id="fdYears" aria-label="Tenure" min="1" max="20" step="1" value="5" />
       </div>
 
-      <div class="result-hero">
+      <div class="result-hero" aria-live="polite">
         <div class="label">Maturity value</div>
         <div class="big"><span class="cur">$</span><span id="fdMaturity">0</span></div>
       </div>
@@ -2112,26 +2125,26 @@
 
       <div class="field">
         <label>Target amount <span class="value"><span class="cur">$</span><span id="goalAmtV">1,000,000</span></span></label>
-        <input type="range" id="goalAmt" min="10000" max="50000000" step="10000" value="1000000" />
+        <input type="range" id="goalAmt" aria-label="Target amount" min="10000" max="50000000" step="10000" value="1000000" />
         <div class="amt-input-wrap">
           <span class="amt-cur cur">$</span>
-          <input type="number" class="amt-input" id="goalAmtInput" inputmode="numeric" />
+          <input type="number" class="amt-input" id="goalAmtInput" aria-label="Target amount" inputmode="numeric" />
           <span class="amt-hint">type exact</span>
         </div>
       </div>
       <div class="field">
         <label>Time to goal <span class="value"><span id="goalYearsV">5</span> years</span></label>
-        <input type="range" id="goalYears" min="1" max="30" step="1" value="5" />
+        <input type="range" id="goalYears" aria-label="Time to goal" min="1" max="30" step="1" value="5" />
       </div>
       <div class="field">
         <label>
           Expected return
           <span><span class="rate-chip" id="goalRateChip">Use 12%</span><span class="value"><span id="goalRateV">10</span>%</span></span>
         </label>
-        <input type="range" id="goalRate" min="1" max="25" step="0.5" value="10" />
+        <input type="range" id="goalRate" aria-label="Expected return" min="1" max="25" step="0.5" value="10" />
       </div>
 
-      <div class="result-hero">
+      <div class="result-hero" aria-live="polite">
         <div class="label">Monthly saving needed</div>
         <div class="big"><span class="cur">$</span><span id="goalMonthly">0</span></div>
       </div>
@@ -2165,10 +2178,10 @@
           <label>Your monthly take-home income (after tax)
             <span class="value"><span class="cur">$</span><span id="hcIncomeV">100,000</span></span>
           </label>
-          <input type="range" id="hcIncome" min="5000" max="5000000" step="1000" value="100000" />
+          <input type="range" id="hcIncome" aria-label="Your monthly take-home income (after tax)" min="5000" max="5000000" step="1000" value="100000" />
           <div class="amt-input-wrap">
             <span class="amt-cur cur">$</span>
-            <input type="number" class="amt-input" id="hcIncomeInput" inputmode="numeric" />
+            <input type="number" class="amt-input" id="hcIncomeInput" aria-label="Your monthly take-home income (after tax)" inputmode="numeric" />
             <span class="amt-hint">type exact</span>
           </div>
         </div>
@@ -2177,10 +2190,10 @@
           <label>Your partner's monthly take-home income <span style="color:var(--muted); font-weight:400; font-size:11px;">(optional · for joint households)</span>
             <span class="value"><span class="cur">$</span><span id="hcSpouseV">0</span></span>
           </label>
-          <input type="range" id="hcSpouse" min="0" max="5000000" step="1000" value="0" />
+          <input type="range" id="hcSpouse" aria-label="Your partner's monthly take-home income (optional · for joint households)" min="0" max="5000000" step="1000" value="0" />
           <div class="amt-input-wrap">
             <span class="amt-cur cur">$</span>
-            <input type="number" class="amt-input" id="hcSpouseInput" inputmode="numeric" />
+            <input type="number" class="amt-input" id="hcSpouseInput" aria-label="Your partner's monthly take-home income (optional · for joint households)" inputmode="numeric" />
             <span class="amt-hint">type exact</span>
           </div>
         </div>
@@ -2189,10 +2202,10 @@
           <label>Monthly essential expenses (rent, food, bills)
             <span class="value"><span class="cur">$</span><span id="hcExpensesV">50,000</span></span>
           </label>
-          <input type="range" id="hcExpenses" min="0" max="2000000" step="1000" value="50000" />
+          <input type="range" id="hcExpenses" aria-label="Monthly essential expenses (rent, food, bills)" min="0" max="2000000" step="1000" value="50000" />
           <div class="amt-input-wrap">
             <span class="amt-cur cur">$</span>
-            <input type="number" class="amt-input" id="hcExpensesInput" inputmode="numeric" />
+            <input type="number" class="amt-input" id="hcExpensesInput" aria-label="Monthly essential expenses (rent, food, bills)" inputmode="numeric" />
             <span class="amt-hint">type exact</span>
           </div>
         </div>
@@ -2201,10 +2214,10 @@
           <label id="hcEmisLabel">Total monthly loan payments (all loans combined)
             <span class="value"><span class="cur">$</span><span id="hcEmisV">0</span></span>
           </label>
-          <input type="range" id="hcEmis" min="0" max="500000" step="500" value="0" />
+          <input type="range" id="hcEmis" aria-label="Total monthly loan payments (all loans combined)" min="0" max="500000" step="500" value="0" />
           <div class="amt-input-wrap">
             <span class="amt-cur cur">$</span>
-            <input type="number" class="amt-input" id="hcEmisInput" inputmode="numeric" />
+            <input type="number" class="amt-input" id="hcEmisInput" aria-label="Total monthly loan payments (all loans combined)" inputmode="numeric" />
             <span class="amt-hint">type exact</span>
           </div>
         </div>
@@ -2213,10 +2226,10 @@
           <label>Monthly investments / SIPs (equity, mutual funds)
             <span class="value"><span class="cur">$</span><span id="hcSipV">0</span></span>
           </label>
-          <input type="range" id="hcSip" min="0" max="500000" step="500" value="0" />
+          <input type="range" id="hcSip" aria-label="Monthly investments / SIPs (equity, mutual funds)" min="0" max="500000" step="500" value="0" />
           <div class="amt-input-wrap">
             <span class="amt-cur cur">$</span>
-            <input type="number" class="amt-input" id="hcSipInput" inputmode="numeric" />
+            <input type="number" class="amt-input" id="hcSipInput" aria-label="Monthly investments / SIPs (equity, mutual funds)" inputmode="numeric" />
             <span class="amt-hint">type exact</span>
           </div>
         </div>
@@ -2225,10 +2238,10 @@
           <label>Monthly property investment <span style="color:var(--muted); font-weight:400; font-size:11px;">(plot installments, pre-launch booking, extra principal)</span>
             <span class="value"><span class="cur">$</span><span id="hcPropInvestV">0</span></span>
           </label>
-          <input type="range" id="hcPropInvest" min="0" max="1000000" step="1000" value="0" />
+          <input type="range" id="hcPropInvest" aria-label="Monthly property investment (plot installments, pre-launch booking, extra principal)" min="0" max="1000000" step="1000" value="0" />
           <div class="amt-input-wrap">
             <span class="amt-cur cur">$</span>
-            <input type="number" class="amt-input" id="hcPropInvestInput" inputmode="numeric" />
+            <input type="number" class="amt-input" id="hcPropInvestInput" aria-label="Monthly property investment (plot installments, pre-launch booking, extra principal)" inputmode="numeric" />
             <span class="amt-hint">type exact</span>
           </div>
         </div>
@@ -2242,10 +2255,10 @@
           <label>Cash / liquid savings (bank + FDs you can break)
             <span class="value"><span class="cur">$</span><span id="hcSavingsV">50,000</span></span>
           </label>
-          <input type="range" id="hcSavings" min="0" max="50000000" step="5000" value="50000" />
+          <input type="range" id="hcSavings" aria-label="Cash / liquid savings (bank + FDs you can break)" min="0" max="50000000" step="5000" value="50000" />
           <div class="amt-input-wrap">
             <span class="amt-cur cur">$</span>
-            <input type="number" class="amt-input" id="hcSavingsInput" inputmode="numeric" />
+            <input type="number" class="amt-input" id="hcSavingsInput" aria-label="Cash / liquid savings (bank + FDs you can break)" inputmode="numeric" />
             <span class="amt-hint">type exact</span>
           </div>
         </div>
@@ -2254,10 +2267,10 @@
           <label>Stocks / equity / mutual fund portfolio value <span style="color:var(--muted); font-weight:400; font-size:11px;">(market value today)</span>
             <span class="value"><span class="cur">$</span><span id="hcStocksV">0</span></span>
           </label>
-          <input type="range" id="hcStocks" min="0" max="500000000" step="10000" value="0" />
+          <input type="range" id="hcStocks" aria-label="Stocks / equity / mutual fund portfolio value (market value today)" min="0" max="500000000" step="10000" value="0" />
           <div class="amt-input-wrap">
             <span class="amt-cur cur">$</span>
-            <input type="number" class="amt-input" id="hcStocksInput" inputmode="numeric" />
+            <input type="number" class="amt-input" id="hcStocksInput" aria-label="Stocks / equity / mutual fund portfolio value (market value today)" inputmode="numeric" />
             <span class="amt-hint">type exact</span>
           </div>
         </div>
@@ -2266,10 +2279,10 @@
           <label>Property value <span style="color:var(--muted); font-weight:400; font-size:11px;">(home equity, rentals, plots — market value)</span>
             <span class="value"><span class="cur">$</span><span id="hcPropertyV">0</span></span>
           </label>
-          <input type="range" id="hcProperty" min="0" max="1000000000" step="100000" value="0" />
+          <input type="range" id="hcProperty" aria-label="Property value (home equity, rentals, plots — market value)" min="0" max="1000000000" step="100000" value="0" />
           <div class="amt-input-wrap">
             <span class="amt-cur cur">$</span>
-            <input type="number" class="amt-input" id="hcPropertyInput" inputmode="numeric" />
+            <input type="number" class="amt-input" id="hcPropertyInput" aria-label="Property value (home equity, rentals, plots — market value)" inputmode="numeric" />
             <span class="amt-hint">type exact</span>
           </div>
         </div>
@@ -2278,10 +2291,10 @@
           <label>Credit card outstanding balance <span style="color:var(--muted); font-weight:400; font-size:11px;">(what you actually owe today)</span>
             <span class="value"><span class="cur">$</span><span id="hcCreditCardV">0</span></span>
           </label>
-          <input type="range" id="hcCreditCard" min="0" max="2000000" step="1000" value="0" />
+          <input type="range" id="hcCreditCard" aria-label="Credit card outstanding balance (what you actually owe today)" min="0" max="2000000" step="1000" value="0" />
           <div class="amt-input-wrap">
             <span class="amt-cur cur">$</span>
-            <input type="number" class="amt-input" id="hcCreditCardInput" inputmode="numeric" />
+            <input type="number" class="amt-input" id="hcCreditCardInput" aria-label="Credit card outstanding balance (what you actually owe today)" inputmode="numeric" />
             <span class="amt-hint">type exact</span>
           </div>
         </div>
@@ -2290,10 +2303,10 @@
           <label>Informal loans owed <span style="color:var(--muted); font-weight:400; font-size:11px;">(family, friends, employer advances, gold loans)</span>
             <span class="value"><span class="cur">$</span><span id="hcInformalV">0</span></span>
           </label>
-          <input type="range" id="hcInformal" min="0" max="10000000" step="5000" value="0" />
+          <input type="range" id="hcInformal" aria-label="Informal loans owed (family, friends, employer advances, gold loans)" min="0" max="10000000" step="5000" value="0" />
           <div class="amt-input-wrap">
             <span class="amt-cur cur">$</span>
-            <input type="number" class="amt-input" id="hcInformalInput" inputmode="numeric" />
+            <input type="number" class="amt-input" id="hcInformalInput" aria-label="Informal loans owed (family, friends, employer advances, gold loans)" inputmode="numeric" />
             <span class="amt-hint">type exact</span>
           </div>
         </div>
@@ -2304,11 +2317,11 @@
         <label>Your age
           <span class="value"><span id="hcAgeV">30</span> years</span>
         </label>
-        <input type="range" id="hcAge" min="18" max="70" step="1" value="30" />
+        <input type="range" id="hcAge" aria-label="Your age" min="18" max="70" step="1" value="30" />
       </div>
 
       <!-- SCORE DISPLAY -->
-      <div class="result-hero" style="padding-top:20px;">
+      <div class="result-hero" aria-live="polite" style="padding-top:20px;">
         <div class="label">Your Financial Health Score</div>
         <div class="big"><span id="hcScore">—</span><span style="font-size:24px; color:var(--muted); font-weight:400;"> / 100</span></div>
         <div id="hcGrade" style="font-size:14px; font-weight:700; margin-top:4px; color:var(--muted);">—</div>
@@ -2348,29 +2361,29 @@
       </div>
       <div class="field">
         <label>Current age <span class="value"><span id="retAgeV">30</span> yrs</span></label>
-        <input type="range" id="retAge" min="18" max="65" step="1" value="30" />
+        <input type="range" id="retAge" aria-label="Current age" min="18" max="65" step="1" value="30" />
       </div>
       <div class="field">
         <label>Retirement age <span class="value"><span id="retAgeRetV">60</span> yrs</span></label>
-        <input type="range" id="retAgeRet" min="40" max="75" step="1" value="60" />
+        <input type="range" id="retAgeRet" aria-label="Retirement age" min="40" max="75" step="1" value="60" />
       </div>
       <div class="field">
         <label>Desired monthly income at retirement (today's money) <span class="value"><span class="cur">$</span><span id="retIncomeV">50,000</span></span></label>
-        <input type="range" id="retIncome" min="5000" max="1000000" step="1000" value="50000" />
+        <input type="range" id="retIncome" aria-label="Desired monthly income at retirement (today's money)" min="5000" max="1000000" step="1000" value="50000" />
       </div>
       <div class="field">
         <label>Expected inflation <span class="value"><span id="retInflV">6</span>%</span></label>
-        <input type="range" id="retInfl" min="0" max="20" step="0.1" value="6" />
+        <input type="range" id="retInfl" aria-label="Expected inflation" min="0" max="20" step="0.1" value="6" />
       </div>
       <div class="field">
         <label>Expected return during accumulation <span class="value"><span id="retRateV">12</span>%</span></label>
-        <input type="range" id="retRate" min="1" max="25" step="0.1" value="12" />
+        <input type="range" id="retRate" aria-label="Expected return during accumulation" min="1" max="25" step="0.1" value="12" />
       </div>
       <div class="field">
         <label>Post-retirement return (conservative) <span class="value"><span id="retPostV">7</span>%</span></label>
-        <input type="range" id="retPost" min="0" max="15" step="0.1" value="7" />
+        <input type="range" id="retPost" aria-label="Post-retirement return (conservative)" min="0" max="15" step="0.1" value="7" />
       </div>
-      <div class="result-hero">
+      <div class="result-hero" aria-live="polite">
         <div class="label">Monthly SIP needed</div>
         <div class="big"><span class="cur">$</span><span id="retSip">0</span></div>
       </div>
@@ -2398,15 +2411,15 @@
           <div style="font-weight:700;color:var(--accent);margin-bottom:10px;font-size:14px;">Loan A</div>
           <div class="field">
             <label style="font-size:12px;">Amount <span class="value" style="font-size:13px;"><span class="cur">$</span><span id="cmpAmtAV">1,000,000</span></span></label>
-            <input type="range" id="cmpAmtA" min="10000" max="100000000" step="10000" value="1000000" />
+            <input type="range" id="cmpAmtA" aria-label="Loan A amount" min="10000" max="100000000" step="10000" value="1000000" />
           </div>
           <div class="field">
             <label style="font-size:12px;">Rate <span class="value" style="font-size:13px;"><span id="cmpRateAV">8.5</span>%</span></label>
-            <input type="range" id="cmpRateA" min="0.1" max="60" step="0.1" value="8.5" />
+            <input type="range" id="cmpRateA" aria-label="Loan A rate" min="0.1" max="60" step="0.1" value="8.5" />
           </div>
           <div class="field">
             <label style="font-size:12px;">Years <span class="value" style="font-size:13px;"><span id="cmpYearsAV">20</span></span></label>
-            <input type="range" id="cmpYearsA" min="1" max="30" step="1" value="20" />
+            <input type="range" id="cmpYearsA" aria-label="Loan A years" min="1" max="30" step="1" value="20" />
           </div>
         </div>
 
@@ -2415,20 +2428,20 @@
           <div style="font-weight:700;color:var(--accent-2);margin-bottom:10px;font-size:14px;">Loan B</div>
           <div class="field">
             <label style="font-size:12px;">Amount <span class="value" style="font-size:13px;"><span class="cur">$</span><span id="cmpAmtBV">1,000,000</span></span></label>
-            <input type="range" id="cmpAmtB" min="10000" max="100000000" step="10000" value="1000000" />
+            <input type="range" id="cmpAmtB" aria-label="Loan B amount" min="10000" max="100000000" step="10000" value="1000000" />
           </div>
           <div class="field">
             <label style="font-size:12px;">Rate <span class="value" style="font-size:13px;"><span id="cmpRateBV">9</span>%</span></label>
-            <input type="range" id="cmpRateB" min="0.1" max="60" step="0.1" value="9" />
+            <input type="range" id="cmpRateB" aria-label="Loan B rate" min="0.1" max="60" step="0.1" value="9" />
           </div>
           <div class="field">
             <label style="font-size:12px;">Years <span class="value" style="font-size:13px;"><span id="cmpYearsBV">15</span></span></label>
-            <input type="range" id="cmpYearsB" min="1" max="30" step="1" value="15" />
+            <input type="range" id="cmpYearsB" aria-label="Loan B years" min="1" max="30" step="1" value="15" />
           </div>
         </div>
       </div>
 
-      <div class="result-hero">
+      <div class="result-hero" aria-live="polite">
         <div class="label" id="cmpHeroLabel">Monthly payment — Loan A vs Loan B</div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px;">
           <div style="color:var(--accent);font-size:24px;font-family:'JetBrains Mono',monospace;font-weight:700;"><span class="cur">$</span> <span id="cmpEmiA">0</span></div>
@@ -2439,7 +2452,7 @@
         <div class="stat"><div class="k">Total A cost</div><div class="v" id="cmpTotalA">—</div></div>
         <div class="stat"><div class="k">Total B cost</div><div class="v" id="cmpTotalB">—</div></div>
       </div>
-      <div class="result-hero" style="margin-top:14px;">
+      <div class="result-hero" aria-live="polite" style="margin-top:14px;">
         <div class="label"><span id="cmpVerdictLabel">Winner</span></div>
         <div class="big" id="cmpVerdict" style="font-size:22px;">—</div>
         <div style="color:var(--muted);font-size:12px;margin-top:6px;" id="cmpReason">—</div>
@@ -2462,28 +2475,28 @@
       </div>
       <div class="field">
         <label>Monthly gross income <span class="value"><span class="cur">$</span><span id="affIncomeV">100,000</span></span></label>
-        <input type="range" id="affIncome" min="10000" max="5000000" step="5000" value="100000" />
+        <input type="range" id="affIncome" aria-label="Monthly gross income" min="10000" max="5000000" step="5000" value="100000" />
       </div>
       <div class="field">
         <label id="affExistingLabel">Existing monthly loan payments (car, personal, credit card minimum) <span class="value"><span class="cur">$</span><span id="affExistingV">0</span></span></label>
-        <input type="range" id="affExisting" min="0" max="500000" step="1000" value="0" />
+        <input type="range" id="affExisting" aria-label="Existing monthly loan payments (car, personal, credit card minimum)" min="0" max="500000" step="1000" value="0" />
       </div>
       <div class="field">
         <label>
           Max FOIR %
           <span class="value"><span id="affFoirV">40</span>%</span>
         </label>
-        <input type="range" id="affFoir" min="20" max="60" step="1" value="40" />
+        <input type="range" id="affFoir" aria-label="Max FOIR %" min="20" max="60" step="1" value="40" />
       </div>
       <div class="field">
         <label>Expected interest rate <span class="value"><span id="affRateV">8.5</span>%</span></label>
-        <input type="range" id="affRate" min="0.1" max="60" step="0.1" value="8.5" />
+        <input type="range" id="affRate" aria-label="Expected interest rate" min="0.1" max="60" step="0.1" value="8.5" />
       </div>
       <div class="field">
         <label>Loan tenure <span class="value"><span id="affYearsV">20</span> years</span></label>
-        <input type="range" id="affYears" min="1" max="30" step="1" value="20" />
+        <input type="range" id="affYears" aria-label="Loan tenure" min="1" max="30" step="1" value="20" />
       </div>
-      <div class="result-hero">
+      <div class="result-hero" aria-live="polite">
         <div class="label">Max loan you qualify for</div>
         <div class="big"><span class="cur">$</span><span id="affMaxLoan">0</span></div>
       </div>
@@ -2514,29 +2527,29 @@
 
         <div class="field">
           <label>Property price <span class="value"><span class="cur">$</span><span id="rbPriceV">8,000,000</span></span></label>
-          <input type="range" id="rbPrice" min="500000" max="500000000" step="100000" value="8000000" />
+          <input type="range" id="rbPrice" aria-label="Property price" min="500000" max="500000000" step="100000" value="8000000" />
           <div class="amt-input-wrap">
             <span class="amt-cur cur">$</span>
-            <input type="number" class="amt-input" id="rbPriceInput" inputmode="numeric" />
+            <input type="number" class="amt-input" id="rbPriceInput" aria-label="Property price" inputmode="numeric" />
             <span class="amt-hint">type exact</span>
           </div>
         </div>
         <div class="field">
           <label>Down payment <span class="value"><span id="rbDownPctV">20</span>% · <span class="cur">$</span><span id="rbDownAmtV">1,600,000</span></span></label>
-          <input type="range" id="rbDownPct" min="5" max="100" step="1" value="20" />
+          <input type="range" id="rbDownPct" aria-label="Down payment" min="5" max="100" step="1" value="20" />
           <div class="amt-input-wrap">
             <span class="amt-cur cur">$</span>
-            <input type="number" class="amt-input" id="rbDownAmtInput" inputmode="numeric" placeholder="or type exact amount" />
+            <input type="number" class="amt-input" id="rbDownAmtInput" aria-label="Down payment" inputmode="numeric" placeholder="or type exact amount" />
             <span class="amt-hint">exact amount</span>
           </div>
         </div>
         <div class="field">
           <label>Home loan rate <span class="value"><span id="rbRateV">8.5</span>%</span></label>
-          <input type="range" id="rbRate" min="0.1" max="25" step="0.1" value="8.5" />
+          <input type="range" id="rbRate" aria-label="Home loan rate" min="0.1" max="25" step="0.1" value="8.5" />
         </div>
         <div class="field">
           <label>Expected yearly price growth <span class="value"><span id="rbGrowthV">5</span>%</span></label>
-          <input type="range" id="rbGrowth" min="0" max="15" step="0.5" value="5" />
+          <input type="range" id="rbGrowth" aria-label="Expected yearly price growth" min="0" max="15" step="0.5" value="5" />
         </div>
       </div>
 
@@ -2546,27 +2559,27 @@
 
         <div class="field">
           <label>Monthly rent for the same place <span class="value"><span class="cur">$</span><span id="rbRentV">30,000</span></span></label>
-          <input type="range" id="rbRent" min="1000" max="1000000" step="1000" value="30000" />
+          <input type="range" id="rbRent" aria-label="Monthly rent for the same place" min="1000" max="1000000" step="1000" value="30000" />
           <div class="amt-input-wrap">
             <span class="amt-cur cur">$</span>
-            <input type="number" class="amt-input" id="rbRentInput" inputmode="numeric" />
+            <input type="number" class="amt-input" id="rbRentInput" aria-label="Monthly rent for the same place" inputmode="numeric" />
             <span class="amt-hint">type exact</span>
           </div>
         </div>
         <div class="field">
           <label>Yearly rent increase <span class="value"><span id="rbRentIncV">7</span>%</span></label>
-          <input type="range" id="rbRentInc" min="0" max="25" step="0.5" value="7" />
+          <input type="range" id="rbRentInc" aria-label="Yearly rent increase" min="0" max="25" step="0.5" value="7" />
         </div>
       </div>
 
       <!-- HORIZON -->
       <div class="field">
         <label>How many years will you stay? <span class="value"><span id="rbHorizonV">10</span> years</span></label>
-        <input type="range" id="rbHorizon" min="1" max="30" step="1" value="10" />
+        <input type="range" id="rbHorizon" aria-label="How many years will you stay?" min="1" max="30" step="1" value="10" />
       </div>
 
       <!-- VERDICT -->
-      <div class="result-hero">
+      <div class="result-hero" aria-live="polite">
         <div class="label" id="rbVerdictLabel">Winner</div>
         <div class="big" id="rbVerdict" style="font-size:24px;">—</div>
         <div id="rbVerdictReason" style="font-size:13px; color:var(--muted); margin-top:10px; line-height:1.5; max-width:420px; margin-left:auto; margin-right:auto;">—</div>
@@ -2617,26 +2630,26 @@
         </div>
         <div class="field">
           <label>Cash &amp; bank balance <span class="value"><span class="cur">$</span><span id="zCashV">500,000</span></span></label>
-          <input type="range" id="zCash" min="0" max="10000000" step="5000" value="500000" />
+          <input type="range" id="zCash" aria-label="Cash &amp; bank balance" min="0" max="10000000" step="5000" value="500000" />
         </div>
         <div class="field">
           <label>Gold value <span class="value"><span class="cur">$</span><span id="zGoldV">200,000</span></span></label>
-          <input type="range" id="zGold" min="0" max="5000000" step="5000" value="200000" />
+          <input type="range" id="zGold" aria-label="Gold value" min="0" max="5000000" step="5000" value="200000" />
         </div>
         <div class="field">
           <label>Silver &amp; other assets <span class="value"><span class="cur">$</span><span id="zOtherV">50,000</span></span></label>
-          <input type="range" id="zOther" min="0" max="5000000" step="5000" value="50000" />
+          <input type="range" id="zOther" aria-label="Silver &amp; other assets" min="0" max="5000000" step="5000" value="50000" />
         </div>
         <div class="field">
           <label>Investments / stocks <span class="value"><span class="cur">$</span><span id="zInvV">100,000</span></span></label>
-          <input type="range" id="zInv" min="0" max="10000000" step="5000" value="100000" />
+          <input type="range" id="zInv" aria-label="Investments / stocks" min="0" max="10000000" step="5000" value="100000" />
         </div>
         <div class="field">
           <label>Debts owed by you (subtract) <span class="value"><span class="cur">$</span><span id="zDebtV">0</span></span></label>
-          <input type="range" id="zDebt" min="0" max="5000000" step="5000" value="0" />
+          <input type="range" id="zDebt" aria-label="Debts owed by you (subtract)" min="0" max="5000000" step="5000" value="0" />
         </div>
 
-        <div class="result-hero">
+        <div class="result-hero" aria-live="polite">
           <div class="label">Zakat due (2.5%)</div>
           <div class="big islamic"><span class="cur">$</span><span id="zakatDue">0</span></div>
         </div>
@@ -2652,22 +2665,22 @@
         </div>
         <div class="field">
           <label>Asset price <span class="value"><span class="cur">$</span><span id="mPriceV">2,500,000</span></span></label>
-          <input type="range" id="mPrice" min="50000" max="50000000" step="50000" value="2500000" />
+          <input type="range" id="mPrice" aria-label="Asset price" min="50000" max="50000000" step="50000" value="2500000" />
         </div>
         <div class="field">
           <label>Your down payment <span class="value"><span class="cur">$</span><span id="mDownV">500,000</span></span></label>
-          <input type="range" id="mDown" min="0" max="20000000" step="10000" value="500000" />
+          <input type="range" id="mDown" aria-label="Your down payment" min="0" max="20000000" step="10000" value="500000" />
         </div>
         <div class="field">
           <label>Bank's profit margin <span class="value"><span id="mMarginV">20</span>%</span></label>
-          <input type="range" id="mMargin" min="5" max="60" step="0.5" value="20" />
+          <input type="range" id="mMargin" aria-label="Bank's profit margin" min="5" max="60" step="0.5" value="20" />
         </div>
         <div class="field">
           <label>Tenure <span class="value"><span id="mYearsV">15</span> years</span></label>
-          <input type="range" id="mYears" min="1" max="30" step="1" value="15" />
+          <input type="range" id="mYears" aria-label="Tenure" min="1" max="30" step="1" value="15" />
         </div>
 
-        <div class="result-hero">
+        <div class="result-hero" aria-live="polite">
           <div class="label">Fixed monthly installment</div>
           <div class="big islamic"><span class="cur">$</span><span id="mMonthly">0</span></div>
         </div>
@@ -2684,18 +2697,18 @@
         </div>
         <div class="field">
           <label>Monthly savings <span class="value"><span class="cur">$</span><span id="hAmtV">10,000</span></span></label>
-          <input type="range" id="hAmt" min="500" max="500000" step="500" value="10000" />
+          <input type="range" id="hAmt" aria-label="Monthly savings" min="500" max="500000" step="500" value="10000" />
         </div>
         <div class="field">
           <label>Expected profit rate (p.a.) <span class="value"><span id="hRateV">8</span>%</span></label>
-          <input type="range" id="hRate" min="1" max="25" step="0.5" value="8" />
+          <input type="range" id="hRate" aria-label="Expected profit rate (p.a.)" min="1" max="25" step="0.5" value="8" />
         </div>
         <div class="field">
           <label>Duration <span class="value"><span id="hYearsV">10</span> years</span></label>
-          <input type="range" id="hYears" min="1" max="40" step="1" value="10" />
+          <input type="range" id="hYears" aria-label="Duration" min="1" max="40" step="1" value="10" />
         </div>
 
-        <div class="result-hero">
+        <div class="result-hero" aria-live="polite">
           <div class="label">Projected value</div>
           <div class="big islamic"><span class="cur">$</span><span id="hFv">0</span></div>
         </div>
@@ -2721,7 +2734,7 @@
       <div class="field">
         <label>Amount</label>
         <div class="conv-row">
-          <input type="number" id="convAmt" class="conv-input" value="100" step="0.01" />
+          <input type="number" id="convAmt" aria-label="Amount" class="conv-input" value="100" step="0.01" />
           <select id="convFrom" class="conv-select"></select>
         </div>
       </div>
@@ -2731,7 +2744,7 @@
       <div class="field">
         <label>Converted</label>
         <div class="conv-row">
-          <input type="number" id="convResult" class="conv-input" readonly />
+          <input type="number" id="convResult" aria-label="Converted" class="conv-input" readonly />
           <select id="convTo" class="conv-select"></select>
         </div>
       </div>
@@ -2802,9 +2815,9 @@
   </main>
 
   <!-- SELF-TEST MODAL -->
-  <div class="modal" id="selfTestModal">
+  <div class="modal" id="selfTestModal" role="dialog" aria-modal="true" aria-labelledby="selfTestModalTitle">
     <div class="modal-card">
-      <h3>Calculator math — worked examples</h3>
+      <h3 id="selfTestModalTitle">Calculator math — worked examples</h3>
       <p style="color:var(--muted);font-size:13px;margin-bottom:16px;">
         Each result below is computed live by this calculator. Cross-check with any reputable online calculator — the numbers should match to within 1 currency unit (rounding only).
       </p>
@@ -2815,10 +2828,10 @@
     </div>
   </div>
 
-  <div class="modal" id="currencyModal">
+  <div class="modal" id="currencyModal" role="dialog" aria-modal="true" aria-labelledby="currencyModalTitle">
     <div class="modal-card">
-      <h3>Pick currency</h3>
-      <input type="text" class="search-box" id="currencySearch" placeholder="Search currencies…" />
+      <h3 id="currencyModalTitle">Pick currency</h3>
+      <input type="text" class="search-box" id="currencySearch" aria-label="Search currencies" placeholder="Search currencies…" />
       <div id="currencyList"></div>
     </div>
   </div>
@@ -4257,8 +4270,8 @@
         const i = currencies.indexOf(c);
         const hasProfile = COUNTRY_PROFILES[c.code] ? '<span class="has-profile">LOCAL RATES</span>' : '';
         return `
-          <div class="currency-row" data-i="${i}">
-            <span><span class="flag">${c.flag}</span>${c.name}${hasProfile}</span>
+          <div class="currency-row" data-i="${i}" role="button" tabindex="0" aria-label="${c.name}, ${c.sym} ${c.code}" onkeydown="if(event.key==='Enter')this.click()">
+            <span><span class="flag" aria-hidden="true">${c.flag}</span>${c.name}${hasProfile}</span>
             <b>${c.sym} ${c.code}</b>
           </div>`;
       }).join('');
@@ -6597,6 +6610,9 @@
       try { localStorage.setItem(SCENARIOS_KEY, JSON.stringify(list.slice(0, 5))); }
       catch(e) {}
     }
+    function escapeHtml(s) {
+      return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    }
     function renderSavedList() {
       const listEl = document.getElementById('emiSavedList');
       if (!listEl) return;
@@ -6604,10 +6620,11 @@
       if (saved.length === 0) { listEl.innerHTML = ''; return; }
       let html = '<div style="font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:0.05em; font-weight:600; margin-bottom:8px;">💾 Your saved scenarios (tap to load)</div>';
       saved.forEach((s, i) => {
+        const safeName = escapeHtml(s.name);
         html += `
           <div style="display:flex; align-items:center; gap:8px; padding:8px 10px; background:var(--bg); border:1px solid var(--line); border-radius:8px; margin-bottom:6px; font-size:12px;">
-            <div style="flex:1; min-width:0; cursor:pointer;" onclick="loadScenario(${i})">
-              <div style="font-weight:700; color:var(--ink);">${s.name}</div>
+            <div style="flex:1; min-width:0; cursor:pointer;" onclick="loadScenario(${i})" role="button" tabindex="0" aria-label="Load saved scenario: ${safeName}" onkeydown="if(event.key==='Enter')this.click()">
+              <div style="font-weight:700; color:var(--ink);">${safeName}</div>
               <div style="color:var(--muted); font-family:'JetBrains Mono',monospace; font-size:11px;">${s.cur} ${fmtNumRaw(s.amount)} @ ${s.rate}% × ${s.years}yr</div>
             </div>
             <button style="background:transparent; border:none; color:var(--muted); cursor:pointer; font-size:16px; padding:4px 8px;" onclick="deleteScenario(${i})" title="Delete">✕</button>
@@ -6952,7 +6969,7 @@
           const c = lookup[code];
           const sel = (code === detected) ? ' style="border-color:var(--accent);"' : '';
           return `<button type="button" class="welcome-country-btn" data-cur-code="${c.code}"${sel}>
-            <span class="flag">${c.flag}</span>
+            <span class="flag" aria-hidden="true">${c.flag}</span>
             <span>${c.code}</span>
           </button>`;
         }).join('');
@@ -7360,6 +7377,80 @@
       clearTimeout(_interpretRefreshTimer);
       _interpretRefreshTimer = setTimeout(refreshInterpretations, 300);
     });
+
+    // ================================================================
+    // ACCESSIBILITY: modal focus trap + focus restore
+    //
+    // welcomeOverlay / selfTestModal / currencyModal are all opened from
+    // different code paths (button clicks, showWelcome(), etc.) by adding
+    // a `show` class, so rather than hooking every call site we watch
+    // each modal's class attribute and react when `show` toggles.
+    // ================================================================
+    (function () {
+      const FOCUSABLE_SEL = 'a[href], button:not([disabled]), textarea, input:not([disabled]), select, [tabindex]:not([tabindex="-1"])';
+      const modalIds = ['welcomeOverlay', 'selfTestModal', 'currencyModal'];
+      const lastTrigger = {};
+
+      function getFocusable(container) {
+        return Array.prototype.filter.call(
+          container.querySelectorAll(FOCUSABLE_SEL),
+          el => el.offsetParent !== null
+        );
+      }
+
+      function onModalShown(modal) {
+        lastTrigger[modal.id] = document.activeElement;
+        const focusables = getFocusable(modal);
+        if (focusables.length) {
+          focusables[0].focus();
+        } else {
+          modal.setAttribute('tabindex', '-1');
+          modal.focus();
+        }
+      }
+
+      function onModalHidden(modal) {
+        const trigger = lastTrigger[modal.id];
+        if (trigger && typeof trigger.focus === 'function') trigger.focus();
+        lastTrigger[modal.id] = null;
+      }
+
+      modalIds.forEach(id => {
+        const modal = document.getElementById(id);
+        if (!modal) return;
+
+        let wasShown = modal.classList.contains('show');
+        new MutationObserver(() => {
+          const isShown = modal.classList.contains('show');
+          if (isShown && !wasShown) onModalShown(modal);
+          else if (!isShown && wasShown) onModalHidden(modal);
+          wasShown = isShown;
+        }).observe(modal, { attributes: true, attributeFilter: ['class'] });
+
+        // Trap Tab within the modal, and let Escape close it (selfTestModal
+        // and currencyModal had no keyboard close path before; welcomeOverlay
+        // keeps its existing dismissWelcome() handler, this is additive).
+        modal.addEventListener('keydown', (e) => {
+          if (!modal.classList.contains('show')) return;
+          if (e.key === 'Escape') {
+            if (id !== 'welcomeOverlay') modal.classList.remove('show');
+            return;
+          }
+          if (e.key !== 'Tab') return;
+          const focusables = getFocusable(modal);
+          if (!focusables.length) return;
+          const first = focusables[0];
+          const last = focusables[focusables.length - 1];
+          if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+          } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+          }
+        });
+      });
+    })();
   </script>
 
   <div class="toast" id="toast"></div>
