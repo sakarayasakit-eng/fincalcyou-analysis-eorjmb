@@ -1,5 +1,6 @@
 # build artifacts
 *.zip
+__pycache__/
 
 # local Netlify CLI state
 .netlify/
