@@ -314,15 +314,13 @@
 
     /* ATTRACTIVE HERO TABS */
     .tabs-wrap {
-      overflow-x: auto; -webkit-overflow-scrolling: touch;
-      margin-bottom: 18px; padding-bottom: 4px;
-      scroll-snap-type: x proximity;
-      -webkit-mask-image: linear-gradient(to right, #000 90%, transparent 100%);
-              mask-image: linear-gradient(to right, #000 90%, transparent 100%);
+      margin-bottom: 18px;
     }
     .tabs-wrap::-webkit-scrollbar { display: none; }
     .tabs {
-      display: flex; gap: 8px; min-width: min-content;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(108px, 1fr));
+      gap: 8px;
     }
     .tab {
       flex: 0 0 auto;
@@ -354,8 +352,8 @@
       box-shadow: 0 6px 20px rgba(94,234,212,0.25);
     }
     @media (max-width: 560px) {
-      .tabs { gap: 6px; }
-      .tab { min-width: 60px; padding: 9px 7px; align-items: center; text-align: center; gap: 1px; }
+      .tabs { gap: 6px; grid-template-columns: repeat(auto-fit, minmax(76px, 1fr)); }
+      .tab { min-width: 0; padding: 9px 7px; align-items: center; text-align: center; gap: 1px; }
       .tab .icon { font-size: 19px; margin-bottom: 2px; }
       .tab .t-title { font-size: 10px; line-height: 1.15; }
       .tab .t-sub { display: none; }
@@ -2807,6 +2805,34 @@
     </div>
 
     <!-- AD SLOT 3: Footer (catches session-end) -->
+    <style>
+      .explore-link{display:block;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:12px 14px;color:var(--ink);text-decoration:none;font-weight:600;font-size:14px;transition:all .15s;}
+      .explore-link:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-1px);}
+    </style>
+    <section class="card" id="explore">
+      <h2 style="font-family:'Inter',system-ui,sans-serif;font-size:22px;font-weight:800;letter-spacing:-0.02em;margin:0 0 6px;">Explore all calculators</h2>
+      <p style="color:var(--muted);font-size:14px;margin:0 0 16px;">Dedicated pages with local rates and banks — for every calculator and all 34 countries.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;">
+        <a class="explore-link" href="/pages/home-loan-calculator.html">🏠 Home Loan &amp; Mortgage</a>
+        <a class="explore-link" href="/pages/car-loan-calculator.html">🚗 Car Loan</a>
+        <a class="explore-link" href="/pages/sip-calculator.html">📈 SIP &amp; Investing</a>
+        <a class="explore-link" href="/pages/fixed-deposit-calculator.html">🏦 Fixed Deposit</a>
+        <a class="explore-link" href="/pages/retirement-calculator.html">🏖 Retirement</a>
+        <a class="explore-link" href="/pages/rent-vs-buy-calculator.html">🔑 Rent vs Buy</a>
+        <a class="explore-link" href="/pages/education-loan-calculator.html">🎓 Education Loan</a>
+        <a class="explore-link" href="/pages/zakat-calculator.html">☪ Zakat</a>
+        <a class="explore-link" href="/dscr-calculator.html">🏘 DSCR (US rentals)</a>
+      </div>
+      <p style="color:var(--muted);font-size:13px;margin:18px 0 10px;">Popular countries:
+        <a href="/pages/india-financial-calculators.html">India</a> ·
+        <a href="/pages/uae-financial-calculators.html">UAE</a> ·
+        <a href="/pages/pakistan-financial-calculators.html">Pakistan</a> ·
+        <a href="/pages/indonesia-financial-calculators.html">Indonesia</a> ·
+        <a href="/pages/nigeria-financial-calculators.html">Nigeria</a>
+      </p>
+      <a href="/pages/" style="display:inline-block;margin-top:4px;background:var(--accent);color:#fff;padding:11px 20px;border-radius:10px;font-weight:700;text-decoration:none;font-size:14px;">Browse all 290+ calculators &amp; 34 countries →</a>
+    </section>
+
     <div class="ad-slot" id="adSlotFooter"></div>
 
     <footer>

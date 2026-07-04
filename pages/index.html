@@ -73,6 +73,20 @@
       letter-spacing: 0.1em;
       margin: 24px 0 10px;
     }
+
+    .dir-controls{position:sticky;top:0;z-index:5;background:var(--bg);padding:14px 0 10px;margin-bottom:4px;}
+    .dir-search{width:100%;padding:13px 16px;border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--ink);font-family:inherit;font-size:15px;box-shadow:0 1px 2px rgba(16,38,58,.05);}
+    .dir-search:focus{outline:2px solid var(--accent);outline-offset:1px;}
+    .dir-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;}
+    .dir-chip{border:1px solid var(--line);background:var(--card);color:var(--muted);border-radius:999px;padding:7px 14px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;transition:all .15s;}
+    .dir-chip:hover{border-color:var(--accent);color:var(--ink);}
+    .dir-chip.active{background:var(--accent);color:#fff;border-color:var(--accent);}
+    .guides-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px;align-items:start;}
+    .guides-grid .section-header{grid-column:1/-1;font-family:'Inter',system-ui,sans-serif;font-size:15px;font-weight:700;text-transform:none;letter-spacing:-0.01em;color:var(--ink);margin:26px 0 2px;padding-bottom:8px;border-bottom:1px solid var(--line);}
+    .guides-grid .section-header:first-of-type{margin-top:4px;}
+    .guide-card{margin-bottom:0;height:100%;}
+    .guide-card:hover{border-color:rgba(14,122,74,0.35);}
+    .dir-empty{grid-column:1/-1;color:var(--muted);padding:36px 0;text-align:center;}
   </style>
 
 <script type="application/ld+json">
@@ -106,1207 +120,1225 @@
 
 
 
-    <div class="section-header">🧮 Main calculators</div>
-    <a class="guide-card" href="home-loan-calculator.html">
+        <div class="dir-controls">
+      <input type="search" id="dirSearch" class="dir-search" placeholder="Search 290+ calculators — e.g. mortgage, SIP, Dubai, Zakat…" aria-label="Search calculators">
+      <div class="dir-chips" id="dirChips">
+        <button class="dir-chip active" data-filter="all">All</button>
+        <button class="dir-chip" data-filter="loans">Loans</button>
+        <button class="dir-chip" data-filter="investing">Investing &amp; Savings</button>
+        <button class="dir-chip" data-filter="retirement">Retirement</button>
+        <button class="dir-chip" data-filter="realestate">Real estate</button>
+        <button class="dir-chip" data-filter="islamic">Islamic</button>
+        <button class="dir-chip" data-filter="currency">Currency</button>
+        <button class="dir-chip" data-filter="country">By country</button>
+        <button class="dir-chip" data-filter="learn">Learn</button>
+      </div>
+      <div style="margin-top:10px;">
+        <select id="dirCountry" class="dir-search" style="max-width:280px;cursor:pointer;"><option value="">All countries</option><option value="us">United States</option><option value="uk">United Kingdom</option><option value="in">India</option><option value="pk">Pakistan</option><option value="bd">Bangladesh</option><option value="lk">Sri Lanka</option><option value="ae">UAE</option><option value="sa">Saudi Arabia</option><option value="qa">Qatar</option><option value="kw">Kuwait</option><option value="bh">Bahrain</option><option value="my">Malaysia</option><option value="id">Indonesia</option><option value="sg">Singapore</option><option value="ph">Philippines</option><option value="th">Thailand</option><option value="vn">Vietnam</option><option value="cn">China</option><option value="hk">Hong Kong</option><option value="tw">Taiwan</option><option value="kr">South Korea</option><option value="jp">Japan</option><option value="ru">Russia</option><option value="tr">Türkiye</option><option value="eg">Egypt</option><option value="ng">Nigeria</option><option value="ke">Kenya</option><option value="za">South Africa</option><option value="br">Brazil</option><option value="mx">Mexico</option><option value="ca">Canada</option><option value="au">Australia</option><option value="nz">New Zealand</option><option value="eu">Eurozone</option></select>
+      </div>
+    </div>
+    <div class="guides-grid" id="guidesGrid">
+    <div class="section-header" data-cat="featured">🧮 Main calculators</div>
+    <a class="guide-card" data-country="" data-cat="featured" href="home-loan-calculator.html">
       <h3><span class="flag">🏠</span> Home Loan &amp; Mortgage Calculator</h3>
       <p>Monthly payment on a home loan or mortgage across 34 countries with real bank rates — links to every country version.</p>
     </a>
-    <a class="guide-card" href="car-loan-calculator.html">
+    <a class="guide-card" data-country="" data-cat="featured" href="car-loan-calculator.html">
       <h3><span class="flag">🚗</span> Car Loan &amp; Auto Finance Calculator</h3>
       <p>Monthly payment on a new or used car loan, with country-specific down-payment and tenure rules applied.</p>
     </a>
-    <a class="guide-card" href="sip-calculator.html">
+    <a class="guide-card" data-country="" data-cat="featured" href="sip-calculator.html">
       <h3><span class="flag">📈</span> SIP &amp; Monthly Investment Calculator</h3>
       <p>See how a fixed monthly investment grows through compounding, using long-term market returns for your country.</p>
     </a>
-    <a class="guide-card" href="fixed-deposit-calculator.html">
+    <a class="guide-card" data-country="" data-cat="featured" href="fixed-deposit-calculator.html">
       <h3><span class="flag">🏦</span> Fixed Deposit &amp; CD Calculator</h3>
       <p>Maturity value and interest on a fixed-term deposit (FD / CD / term deposit), with real bank rates.</p>
     </a>
-    <a class="guide-card" href="education-loan-calculator.html">
+    <a class="guide-card" data-country="" data-cat="featured" href="education-loan-calculator.html">
       <h3><span class="flag">🎓</span> Education Loan Calculator</h3>
       <p>Monthly payment after studies, including interest that builds up during the moratorium period.</p>
     </a>
-    <a class="guide-card" href="retirement-calculator.html">
+    <a class="guide-card" data-country="" data-cat="featured" href="retirement-calculator.html">
       <h3><span class="flag">🏖</span> Retirement Calculator</h3>
       <p>How much to invest each month to retire with the income you want, adjusted for inflation.</p>
     </a>
-    <a class="guide-card" href="rent-vs-buy-calculator.html">
+    <a class="guide-card" data-country="" data-cat="featured" href="rent-vs-buy-calculator.html">
       <h3><span class="flag">🔑</span> Rent vs Buy Calculator</h3>
       <p>Whether renting or buying leaves you better off over the years you plan to stay.</p>
     </a>
-    <a class="guide-card" href="zakat-calculator.html">
+    <a class="guide-card" data-country="" data-cat="featured" href="zakat-calculator.html">
       <h3><span class="flag">☪</span> Zakat Calculator</h3>
       <p>Work out the 2.5% Zakat due on your net wealth above the nisab threshold, in any currency.</p>
     </a>
 
-    <a class="guide-card" href="../dscr-calculator.html">
+    <a class="guide-card" data-country="" data-cat="featured" href="../dscr-calculator.html">
       <h3><span class="flag">🏘</span> DSCR Calculator (Short-Term Rentals)</h3>
       <p>Debt Service Coverage Ratio for Airbnb / short-term rental properties — built for US real-estate investors.</p>
     </a>
-    <a class="guide-card" href="../dscr-calculator-locations.html">
+    <a class="guide-card" data-country="" data-cat="featured" href="../dscr-calculator-locations.html">
       <h3><span class="flag">📍</span> DSCR Calculator by City</h3>
       <p>City-specific DSCR calculators — Austin, Dallas, Miami, Phoenix, Nashville, Tampa, Atlanta, Charlotte, Denver, Las Vegas.</p>
     </a>
 
-    <div class="section-header">🌍 Country hubs (5)</div>
-    <a class="guide-card" href="india-financial-calculators.html">
+    <div class="section-header" data-cat="country">🌍 Country hubs (5)</div>
+    <a class="guide-card" data-country="" data-cat="country" href="india-financial-calculators.html">
       <h3><span class="flag">🌍</span> 🇮🇳 India Financial Calculators</h3>
       <p>Free India finance calculators: home loan EMI, car loan, SIP, fixed deposit, Zakat and currency — localized rates and banks. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="indonesia-financial-calculators.html">
+    <a class="guide-card" data-country="" data-cat="country" href="indonesia-financial-calculators.html">
       <h3><span class="flag">🌍</span> 🇮🇩 Indonesia Financial Calculators</h3>
       <p>Free Indonesia finance calculators: home loan EMI, car loan, SIP, fixed deposit, Zakat and currency — localized rates and banks. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="nigeria-financial-calculators.html">
+    <a class="guide-card" data-country="" data-cat="country" href="nigeria-financial-calculators.html">
       <h3><span class="flag">🌍</span> 🇳🇬 Nigeria Financial Calculators</h3>
       <p>Free Nigeria finance calculators: home loan EMI, car loan, SIP, fixed deposit, Zakat and currency — localized rates and banks. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="pakistan-financial-calculators.html">
+    <a class="guide-card" data-country="" data-cat="country" href="pakistan-financial-calculators.html">
       <h3><span class="flag">🌍</span> 🇵🇰 Pakistan Financial Calculators</h3>
       <p>Free Pakistan finance calculators: home loan EMI, car loan, SIP, fixed deposit, Zakat and currency — localized rates and banks. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="uae-financial-calculators.html">
+    <a class="guide-card" data-country="" data-cat="country" href="uae-financial-calculators.html">
       <h3><span class="flag">🌍</span> 🇦🇪 United Arab Emirates Financial Calculators</h3>
       <p>Free United Arab Emirates finance calculators: home loan EMI, car loan, SIP, fixed deposit, Zakat and currency — localized rates and banks. No signup, no tracking.</p>
     </a>
-    <div class="section-header">🏠 Home loans & mortgages (95)</div>
-    <a class="guide-card" href="1-crore-home-loan-emi-calculator.html">
+    <div class="section-header" data-cat="loans">🏠 Home loans & mortgages (95)</div>
+    <a class="guide-card" data-country="in" data-cat="loans" href="1-crore-home-loan-emi-calculator.html">
       <h3><span class="flag">🏠</span> ₹1 Crore Home Loan EMI Calculator</h3>
       <p>What is the EMI for a ₹1 Crore home loan in India? See monthly EMI and total interest at 8.5% across 10–30 year tenures. Free, no signup.</p>
     </a>
-    <a class="guide-card" href="1.5-crore-home-loan-emi-calculator.html">
+    <a class="guide-card" data-country="in" data-cat="loans" href="1.5-crore-home-loan-emi-calculator.html">
       <h3><span class="flag">🏠</span> ₹1.5 Crore Home Loan EMI Calculator</h3>
       <p>What is the EMI for a ₹1.5 Crore home loan in India? Monthly EMI and total interest at 8.5% across 10–30 years. Free, no signup.</p>
     </a>
-    <a class="guide-card" href="2-crore-home-loan-emi-calculator.html">
+    <a class="guide-card" data-country="in" data-cat="loans" href="2-crore-home-loan-emi-calculator.html">
       <h3><span class="flag">🏠</span> ₹2 Crore Home Loan EMI Calculator</h3>
       <p>What is the EMI for a ₹2 Crore home loan in India? Monthly EMI and total interest at 8.5% across 10–30 years. Free, no signup.</p>
     </a>
-    <a class="guide-card" href="20-lakh-home-loan-emi-calculator.html">
+    <a class="guide-card" data-country="in" data-cat="loans" href="20-lakh-home-loan-emi-calculator.html">
       <h3><span class="flag">🏠</span> ₹20 Lakh Home Loan EMI Calculator</h3>
       <p>What is the EMI for a ₹20 Lakh home loan in India? See monthly EMI and total interest at 8.5% across 10–30 year tenures. Free, no signup.</p>
     </a>
-    <a class="guide-card" href="25-lakh-home-loan-emi-calculator.html">
+    <a class="guide-card" data-country="in" data-cat="loans" href="25-lakh-home-loan-emi-calculator.html">
       <h3><span class="flag">🏠</span> ₹25 Lakh Home Loan EMI Calculator</h3>
       <p>What is the EMI for a ₹25 Lakh home loan in India? Monthly EMI and total interest at 8.5% across 10–30 years. Free, no signup.</p>
     </a>
-    <a class="guide-card" href="30-lakh-home-loan-emi-calculator.html">
+    <a class="guide-card" data-country="in" data-cat="loans" href="30-lakh-home-loan-emi-calculator.html">
       <h3><span class="flag">🏠</span> ₹30 Lakh Home Loan EMI Calculator</h3>
       <p>What is the EMI for a ₹30 Lakh home loan in India? See monthly EMI and total interest at 8.5% across 10–30 year tenures. Free, no signup.</p>
     </a>
-    <a class="guide-card" href="40-lakh-home-loan-emi-calculator.html">
+    <a class="guide-card" data-country="in" data-cat="loans" href="40-lakh-home-loan-emi-calculator.html">
       <h3><span class="flag">🏠</span> ₹40 Lakh Home Loan EMI Calculator</h3>
       <p>What is the EMI for a ₹40 Lakh home loan in India? Monthly EMI and total interest at 8.5% across 10–30 years. Free, no signup.</p>
     </a>
-    <a class="guide-card" href="50-lakh-home-loan-emi-calculator.html">
+    <a class="guide-card" data-country="in" data-cat="loans" href="50-lakh-home-loan-emi-calculator.html">
       <h3><span class="flag">🏠</span> ₹50 Lakh Home Loan EMI Calculator</h3>
       <p>What is the EMI for a ₹50 Lakh home loan in India? See monthly EMI and total interest at 8.5% across 10–30 year tenures. Free, no signup.</p>
     </a>
-    <a class="guide-card" href="60-lakh-home-loan-emi-calculator.html">
+    <a class="guide-card" data-country="in" data-cat="loans" href="60-lakh-home-loan-emi-calculator.html">
       <h3><span class="flag">🏠</span> ₹60 Lakh Home Loan EMI Calculator</h3>
       <p>What is the EMI for a ₹60 Lakh home loan in India? Monthly EMI and total interest at 8.5% across 10–30 years. Free, no signup.</p>
     </a>
-    <a class="guide-card" href="75-lakh-home-loan-emi-calculator.html">
+    <a class="guide-card" data-country="in" data-cat="loans" href="75-lakh-home-loan-emi-calculator.html">
       <h3><span class="flag">🏠</span> ₹75 Lakh Home Loan EMI Calculator</h3>
       <p>What is the EMI for a ₹75 Lakh home loan in India? See monthly EMI and total interest at 8.5% across 10–30 year tenures. Free, no signup.</p>
     </a>
-    <a class="guide-card" href="access-bank-loan-calculator.html">
+    <a class="guide-card" data-country="ng" data-cat="loans" href="access-bank-loan-calculator.html">
       <h3><span class="flag">🏠</span> Access Bank Loan Calculator</h3>
       <p>Free Access Bank loan calculator. Estimate your monthly payment at ~29.50% in Nigeria. No signup, instant.</p>
     </a>
-    <a class="guide-card" href="adcb-mortgage-calculator.html">
+    <a class="guide-card" data-country="ae" data-cat="loans" href="adcb-mortgage-calculator.html">
       <h3><span class="flag">🏠</span> ADCB Mortgage Calculator</h3>
       <p>Free ADCB mortgage calculator. Estimate your monthly home-finance payment in AED at ~6.25%. Expat deposit rules. No signup.</p>
     </a>
-    <a class="guide-card" href="al-rajhi-home-finance-calculator.html">
+    <a class="guide-card" data-country="sa" data-cat="loans" href="al-rajhi-home-finance-calculator.html">
       <h3><span class="flag">🏠</span> Al Rajhi Bank Home Finance Calculator</h3>
       <p>Free Al Rajhi Bank home finance calculator. Estimate your monthly payment at ~6.25% in Saudi Arabia. No signup, instant.</p>
     </a>
-    <a class="guide-card" href="alinma-home-finance-calculator.html">
+    <a class="guide-card" data-country="sa" data-cat="loans" href="alinma-home-finance-calculator.html">
       <h3><span class="flag">🏠</span> Alinma Bank Home Finance Calculator</h3>
       <p>Free Alinma Bank home finance calculator. Estimate your monthly payment at ~6.30% in Saudi Arabia. No signup, instant.</p>
     </a>
-    <a class="guide-card" href="anz-home-loan-calculator.html">
+    <a class="guide-card" data-country="au" data-cat="loans" href="anz-home-loan-calculator.html">
       <h3><span class="flag">🏠</span> ANZ Home Loan Calculator</h3>
       <p>Free ANZ home loan calculator. Estimate your monthly payment at ~6.05% in Australia. No signup, instant.</p>
     </a>
-    <a class="guide-card" href="axis-home-loan-emi-calculator.html">
+    <a class="guide-card" data-country="in" data-cat="loans" href="axis-home-loan-emi-calculator.html">
       <h3><span class="flag">🏠</span> Axis Bank Home Loan EMI Calculator</h3>
       <p>Free Axis Bank home loan EMI calculator. Calculate your monthly EMI and total interest at Axis Bank's current rate (~8.90%). RBI-linked. No signup.</p>
     </a>
-    <a class="guide-card" href="bank-of-america-mortgage-calculator.html">
+    <a class="guide-card" data-country="us" data-cat="loans" href="bank-of-america-mortgage-calculator.html">
       <h3><span class="flag">🏠</span> Bank of America Mortgage Calculator</h3>
       <p>Free Bank of America mortgage calculator. Estimate your monthly payment at ~6.55% in USA. No signup, instant.</p>
     </a>
-    <a class="guide-card" href="barclays-mortgage-calculator.html">
+    <a class="guide-card" data-country="uk" data-cat="loans" href="barclays-mortgage-calculator.html">
       <h3><span class="flag">🏠</span> Barclays Mortgage Calculator</h3>
       <p>Free Barclays mortgage calculator. Estimate your monthly payment at ~4.50% in UK. No signup, instant.</p>
     </a>
-    <a class="guide-card" href="bca-kpr-calculator.html">
+    <a class="guide-card" data-country="id" data-cat="loans" href="bca-kpr-calculator.html">
       <h3><span class="flag">🏠</span> Kalkulator KPR BCA</h3>
       <p>Kalkulator KPR BCA gratis. Hitung cicilan dan total bunga dengan SBDK BCA (~9.39%). Tanpa daftar.</p>
     </a>
-    <a class="guide-card" href="brac-bank-home-loan-calculator.html">
+    <a class="guide-card" data-country="bd" data-cat="loans" href="brac-bank-home-loan-calculator.html">
       <h3><span class="flag">🏠</span> BRAC Bank Home Loan Calculator</h3>
       <p>Free BRAC Bank home loan calculator. Estimate your monthly payment at ~13.00% in Bangladesh. No signup, instant.</p>
     </a>
-    <a class="guide-card" href="bri-kpr-calculator.html">
+    <a class="guide-card" data-country="id" data-cat="loans" href="bri-kpr-calculator.html">
       <h3><span class="flag">🏠</span> Kalkulator KPR BRI</h3>
       <p>Kalkulator KPR BRI gratis. Hitung cicilan dan total bunga dengan SBDK BRI (~10.00%). Tanpa daftar.</p>
     </a>
-    <a class="guide-card" href="btn-kpr-calculator.html">
+    <a class="guide-card" data-country="id" data-cat="loans" href="btn-kpr-calculator.html">
       <h3><span class="flag">🏠</span> Kalkulator KPR BTN</h3>
       <p>Kalkulator KPR BTN gratis. Hitung cicilan dan total bunga dengan SBDK BTN (~8.04%). Tanpa daftar.</p>
     </a>
-    <a class="guide-card" href="cba-home-loan-calculator.html">
+    <a class="guide-card" data-country="au" data-cat="loans" href="cba-home-loan-calculator.html">
       <h3><span class="flag">🏠</span> CommBank (CBA) Home Loan Calculator</h3>
       <p>Free CommBank (CBA) home loan calculator. Estimate your monthly payment at ~6.00% in Australia. No signup, instant.</p>
     </a>
-    <a class="guide-card" href="chase-mortgage-calculator.html">
+    <a class="guide-card" data-country="us" data-cat="loans" href="chase-mortgage-calculator.html">
       <h3><span class="flag">🏠</span> Chase Mortgage Calculator</h3>
       <p>Free Chase mortgage calculator. Estimate your monthly payment at ~6.50% in USA. No signup, instant.</p>
     </a>
-    <a class="guide-card" href="cimb-home-loan-calculator.html">
+    <a class="guide-card" data-country="my" data-cat="loans" href="cimb-home-loan-calculator.html">
       <h3><span class="flag">🏠</span> CIMB Home Loan Calculator</h3>
       <p>Free CIMB home loan calculator. Estimate your monthly payment at ~4.40% in Malaysia. No signup, instant.</p>
     </a>
-    <a class="guide-card" href="city-bank-home-loan-calculator.html">
+    <a class="guide-card" data-country="bd" data-cat="loans" href="city-bank-home-loan-calculator.html">
       <h3><span class="flag">🏠</span> City Bank Home Loan Calculator</h3>
       <p>Free City Bank home loan calculator. Estimate your monthly payment at ~13.50% in Bangladesh. No signup, instant.</p>
     </a>
-    <a class="guide-card" href="credito-hipotecario-mexico.html">
+    <a class="guide-card" data-country="mx" data-cat="loans" href="credito-hipotecario-mexico.html">
       <h3><span class="flag">🏠</span> Crédito Hipotecario Calculator — Mexico</h3>
       <p>Free Mexico crédito hipotecario calculator. Monthly payment at current rates (~11.5% p.a.), total interest in MXN. Real bank data. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="dbbl-home-loan-calculator.html">
+    <a class="guide-card" data-country="bd" data-cat="loans" href="dbbl-home-loan-calculator.html">
       <h3><span class="flag">🏠</span> Dutch-Bangla Bank Home Loan Calculator</h3>
       <p>Free Dutch-Bangla Bank home loan calculator. Estimate your monthly payment at ~13.00% in Bangladesh. No signup, instant.</p>
     </a>
-    <a class="guide-card" href="dib-mortgage-calculator.html">
+    <a class="guide-card" data-country="ae" data-cat="loans" href="dib-mortgage-calculator.html">
       <h3><span class="flag">🏠</span> Dubai Islamic Bank Mortgage Calculator</h3>
       <p>Free Dubai Islamic Bank mortgage calculator. Estimate your monthly home-finance payment in AED at ~6.00%. Expat deposit rules. No signup.</p>
     </a>
-    <a class="guide-card" href="emirates-nbd-mortgage-calculator.html">
+    <a class="guide-card" data-country="ae" data-cat="loans" href="emirates-nbd-mortgage-calculator.html">
       <h3><span class="flag">🏠</span> Emirates NBD Mortgage Calculator</h3>
       <p>Free Emirates NBD mortgage calculator. Estimate your monthly home-finance payment in AED at ~6.00%. Expat deposit rules. No signup.</p>
     </a>
-    <a class="guide-card" href="fab-mortgage-calculator.html">
+    <a class="guide-card" data-country="ae" data-cat="loans" href="fab-mortgage-calculator.html">
       <h3><span class="flag">🏠</span> FAB (First Abu Dhabi Bank) Mortgage Calculator</h3>
       <p>Free FAB (First Abu Dhabi Bank) mortgage calculator. Estimate your monthly home-finance payment in AED at ~6.00%. Expat deposit rules. No signup.</p>
     </a>
-    <a class="guide-card" href="financiamento-imobiliario-brasil.html">
+    <a class="guide-card" data-country="br" data-cat="loans" href="financiamento-imobiliario-brasil.html">
       <h3><span class="flag">🏠</span> Financiamento Calculator — Brazil</h3>
       <p>Free Brazil financiamento calculator. Monthly payment at current rates (~12.0% p.a.), total interest in BRL. Real bank data. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="gtbank-loan-calculator.html">
+    <a class="guide-card" data-country="ng" data-cat="loans" href="gtbank-loan-calculator.html">
       <h3><span class="flag">🏠</span> GTBank Loan Calculator</h3>
       <p>Free GTBank loan calculator. Estimate your monthly payment at ~29.00% in Nigeria. No signup, instant.</p>
     </a>
-    <a class="guide-card" href="halifax-mortgage-calculator.html">
+    <a class="guide-card" data-country="uk" data-cat="loans" href="halifax-mortgage-calculator.html">
       <h3><span class="flag">🏠</span> Halifax (Lloyds) Mortgage Calculator</h3>
       <p>Free Halifax (Lloyds) mortgage calculator. Estimate your monthly payment at ~4.50% in UK. No signup, instant.</p>
     </a>
-    <a class="guide-card" href="hbl-home-financing-calculator.html">
+    <a class="guide-card" data-country="pk" data-cat="loans" href="hbl-home-financing-calculator.html">
       <h3><span class="flag">🏠</span> HBL Home Financing Calculator</h3>
       <p>Free HBL home financing calculator. Estimate your monthly installment in PKR at ~16.5%. SBP-linked. No signup.</p>
     </a>
-    <a class="guide-card" href="hdfc-home-loan-emi-calculator.html">
+    <a class="guide-card" data-country="in" data-cat="loans" href="hdfc-home-loan-emi-calculator.html">
       <h3><span class="flag">🏠</span> HDFC Home Loan EMI Calculator</h3>
       <p>Free HDFC home loan EMI calculator. Calculate your monthly EMI and total interest at HDFC's current rate (~8.60%). RBI-linked. No signup.</p>
     </a>
-    <a class="guide-card" href="home-finance-calculator-bahrain.html">
+    <a class="guide-card" data-country="bh" data-cat="loans" href="home-finance-calculator-bahrain.html">
       <h3><span class="flag">🏠</span> Home Finance Calculator — Bahrain</h3>
       <p>Free Bahrain home finance calculator. Monthly payment at current rates (~5.5% p.a.), total interest in BHD. Real bank data. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="home-finance-calculator-kuwait.html">
+    <a class="guide-card" data-country="kw" data-cat="loans" href="home-finance-calculator-kuwait.html">
       <h3><span class="flag">🏠</span> Home Finance Calculator — Kuwait</h3>
       <p>Free Kuwait home finance calculator. Monthly payment at current rates (~5.0% p.a.), total interest in KWD. Real bank data. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="home-finance-calculator-qatar.html">
+    <a class="guide-card" data-country="qa" data-cat="loans" href="home-finance-calculator-qatar.html">
       <h3><span class="flag">🏠</span> Home Finance Calculator — Qatar</h3>
       <p>Free Qatar home finance calculator. Monthly installment at current QNB, CBQ, Doha Bank and QIB rates. Conventional & Islamic. No signup.</p>
     </a>
-    <a class="guide-card" href="home-finance-calculator-saudi-arabia.html">
+    <a class="guide-card" data-country="sa" data-cat="loans" href="home-finance-calculator-saudi-arabia.html">
       <h3><span class="flag">🏠</span> Saudi Arabia Home Finance Calculator — Murabaha &amp; Ijara</h3>
       <p>Free Saudi home finance calculator. Islamic Murabaha and Ijara monthly installments from Al Rajhi, SNB, Alinma, Bank Albilad. SAR payment, profit rate, and Real Estate Fund (REDF) support guidance.</p>
     </a>
-    <a class="guide-card" href="home-loan-calculator-australia.html">
+    <a class="guide-card" data-country="au" data-cat="loans" href="home-loan-calculator-australia.html">
       <h3><span class="flag">🏠</span> Australian Home Loan Calculator — Variable, Fixed &amp; Split</h3>
       <p>Free Australian home loan calculator. Compare variable, fixed, and split rates from CBA, Westpac, ANZ, NAB. Includes LMI, stamp duty, offset accounts.</p>
     </a>
-    <a class="guide-card" href="home-loan-calculator-bangladesh.html">
+    <a class="guide-card" data-country="bd" data-cat="loans" href="home-loan-calculator-bangladesh.html">
       <h3><span class="flag">🏠</span> Home Loan Calculator — Bangladesh</h3>
       <p>Free Bangladesh home loan calculator. Monthly installment at current BRAC, DBBL, City Bank, EBL rates. Total interest in BDT. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="home-loan-calculator-kenya.html">
+    <a class="guide-card" data-country="ke" data-cat="loans" href="home-loan-calculator-kenya.html">
       <h3><span class="flag">🏠</span> Home Loan Calculator — Kenya</h3>
       <p>Free Kenya mortgage calculator. Monthly repayment at current KCB, Equity, Absa, HFC rates, plus cheaper KMRC-backed loans. No signup.</p>
     </a>
-    <a class="guide-card" href="home-loan-calculator-malaysia.html">
+    <a class="guide-card" data-country="my" data-cat="loans" href="home-loan-calculator-malaysia.html">
       <h3><span class="flag">🏠</span> Home Loan Calculator — Malaysia</h3>
       <p>Free Malaysia home loan calculator. Conventional and Islamic home financing from Maybank, CIMB, Public Bank, RHB. Monthly installment, BNM OPR-linked rates, and total interest in MYR.</p>
     </a>
-    <a class="guide-card" href="home-loan-calculator-philippines.html">
+    <a class="guide-card" data-country="ph" data-cat="loans" href="home-loan-calculator-philippines.html">
       <h3><span class="flag">🏠</span> Home Loan Calculator — Philippines</h3>
       <p>Free Philippines home loan calculator. Monthly amortization using current BPI, BDO, Metrobank and Pag-IBIG rates. See total interest in pesos. No signup.</p>
     </a>
-    <a class="guide-card" href="home-loan-calculator-singapore.html">
+    <a class="guide-card" data-country="sg" data-cat="loans" href="home-loan-calculator-singapore.html">
       <h3><span class="flag">🏠</span> Home Loan Calculator — Singapore</h3>
       <p>Free Singapore home loan calculator. Monthly instalment for HDB and bank loans (DBS, UOB, OCBC) at current SORA-linked rates. Total interest in SGD. No signup.</p>
     </a>
-    <a class="guide-card" href="home-loan-calculator-south-africa.html">
+    <a class="guide-card" data-country="za" data-cat="loans" href="home-loan-calculator-south-africa.html">
       <h3><span class="flag">🏠</span> Home Loan & Bond Calculator — South Africa</h3>
       <p>Free South Africa bond repayment calculator. Monthly repayment at prime-linked rates from Standard Bank, FNB, Absa, Nedbank. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="home-loan-calculator-thailand.html">
+    <a class="guide-card" data-country="th" data-cat="loans" href="home-loan-calculator-thailand.html">
       <h3><span class="flag">🏠</span> Home Loan Calculator — Thailand</h3>
       <p>Free Thailand home loan calculator. Monthly payment at current rates (~6.0% p.a.), total interest in THB. Real bank data. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="home-loan-calculator-vietnam.html">
+    <a class="guide-card" data-country="vn" data-cat="loans" href="home-loan-calculator-vietnam.html">
       <h3><span class="flag">🏠</span> Home Loan Calculator — Vietnam</h3>
       <p>Free Vietnam home loan calculator. Monthly payment at current rates (~10.0% p.a.), total interest in VND. Real bank data. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="home-loan-emi-calculator-india.html">
+    <a class="guide-card" data-country="in" data-cat="loans" href="home-loan-emi-calculator-india.html">
       <h3><span class="flag">🏠</span> Home Loan EMI Calculator — India</h3>
       <p>Free home loan EMI calculator for India. Uses current RBI repo rate and typical SBI, HDFC, ICICI, Axis home loan rates. See your monthly EMI, total interest, and prepayment savings.</p>
     </a>
-    <a class="guide-card" href="home-loan-emi-pakistan.html">
+    <a class="guide-card" data-country="pk" data-cat="loans" href="home-loan-emi-pakistan.html">
       <h3><span class="flag">🏠</span> Home Loan EMI Calculator Pakistan 2026</h3>
       <p>Free Pakistan home financing EMI calculator. Uses State Bank of Pakistan (SBP) policy rate plus typical markup. Supports Meezan, HBL, MCB, UBL rates for 2026.</p>
     </a>
-    <a class="guide-card" href="home-loan-on-1-lakh-salary.html">
+    <a class="guide-card" data-country="in" data-cat="loans" href="home-loan-on-1-lakh-salary.html">
       <h3><span class="flag">🏠</span> Home Loan on a ₹1,00,000 Salary</h3>
       <p>How much home loan can you get on a ₹1,00,000 salary in India? See your maximum eligible loan at 8.5% using the FOIR rule. Free, no signup.</p>
     </a>
-    <a class="guide-card" href="home-loan-on-30000-salary.html">
+    <a class="guide-card" data-country="in" data-cat="loans" href="home-loan-on-30000-salary.html">
       <h3><span class="flag">🏠</span> Home Loan on a ₹30,000 Salary</h3>
       <p>How much home loan can you get on a ₹30,000 salary in India? See your maximum eligible loan at 8.5% using the FOIR rule. Free, no signup.</p>
     </a>
-    <a class="guide-card" href="home-loan-on-50000-salary.html">
+    <a class="guide-card" data-country="in" data-cat="loans" href="home-loan-on-50000-salary.html">
       <h3><span class="flag">🏠</span> Home Loan on a ₹50,000 Salary</h3>
       <p>How much home loan can you get on a ₹50,000 salary in India? See your maximum eligible loan at 8.5% using the FOIR rule. Free, no signup.</p>
     </a>
-    <a class="guide-card" href="housing-loan-calculator-sri-lanka.html">
+    <a class="guide-card" data-country="lk" data-cat="loans" href="housing-loan-calculator-sri-lanka.html">
       <h3><span class="flag">🏠</span> Housing Loan Calculator — Sri Lanka</h3>
       <p>Free Sri Lanka housing loan calculator. Monthly installment at current Commercial Bank, HNB, Sampath, BOC, NDB rates. Total interest in LKR. No signup.</p>
     </a>
-    <a class="guide-card" href="hsbc-uk-mortgage-calculator.html">
+    <a class="guide-card" data-country="uk" data-cat="loans" href="hsbc-uk-mortgage-calculator.html">
       <h3><span class="flag">🏠</span> HSBC UK Mortgage Calculator</h3>
       <p>Free HSBC UK mortgage calculator. Estimate your monthly payment at ~4.40% in UK. No signup, instant.</p>
     </a>
-    <a class="guide-card" href="icici-home-loan-emi-calculator.html">
+    <a class="guide-card" data-country="in" data-cat="loans" href="icici-home-loan-emi-calculator.html">
       <h3><span class="flag">🏠</span> ICICI Bank Home Loan EMI Calculator</h3>
       <p>Free ICICI Bank home loan EMI calculator. Calculate your monthly EMI and total interest at ICICI Bank's current rate (~8.70%). RBI-linked. No signup.</p>
     </a>
-    <a class="guide-card" href="konut-kredisi-hesaplama.html">
+    <a class="guide-card" data-country="tr" data-cat="loans" href="konut-kredisi-hesaplama.html">
       <h3><span class="flag">🏠</span> Konut Kredisi Calculator — Türkiye</h3>
       <p>Free Türkiye konut kredisi calculator. Monthly payment at current rates (~44.0% p.a.), total interest in TRY. Real bank data. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="kpr-calculator-indonesia.html">
+    <a class="guide-card" data-country="id" data-cat="loans" href="kpr-calculator-indonesia.html">
       <h3><span class="flag">🏠</span> KPR Calculator — Indonesia</h3>
       <p>Free KPR calculator for Indonesia. Estimate monthly cicilan using current SBDK rates from BTN, BNI, BCA, BRI, Mandiri. See total interest in Rupiah. No signup.</p>
     </a>
-    <a class="guide-card" href="loan-calculator-nigeria.html">
+    <a class="guide-card" data-country="ng" data-cat="loans" href="loan-calculator-nigeria.html">
       <h3><span class="flag">🏠</span> Loan Calculator — Nigeria</h3>
       <p>Free Nigeria loan calculator. Estimate monthly repayment and total interest at current CBN rates (MPR 27.5%). Covers GTBank, Zenith, Access, UBA personal and mortgage loans. See the true cost.</p>
     </a>
-    <a class="guide-card" href="mandiri-kpr-calculator.html">
+    <a class="guide-card" data-country="id" data-cat="loans" href="mandiri-kpr-calculator.html">
       <h3><span class="flag">🏠</span> Kalkulator KPR Bank Mandiri</h3>
       <p>Kalkulator KPR Bank Mandiri gratis. Hitung cicilan dan total bunga dengan SBDK Bank Mandiri (~12.50%). Tanpa daftar.</p>
     </a>
-    <a class="guide-card" href="maybank-home-loan-calculator.html">
+    <a class="guide-card" data-country="my" data-cat="loans" href="maybank-home-loan-calculator.html">
       <h3><span class="flag">🏠</span> Maybank Home Loan Calculator</h3>
       <p>Free Maybank home loan calculator. Estimate your monthly payment at ~4.30% in Malaysia. No signup, instant.</p>
     </a>
-    <a class="guide-card" href="mcb-home-financing-calculator.html">
+    <a class="guide-card" data-country="pk" data-cat="loans" href="mcb-home-financing-calculator.html">
       <h3><span class="flag">🏠</span> MCB Bank Home Financing Calculator</h3>
       <p>Free MCB Bank home financing calculator. Estimate your monthly installment in PKR at ~16.5%. SBP-linked. No signup.</p>
     </a>
-    <a class="guide-card" href="meezan-home-financing-calculator.html">
+    <a class="guide-card" data-country="pk" data-cat="loans" href="meezan-home-financing-calculator.html">
       <h3><span class="flag">🏠</span> Meezan Bank Home Financing Calculator</h3>
       <p>Free Meezan Bank home financing calculator. Estimate your monthly installment in PKR at ~16.0%. SBP-linked. No signup.</p>
     </a>
-    <a class="guide-card" href="mera-pakistan-mera-ghar-calculator.html">
+    <a class="guide-card" data-country="pk" data-cat="loans" href="mera-pakistan-mera-ghar-calculator.html">
       <h3><span class="flag">🏠</span> Mera Pakistan Mera Ghar — Installment Calculator</h3>
       <p>Mera Pakistan Mera Ghar guide & home finance calculator. Subsidized markup tiers vs standard rates, eligibility, and monthly installment estimate. No signup.</p>
     </a>
-    <a class="guide-card" href="mortgage-calculator-canada.html">
+    <a class="guide-card" data-country="ca" data-cat="loans" href="mortgage-calculator-canada.html">
       <h3><span class="flag">🏠</span> Canadian Mortgage Calculator — Fixed &amp; Variable</h3>
       <p>Free Canadian mortgage calculator. Compare 5-year fixed, variable, and HELOC rates from RBC, TD, Scotiabank, BMO, CIBC. Includes CMHC insurance and stress test.</p>
     </a>
-    <a class="guide-card" href="mortgage-calculator-china.html">
+    <a class="guide-card" data-country="cn" data-cat="loans" href="mortgage-calculator-china.html">
       <h3><span class="flag">🏠</span> Mortgage Calculator — China</h3>
       <p>Free China mortgage calculator. Monthly payment at current rates (~3.6% p.a.), total interest in CNY. Real bank data. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="mortgage-calculator-egypt.html">
+    <a class="guide-card" data-country="eg" data-cat="loans" href="mortgage-calculator-egypt.html">
       <h3><span class="flag">🏠</span> Mortgage Calculator — Egypt</h3>
       <p>Free Egypt mortgage calculator. Monthly installment at current NBE, Banque Misr, CIB rates plus the CBE subsidized initiative. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="mortgage-calculator-eurozone.html">
+    <a class="guide-card" data-country="eu" data-cat="loans" href="mortgage-calculator-eurozone.html">
       <h3><span class="flag">🏠</span> Mortgage Calculator — Eurozone</h3>
       <p>Free Eurozone mortgage calculator. Monthly payment at current rates (~3.6% p.a.), total interest in EUR. Real bank data. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="mortgage-calculator-hong-kong.html">
+    <a class="guide-card" data-country="hk" data-cat="loans" href="mortgage-calculator-hong-kong.html">
       <h3><span class="flag">🏠</span> Mortgage Calculator — Hong Kong</h3>
       <p>Free Hong Kong mortgage calculator. Monthly payment at current rates (~3.5% p.a.), total interest in HKD. Real bank data. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="mortgage-calculator-japan.html">
+    <a class="guide-card" data-country="jp" data-cat="loans" href="mortgage-calculator-japan.html">
       <h3><span class="flag">🏠</span> Mortgage Calculator — Japan</h3>
       <p>Free Japan mortgage calculator. Monthly payment at current rates (~1.5% p.a.), total interest in JPY. Real bank data. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="mortgage-calculator-new-zealand.html">
+    <a class="guide-card" data-country="nz" data-cat="loans" href="mortgage-calculator-new-zealand.html">
       <h3><span class="flag">🏠</span> Mortgage Calculator — New Zealand</h3>
       <p>Free New Zealand mortgage calculator. Monthly payment at current rates (~5.0% p.a.), total interest in NZD. Real bank data. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="mortgage-calculator-russia.html">
+    <a class="guide-card" data-country="ru" data-cat="loans" href="mortgage-calculator-russia.html">
       <h3><span class="flag">🏠</span> Mortgage Calculator — Russia</h3>
       <p>Free Russia mortgage calculator. Monthly payment at current rates (~22.0% p.a.), total interest in RUB. Real bank data. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="mortgage-calculator-south-korea.html">
+    <a class="guide-card" data-country="kr" data-cat="loans" href="mortgage-calculator-south-korea.html">
       <h3><span class="flag">🏠</span> Mortgage Calculator — South Korea</h3>
       <p>Free South Korea mortgage calculator. Monthly payment at current rates (~4.5% p.a.), total interest in KRW. Real bank data. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="mortgage-calculator-taiwan.html">
+    <a class="guide-card" data-country="tw" data-cat="loans" href="mortgage-calculator-taiwan.html">
       <h3><span class="flag">🏠</span> Mortgage Calculator — Taiwan</h3>
       <p>Free Taiwan mortgage calculator. Monthly payment at current rates (~2.2% p.a.), total interest in TWD. Real bank data. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="mortgage-calculator-uae.html">
+    <a class="guide-card" data-country="ae" data-cat="loans" href="mortgage-calculator-uae.html">
       <h3><span class="flag">🏠</span> UAE Mortgage Calculator — Home Finance in AED</h3>
       <p>Free UAE mortgage calculator. Compare conventional and Islamic (Murabaha/Ijara) home finance from Emirates NBD, FAB, ADCB, Dubai Islamic Bank, Mashreq. AED monthly payment, deposit rules, fees.</p>
     </a>
-    <a class="guide-card" href="mortgage-calculator-uk.html">
+    <a class="guide-card" data-country="uk" data-cat="loans" href="mortgage-calculator-uk.html">
       <h3><span class="flag">🏠</span> UK Mortgage Calculator — Monthly Payment &amp; Affordability</h3>
       <p>Free UK mortgage calculator. Compare 2-year fixed, 5-year fixed, tracker, and SVR rates from HSBC, Barclays, Lloyds, NatWest, Santander. Includes stamp duty and first-time buyer scenarios.</p>
     </a>
-    <a class="guide-card" href="mortgage-calculator-usa.html">
+    <a class="guide-card" data-country="us" data-cat="loans" href="mortgage-calculator-usa.html">
       <h3><span class="flag">🏠</span> US Mortgage Calculator — 30-Year &amp; 15-Year Fixed</h3>
       <p>Free US mortgage calculator. Compare 30-year fixed, 15-year fixed, and ARM rates. Includes PMI, property tax, insurance. Works for Chase, Wells Fargo, Bank of America, Rocket Mortgage rates.</p>
     </a>
-    <a class="guide-card" href="nab-home-loan-calculator.html">
+    <a class="guide-card" data-country="au" data-cat="loans" href="nab-home-loan-calculator.html">
       <h3><span class="flag">🏠</span> NAB Home Loan Calculator</h3>
       <p>Free NAB home loan calculator. Estimate your monthly payment at ~6.00% in Australia. No signup, instant.</p>
     </a>
-    <a class="guide-card" href="nationwide-mortgage-calculator.html">
+    <a class="guide-card" data-country="uk" data-cat="loans" href="nationwide-mortgage-calculator.html">
       <h3><span class="flag">🏠</span> Nationwide Mortgage Calculator</h3>
       <p>Free Nationwide mortgage calculator. Estimate your monthly payment at ~4.50% in UK. No signup, instant.</p>
     </a>
-    <a class="guide-card" href="natwest-mortgage-calculator.html">
+    <a class="guide-card" data-country="uk" data-cat="loans" href="natwest-mortgage-calculator.html">
       <h3><span class="flag">🏠</span> NatWest Mortgage Calculator</h3>
       <p>Free NatWest mortgage calculator. Estimate your monthly payment at ~4.50% in UK. No signup, instant.</p>
     </a>
-    <a class="guide-card" href="pag-ibig-housing-loan-calculator.html">
+    <a class="guide-card" data-country="ph" data-cat="loans" href="pag-ibig-housing-loan-calculator.html">
       <h3><span class="flag">🏠</span> Pag-IBIG Housing Loan Calculator — Philippines</h3>
       <p>Free Pag-IBIG housing loan guide & calculator. Subsidized HDMF rates, ₱6M ceiling, up to 30 years, member eligibility. Estimate your amortization. No signup.</p>
     </a>
-    <a class="guide-card" href="public-bank-home-loan-calculator.html">
+    <a class="guide-card" data-country="my" data-cat="loans" href="public-bank-home-loan-calculator.html">
       <h3><span class="flag">🏠</span> Public Bank Home Loan Calculator</h3>
       <p>Free Public Bank home loan calculator. Estimate your monthly payment at ~4.35% in Malaysia. No signup, instant.</p>
     </a>
-    <a class="guide-card" href="rbc-mortgage-calculator.html">
+    <a class="guide-card" data-country="ca" data-cat="loans" href="rbc-mortgage-calculator.html">
       <h3><span class="flag">🏠</span> RBC Mortgage Calculator</h3>
       <p>Free RBC mortgage calculator. Estimate your monthly payment at ~4.75% in Canada. No signup, instant.</p>
     </a>
-    <a class="guide-card" href="rhb-home-loan-calculator.html">
+    <a class="guide-card" data-country="my" data-cat="loans" href="rhb-home-loan-calculator.html">
       <h3><span class="flag">🏠</span> RHB Home Loan Calculator</h3>
       <p>Free RHB home loan calculator. Estimate your monthly payment at ~4.45% in Malaysia. No signup, instant.</p>
     </a>
-    <a class="guide-card" href="rocket-mortgage-mortgage-calculator.html">
+    <a class="guide-card" data-country="us" data-cat="loans" href="rocket-mortgage-mortgage-calculator.html">
       <h3><span class="flag">🏠</span> Rocket Mortgage Mortgage Calculator</h3>
       <p>Free Rocket Mortgage mortgage calculator. Estimate your monthly payment at ~6.60% in USA. No signup, instant.</p>
     </a>
-    <a class="guide-card" href="santander-uk-mortgage-calculator.html">
+    <a class="guide-card" data-country="uk" data-cat="loans" href="santander-uk-mortgage-calculator.html">
       <h3><span class="flag">🏠</span> Santander UK Mortgage Calculator</h3>
       <p>Free Santander UK mortgage calculator. Estimate your monthly payment at ~4.55% in UK. No signup, instant.</p>
     </a>
-    <a class="guide-card" href="sbi-home-loan-emi-calculator.html">
+    <a class="guide-card" data-country="in" data-cat="loans" href="sbi-home-loan-emi-calculator.html">
       <h3><span class="flag">🏠</span> SBI Home Loan EMI Calculator</h3>
       <p>Free SBI home loan EMI calculator. Calculate your monthly EMI and total interest at SBI's current rate (~8.50%). RBI-linked. No signup.</p>
     </a>
-    <a class="guide-card" href="scotiabank-mortgage-calculator.html">
+    <a class="guide-card" data-country="ca" data-cat="loans" href="scotiabank-mortgage-calculator.html">
       <h3><span class="flag">🏠</span> Scotiabank Mortgage Calculator</h3>
       <p>Free Scotiabank mortgage calculator. Estimate your monthly payment at ~4.80% in Canada. No signup, instant.</p>
     </a>
-    <a class="guide-card" href="snb-home-finance-calculator.html">
+    <a class="guide-card" data-country="sa" data-cat="loans" href="snb-home-finance-calculator.html">
       <h3><span class="flag">🏠</span> Saudi National Bank (SNB) Home Finance Calculator</h3>
       <p>Free Saudi National Bank (SNB) home finance calculator. Estimate your monthly payment at ~6.30% in Saudi Arabia. No signup, instant.</p>
     </a>
-    <a class="guide-card" href="td-canada-mortgage-calculator.html">
+    <a class="guide-card" data-country="ca" data-cat="loans" href="td-canada-mortgage-calculator.html">
       <h3><span class="flag">🏠</span> TD Canada Mortgage Calculator</h3>
       <p>Free TD Canada mortgage calculator. Estimate your monthly payment at ~4.80% in Canada. No signup, instant.</p>
     </a>
-    <a class="guide-card" href="uba-loan-calculator.html">
+    <a class="guide-card" data-country="ng" data-cat="loans" href="uba-loan-calculator.html">
       <h3><span class="flag">🏠</span> UBA Loan Calculator</h3>
       <p>Free UBA loan calculator. Estimate your monthly payment at ~29.00% in Nigeria. No signup, instant.</p>
     </a>
-    <a class="guide-card" href="wells-fargo-mortgage-calculator.html">
+    <a class="guide-card" data-country="us" data-cat="loans" href="wells-fargo-mortgage-calculator.html">
       <h3><span class="flag">🏠</span> Wells Fargo Mortgage Calculator</h3>
       <p>Free Wells Fargo mortgage calculator. Estimate your monthly payment at ~6.60% in USA. No signup, instant.</p>
     </a>
-    <a class="guide-card" href="westpac-home-loan-calculator.html">
+    <a class="guide-card" data-country="au" data-cat="loans" href="westpac-home-loan-calculator.html">
       <h3><span class="flag">🏠</span> Westpac Home Loan Calculator</h3>
       <p>Free Westpac home loan calculator. Estimate your monthly payment at ~6.05% in Australia. No signup, instant.</p>
     </a>
-    <a class="guide-card" href="zenith-bank-loan-calculator.html">
+    <a class="guide-card" data-country="ng" data-cat="loans" href="zenith-bank-loan-calculator.html">
       <h3><span class="flag">🏠</span> Zenith Bank Loan Calculator</h3>
       <p>Free Zenith Bank loan calculator. Estimate your monthly payment at ~29.00% in Nigeria. No signup, instant.</p>
     </a>
-    <div class="section-header">🚗 Car &amp; vehicle finance (38)</div>
-    <a class="guide-card" href="bank-alfalah-car-finance-calculator.html">
+    <div class="section-header" data-cat="loans">🚗 Car &amp; vehicle finance (38)</div>
+    <a class="guide-card" data-country="pk" data-cat="loans" href="bank-alfalah-car-finance-calculator.html">
       <h3><span class="flag">🚗</span> Bank Alfalah Car Finance — Installment Calculator</h3>
       <p>Free Bank Alfalah Car Finance calculator. Estimate your monthly car-finance installment in PKR at ~17.5% effective. SBP rules explained. No signup.</p>
     </a>
-    <a class="guide-card" href="car-finance-calculator-bahrain.html">
+    <a class="guide-card" data-country="bh" data-cat="loans" href="car-finance-calculator-bahrain.html">
       <h3><span class="flag">🚗</span> Car Loan Calculator — Bahrain</h3>
       <p>Free Bahrain car loan calculator. Monthly installment at current auto-finance rates (~5.5% p.a.), total interest in BHD. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="car-finance-calculator-qatar.html">
+    <a class="guide-card" data-country="qa" data-cat="loans" href="car-finance-calculator-qatar.html">
       <h3><span class="flag">🚗</span> Car Loan Calculator — Qatar</h3>
       <p>Free Qatar car loan calculator. Monthly installment at current auto-finance rates (~5.2% p.a.), total interest in QAR. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="car-finance-calculator-saudi-arabia.html">
+    <a class="guide-card" data-country="sa" data-cat="loans" href="car-finance-calculator-saudi-arabia.html">
       <h3><span class="flag">🚗</span> Car Loan Calculator — Saudi Arabia</h3>
       <p>Free Saudi Arabia car loan calculator. Monthly installment at current auto-finance rates (~5.0% p.a.), total interest in SAR. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="car-finance-calculator-uk.html">
+    <a class="guide-card" data-country="uk" data-cat="loans" href="car-finance-calculator-uk.html">
       <h3><span class="flag">🚗</span> Car Loan Calculator — UK</h3>
       <p>Free UK car loan calculator. Monthly installment at current auto-finance rates (~8.0% p.a.), total interest in GBP. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="car-loan-calculator-australia.html">
+    <a class="guide-card" data-country="au" data-cat="loans" href="car-loan-calculator-australia.html">
       <h3><span class="flag">🚗</span> Car Loan Calculator — Australia</h3>
       <p>Free Australia car loan calculator. Monthly installment at current auto-finance rates (~8.0% p.a.), total interest in AUD. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="car-loan-calculator-bangladesh.html">
+    <a class="guide-card" data-country="bd" data-cat="loans" href="car-loan-calculator-bangladesh.html">
       <h3><span class="flag">🚗</span> Car Loan Calculator — Bangladesh</h3>
       <p>Free Bangladesh car loan calculator. Monthly installment at current auto-finance rates (~13.0% p.a.), total interest in BDT. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="car-loan-calculator-brazil.html">
+    <a class="guide-card" data-country="br" data-cat="loans" href="car-loan-calculator-brazil.html">
       <h3><span class="flag">🚗</span> Car Loan Calculator — Brazil</h3>
       <p>Free Brazil car loan calculator. Monthly installment at current auto-finance rates (~25.0% p.a.), total interest in BRL. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="car-loan-calculator-canada.html">
+    <a class="guide-card" data-country="ca" data-cat="loans" href="car-loan-calculator-canada.html">
       <h3><span class="flag">🚗</span> Car Loan Calculator — Canada</h3>
       <p>Free Canada car loan calculator. Monthly installment at current auto-finance rates (~7.0% p.a.), total interest in CAD. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="car-loan-calculator-china.html">
+    <a class="guide-card" data-country="cn" data-cat="loans" href="car-loan-calculator-china.html">
       <h3><span class="flag">🚗</span> Car Loan Calculator — China</h3>
       <p>Free China car loan calculator. Monthly installment at current auto-finance rates (~4.5% p.a.), total interest in CNY. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="car-loan-calculator-egypt.html">
+    <a class="guide-card" data-country="eg" data-cat="loans" href="car-loan-calculator-egypt.html">
       <h3><span class="flag">🚗</span> Car Loan Calculator — Egypt</h3>
       <p>Free Egypt car loan calculator. Monthly installment at current auto-finance rates (~23.0% p.a.), total interest in EGP. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="car-loan-calculator-eurozone.html">
+    <a class="guide-card" data-country="eu" data-cat="loans" href="car-loan-calculator-eurozone.html">
       <h3><span class="flag">🚗</span> Car Loan Calculator — Eurozone</h3>
       <p>Free Eurozone car loan calculator. Monthly installment at current auto-finance rates (~5.5% p.a.), total interest in EUR. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="car-loan-calculator-hong-kong.html">
+    <a class="guide-card" data-country="hk" data-cat="loans" href="car-loan-calculator-hong-kong.html">
       <h3><span class="flag">🚗</span> Car Loan Calculator — Hong Kong</h3>
       <p>Free Hong Kong car loan calculator. Monthly installment at current auto-finance rates (~5.0% p.a.), total interest in HKD. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="car-loan-calculator-india.html">
+    <a class="guide-card" data-country="in" data-cat="loans" href="car-loan-calculator-india.html">
       <h3><span class="flag">🚗</span> Car Loan EMI Calculator — India</h3>
       <p>Free car loan EMI calculator for India. Monthly EMI using current SBI, HDFC, ICICI, Axis, Kotak rates. New & used car. See total interest in rupees. No signup.</p>
     </a>
-    <a class="guide-card" href="car-loan-calculator-indonesia.html">
+    <a class="guide-card" data-country="id" data-cat="loans" href="car-loan-calculator-indonesia.html">
       <h3><span class="flag">🚗</span> Car Loan (KKB) Calculator — Indonesia</h3>
       <p>Free Indonesia car loan (KKB) calculator. Estimate monthly cicilan using BCA Finance, Mandiri Tunas, Adira rates. See total interest in Rupiah. No signup.</p>
     </a>
-    <a class="guide-card" href="car-loan-calculator-japan.html">
+    <a class="guide-card" data-country="jp" data-cat="loans" href="car-loan-calculator-japan.html">
       <h3><span class="flag">🚗</span> Car Loan Calculator — Japan</h3>
       <p>Free Japan car loan calculator. Monthly installment at current auto-finance rates (~2.5% p.a.), total interest in JPY. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="car-loan-calculator-kenya.html">
+    <a class="guide-card" data-country="ke" data-cat="loans" href="car-loan-calculator-kenya.html">
       <h3><span class="flag">🚗</span> Car Loan Calculator — Kenya</h3>
       <p>Free Kenya car loan calculator. Monthly installment at current auto-finance rates (~15.0% p.a.), total interest in KES. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="car-loan-calculator-kuwait.html">
+    <a class="guide-card" data-country="kw" data-cat="loans" href="car-loan-calculator-kuwait.html">
       <h3><span class="flag">🚗</span> Car Loan Calculator — Kuwait</h3>
       <p>Free Kuwait car loan calculator. Monthly installment at current auto-finance rates (~5.0% p.a.), total interest in KWD. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="car-loan-calculator-malaysia.html">
+    <a class="guide-card" data-country="my" data-cat="loans" href="car-loan-calculator-malaysia.html">
       <h3><span class="flag">🚗</span> Car Loan Calculator — Malaysia</h3>
       <p>Free Malaysia car loan calculator. Monthly installment at current auto-finance rates (~3.5% p.a.), total interest in MYR. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="car-loan-calculator-mexico.html">
+    <a class="guide-card" data-country="mx" data-cat="loans" href="car-loan-calculator-mexico.html">
       <h3><span class="flag">🚗</span> Car Loan Calculator — Mexico</h3>
       <p>Free Mexico car loan calculator. Monthly installment at current auto-finance rates (~13.5% p.a.), total interest in MXN. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="car-loan-calculator-new-zealand.html">
+    <a class="guide-card" data-country="nz" data-cat="loans" href="car-loan-calculator-new-zealand.html">
       <h3><span class="flag">🚗</span> Car Loan Calculator — New Zealand</h3>
       <p>Free New Zealand car loan calculator. Monthly installment at current auto-finance rates (~10.0% p.a.), total interest in NZD. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="car-loan-calculator-nigeria.html">
+    <a class="guide-card" data-country="ng" data-cat="loans" href="car-loan-calculator-nigeria.html">
       <h3><span class="flag">🚗</span> Car Loan Calculator — Nigeria</h3>
       <p>Free Nigeria car loan calculator. Monthly repayment at current bank rates (GTBank, UBA, Access). See the true cost of auto finance in Naira. No signup.</p>
     </a>
-    <a class="guide-card" href="car-loan-calculator-pakistan.html">
+    <a class="guide-card" data-country="pk" data-cat="loans" href="car-loan-calculator-pakistan.html">
       <h3><span class="flag">🚗</span> Car Loan Calculator — Pakistan</h3>
       <p>Free Pakistan car loan calculator. Conventional auto finance and Islamic Ijarah from Meezan, HBL, Bank Alfalah, UBL. Monthly installment in PKR, SBP tenure and down-payment rules explained.</p>
     </a>
-    <a class="guide-card" href="car-loan-calculator-philippines.html">
+    <a class="guide-card" data-country="ph" data-cat="loans" href="car-loan-calculator-philippines.html">
       <h3><span class="flag">🚗</span> Car Loan Calculator — Philippines</h3>
       <p>Free Philippines car loan calculator. Monthly amortization using current BPI, BDO, Metrobank, Security Bank rates. See total interest in pesos. No signup.</p>
     </a>
-    <a class="guide-card" href="car-loan-calculator-russia.html">
+    <a class="guide-card" data-country="ru" data-cat="loans" href="car-loan-calculator-russia.html">
       <h3><span class="flag">🚗</span> Car Loan Calculator — Russia</h3>
       <p>Free Russia car loan calculator. Monthly installment at current auto-finance rates (~24.0% p.a.), total interest in RUB. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="car-loan-calculator-singapore.html">
+    <a class="guide-card" data-country="sg" data-cat="loans" href="car-loan-calculator-singapore.html">
       <h3><span class="flag">🚗</span> Car Loan Calculator — Singapore</h3>
       <p>Free Singapore car loan calculator. Monthly installment at current auto-finance rates (~3.5% p.a.), total interest in SGD. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="car-loan-calculator-south-korea.html">
+    <a class="guide-card" data-country="kr" data-cat="loans" href="car-loan-calculator-south-korea.html">
       <h3><span class="flag">🚗</span> Car Loan Calculator — South Korea</h3>
       <p>Free South Korea car loan calculator. Monthly installment at current auto-finance rates (~5.5% p.a.), total interest in KRW. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="car-loan-calculator-sri-lanka.html">
+    <a class="guide-card" data-country="lk" data-cat="loans" href="car-loan-calculator-sri-lanka.html">
       <h3><span class="flag">🚗</span> Car Loan Calculator — Sri Lanka</h3>
       <p>Free Sri Lanka car loan calculator. Monthly installment at current auto-finance rates (~13.0% p.a.), total interest in LKR. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="car-loan-calculator-taiwan.html">
+    <a class="guide-card" data-country="tw" data-cat="loans" href="car-loan-calculator-taiwan.html">
       <h3><span class="flag">🚗</span> Car Loan Calculator — Taiwan</h3>
       <p>Free Taiwan car loan calculator. Monthly installment at current auto-finance rates (~4.0% p.a.), total interest in TWD. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="car-loan-calculator-thailand.html">
+    <a class="guide-card" data-country="th" data-cat="loans" href="car-loan-calculator-thailand.html">
       <h3><span class="flag">🚗</span> Car Loan Calculator — Thailand</h3>
       <p>Free Thailand car loan calculator. Monthly installment at current auto-finance rates (~4.5% p.a.), total interest in THB. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="car-loan-calculator-uae.html">
+    <a class="guide-card" data-country="ae" data-cat="loans" href="car-loan-calculator-uae.html">
       <h3><span class="flag">🚗</span> UAE Car Loan Calculator 2026</h3>
       <p>Free UAE auto loan calculator. Compares conventional car financing and Islamic Ijarah (lease-to-own) across Emirates NBD, FAB, Dubai Islamic Bank, ADIB, and Mashreq.</p>
     </a>
-    <a class="guide-card" href="car-loan-calculator-usa.html">
+    <a class="guide-card" data-country="us" data-cat="loans" href="car-loan-calculator-usa.html">
       <h3><span class="flag">🚗</span> Car Loan Calculator — USA</h3>
       <p>Free USA car loan calculator. Monthly installment at current auto-finance rates (~7.5% p.a.), total interest in USD. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="car-loan-calculator-vietnam.html">
+    <a class="guide-card" data-country="vn" data-cat="loans" href="car-loan-calculator-vietnam.html">
       <h3><span class="flag">🚗</span> Car Loan Calculator — Vietnam</h3>
       <p>Free Vietnam car loan calculator. Monthly installment at current auto-finance rates (~10.5% p.a.), total interest in VND. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="hbl-car-finance-calculator.html">
+    <a class="guide-card" data-country="pk" data-cat="loans" href="hbl-car-finance-calculator.html">
       <h3><span class="flag">🚗</span> HBL CarLoan — Installment Calculator</h3>
       <p>Free HBL CarLoan calculator. Estimate your monthly car-finance installment in PKR at ~17.5% effective. SBP rules explained. No signup.</p>
     </a>
-    <a class="guide-card" href="meezan-car-finance-calculator.html">
+    <a class="guide-card" data-country="pk" data-cat="loans" href="meezan-car-finance-calculator.html">
       <h3><span class="flag">🚗</span> Meezan Bank Car Ijarah — Installment Calculator</h3>
       <p>Free Meezan Bank Car Ijarah calculator. Estimate your monthly car-finance installment in PKR at ~18.0% effective. SBP rules explained. No signup.</p>
     </a>
-    <a class="guide-card" href="tasit-kredisi-hesaplama.html">
+    <a class="guide-card" data-country="tr" data-cat="loans" href="tasit-kredisi-hesaplama.html">
       <h3><span class="flag">🚗</span> Taşıt Kredisi Hesaplama 2026</h3>
       <p>Ücretsiz taşıt kredisi hesaplayıcı. TCMB politika faizi güncel 2026. Garanti, Ziraat, İş Bankası araç kredisi oranları ve LTV kuralları.</p>
     </a>
-    <a class="guide-card" href="ubl-car-finance-calculator.html">
+    <a class="guide-card" data-country="pk" data-cat="loans" href="ubl-car-finance-calculator.html">
       <h3><span class="flag">🚗</span> UBL Drive — Installment Calculator</h3>
       <p>Free UBL Drive calculator. Estimate your monthly car-finance installment in PKR at ~18.0% effective. SBP rules explained. No signup.</p>
     </a>
-    <a class="guide-card" href="vehicle-finance-south-africa.html">
+    <a class="guide-card" data-country="za" data-cat="loans" href="vehicle-finance-south-africa.html">
       <h3><span class="flag">🚗</span> Vehicle Finance Calculator South Africa 2026</h3>
       <p>Free South African vehicle finance calculator. Covers WesBank, MFC, Absa, Standard Bank. Explains balloon payments and residual values clearly. Uses current SARB repo rate.</p>
     </a>
-    <div class="section-header">📈 Investing &amp; SIP (40)</div>
-    <a class="guide-card" href="sip-10000-per-month.html">
+    <div class="section-header" data-cat="investing">📈 Investing &amp; SIP (40)</div>
+    <a class="guide-card" data-country="" data-cat="investing" href="sip-10000-per-month.html">
       <h3><span class="flag">📈</span> ₹10,000 SIP Per Month — Growth Calculator</h3>
       <p>How much does a ₹10,000 monthly SIP grow to? See future value at 12% across 10–30 years. Free India SIP calculator, no signup.</p>
     </a>
-    <a class="guide-card" href="sip-15000-per-month.html">
+    <a class="guide-card" data-country="" data-cat="investing" href="sip-15000-per-month.html">
       <h3><span class="flag">📈</span> ₹15,000 SIP Per Month — Growth Calculator</h3>
       <p>How much does a ₹15,000 monthly SIP grow to? Future value at 12% across 10–30 years. Free India SIP calculator, no signup.</p>
     </a>
-    <a class="guide-card" href="sip-20000-per-month.html">
+    <a class="guide-card" data-country="" data-cat="investing" href="sip-20000-per-month.html">
       <h3><span class="flag">📈</span> ₹20,000 SIP Per Month — Growth Calculator</h3>
       <p>How much does a ₹20,000 monthly SIP grow to? Future value at 12% across 10–30 years. Free India SIP calculator, no signup.</p>
     </a>
-    <a class="guide-card" href="sip-25000-per-month.html">
+    <a class="guide-card" data-country="" data-cat="investing" href="sip-25000-per-month.html">
       <h3><span class="flag">📈</span> ₹25,000 SIP Per Month — Growth Calculator</h3>
       <p>How much does a ₹25,000 monthly SIP grow to? Future value at 12% across 10–30 years. Free India SIP calculator, no signup.</p>
     </a>
-    <a class="guide-card" href="sip-5000-per-month.html">
+    <a class="guide-card" data-country="" data-cat="investing" href="sip-5000-per-month.html">
       <h3><span class="flag">📈</span> ₹5,000 SIP Per Month — Growth Calculator</h3>
       <p>How much does a ₹5,000 monthly SIP grow to? See future value at 12% across 10–30 years. Free India SIP calculator, no signup.</p>
     </a>
-    <a class="guide-card" href="sip-calculator-1-crore.html">
+    <a class="guide-card" data-country="in" data-cat="investing" href="sip-calculator-1-crore.html">
       <h3><span class="flag">📈</span> How Much SIP to Reach ₹1 Crore</h3>
       <p>How much monthly SIP do you need to reach ₹1 crore? See the amount for 10–30 years at 12%. Free India SIP goal calculator, no signup.</p>
     </a>
-    <a class="guide-card" href="sip-calculator-australia.html">
+    <a class="guide-card" data-country="au" data-cat="investing" href="sip-calculator-australia.html">
       <h3><span class="flag">📈</span> Monthly Investment Calculator — Australia</h3>
       <p>Free Australia monthly investment calculator. See how a monthly investment grows at ~8% historical returns. Compounding, total gains in AUD. No signup.</p>
     </a>
-    <a class="guide-card" href="sip-calculator-bahrain.html">
+    <a class="guide-card" data-country="bh" data-cat="investing" href="sip-calculator-bahrain.html">
       <h3><span class="flag">📈</span> Monthly Investment Calculator — Bahrain</h3>
       <p>Free Bahrain monthly investment calculator. See how a monthly investment grows at ~6% historical returns. Compounding, total gains in BHD. No signup.</p>
     </a>
-    <a class="guide-card" href="sip-calculator-bangladesh.html">
+    <a class="guide-card" data-country="bd" data-cat="investing" href="sip-calculator-bangladesh.html">
       <h3><span class="flag">📈</span> SIP Calculator — Bangladesh</h3>
       <p>Free Bangladesh sip calculator. See how a monthly investment grows at ~11% historical returns. Compounding, total gains in BDT. No signup.</p>
     </a>
-    <a class="guide-card" href="sip-calculator-brazil.html">
+    <a class="guide-card" data-country="br" data-cat="investing" href="sip-calculator-brazil.html">
       <h3><span class="flag">📈</span> Monthly Investment Calculator — Brazil</h3>
       <p>Free Brazil monthly investment calculator. See how a monthly investment grows at ~14% historical returns. Compounding, total gains in BRL. No signup.</p>
     </a>
-    <a class="guide-card" href="sip-calculator-canada.html">
+    <a class="guide-card" data-country="ca" data-cat="investing" href="sip-calculator-canada.html">
       <h3><span class="flag">📈</span> Monthly Investment Calculator — Canada</h3>
       <p>Free Canada monthly investment calculator. See how a monthly investment grows at ~8% historical returns. Compounding, total gains in CAD. No signup.</p>
     </a>
-    <a class="guide-card" href="sip-calculator-china.html">
+    <a class="guide-card" data-country="cn" data-cat="investing" href="sip-calculator-china.html">
       <h3><span class="flag">📈</span> Monthly Investment Calculator — China</h3>
       <p>Free China monthly investment calculator. See how a monthly investment grows at ~8% historical returns. Compounding, total gains in CNY. No signup.</p>
     </a>
-    <a class="guide-card" href="sip-calculator-egypt.html">
+    <a class="guide-card" data-country="eg" data-cat="investing" href="sip-calculator-egypt.html">
       <h3><span class="flag">📈</span> Monthly Investment Calculator — Egypt</h3>
       <p>Free Egypt monthly investment calculator. See how a monthly investment grows at ~20% historical returns. Compounding, total gains in EGP. No signup.</p>
     </a>
-    <a class="guide-card" href="sip-calculator-eurozone.html">
+    <a class="guide-card" data-country="eu" data-cat="investing" href="sip-calculator-eurozone.html">
       <h3><span class="flag">📈</span> Monthly Investment Calculator — Eurozone</h3>
       <p>Free Eurozone monthly investment calculator. See how a monthly investment grows at ~8% historical returns. Compounding, total gains in EUR. No signup.</p>
     </a>
-    <a class="guide-card" href="sip-calculator-hong-kong.html">
+    <a class="guide-card" data-country="hk" data-cat="investing" href="sip-calculator-hong-kong.html">
       <h3><span class="flag">📈</span> Monthly Investment Calculator — Hong Kong</h3>
       <p>Free Hong Kong monthly investment calculator. See how a monthly investment grows at ~7% historical returns. Compounding, total gains in HKD. No signup.</p>
     </a>
-    <a class="guide-card" href="sip-calculator-india-20-years.html">
+    <a class="guide-card" data-country="in" data-cat="investing" href="sip-calculator-india-20-years.html">
       <h3><span class="flag">📈</span> SIP Calculator India — Build ₹1 Crore in 20 Years</h3>
       <p>Free SIP calculator for India. See how ₹5,000 to ₹50,000 monthly SIP grows over 10, 20, or 30 years at historical Nifty 50 returns. Includes step-up SIP examples.</p>
     </a>
-    <a class="guide-card" href="sip-calculator-indonesia.html">
+    <a class="guide-card" data-country="id" data-cat="investing" href="sip-calculator-indonesia.html">
       <h3><span class="flag">📈</span> Reksa Dana Calculator — Indonesia</h3>
       <p>Free Indonesia mutual-fund (reksa dana) calculator. See how a monthly investment grows at IHSG historical returns. Bibit, Ajaib, Bareksa. No signup.</p>
     </a>
-    <a class="guide-card" href="sip-calculator-japan.html">
+    <a class="guide-card" data-country="jp" data-cat="investing" href="sip-calculator-japan.html">
       <h3><span class="flag">📈</span> Monthly Investment Calculator — Japan</h3>
       <p>Free Japan monthly investment calculator. See how a monthly investment grows at ~6% historical returns. Compounding, total gains in JPY. No signup.</p>
     </a>
-    <a class="guide-card" href="sip-calculator-kenya.html">
+    <a class="guide-card" data-country="ke" data-cat="investing" href="sip-calculator-kenya.html">
       <h3><span class="flag">📈</span> Monthly Investment Calculator — Kenya</h3>
       <p>Free Kenya monthly investment calculator. See how a monthly investment grows at ~12% historical returns. Compounding, total gains in KES. No signup.</p>
     </a>
-    <a class="guide-card" href="sip-calculator-kuwait.html">
+    <a class="guide-card" data-country="kw" data-cat="investing" href="sip-calculator-kuwait.html">
       <h3><span class="flag">📈</span> Monthly Investment Calculator — Kuwait</h3>
       <p>Free Kuwait monthly investment calculator. See how a monthly investment grows at ~6% historical returns. Compounding, total gains in KWD. No signup.</p>
     </a>
-    <a class="guide-card" href="sip-calculator-malaysia.html">
+    <a class="guide-card" data-country="my" data-cat="investing" href="sip-calculator-malaysia.html">
       <h3><span class="flag">📈</span> Monthly Investment Calculator — Malaysia</h3>
       <p>Free Malaysia monthly investment calculator. See how a monthly investment grows at ~8% historical returns. Compounding, total gains in MYR. No signup.</p>
     </a>
-    <a class="guide-card" href="sip-calculator-mexico.html">
+    <a class="guide-card" data-country="mx" data-cat="investing" href="sip-calculator-mexico.html">
       <h3><span class="flag">📈</span> Monthly Investment Calculator — Mexico</h3>
       <p>Free Mexico monthly investment calculator. See how a monthly investment grows at ~11% historical returns. Compounding, total gains in MXN. No signup.</p>
     </a>
-    <a class="guide-card" href="sip-calculator-new-zealand.html">
+    <a class="guide-card" data-country="nz" data-cat="investing" href="sip-calculator-new-zealand.html">
       <h3><span class="flag">📈</span> Monthly Investment Calculator — New Zealand</h3>
       <p>Free New Zealand monthly investment calculator. See how a monthly investment grows at ~8% historical returns. Compounding, total gains in NZD. No signup.</p>
     </a>
-    <a class="guide-card" href="sip-calculator-nigeria.html">
+    <a class="guide-card" data-country="ng" data-cat="investing" href="sip-calculator-nigeria.html">
       <h3><span class="flag">📈</span> Monthly Investment Calculator — Nigeria</h3>
       <p>Free Nigeria monthly investment calculator. See how a monthly investment grows at ~18% historical returns. Compounding, total gains in NGN. No signup.</p>
     </a>
-    <a class="guide-card" href="sip-calculator-pakistan.html">
+    <a class="guide-card" data-country="pk" data-cat="investing" href="sip-calculator-pakistan.html">
       <h3><span class="flag">📈</span> SIP Calculator — Pakistan</h3>
       <p>Free SIP calculator for Pakistan. See how a monthly mutual-fund investment grows at KSE-100 historical returns. UBL Funds, MCB-Arif Habib, Al Meezan. No signup.</p>
     </a>
-    <a class="guide-card" href="sip-calculator-philippines.html">
+    <a class="guide-card" data-country="ph" data-cat="investing" href="sip-calculator-philippines.html">
       <h3><span class="flag">📈</span> Investment Calculator — Philippines</h3>
       <p>Free Philippines monthly investment calculator. See how regular investing grows at PSEi historical returns. COL Financial, GInvest, Pag-IBIG MP2. No signup.</p>
     </a>
-    <a class="guide-card" href="sip-calculator-qatar.html">
+    <a class="guide-card" data-country="qa" data-cat="investing" href="sip-calculator-qatar.html">
       <h3><span class="flag">📈</span> Monthly Investment Calculator — Qatar</h3>
       <p>Free Qatar monthly investment calculator. See how a monthly investment grows at ~6% historical returns. Compounding, total gains in QAR. No signup.</p>
     </a>
-    <a class="guide-card" href="sip-calculator-russia.html">
+    <a class="guide-card" data-country="ru" data-cat="investing" href="sip-calculator-russia.html">
       <h3><span class="flag">📈</span> Monthly Investment Calculator — Russia</h3>
       <p>Free Russia monthly investment calculator. See how a monthly investment grows at ~18% historical returns. Compounding, total gains in RUB. No signup.</p>
     </a>
-    <a class="guide-card" href="sip-calculator-saudi-arabia.html">
+    <a class="guide-card" data-country="sa" data-cat="investing" href="sip-calculator-saudi-arabia.html">
       <h3><span class="flag">📈</span> Monthly Investment Calculator — Saudi Arabia</h3>
       <p>Free Saudi Arabia monthly investment calculator. See how a monthly investment grows at ~10% historical returns. Compounding, total gains in SAR. No signup.</p>
     </a>
-    <a class="guide-card" href="sip-calculator-singapore.html">
+    <a class="guide-card" data-country="sg" data-cat="investing" href="sip-calculator-singapore.html">
       <h3><span class="flag">📈</span> Monthly Investment Calculator — Singapore</h3>
       <p>Free Singapore monthly investment calculator. See how a monthly investment grows at ~7% historical returns. Compounding, total gains in SGD. No signup.</p>
     </a>
-    <a class="guide-card" href="sip-calculator-south-africa.html">
+    <a class="guide-card" data-country="za" data-cat="investing" href="sip-calculator-south-africa.html">
       <h3><span class="flag">📈</span> Monthly Investment Calculator — South Africa</h3>
       <p>Free South Africa monthly investment calculator. See how a monthly investment grows at ~11% historical returns. Compounding, total gains in ZAR. No signup.</p>
     </a>
-    <a class="guide-card" href="sip-calculator-south-korea.html">
+    <a class="guide-card" data-country="kr" data-cat="investing" href="sip-calculator-south-korea.html">
       <h3><span class="flag">📈</span> Monthly Investment Calculator — South Korea</h3>
       <p>Free South Korea monthly investment calculator. See how a monthly investment grows at ~7% historical returns. Compounding, total gains in KRW. No signup.</p>
     </a>
-    <a class="guide-card" href="sip-calculator-sri-lanka.html">
+    <a class="guide-card" data-country="lk" data-cat="investing" href="sip-calculator-sri-lanka.html">
       <h3><span class="flag">📈</span> SIP Calculator — Sri Lanka</h3>
       <p>Free Sri Lanka sip calculator. See how a monthly investment grows at ~11% historical returns. Compounding, total gains in LKR. No signup.</p>
     </a>
-    <a class="guide-card" href="sip-calculator-taiwan.html">
+    <a class="guide-card" data-country="tw" data-cat="investing" href="sip-calculator-taiwan.html">
       <h3><span class="flag">📈</span> Monthly Investment Calculator — Taiwan</h3>
       <p>Free Taiwan monthly investment calculator. See how a monthly investment grows at ~7% historical returns. Compounding, total gains in TWD. No signup.</p>
     </a>
-    <a class="guide-card" href="sip-calculator-thailand.html">
+    <a class="guide-card" data-country="th" data-cat="investing" href="sip-calculator-thailand.html">
       <h3><span class="flag">📈</span> Monthly Investment Calculator — Thailand</h3>
       <p>Free Thailand monthly investment calculator. See how a monthly investment grows at ~7% historical returns. Compounding, total gains in THB. No signup.</p>
     </a>
-    <a class="guide-card" href="sip-calculator-turkey.html">
+    <a class="guide-card" data-country="tr" data-cat="investing" href="sip-calculator-turkey.html">
       <h3><span class="flag">📈</span> Monthly Investment Calculator — Türkiye</h3>
       <p>Free Türkiye monthly investment calculator. See how a monthly investment grows at ~35% historical returns. Compounding, total gains in TRY. No signup.</p>
     </a>
-    <a class="guide-card" href="sip-calculator-uae.html">
+    <a class="guide-card" data-country="ae" data-cat="investing" href="sip-calculator-uae.html">
       <h3><span class="flag">📈</span> Monthly Investment Calculator — UAE</h3>
       <p>Free UAE monthly investment calculator. See how a monthly investment grows at ~9% historical returns. Compounding, total gains in AED. No signup.</p>
     </a>
-    <a class="guide-card" href="sip-calculator-uk.html">
+    <a class="guide-card" data-country="uk" data-cat="investing" href="sip-calculator-uk.html">
       <h3><span class="flag">📈</span> Monthly Investment Calculator — UK</h3>
       <p>Free UK monthly investment calculator. See how a monthly investment grows at ~9% historical returns. Compounding, total gains in GBP. No signup.</p>
     </a>
-    <a class="guide-card" href="sip-calculator-usa.html">
+    <a class="guide-card" data-country="us" data-cat="investing" href="sip-calculator-usa.html">
       <h3><span class="flag">📈</span> Monthly Investment Calculator — USA</h3>
       <p>Free USA monthly investment calculator. See how a monthly investment grows at ~10% historical returns. Compounding, total gains in USD. No signup.</p>
     </a>
-    <a class="guide-card" href="sip-calculator-vietnam.html">
+    <a class="guide-card" data-country="vn" data-cat="investing" href="sip-calculator-vietnam.html">
       <h3><span class="flag">📈</span> Monthly Investment Calculator — Vietnam</h3>
       <p>Free Vietnam monthly investment calculator. See how a monthly investment grows at ~10% historical returns. Compounding, total gains in VND. No signup.</p>
     </a>
-    <div class="section-header">🏦 Fixed deposits (37)</div>
-    <a class="guide-card" href="fixed-deposit-calculator-australia.html">
+    <div class="section-header" data-cat="investing">🏦 Fixed deposits (37)</div>
+    <a class="guide-card" data-country="au" data-cat="investing" href="fixed-deposit-calculator-australia.html">
       <h3><span class="flag">🏦</span> Fixed Deposit Calculator — Australia</h3>
       <p>Free Australia fixed deposit calculator. Maturity value and interest at ~4.5% p.a. (quarterly compounding) in AUD. Real bank data. No signup.</p>
     </a>
-    <a class="guide-card" href="fixed-deposit-calculator-bahrain.html">
+    <a class="guide-card" data-country="bh" data-cat="investing" href="fixed-deposit-calculator-bahrain.html">
       <h3><span class="flag">🏦</span> Fixed Deposit Calculator — Bahrain</h3>
       <p>Free Bahrain fixed deposit calculator. Maturity value and interest at ~4.0% p.a. (quarterly compounding) in BHD. Real bank data. No signup.</p>
     </a>
-    <a class="guide-card" href="fixed-deposit-calculator-bangladesh.html">
+    <a class="guide-card" data-country="bd" data-cat="investing" href="fixed-deposit-calculator-bangladesh.html">
       <h3><span class="flag">🏦</span> Fixed Deposit Calculator — Bangladesh</h3>
       <p>Free Bangladesh fixed deposit calculator. Maturity value and interest at ~10.5% p.a. (quarterly compounding) in BDT. Real bank data. No signup.</p>
     </a>
-    <a class="guide-card" href="fixed-deposit-calculator-brazil.html">
+    <a class="guide-card" data-country="br" data-cat="investing" href="fixed-deposit-calculator-brazil.html">
       <h3><span class="flag">🏦</span> Fixed Deposit Calculator — Brazil</h3>
       <p>Free Brazil fixed deposit calculator. Maturity value and interest at ~13.5% p.a. (quarterly compounding) in BRL. Real bank data. No signup.</p>
     </a>
-    <a class="guide-card" href="fixed-deposit-calculator-canada.html">
+    <a class="guide-card" data-country="ca" data-cat="investing" href="fixed-deposit-calculator-canada.html">
       <h3><span class="flag">🏦</span> Fixed Deposit Calculator — Canada</h3>
       <p>Free Canada fixed deposit calculator. Maturity value and interest at ~4.0% p.a. (quarterly compounding) in CAD. Real bank data. No signup.</p>
     </a>
-    <a class="guide-card" href="fixed-deposit-calculator-china.html">
+    <a class="guide-card" data-country="cn" data-cat="investing" href="fixed-deposit-calculator-china.html">
       <h3><span class="flag">🏦</span> Fixed Deposit Calculator — China</h3>
       <p>Free China fixed deposit calculator. Maturity value and interest at ~2.0% p.a. (quarterly compounding) in CNY. Real bank data. No signup.</p>
     </a>
-    <a class="guide-card" href="fixed-deposit-calculator-egypt.html">
+    <a class="guide-card" data-country="eg" data-cat="investing" href="fixed-deposit-calculator-egypt.html">
       <h3><span class="flag">🏦</span> Fixed Deposit Calculator — Egypt</h3>
       <p>Free Egypt fixed deposit calculator. Maturity value and interest at ~18.5% p.a. (quarterly compounding) in EGP. Real bank data. No signup.</p>
     </a>
-    <a class="guide-card" href="fixed-deposit-calculator-eurozone.html">
+    <a class="guide-card" data-country="eu" data-cat="investing" href="fixed-deposit-calculator-eurozone.html">
       <h3><span class="flag">🏦</span> Fixed Deposit Calculator — Eurozone</h3>
       <p>Free Eurozone fixed deposit calculator. Maturity value and interest at ~2.5% p.a. (quarterly compounding) in EUR. Real bank data. No signup.</p>
     </a>
-    <a class="guide-card" href="fixed-deposit-calculator-hong-kong.html">
+    <a class="guide-card" data-country="hk" data-cat="investing" href="fixed-deposit-calculator-hong-kong.html">
       <h3><span class="flag">🏦</span> Fixed Deposit Calculator — Hong Kong</h3>
       <p>Free Hong Kong fixed deposit calculator. Maturity value and interest at ~2.5% p.a. (quarterly compounding) in HKD. Real bank data. No signup.</p>
     </a>
-    <a class="guide-card" href="fixed-deposit-calculator-india.html">
+    <a class="guide-card" data-country="in" data-cat="investing" href="fixed-deposit-calculator-india.html">
       <h3><span class="flag">🏦</span> Fixed Deposit Calculator — India</h3>
       <p>Free India fixed deposit calculator. Maturity value and interest at ~6.5% p.a. (quarterly compounding) in INR. Real bank data. No signup.</p>
     </a>
-    <a class="guide-card" href="fixed-deposit-calculator-indonesia.html">
+    <a class="guide-card" data-country="id" data-cat="investing" href="fixed-deposit-calculator-indonesia.html">
       <h3><span class="flag">🏦</span> Fixed Deposit Calculator — Indonesia</h3>
       <p>Free Indonesia fixed deposit calculator. Maturity value and interest at ~5.2% p.a. (quarterly compounding) in IDR. Real bank data. No signup.</p>
     </a>
-    <a class="guide-card" href="fixed-deposit-calculator-japan.html">
+    <a class="guide-card" data-country="jp" data-cat="investing" href="fixed-deposit-calculator-japan.html">
       <h3><span class="flag">🏦</span> Fixed Deposit Calculator — Japan</h3>
       <p>Free Japan fixed deposit calculator. Maturity value and interest at ~0.4% p.a. (quarterly compounding) in JPY. Real bank data. No signup.</p>
     </a>
-    <a class="guide-card" href="fixed-deposit-calculator-kenya.html">
+    <a class="guide-card" data-country="ke" data-cat="investing" href="fixed-deposit-calculator-kenya.html">
       <h3><span class="flag">🏦</span> Fixed Deposit Calculator — Kenya</h3>
       <p>Free Kenya fixed deposit calculator. Maturity value and interest at ~9.5% p.a. (quarterly compounding) in KES. Real bank data. No signup.</p>
     </a>
-    <a class="guide-card" href="fixed-deposit-calculator-kuwait.html">
+    <a class="guide-card" data-country="kw" data-cat="investing" href="fixed-deposit-calculator-kuwait.html">
       <h3><span class="flag">🏦</span> Fixed Deposit Calculator — Kuwait</h3>
       <p>Free Kuwait fixed deposit calculator. Maturity value and interest at ~3.2% p.a. (quarterly compounding) in KWD. Real bank data. No signup.</p>
     </a>
-    <a class="guide-card" href="fixed-deposit-calculator-malaysia.html">
+    <a class="guide-card" data-country="my" data-cat="investing" href="fixed-deposit-calculator-malaysia.html">
       <h3><span class="flag">🏦</span> Fixed Deposit Calculator — Malaysia</h3>
       <p>Free Malaysia fixed deposit calculator. Maturity value and interest at ~3.5% p.a. (quarterly compounding) in MYR. Real bank data. No signup.</p>
     </a>
-    <a class="guide-card" href="fixed-deposit-calculator-mexico.html">
+    <a class="guide-card" data-country="mx" data-cat="investing" href="fixed-deposit-calculator-mexico.html">
       <h3><span class="flag">🏦</span> Fixed Deposit Calculator — Mexico</h3>
       <p>Free Mexico fixed deposit calculator. Maturity value and interest at ~9.5% p.a. (quarterly compounding) in MXN. Real bank data. No signup.</p>
     </a>
-    <a class="guide-card" href="fixed-deposit-calculator-new-zealand.html">
+    <a class="guide-card" data-country="nz" data-cat="investing" href="fixed-deposit-calculator-new-zealand.html">
       <h3><span class="flag">🏦</span> Fixed Deposit Calculator — New Zealand</h3>
       <p>Free New Zealand fixed deposit calculator. Maturity value and interest at ~4.0% p.a. (quarterly compounding) in NZD. Real bank data. No signup.</p>
     </a>
-    <a class="guide-card" href="fixed-deposit-calculator-nigeria.html">
+    <a class="guide-card" data-country="ng" data-cat="investing" href="fixed-deposit-calculator-nigeria.html">
       <h3><span class="flag">🏦</span> Fixed Deposit Calculator — Nigeria</h3>
       <p>Free Nigeria fixed deposit calculator. Maturity value and interest at ~14.0% p.a. (quarterly compounding) in NGN. Real bank data. No signup.</p>
     </a>
-    <a class="guide-card" href="fixed-deposit-calculator-pakistan.html">
+    <a class="guide-card" data-country="pk" data-cat="investing" href="fixed-deposit-calculator-pakistan.html">
       <h3><span class="flag">🏦</span> Fixed Deposit Calculator — Pakistan</h3>
       <p>Free Pakistan fixed deposit calculator. Maturity value and interest at ~13.0% p.a. (quarterly compounding) in PKR. Real bank data. No signup.</p>
     </a>
-    <a class="guide-card" href="fixed-deposit-calculator-philippines.html">
+    <a class="guide-card" data-country="ph" data-cat="investing" href="fixed-deposit-calculator-philippines.html">
       <h3><span class="flag">🏦</span> Fixed Deposit Calculator — Philippines</h3>
       <p>Free Philippines fixed deposit calculator. Maturity value and interest at ~5.2% p.a. (quarterly compounding) in PHP. Real bank data. No signup.</p>
     </a>
-    <a class="guide-card" href="fixed-deposit-calculator-qatar.html">
+    <a class="guide-card" data-country="qa" data-cat="investing" href="fixed-deposit-calculator-qatar.html">
       <h3><span class="flag">🏦</span> Fixed Deposit Calculator — Qatar</h3>
       <p>Free Qatar fixed deposit calculator. Maturity value and interest at ~3.9% p.a. (quarterly compounding) in QAR. Real bank data. No signup.</p>
     </a>
-    <a class="guide-card" href="fixed-deposit-calculator-russia.html">
+    <a class="guide-card" data-country="ru" data-cat="investing" href="fixed-deposit-calculator-russia.html">
       <h3><span class="flag">🏦</span> Fixed Deposit Calculator — Russia</h3>
       <p>Free Russia fixed deposit calculator. Maturity value and interest at ~16.0% p.a. (quarterly compounding) in RUB. Real bank data. No signup.</p>
     </a>
-    <a class="guide-card" href="fixed-deposit-calculator-saudi-arabia.html">
+    <a class="guide-card" data-country="sa" data-cat="investing" href="fixed-deposit-calculator-saudi-arabia.html">
       <h3><span class="flag">🏦</span> Fixed Deposit Calculator — Saudi Arabia</h3>
       <p>Free Saudi Arabia fixed deposit calculator. Maturity value and interest at ~4.0% p.a. (quarterly compounding) in SAR. Real bank data. No signup.</p>
     </a>
-    <a class="guide-card" href="fixed-deposit-calculator-singapore.html">
+    <a class="guide-card" data-country="sg" data-cat="investing" href="fixed-deposit-calculator-singapore.html">
       <h3><span class="flag">🏦</span> Fixed Deposit Calculator — Singapore</h3>
       <p>Free Singapore fixed deposit calculator. Maturity value and interest at ~2.8% p.a. (quarterly compounding) in SGD. Real bank data. No signup.</p>
     </a>
-    <a class="guide-card" href="fixed-deposit-calculator-south-africa.html">
+    <a class="guide-card" data-country="za" data-cat="investing" href="fixed-deposit-calculator-south-africa.html">
       <h3><span class="flag">🏦</span> Fixed Deposit Calculator — South Africa</h3>
       <p>Free South Africa fixed deposit calculator. Maturity value and interest at ~8.5% p.a. (quarterly compounding) in ZAR. Real bank data. No signup.</p>
     </a>
-    <a class="guide-card" href="fixed-deposit-calculator-south-korea.html">
+    <a class="guide-card" data-country="kr" data-cat="investing" href="fixed-deposit-calculator-south-korea.html">
       <h3><span class="flag">🏦</span> Fixed Deposit Calculator — South Korea</h3>
       <p>Free South Korea fixed deposit calculator. Maturity value and interest at ~3.0% p.a. (quarterly compounding) in KRW. Real bank data. No signup.</p>
     </a>
-    <a class="guide-card" href="fixed-deposit-calculator-sri-lanka.html">
+    <a class="guide-card" data-country="lk" data-cat="investing" href="fixed-deposit-calculator-sri-lanka.html">
       <h3><span class="flag">🏦</span> Fixed Deposit Calculator — Sri Lanka</h3>
       <p>Free Sri Lanka fixed deposit calculator. Maturity value and interest at ~9.0% p.a. (quarterly compounding) in LKR. Real bank data. No signup.</p>
     </a>
-    <a class="guide-card" href="fixed-deposit-calculator-taiwan.html">
+    <a class="guide-card" data-country="tw" data-cat="investing" href="fixed-deposit-calculator-taiwan.html">
       <h3><span class="flag">🏦</span> Fixed Deposit Calculator — Taiwan</h3>
       <p>Free Taiwan fixed deposit calculator. Maturity value and interest at ~1.6% p.a. (quarterly compounding) in TWD. Real bank data. No signup.</p>
     </a>
-    <a class="guide-card" href="fixed-deposit-calculator-thailand.html">
+    <a class="guide-card" data-country="th" data-cat="investing" href="fixed-deposit-calculator-thailand.html">
       <h3><span class="flag">🏦</span> Fixed Deposit Calculator — Thailand</h3>
       <p>Free Thailand fixed deposit calculator. Maturity value and interest at ~1.5% p.a. (quarterly compounding) in THB. Real bank data. No signup.</p>
     </a>
-    <a class="guide-card" href="fixed-deposit-calculator-turkey.html">
+    <a class="guide-card" data-country="tr" data-cat="investing" href="fixed-deposit-calculator-turkey.html">
       <h3><span class="flag">🏦</span> Fixed Deposit Calculator — Türkiye</h3>
       <p>Free Türkiye fixed deposit calculator. Maturity value and interest at ~40.0% p.a. (quarterly compounding) in TRY. Real bank data. No signup.</p>
     </a>
-    <a class="guide-card" href="fixed-deposit-calculator-uae.html">
+    <a class="guide-card" data-country="ae" data-cat="investing" href="fixed-deposit-calculator-uae.html">
       <h3><span class="flag">🏦</span> Fixed Deposit Calculator — UAE</h3>
       <p>Free UAE fixed deposit calculator. Maturity value and interest at ~3.5% p.a. (quarterly compounding) in AED. Real bank data. No signup.</p>
     </a>
-    <a class="guide-card" href="fixed-deposit-calculator-uk.html">
+    <a class="guide-card" data-country="uk" data-cat="investing" href="fixed-deposit-calculator-uk.html">
       <h3><span class="flag">🏦</span> Fixed Deposit Calculator — UK</h3>
       <p>Free UK fixed deposit calculator. Maturity value and interest at ~4.0% p.a. (quarterly compounding) in GBP. Real bank data. No signup.</p>
     </a>
-    <a class="guide-card" href="fixed-deposit-calculator-usa.html">
+    <a class="guide-card" data-country="us" data-cat="investing" href="fixed-deposit-calculator-usa.html">
       <h3><span class="flag">🏦</span> Fixed Deposit Calculator — USA</h3>
       <p>Free USA fixed deposit calculator. Maturity value and interest at ~4.0% p.a. (quarterly compounding) in USD. Real bank data. No signup.</p>
     </a>
-    <a class="guide-card" href="fixed-deposit-calculator-vietnam.html">
+    <a class="guide-card" data-country="vn" data-cat="investing" href="fixed-deposit-calculator-vietnam.html">
       <h3><span class="flag">🏦</span> Fixed Deposit Calculator — Vietnam</h3>
       <p>Free Vietnam fixed deposit calculator. Maturity value and interest at ~5.5% p.a. (quarterly compounding) in VND. Real bank data. No signup.</p>
     </a>
-    <a class="guide-card" href="hdfc-fd-calculator.html">
+    <a class="guide-card" data-country="in" data-cat="investing" href="hdfc-fd-calculator.html">
       <h3><span class="flag">🏦</span> HDFC Bank FD Calculator</h3>
       <p>Free HDFC Bank FD calculator. Calculate maturity value and interest at HDFC Bank's current FD rate (~7.00%, quarterly compounding). No signup.</p>
     </a>
-    <a class="guide-card" href="icici-fd-calculator.html">
+    <a class="guide-card" data-country="in" data-cat="investing" href="icici-fd-calculator.html">
       <h3><span class="flag">🏦</span> ICICI Bank FD Calculator</h3>
       <p>Free ICICI Bank FD calculator. Calculate maturity value and interest at ICICI Bank's current FD rate (~7.00%, quarterly compounding). No signup.</p>
     </a>
-    <a class="guide-card" href="sbi-fd-calculator.html">
+    <a class="guide-card" data-country="in" data-cat="investing" href="sbi-fd-calculator.html">
       <h3><span class="flag">🏦</span> SBI FD Calculator</h3>
       <p>Free SBI FD calculator. Calculate maturity value and interest at SBI's current FD rate (~6.50%, quarterly compounding). No signup.</p>
     </a>
-    <div class="section-header">🏖 Retirement (4)</div>
-    <a class="guide-card" href="retirement-calculator-india.html">
+    <div class="section-header" data-cat="retirement">🏖 Retirement (4)</div>
+    <a class="guide-card" data-country="in" data-cat="retirement" href="retirement-calculator-india.html">
       <h3><span class="flag">🏖</span> Retirement Calculator — India</h3>
       <p>Free India retirement calculator. Find the monthly investment needed to retire, using the 25× rule and inflation. No signup.</p>
     </a>
-    <a class="guide-card" href="retirement-calculator-uae.html">
+    <a class="guide-card" data-country="ae" data-cat="retirement" href="retirement-calculator-uae.html">
       <h3><span class="flag">🏖</span> Retirement Calculator — UAE</h3>
       <p>Free UAE retirement calculator. Find the monthly investment needed to retire, using the 25× rule and inflation. No signup.</p>
     </a>
-    <a class="guide-card" href="retirement-calculator-uk.html">
+    <a class="guide-card" data-country="uk" data-cat="retirement" href="retirement-calculator-uk.html">
       <h3><span class="flag">🏖</span> Retirement Calculator — UK</h3>
       <p>Free UK retirement calculator. Find the monthly investment needed to retire, using the 25× rule and inflation. No signup.</p>
     </a>
-    <a class="guide-card" href="retirement-calculator-usa.html">
+    <a class="guide-card" data-country="us" data-cat="retirement" href="retirement-calculator-usa.html">
       <h3><span class="flag">🏖</span> Retirement Calculator — USA</h3>
       <p>Free USA retirement calculator. Find the monthly investment needed to retire, using the 25× rule and inflation. No signup.</p>
     </a>
-    <div class="section-header">🎓 Education loans (5)</div>
-    <a class="guide-card" href="education-loan-calculator-india.html">
+    <div class="section-header" data-cat="loans">🎓 Education loans (5)</div>
+    <a class="guide-card" data-country="in" data-cat="loans" href="education-loan-calculator-india.html">
       <h3><span class="flag">🎓</span> Education Loan Calculator — India</h3>
       <p>Free India education loan calculator. Estimate EMI after the moratorium period, with interest accrual during study. No signup.</p>
     </a>
-    <a class="guide-card" href="education-loan-calculator-pakistan.html">
+    <a class="guide-card" data-country="pk" data-cat="loans" href="education-loan-calculator-pakistan.html">
       <h3><span class="flag">🎓</span> Education Loan Calculator — Pakistan</h3>
       <p>Free Pakistan education loan calculator. Estimate EMI after the moratorium period, with interest accrual during study. No signup.</p>
     </a>
-    <a class="guide-card" href="education-loan-calculator-philippines.html">
+    <a class="guide-card" data-country="ph" data-cat="loans" href="education-loan-calculator-philippines.html">
       <h3><span class="flag">🎓</span> Education Loan Calculator — Philippines</h3>
       <p>Free Philippines education loan calculator. Estimate EMI after the moratorium period, with interest accrual during study. No signup.</p>
     </a>
-    <a class="guide-card" href="education-loan-calculator-uk.html">
+    <a class="guide-card" data-country="uk" data-cat="loans" href="education-loan-calculator-uk.html">
       <h3><span class="flag">🎓</span> Education Loan Calculator — UK</h3>
       <p>Free UK education loan calculator. Estimate EMI after the moratorium period, with interest accrual during study. No signup.</p>
     </a>
-    <a class="guide-card" href="education-loan-calculator-usa.html">
+    <a class="guide-card" data-country="us" data-cat="loans" href="education-loan-calculator-usa.html">
       <h3><span class="flag">🎓</span> Education Loan Calculator — USA</h3>
       <p>Free USA education loan calculator. Estimate EMI after the moratorium period, with interest accrual during study. No signup.</p>
     </a>
-    <div class="section-header">🔑 Rent vs buy (4)</div>
-    <a class="guide-card" href="rent-vs-buy-calculator-india.html">
+    <div class="section-header" data-cat="realestate">🔑 Rent vs buy (4)</div>
+    <a class="guide-card" data-country="in" data-cat="realestate" href="rent-vs-buy-calculator-india.html">
       <h3><span class="flag">🔑</span> Rent vs Buy Calculator — India</h3>
       <p>Free India rent vs buy calculator. Compare the total cost of renting vs buying over your time horizon and see which wins. No signup.</p>
     </a>
-    <a class="guide-card" href="rent-vs-buy-calculator-uae.html">
+    <a class="guide-card" data-country="ae" data-cat="realestate" href="rent-vs-buy-calculator-uae.html">
       <h3><span class="flag">🔑</span> Rent vs Buy Calculator — UAE</h3>
       <p>Free UAE rent vs buy calculator. Compare the total cost of renting vs buying over your time horizon and see which wins. No signup.</p>
     </a>
-    <a class="guide-card" href="rent-vs-buy-calculator-uk.html">
+    <a class="guide-card" data-country="uk" data-cat="realestate" href="rent-vs-buy-calculator-uk.html">
       <h3><span class="flag">🔑</span> Rent vs Buy Calculator — UK</h3>
       <p>Free UK rent vs buy calculator. Compare the total cost of renting vs buying over your time horizon and see which wins. No signup.</p>
     </a>
-    <a class="guide-card" href="rent-vs-buy-calculator-usa.html">
+    <a class="guide-card" data-country="us" data-cat="realestate" href="rent-vs-buy-calculator-usa.html">
       <h3><span class="flag">🔑</span> Rent vs Buy Calculator — USA</h3>
       <p>Free USA rent vs buy calculator. Compare the total cost of renting vs buying over your time horizon and see which wins. No signup.</p>
     </a>
-    <div class="section-header">☪ Islamic finance &amp; Zakat (15)</div>
-    <a class="guide-card" href="zakat-calculator-2026.html">
+    <div class="section-header" data-cat="islamic">☪ Islamic finance &amp; Zakat (15)</div>
+    <a class="guide-card" data-country="" data-cat="islamic" href="zakat-calculator-2026.html">
       <h3><span class="flag">☪</span> Zakat Calculator 2026</h3>
       <p>Free 2026 Zakat calculator. Calculates 2.5% zakat on cash, gold, silver, and investments using current nisab thresholds. Supports PKR, INR, USD, AED, SAR, and more.</p>
     </a>
-    <a class="guide-card" href="zakat-calculator-bahrain.html">
+    <a class="guide-card" data-country="bh" data-cat="islamic" href="zakat-calculator-bahrain.html">
       <h3><span class="flag">☪</span> Zakat Calculator — Bahrain</h3>
       <p>Free Zakat calculator for Bahrain. Calculate 2.5% zakat on cash, gold, silver and investments with live nisab in BHD. Accurate, no signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="zakat-calculator-bangladesh.html">
+    <a class="guide-card" data-country="bd" data-cat="islamic" href="zakat-calculator-bangladesh.html">
       <h3><span class="flag">☪</span> Zakat Calculator — Bangladesh</h3>
       <p>Free Zakat calculator for Bangladesh. Calculate 2.5% zakat on cash, gold, silver and investments using live nisab in Taka. Accurate, no signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="zakat-calculator-egypt.html">
+    <a class="guide-card" data-country="eg" data-cat="islamic" href="zakat-calculator-egypt.html">
       <h3><span class="flag">☪</span> Zakat Calculator — Egypt</h3>
       <p>Free Zakat calculator for Egypt. Calculate 2.5% zakat on cash, gold, silver and investments with live nisab in EGP. Accurate, no signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="zakat-calculator-india.html">
+    <a class="guide-card" data-country="in" data-cat="islamic" href="zakat-calculator-india.html">
       <h3><span class="flag">☪</span> Zakat Calculator — India</h3>
       <p>Free Zakat calculator for India. Calculate 2.5% zakat on cash, gold, silver and shares using live nisab in rupees. Accurate, no signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="zakat-calculator-indonesia.html">
+    <a class="guide-card" data-country="id" data-cat="islamic" href="zakat-calculator-indonesia.html">
       <h3><span class="flag">☪</span> Kalkulator Zakat Mal — Indonesia</h3>
       <p>Free Indonesia Zakat (zakat mal) calculator. Hitung zakat 2.5% on cash, gold and investasi using live nisab in Rupiah. Akurat, no signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="zakat-calculator-kenya.html">
+    <a class="guide-card" data-country="ke" data-cat="islamic" href="zakat-calculator-kenya.html">
       <h3><span class="flag">☪</span> Zakat Calculator — Kenya</h3>
       <p>Free Zakat calculator for Kenya. Calculate 2.5% zakat on cash, gold, silver and investments with live nisab in KES. Accurate, no signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="zakat-calculator-kuwait.html">
+    <a class="guide-card" data-country="kw" data-cat="islamic" href="zakat-calculator-kuwait.html">
       <h3><span class="flag">☪</span> Zakat Calculator — Kuwait</h3>
       <p>Free Zakat calculator for Kuwait. Calculate 2.5% zakat on cash, gold, silver and investments with live nisab in KWD. Accurate, no signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="zakat-calculator-malaysia.html">
+    <a class="guide-card" data-country="my" data-cat="islamic" href="zakat-calculator-malaysia.html">
       <h3><span class="flag">☪</span> Zakat Calculator — Malaysia</h3>
       <p>Free Zakat calculator for Malaysia. Calculate 2.5% zakat on cash, gold, silver and investments with live nisab in MYR. Accurate, no signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="zakat-calculator-nigeria.html">
+    <a class="guide-card" data-country="ng" data-cat="islamic" href="zakat-calculator-nigeria.html">
       <h3><span class="flag">☪</span> Zakat Calculator — Nigeria</h3>
       <p>Free Zakat calculator for Nigeria. Calculate 2.5% zakat on cash, gold, silver and investments with live nisab in NGN. Accurate, no signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="zakat-calculator-pakistan.html">
+    <a class="guide-card" data-country="pk" data-cat="islamic" href="zakat-calculator-pakistan.html">
       <h3><span class="flag">☪</span> Zakat Calculator — Pakistan</h3>
       <p>Free Zakat calculator for Pakistan. Calculate 2.5% zakat on cash, gold, silver and investments with live nisab in PKR. Accurate, no signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="zakat-calculator-qatar.html">
+    <a class="guide-card" data-country="qa" data-cat="islamic" href="zakat-calculator-qatar.html">
       <h3><span class="flag">☪</span> Zakat Calculator — Qatar</h3>
       <p>Free Zakat calculator for Qatar. Calculate 2.5% zakat on cash, gold, silver and investments with live nisab in QAR. Accurate, no signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="zakat-calculator-saudi-arabia.html">
+    <a class="guide-card" data-country="sa" data-cat="islamic" href="zakat-calculator-saudi-arabia.html">
       <h3><span class="flag">☪</span> Zakat Calculator — Saudi Arabia</h3>
       <p>Free Zakat calculator for Saudi Arabia. Calculate 2.5% zakat on cash, gold, silver and investments with live nisab in SAR. Accurate, no signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="zakat-calculator-turkey.html">
+    <a class="guide-card" data-country="tr" data-cat="islamic" href="zakat-calculator-turkey.html">
       <h3><span class="flag">☪</span> Zakat Calculator — Türkiye</h3>
       <p>Free Zakat calculator for Türkiye. Calculate 2.5% zakat on cash, gold, silver and investments with live nisab in TRY. Accurate, no signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="zakat-calculator-uae.html">
+    <a class="guide-card" data-country="ae" data-cat="islamic" href="zakat-calculator-uae.html">
       <h3><span class="flag">☪</span> Zakat Calculator — UAE</h3>
       <p>Free Zakat calculator for UAE. Calculate 2.5% zakat on cash, gold, silver and investments with live nisab in AED. Accurate, no signup, no tracking.</p>
     </a>
-    <div class="section-header">💱 Currency &amp; remittance (22)</div>
-    <a class="guide-card" href="aed-to-inr-converter.html">
+    <div class="section-header" data-cat="currency">💱 Currency &amp; remittance (22)</div>
+    <a class="guide-card" data-country="" data-cat="currency" href="aed-to-inr-converter.html">
       <h3><span class="flag">💱</span> AED to INR Converter & India Remittance Guide</h3>
       <p>Convert AED to INR at the live mid-market rate, and compare the cheapest ways to send money to India. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="aed-to-pkr-converter.html">
+    <a class="guide-card" data-country="" data-cat="currency" href="aed-to-pkr-converter.html">
       <h3><span class="flag">💱</span> AED to PKR Converter & UAE→Pakistan Remittance Guide</h3>
       <p>Convert AED to PKR with the live mid-market rate, and compare LuLu, Wise, Remitly and Roshan Digital Account for sending money from UAE to Pakistan. No signup.</p>
     </a>
-    <a class="guide-card" href="aud-to-inr-converter.html">
+    <a class="guide-card" data-country="" data-cat="currency" href="aud-to-inr-converter.html">
       <h3><span class="flag">💱</span> AUD to INR Converter & India Remittance Guide</h3>
       <p>Convert AUD to INR at the live mid-market rate and find the cheapest way to send money to India. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="cad-to-inr-converter.html">
+    <a class="guide-card" data-country="" data-cat="currency" href="cad-to-inr-converter.html">
       <h3><span class="flag">💱</span> CAD to INR Converter & India Remittance Guide</h3>
       <p>Convert CAD to INR at the live mid-market rate, and compare the cheapest ways to send money to India. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="eur-to-try-converter.html">
+    <a class="guide-card" data-country="" data-cat="currency" href="eur-to-try-converter.html">
       <h3><span class="flag">💱</span> EUR to TRY Converter & Türkiye Remittance Guide</h3>
       <p>Convert EUR to TRY at the live mid-market rate, and compare the cheapest ways to send money to Türkiye. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="gbp-to-bdt-converter.html">
+    <a class="guide-card" data-country="" data-cat="currency" href="gbp-to-bdt-converter.html">
       <h3><span class="flag">💱</span> GBP to BDT Converter & Bangladesh Remittance Guide</h3>
       <p>Convert GBP to BDT at the live mid-market rate and find the cheapest way to send money to Bangladesh. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="gbp-to-inr-converter.html">
+    <a class="guide-card" data-country="" data-cat="currency" href="gbp-to-inr-converter.html">
       <h3><span class="flag">💱</span> GBP to INR Converter & India Remittance Guide</h3>
       <p>Convert GBP to INR at the live mid-market rate, and compare the cheapest ways to send money to India. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="gbp-to-ngn-converter.html">
+    <a class="guide-card" data-country="" data-cat="currency" href="gbp-to-ngn-converter.html">
       <h3><span class="flag">💱</span> GBP to NGN Converter & Nigeria Remittance Guide</h3>
       <p>Convert GBP to NGN at the live mid-market rate, and compare the cheapest ways to send money to Nigeria. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="gbp-to-pkr-converter.html">
+    <a class="guide-card" data-country="" data-cat="currency" href="gbp-to-pkr-converter.html">
       <h3><span class="flag">💱</span> GBP to PKR Converter & UK→Pakistan Remittance Guide</h3>
       <p>Convert GBP to PKR with the live mid-market rate, and compare Wise, Remitly, ACE and Roshan Digital Account for sending money from the UK to Pakistan. No signup.</p>
     </a>
-    <a class="guide-card" href="sar-to-inr-converter.html">
+    <a class="guide-card" data-country="" data-cat="currency" href="sar-to-inr-converter.html">
       <h3><span class="flag">💱</span> SAR to INR Converter & India Remittance Guide</h3>
       <p>Convert SAR to INR at the live mid-market rate, and compare the cheapest ways to send money to India. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="sar-to-pkr-converter.html">
+    <a class="guide-card" data-country="" data-cat="currency" href="sar-to-pkr-converter.html">
       <h3><span class="flag">💱</span> SAR to PKR Converter & Saudi→Pakistan Remittance Guide</h3>
       <p>Convert SAR to PKR at the live mid-market rate. Compare STC Pay, Al Rajhi, Wise, Remitly and Roshan Digital Account for Saudi→Pakistan. No signup.</p>
     </a>
-    <a class="guide-card" href="usd-to-bdt-converter.html">
+    <a class="guide-card" data-country="" data-cat="currency" href="usd-to-bdt-converter.html">
       <h3><span class="flag">💱</span> USD to BDT Converter & Bangladesh Remittance Guide</h3>
       <p>Convert USD to BDT at the live mid-market rate, and compare the cheapest ways to send money to Bangladesh. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="usd-to-egp-converter.html">
+    <a class="guide-card" data-country="" data-cat="currency" href="usd-to-egp-converter.html">
       <h3><span class="flag">💱</span> USD to EGP Converter & Egypt Remittance Guide</h3>
       <p>Convert USD to EGP at the live mid-market rate, and compare the cheapest ways to send money to Egypt. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="usd-to-inr-converter.html">
+    <a class="guide-card" data-country="" data-cat="currency" href="usd-to-inr-converter.html">
       <h3><span class="flag">💱</span> USD to INR Converter & India Remittance Guide</h3>
       <p>Convert USD to INR with the live mid-market rate, and compare Wise, Remitly, Western Union and banks for sending money to India. See real costs. No signup.</p>
     </a>
-    <a class="guide-card" href="usd-to-kes-converter.html">
+    <a class="guide-card" data-country="" data-cat="currency" href="usd-to-kes-converter.html">
       <h3><span class="flag">💱</span> USD to KES Converter & Kenya Remittance Guide</h3>
       <p>Convert USD to KES at the live mid-market rate, and compare the cheapest ways to send money to Kenya. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="usd-to-lkr-converter.html">
+    <a class="guide-card" data-country="" data-cat="currency" href="usd-to-lkr-converter.html">
       <h3><span class="flag">💱</span> USD to LKR Converter & Sri Lanka Remittance Guide</h3>
       <p>Convert USD to LKR at the live mid-market rate, and compare the cheapest ways to send money to Sri Lanka. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="usd-to-mxn-converter.html">
+    <a class="guide-card" data-country="" data-cat="currency" href="usd-to-mxn-converter.html">
       <h3><span class="flag">💱</span> USD to MXN Converter & Mexico Remittance Guide</h3>
       <p>Convert USD to MXN at the live mid-market rate and find the cheapest way to send money to Mexico. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="usd-to-ngn-converter.html">
+    <a class="guide-card" data-country="" data-cat="currency" href="usd-to-ngn-converter.html">
       <h3><span class="flag">💱</span> USD to NGN Converter & Nigeria Remittance Guide</h3>
       <p>Convert USD to NGN at the live mid-market rate, and compare the cheapest ways to send money to Nigeria. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="usd-to-php-converter.html">
+    <a class="guide-card" data-country="" data-cat="currency" href="usd-to-php-converter.html">
       <h3><span class="flag">💱</span> USD to PHP Converter & Philippines Remittance Guide</h3>
       <p>Convert USD to PHP with the live mid-market rate, and compare Wise, Remitly, Western Union and GCash for sending money to the Philippines. No signup.</p>
     </a>
-    <a class="guide-card" href="usd-to-pkr-converter.html">
+    <a class="guide-card" data-country="" data-cat="currency" href="usd-to-pkr-converter.html">
       <h3><span class="flag">💱</span> USD to PKR Converter &amp; Guide</h3>
       <p>Convert USD to PKR with live rates. Compare Wise, Remitly, Western Union for Pakistan remittances. See current USD to PKR rate, fees, and transfer tips.</p>
     </a>
-    <a class="guide-card" href="usd-to-try-converter.html">
+    <a class="guide-card" data-country="" data-cat="currency" href="usd-to-try-converter.html">
       <h3><span class="flag">💱</span> USD to TRY Converter & Türkiye Remittance Guide</h3>
       <p>Convert USD to TRY at the live mid-market rate and find the cheapest way to send money to Türkiye. No signup, no tracking.</p>
     </a>
-    <a class="guide-card" href="usd-to-vnd-converter.html">
+    <a class="guide-card" data-country="" data-cat="currency" href="usd-to-vnd-converter.html">
       <h3><span class="flag">💱</span> USD to VND Converter & Vietnam Remittance Guide</h3>
       <p>Convert USD to VND at the live mid-market rate and find the cheapest way to send money to Vietnam. No signup, no tracking.</p>
     </a>
-    <div class="section-header">🧾 Salary &amp; gratuity (3)</div>
-    <a class="guide-card" href="end-of-service-calculator-saudi-arabia.html">
+    <div class="section-header" data-cat="retirement">🧾 Salary &amp; gratuity (3)</div>
+    <a class="guide-card" data-country="in" data-cat="retirement" href="end-of-service-calculator-saudi-arabia.html">
       <h3><span class="flag">🧾</span> Saudi Arabia End of Service (Gratuity) Calculator</h3>
       <p>Free Saudi Arabia end-of-service (ESB) gratuity calculator. Enter salary and years of service for your award estimate per Saudi Labour Law. No signup.</p>
     </a>
-    <a class="guide-card" href="gratuity-calculator-qatar.html">
+    <a class="guide-card" data-country="in" data-cat="retirement" href="gratuity-calculator-qatar.html">
       <h3><span class="flag">🧾</span> Qatar Gratuity Calculator — End of Service</h3>
       <p>Free Qatar end-of-service gratuity calculator. Enter basic salary and years of service for your estimate per Qatar Labour Law (3 weeks/year). No signup.</p>
     </a>
-    <a class="guide-card" href="gratuity-calculator-uae.html">
+    <a class="guide-card" data-country="in" data-cat="retirement" href="gratuity-calculator-uae.html">
       <h3><span class="flag">🧾</span> UAE Gratuity Calculator — End of Service Benefit</h3>
       <p>Free UAE end-of-service gratuity calculator. Enter your basic salary and years of service for your 2022-law gratuity estimate. No signup, instant.</p>
     </a>
-    <div class="section-header">📖 Finance glossary (17)</div>
-    <a class="guide-card" href="glossary.html">
+    <div class="section-header" data-cat="learn">📖 Finance glossary (17)</div>
+    <a class="guide-card" data-country="" data-cat="learn" href="glossary.html">
       <h3><span class="flag">📖</span> Finance Glossary</h3>
       <p>Plain-English definitions of common finance terms — EMI, SIP, fixed deposit, compound interest, nisab, Zakat, FOIR, repo rate, Ijarah, Murabaha and more. Free.</p>
     </a>
-    <a class="guide-card" href="what-is-amortization.html">
+    <a class="guide-card" data-country="" data-cat="learn" href="what-is-amortization.html">
       <h3><span class="flag">📖</span> What is Amortization?</h3>
       <p>The process of paying off a loan through scheduled payments split between interest and principal. Plain-English definition with a worked example. Free finance glossary.</p>
     </a>
-    <a class="guide-card" href="what-is-compound-interest.html">
+    <a class="guide-card" data-country="" data-cat="learn" href="what-is-compound-interest.html">
       <h3><span class="flag">📖</span> What is Compound Interest?</h3>
       <p>Interest earned on both your original principal and the interest already accumulated. Plain-English definition with a worked example. Free finance glossary.</p>
     </a>
-    <a class="guide-card" href="what-is-down-payment.html">
+    <a class="guide-card" data-country="" data-cat="learn" href="what-is-down-payment.html">
       <h3><span class="flag">📖</span> What is Down Payment?</h3>
       <p>The upfront portion of a purchase you pay yourself, with the rest financed by a loan. Plain-English definition with a worked example. Free finance glossary.</p>
     </a>
-    <a class="guide-card" href="what-is-eblr.html">
+    <a class="guide-card" data-country="" data-cat="learn" href="what-is-eblr.html">
       <h3><span class="flag">📖</span> What is EBLR (External Benchmark Lending Rate)?</h3>
       <p>The benchmark Indian banks use to price floating-rate loans, linked to the RBI repo. Plain-English definition with a worked example. Free finance glossary.</p>
     </a>
-    <a class="guide-card" href="what-is-emi.html">
+    <a class="guide-card" data-country="" data-cat="learn" href="what-is-emi.html">
       <h3><span class="flag">📖</span> What is EMI (Equated Monthly Installment)?</h3>
       <p>A fixed monthly payment that repays a loan over its term, covering both interest and principal. Plain-English definition with a worked example. Free finance glossary.</p>
     </a>
-    <a class="guide-card" href="what-is-fixed-deposit.html">
+    <a class="guide-card" data-country="" data-cat="learn" href="what-is-fixed-deposit.html">
       <h3><span class="flag">📖</span> What is Fixed Deposit (FD)?</h3>
       <p>A deposit locked with a bank for a fixed term at a guaranteed interest rate. Plain-English definition with a worked example. Free finance glossary.</p>
     </a>
-    <a class="guide-card" href="what-is-foir.html">
+    <a class="guide-card" data-country="" data-cat="learn" href="what-is-foir.html">
       <h3><span class="flag">📖</span> What is FOIR (Fixed Obligation to Income Ratio)?</h3>
       <p>The share of your income that goes to loan EMIs — used by banks to decide how much you can borrow. Plain-English definition with a worked example. Free finance glossary.</p>
     </a>
-    <a class="guide-card" href="what-is-ijarah.html">
+    <a class="guide-card" data-country="" data-cat="learn" href="what-is-ijarah.html">
       <h3><span class="flag">📖</span> What is Ijarah?</h3>
       <p>An Islamic lease-to-own financing structure with no interest (riba). Plain-English definition with a worked example. Free finance glossary.</p>
     </a>
-    <a class="guide-card" href="what-is-ltv.html">
+    <a class="guide-card" data-country="" data-cat="learn" href="what-is-ltv.html">
       <h3><span class="flag">📖</span> What is LTV (Loan to Value)?</h3>
       <p>The loan amount as a percentage of the property or asset value. Plain-English definition with a worked example. Free finance glossary.</p>
     </a>
-    <a class="guide-card" href="what-is-moratorium.html">
+    <a class="guide-card" data-country="" data-cat="learn" href="what-is-moratorium.html">
       <h3><span class="flag">📖</span> What is Moratorium?</h3>
       <p>A pause on loan repayments — common in education loans during study. Plain-English definition with a worked example. Free finance glossary.</p>
     </a>
-    <a class="guide-card" href="what-is-murabaha.html">
+    <a class="guide-card" data-country="" data-cat="learn" href="what-is-murabaha.html">
       <h3><span class="flag">📖</span> What is Murabaha?</h3>
       <p>An Islamic cost-plus financing structure where the bank resells an asset to you at a transparent profit margin. Plain-English definition with a worked example. Free finance glossary.</p>
     </a>
-    <a class="guide-card" href="what-is-mutual-fund.html">
+    <a class="guide-card" data-country="" data-cat="learn" href="what-is-mutual-fund.html">
       <h3><span class="flag">📖</span> What is Mutual Fund?</h3>
       <p>A pooled investment that holds a diversified portfolio of stocks, bonds, or other assets. Plain-English definition with a worked example. Free finance glossary.</p>
     </a>
-    <a class="guide-card" href="what-is-nisab.html">
+    <a class="guide-card" data-country="" data-cat="learn" href="what-is-nisab.html">
       <h3><span class="flag">📖</span> What is Nisab?</h3>
       <p>The minimum amount of wealth a Muslim must hold before Zakat becomes due. Plain-English definition with a worked example. Free finance glossary.</p>
     </a>
-    <a class="guide-card" href="what-is-repo-rate.html">
+    <a class="guide-card" data-country="" data-cat="learn" href="what-is-repo-rate.html">
       <h3><span class="flag">📖</span> What is Repo Rate?</h3>
       <p>The interest rate at which a central bank lends to commercial banks — the anchor for loan rates. Plain-English definition with a worked example. Free finance glossary.</p>
     </a>
-    <a class="guide-card" href="what-is-sip.html">
+    <a class="guide-card" data-country="" data-cat="learn" href="what-is-sip.html">
       <h3><span class="flag">📖</span> What is SIP (Systematic Investment Plan)?</h3>
       <p>Investing a fixed amount at regular intervals (usually monthly) into mutual funds or an index. Plain-English definition with a worked example. Free finance glossary.</p>
     </a>
-    <a class="guide-card" href="what-is-zakat.html">
+    <a class="guide-card" data-country="" data-cat="learn" href="what-is-zakat.html">
       <h3><span class="flag">📖</span> What is Zakat?</h3>
       <p>An annual 2.5% alms on qualifying wealth above the nisab — one of the Five Pillars of Islam. Plain-English definition with a worked example. Free finance glossary.</p>
     </a>
-    <div class="section-header">📘 Reference &amp; guides (2)</div>
-    <a class="guide-card" href="central-bank-rates-2026.html">
+    <div class="section-header" data-cat="other">📘 Reference &amp; guides (2)</div>
+    <a class="guide-card" data-country="" data-cat="other" href="central-bank-rates-2026.html">
       <h3><span class="flag">📘</span> Central Bank &amp; Loan Rates Across 34 Countries (2026)</h3>
       <p>A free reference table of central-bank policy rates and typical home loan, car loan and savings rates across 34 countries, updated for 2026. No signup.</p>
     </a>
-    <a class="guide-card" href="how-to-calculate-emi.html">
+    <a class="guide-card" data-country="" data-cat="other" href="how-to-calculate-emi.html">
       <h3><span class="flag">📘</span> How to Calculate Loan EMI — Formula &amp; Examples</h3>
       <p>Learn how to calculate your loan EMI with the exact formula, step-by-step worked examples, and a free calculator. Works for home, car, and personal loans in any currency.</p>
     </a>
@@ -1317,6 +1349,7 @@
       <a class="cta-btn" href="../index.html">Open fin·calc →</a>
     </div>
 
+    </div>
     <footer>
       <div style="margin-bottom:10px; line-height:2;">
         <a href="../index.html">Home</a> · <a href="../about.html">About</a> · <a href="../methodology.html">Methodology</a> · <a href="../editorial-policy.html">Editorial policy</a> · <a href="../privacy.html">Privacy</a> · <a href="../contact.html">Contact</a>
@@ -1324,5 +1357,30 @@
       © 2026 fin·calc · Made for better financial decisions. No signup. No tracking.
     </footer>
   </main>
+  <script>
+  (function(){
+    var grid=document.getElementById('guidesGrid'),search=document.getElementById('dirSearch'),chips=document.getElementById('dirChips'),country=document.getElementById('dirCountry');
+    if(!grid)return;
+    var cards=[].slice.call(grid.querySelectorAll('.guide-card')),headers=[].slice.call(grid.querySelectorAll('.section-header')),filter='all';
+    function apply(){
+      var q=search.value.trim().toLowerCase(),cc=country?country.value:'',searching=q!=='',shown=0;
+      cards.forEach(function(c){
+        var cat=c.getAttribute('data-cat'),ccard=c.getAttribute('data-country')||'';
+        var okCat=searching?true:(filter==='all'||cat===filter);
+        var okCountry=cc===''||ccard===cc;
+        var okText=!searching||c.textContent.toLowerCase().indexOf(q)>-1;
+        var show=okCat&&okCountry&&okText; c.style.display=show?'':'none'; if(show)shown++;
+      });
+      var hide=searching||filter!=='all'||cc!=='';
+      headers.forEach(function(h){h.style.display=hide?'none':'';});
+      var e=document.getElementById('dirEmpty');
+      if(shown===0){if(!e){e=document.createElement('div');e.id='dirEmpty';e.className='dir-empty';grid.appendChild(e);}e.textContent='No calculators match your filters. Try another term or country.';e.style.display='';}
+      else if(e){e.style.display='none';}
+    }
+    search.addEventListener('input',apply);
+    if(country)country.addEventListener('change',apply);
+    chips.addEventListener('click',function(ev){var b=ev.target.closest('.dir-chip');if(!b)return;filter=b.getAttribute('data-filter');chips.querySelectorAll('.dir-chip').forEach(function(x){x.classList.toggle('active',x===b);});apply();});
+  })();
+  </script>
 </body>
 </html>
