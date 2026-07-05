@@ -1,0 +1,479 @@
+{
+ "_doc": "Single source of truth for generated calculator clusters. Edit here, then run `python build.py`. Pages marked custom:true are hand-written and left untouched by the generator.",
+ "car_loan": [
+  {
+   "slug": "car-finance-calculator-bahrain",
+   "country_article": "Bahrain",
+   "country": "Bahrain",
+   "cur_symbol": "BHD",
+   "cur_code": "BHD",
+   "locale": "en-BH",
+   "rate": 5.5,
+   "car_note": "Car loan rates ≈ 5–7% p.a. Max tenure typically 5 years. Ijarah and Murabaha available at Al Baraka, Bahrain Islamic Bank, Al Salam.",
+   "related": [
+    "<li><a href=\"home-finance-calculator-bahrain.html\">Home Loan Calculator – Bahrain</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-bahrain.html\">Fixed Deposit Calculator – Bahrain</a></li>",
+    "<li><a href=\"sip-calculator-bahrain.html\">SIP Calculator – Bahrain</a></li>",
+    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>",
+    "<li><a href=\"car-loan-calculator-india.html\">Car Loan Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "car-finance-calculator-qatar",
+   "country_article": "Qatar",
+   "country": "Qatar",
+   "cur_symbol": "QAR",
+   "cur_code": "QAR",
+   "locale": "en-QA",
+   "rate": 5.2,
+   "car_note": "Car loan rates ≈ 4.5–6% p.a. (conventional). Shariah options (Murabaha/Ijarah) via QIB, Masraf Al Rayan. Max tenure 5–7 years depending on income.",
+   "related": [
+    "<li><a href=\"home-finance-calculator-qatar.html\">Home Loan Calculator – Qatar</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-qatar.html\">Fixed Deposit Calculator – Qatar</a></li>",
+    "<li><a href=\"sip-calculator-qatar.html\">SIP Calculator – Qatar</a></li>",
+    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>",
+    "<li><a href=\"car-loan-calculator-india.html\">Car Loan Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "car-finance-calculator-saudi-arabia",
+   "country_article": "Saudi Arabia",
+   "country": "Saudi Arabia",
+   "cur_symbol": "SAR",
+   "cur_code": "SAR",
+   "locale": "en-SA",
+   "rate": 5.0,
+   "car_note": "Auto Murabaha effective rate ≈ 4–6% p.a. Max tenure 5 years. Providers: Al Rajhi Bank, SNB, Alinma, Bank Albilad. SIMAH credit check required.",
+   "related": [
+    "<li><a href=\"home-finance-calculator-saudi-arabia.html\">Home Loan Calculator – Saudi Arabia</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-saudi-arabia.html\">Fixed Deposit Calculator – Saudi Arabia</a></li>",
+    "<li><a href=\"sip-calculator-saudi-arabia.html\">SIP Calculator – Saudi Arabia</a></li>",
+    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>",
+    "<li><a href=\"car-loan-calculator-india.html\">Car Loan Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "car-finance-calculator-uk",
+   "country_article": "the UK",
+   "country": "UK",
+   "cur_symbol": "£",
+   "cur_code": "GBP",
+   "locale": "en-GB",
+   "rate": 8.0,
+   "car_note": "HP rates ≈ 7–10% APR, PCP rates ≈ 6–9% APR. PCP has a final balloon payment; HP pays off fully. Typical tenure 3–5 years. Dealers and banks both offer financing.",
+   "related": [
+    "<li><a href=\"mortgage-calculator-uk.html\">Home Loan Calculator – the UK</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-uk.html\">Fixed Deposit Calculator – the UK</a></li>",
+    "<li><a href=\"sip-calculator-uk.html\">SIP Calculator – the UK</a></li>",
+    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>",
+    "<li><a href=\"car-loan-calculator-india.html\">Car Loan Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "car-loan-calculator-australia",
+   "country_article": "Australia",
+   "country": "Australia",
+   "cur_symbol": "$",
+   "cur_code": "AUD",
+   "locale": "en-AU",
+   "rate": 8.0,
+   "car_note": "Secured car loans ≈ 6.5–9% p.a., unsecured 10–14%. Max tenure 7 years. Dealer finance sometimes has balloon payment options. Providers: CommBank, Westpac, Toyota Finance, Plenti, Pepper Money.",
+   "related": [
+    "<li><a href=\"home-loan-calculator-australia.html\">Home Loan Calculator – Australia</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-australia.html\">Fixed Deposit Calculator – Australia</a></li>",
+    "<li><a href=\"sip-calculator-australia.html\">SIP Calculator – Australia</a></li>",
+    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>",
+    "<li><a href=\"car-loan-calculator-india.html\">Car Loan Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "car-loan-calculator-bangladesh",
+   "country_article": "Bangladesh",
+   "country": "Bangladesh",
+   "cur_symbol": "BDT",
+   "cur_code": "BDT",
+   "locale": "en-BD",
+   "rate": 13.0,
+   "car_note": "Car loan rates ≈ 11–14% p.a. Max tenure 6 years for new cars. DBBL, BRAC, Eastern Bank offer auto loans.",
+   "related": [
+    "<li><a href=\"home-loan-calculator-bangladesh.html\">Home Loan Calculator – Bangladesh</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-bangladesh.html\">Fixed Deposit Calculator – Bangladesh</a></li>",
+    "<li><a href=\"sip-calculator-bangladesh.html\">SIP Calculator – Bangladesh</a></li>",
+    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>",
+    "<li><a href=\"car-loan-calculator-india.html\">Car Loan Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "car-loan-calculator-brazil",
+   "country_article": "Brazil",
+   "country": "Brazil",
+   "cur_symbol": "R$",
+   "cur_code": "BRL",
+   "locale": "pt-BR",
+   "rate": 25.0,
+   "car_note": "Auto loan rates ≈ 1.8–2.5% a.m. (22–30% p.a. effective). Down payment typical 20–30%. Max tenure 5 years (60 months). Providers: Bradesco Financiamentos, Itaú, Santander Financiamentos, BV, Omni.",
+   "related": [
+    "<li><a href=\"financiamento-imobiliario-brasil.html\">Home Loan Calculator – Brazil</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-brazil.html\">Fixed Deposit Calculator – Brazil</a></li>",
+    "<li><a href=\"sip-calculator-brazil.html\">SIP Calculator – Brazil</a></li>",
+    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>",
+    "<li><a href=\"car-loan-calculator-india.html\">Car Loan Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "car-loan-calculator-canada",
+   "country_article": "Canada",
+   "country": "Canada",
+   "cur_symbol": "$",
+   "cur_code": "CAD",
+   "locale": "en-CA",
+   "rate": 7.0,
+   "car_note": "New car loans ≈ 6–8% p.a., used ≈ 8–11%. Tenure up to 96 months (8 years). Manufacturer promos ≈ 0–3.99% on select models. Providers: TD Auto Finance, Scotiabank, RBC, Ford Credit Canada.",
+   "related": [
+    "<li><a href=\"mortgage-calculator-canada.html\">Home Loan Calculator – Canada</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-canada.html\">Fixed Deposit Calculator – Canada</a></li>",
+    "<li><a href=\"sip-calculator-canada.html\">SIP Calculator – Canada</a></li>",
+    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>",
+    "<li><a href=\"car-loan-calculator-india.html\">Car Loan Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "car-loan-calculator-china",
+   "country_article": "China",
+   "country": "China",
+   "cur_symbol": "¥",
+   "cur_code": "CNY",
+   "locale": "zh-CN",
+   "rate": 4.5,
+   "car_note": "Auto loan rates ≈ 4–7% p.a. Min 20% down for conventional, 15% for new-energy vehicles (NEVs). Max tenure 5 years. Providers: ICBC, BoC, BYD Auto Finance, Geely Auto Finance, Toyota Auto Finance.",
+   "related": [
+    "<li><a href=\"mortgage-calculator-china.html\">Home Loan Calculator – China</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-china.html\">Fixed Deposit Calculator – China</a></li>",
+    "<li><a href=\"sip-calculator-china.html\">SIP Calculator – China</a></li>",
+    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>",
+    "<li><a href=\"car-loan-calculator-india.html\">Car Loan Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "car-loan-calculator-egypt",
+   "country_article": "Egypt",
+   "country": "Egypt",
+   "cur_symbol": "EGP",
+   "cur_code": "EGP",
+   "locale": "en-EG",
+   "rate": 23.0,
+   "car_note": "Car loan rates ≈ 22–26% p.a. New and used financing available. Min 20% down payment typical. Providers: CIB, QNB Alahli, NBE, Banque Misr.",
+   "related": [
+    "<li><a href=\"mortgage-calculator-egypt.html\">Home Loan Calculator – Egypt</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-egypt.html\">Fixed Deposit Calculator – Egypt</a></li>",
+    "<li><a href=\"sip-calculator-egypt.html\">SIP Calculator – Egypt</a></li>",
+    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>",
+    "<li><a href=\"car-loan-calculator-india.html\">Car Loan Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "car-loan-calculator-eurozone",
+   "country_article": "the Eurozone",
+   "country": "Eurozone",
+   "cur_symbol": "€",
+   "cur_code": "EUR",
+   "locale": "en-IE",
+   "rate": 5.5,
+   "car_note": "Car loan rates ≈ 5–7% p.a. Manufacturer financing (BMW, VW, Mercedes) often has promotional 0% deals on specific models. Typical tenure 3–7 years.",
+   "related": [
+    "<li><a href=\"mortgage-calculator-eurozone.html\">Home Loan Calculator – the Eurozone</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-eurozone.html\">Fixed Deposit Calculator – the Eurozone</a></li>",
+    "<li><a href=\"sip-calculator-eurozone.html\">SIP Calculator – the Eurozone</a></li>",
+    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>",
+    "<li><a href=\"car-loan-calculator-india.html\">Car Loan Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "car-loan-calculator-hong-kong",
+   "country_article": "Hong Kong",
+   "country": "Hong Kong",
+   "cur_symbol": "HK$",
+   "cur_code": "HKD",
+   "locale": "en-HK",
+   "rate": 5.0,
+   "car_note": "Auto loan rates ≈ 4–6% p.a. Lenders: HSBC, Hang Seng, Bank of East Asia, plus dealer-arranged finance. First registration tax is steep, making cars expensive.",
+   "related": [
+    "<li><a href=\"mortgage-calculator-hong-kong.html\">Home Loan Calculator – Hong Kong</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-hong-kong.html\">Fixed Deposit Calculator – Hong Kong</a></li>",
+    "<li><a href=\"sip-calculator-hong-kong.html\">SIP Calculator – Hong Kong</a></li>",
+    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>",
+    "<li><a href=\"car-loan-calculator-india.html\">Car Loan Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "car-loan-calculator-japan",
+   "country_article": "Japan",
+   "country": "Japan",
+   "cur_symbol": "￥",
+   "cur_code": "JPY",
+   "locale": "ja-JP",
+   "rate": 2.5,
+   "car_note": "Car loan rates ≈ 1.9–4.5% p.a. (dealer financing) or 1.5–3% (bank loans). Max tenure 7 years. Providers: Toyota Financial Services, Nissan Financial, Rakuten Bank, Orix Auto Leasing.",
+   "related": [
+    "<li><a href=\"mortgage-calculator-japan.html\">Home Loan Calculator – Japan</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-japan.html\">Fixed Deposit Calculator – Japan</a></li>",
+    "<li><a href=\"sip-calculator-japan.html\">SIP Calculator – Japan</a></li>",
+    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>",
+    "<li><a href=\"car-loan-calculator-india.html\">Car Loan Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "car-loan-calculator-kenya",
+   "country_article": "Kenya",
+   "country": "Kenya",
+   "cur_symbol": "Ksh",
+   "cur_code": "KES",
+   "locale": "en-KE",
+   "rate": 15.0,
+   "car_note": "Auto loans ≈ 13–18% p.a. 20–30% down payment typical. Tenure up to 6 years. Providers: KCB, NCBA, Stanbic, Co-op Bank, Absa.",
+   "related": [
+    "<li><a href=\"home-loan-calculator-kenya.html\">Home Loan Calculator – Kenya</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-kenya.html\">Fixed Deposit Calculator – Kenya</a></li>",
+    "<li><a href=\"sip-calculator-kenya.html\">SIP Calculator – Kenya</a></li>",
+    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>",
+    "<li><a href=\"car-loan-calculator-india.html\">Car Loan Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "car-loan-calculator-kuwait",
+   "country_article": "Kuwait",
+   "country": "Kuwait",
+   "cur_symbol": "KWD",
+   "cur_code": "KWD",
+   "locale": "en-KW",
+   "rate": 5.0,
+   "car_note": "Auto loan rates ≈ 4.5–6% p.a. (conventional), capped at CBK discount + 3%. Max 5 years. Islamic (Murabaha) via KFH, Boubyan, Warba.",
+   "related": [
+    "<li><a href=\"home-finance-calculator-kuwait.html\">Home Loan Calculator – Kuwait</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-kuwait.html\">Fixed Deposit Calculator – Kuwait</a></li>",
+    "<li><a href=\"sip-calculator-kuwait.html\">SIP Calculator – Kuwait</a></li>",
+    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>",
+    "<li><a href=\"car-loan-calculator-india.html\">Car Loan Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "car-loan-calculator-malaysia",
+   "country_article": "Malaysia",
+   "country": "Malaysia",
+   "cur_symbol": "RM",
+   "cur_code": "MYR",
+   "locale": "ms-MY",
+   "rate": 3.5,
+   "car_note": "HP flat rate ≈ 2–3.5% p.a. (reducing balance ≈ 4–7%). Max 9 years new, 7 years used. Providers: Maybank, CIMB, Public Bank. Islamic AITAB via Bank Islam.",
+   "related": [
+    "<li><a href=\"home-loan-calculator-malaysia.html\">Home Loan Calculator – Malaysia</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-malaysia.html\">Fixed Deposit Calculator – Malaysia</a></li>",
+    "<li><a href=\"sip-calculator-malaysia.html\">SIP Calculator – Malaysia</a></li>",
+    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>",
+    "<li><a href=\"car-loan-calculator-india.html\">Car Loan Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "car-loan-calculator-mexico",
+   "country_article": "Mexico",
+   "country": "Mexico",
+   "cur_symbol": "$",
+   "cur_code": "MXN",
+   "locale": "es-MX",
+   "rate": 13.5,
+   "car_note": "Auto loans ≈ 11–16% p.a. Min 10–20% down. Max tenure 60-72 months. Captive financing (Ford Credit, Toyota Financial México) often competitive. Providers: BBVA, HSBC, Banorte, Ford Credit.",
+   "related": [
+    "<li><a href=\"credito-hipotecario-mexico.html\">Home Loan Calculator – Mexico</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-mexico.html\">Fixed Deposit Calculator – Mexico</a></li>",
+    "<li><a href=\"sip-calculator-mexico.html\">SIP Calculator – Mexico</a></li>",
+    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>",
+    "<li><a href=\"car-loan-calculator-india.html\">Car Loan Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "car-loan-calculator-new-zealand",
+   "country_article": "New Zealand",
+   "country": "New Zealand",
+   "cur_symbol": "$",
+   "cur_code": "NZD",
+   "locale": "en-NZ",
+   "rate": 10.0,
+   "car_note": "Car loan rates ≈ 8–14% p.a. Main lenders: MTF, UDC, Heartland, Motor Trade Finances, plus bank-owned (ASB, ANZ). Peer-to-peer options via Harmoney.",
+   "related": [
+    "<li><a href=\"mortgage-calculator-new-zealand.html\">Home Loan Calculator – New Zealand</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-new-zealand.html\">Fixed Deposit Calculator – New Zealand</a></li>",
+    "<li><a href=\"sip-calculator-new-zealand.html\">SIP Calculator – New Zealand</a></li>",
+    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>",
+    "<li><a href=\"car-loan-calculator-india.html\">Car Loan Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "car-loan-calculator-russia",
+   "country_article": "Russia",
+   "country": "Russia",
+   "cur_symbol": "₽",
+   "cur_code": "RUB",
+   "locale": "ru-RU",
+   "rate": 24.0,
+   "car_note": "Auto loan rates ≈ 22–28% p.a. State auto-subsidy program offers reduced rates for domestic vehicles. Max tenure 5 years. Providers: Sberbank, Gazprombank, RSHB, Rosbank, VTB.",
+   "related": [
+    "<li><a href=\"mortgage-calculator-russia.html\">Home Loan Calculator – Russia</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-russia.html\">Fixed Deposit Calculator – Russia</a></li>",
+    "<li><a href=\"sip-calculator-russia.html\">SIP Calculator – Russia</a></li>",
+    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>",
+    "<li><a href=\"car-loan-calculator-india.html\">Car Loan Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "car-loan-calculator-singapore",
+   "country_article": "Singapore",
+   "country": "Singapore",
+   "cur_symbol": "$",
+   "cur_code": "SGD",
+   "locale": "en-SG",
+   "rate": 3.5,
+   "car_note": "Car loan rates ≈ 2.5–4% p.a. flat (roughly 4.5–7.5% reducing equivalent). MAS rules: Max 60% LTV for cars ≤S$20k OMV, 70% for higher. Max tenure 7 years. Providers: DBS, UOB, Hong Leong Finance.",
+   "related": [
+    "<li><a href=\"home-loan-calculator-singapore.html\">Home Loan Calculator – Singapore</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-singapore.html\">Fixed Deposit Calculator – Singapore</a></li>",
+    "<li><a href=\"sip-calculator-singapore.html\">SIP Calculator – Singapore</a></li>",
+    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>",
+    "<li><a href=\"car-loan-calculator-india.html\">Car Loan Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "car-loan-calculator-south-korea",
+   "country_article": "South Korea",
+   "country": "South Korea",
+   "cur_symbol": "₩",
+   "cur_code": "KRW",
+   "locale": "ko-KR",
+   "rate": 5.5,
+   "car_note": "Auto loan rates ≈ 4.5–7% p.a. Max 5–7 years. Captives: Hyundai Capital, KB Capital. Banks: KB, Shinhan, Hana, plus card companies (Shinhan Card, Samsung Card).",
+   "related": [
+    "<li><a href=\"mortgage-calculator-south-korea.html\">Home Loan Calculator – South Korea</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-south-korea.html\">Fixed Deposit Calculator – South Korea</a></li>",
+    "<li><a href=\"sip-calculator-south-korea.html\">SIP Calculator – South Korea</a></li>",
+    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>",
+    "<li><a href=\"car-loan-calculator-india.html\">Car Loan Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "car-loan-calculator-sri-lanka",
+   "country_article": "Sri Lanka",
+   "country": "Sri Lanka",
+   "cur_symbol": "LKR",
+   "cur_code": "LKR",
+   "locale": "en-LK",
+   "rate": 13.0,
+   "car_note": "Vehicle loan rates ≈ 12–14% p.a. Post-cyclone vehicle imports surged 2025. Max tenure typically 7 years. Providers: Commercial Bank, DFCC, HNB, Seylan.",
+   "related": [
+    "<li><a href=\"housing-loan-calculator-sri-lanka.html\">Home Loan Calculator – Sri Lanka</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-sri-lanka.html\">Fixed Deposit Calculator – Sri Lanka</a></li>",
+    "<li><a href=\"sip-calculator-sri-lanka.html\">SIP Calculator – Sri Lanka</a></li>",
+    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>",
+    "<li><a href=\"car-loan-calculator-india.html\">Car Loan Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "car-loan-calculator-taiwan",
+   "country_article": "Taiwan",
+   "country": "Taiwan",
+   "cur_symbol": "$",
+   "cur_code": "TWD",
+   "locale": "zh-TW",
+   "rate": 4.0,
+   "car_note": "Auto loan rates ≈ 3.5–5% p.a. Tenure up to 84 months. Major lenders: CTBC, Taishin, E.Sun, Fubon, plus captives (Hotai, Toyota Leasing).",
+   "related": [
+    "<li><a href=\"mortgage-calculator-taiwan.html\">Home Loan Calculator – Taiwan</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-taiwan.html\">Fixed Deposit Calculator – Taiwan</a></li>",
+    "<li><a href=\"sip-calculator-taiwan.html\">SIP Calculator – Taiwan</a></li>",
+    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>",
+    "<li><a href=\"car-loan-calculator-india.html\">Car Loan Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "car-loan-calculator-thailand",
+   "country_article": "Thailand",
+   "country": "Thailand",
+   "cur_symbol": "฿",
+   "cur_code": "THB",
+   "locale": "th-TH",
+   "rate": 4.5,
+   "car_note": "Auto loan flat rates ≈ 2.5–4.5% (effective ~5–9% reducing). Max tenure 84 months. Providers: Toyota Leasing, Siam Kubota, bank auto loans (KBank, SCB, Krungthai).",
+   "related": [
+    "<li><a href=\"home-loan-calculator-thailand.html\">Home Loan Calculator – Thailand</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-thailand.html\">Fixed Deposit Calculator – Thailand</a></li>",
+    "<li><a href=\"sip-calculator-thailand.html\">SIP Calculator – Thailand</a></li>",
+    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>",
+    "<li><a href=\"car-loan-calculator-india.html\">Car Loan Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "car-loan-calculator-usa",
+   "country_article": "the USA",
+   "country": "USA",
+   "cur_symbol": "$",
+   "cur_code": "USD",
+   "locale": "en-US",
+   "rate": 7.5,
+   "car_note": "New car loans ≈ 7–8% p.a., used car ≈ 9–11%. Captive lenders (Toyota Financial, Ford Credit) and banks (Chase, Capital One) are common. Credit score materially affects rate.",
+   "related": [
+    "<li><a href=\"mortgage-calculator-usa.html\">Home Loan Calculator – the USA</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-usa.html\">Fixed Deposit Calculator – the USA</a></li>",
+    "<li><a href=\"sip-calculator-usa.html\">SIP Calculator – the USA</a></li>",
+    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>",
+    "<li><a href=\"car-loan-calculator-india.html\">Car Loan Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "car-loan-calculator-vietnam",
+   "country_article": "Vietnam",
+   "country": "Vietnam",
+   "cur_symbol": "₫",
+   "cur_code": "VND",
+   "locale": "vi-VN",
+   "rate": 10.5,
+   "car_note": "Auto loan rates ≈ 9–12% p.a. Tenure up to 7–8 years. Major lenders: Vietcombank, Techcombank, VPBank (FE Credit), plus Toyota Financial Services.",
+   "related": [
+    "<li><a href=\"home-loan-calculator-vietnam.html\">Home Loan Calculator – Vietnam</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-vietnam.html\">Fixed Deposit Calculator – Vietnam</a></li>",
+    "<li><a href=\"sip-calculator-vietnam.html\">SIP Calculator – Vietnam</a></li>",
+    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>",
+    "<li><a href=\"car-loan-calculator-india.html\">Car Loan Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "car-loan-calculator-india",
+   "custom": true
+  },
+  {
+   "slug": "car-loan-calculator-indonesia",
+   "custom": true
+  },
+  {
+   "slug": "car-loan-calculator-nigeria",
+   "custom": true
+  },
+  {
+   "slug": "car-loan-calculator-pakistan",
+   "custom": true
+  },
+  {
+   "slug": "car-loan-calculator-philippines",
+   "custom": true
+  },
+  {
+   "slug": "car-loan-calculator-uae",
+   "custom": true
+  },
+  {
+   "slug": "tasit-kredisi-hesaplama",
+   "custom": true
+  },
+  {
+   "slug": "vehicle-finance-south-africa",
+   "custom": true
+  }
+ ]
+}
