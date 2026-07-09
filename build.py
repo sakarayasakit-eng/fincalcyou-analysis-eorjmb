@@ -26,6 +26,8 @@ REG = json.load(open(os.path.join(HERE, "countries.json"), encoding="utf-8"))
 CARS = REG["car_loan"]
 TEMPLATE_SLUG = "car-loan-calculator-usa"
 T = open(os.path.join(PAGES, TEMPLATE_SLUG + ".html"), encoding="utf-8").read()
+# reuse the template's own reducing-balance answer (keeps its unicode correct)
+REDBAL = re.search(r'<h3>How is car loan installment calculated[^<]*</h3>\s*<p>(.+?)</p>', T, re.S).group(1).strip()
 
 # ---- locale-accurate money via Node (same formatter as the live page) ----
 NODE = r"""
@@ -98,6 +100,46 @@ def render(d, N):
     h = s1(r'(<h2>Related calculators</h2>\s*<ul>).*?(\s*</ul>)', lambda m: m.group(1) + "\n" + relhtml + "\n      </ul>", h)
     h = h.replace("installment calculated in USA?", "installment calculated in " + c + "?")
     h = h.replace("current car loan rate in USA?", "current car loan rate in " + c + "?")
+    if d.get("rate_range") and d.get("lenders"):
+        h = enrich(h, d, N, c, r2)
+    return h
+
+def _plist(xs):
+    return xs[0] if len(xs) == 1 else ", ".join(xs[:-1]) + " and " + xs[-1]
+
+def enrich(h, d, N, country, rate2):
+    """Replace the generic content sections + FAQ schema with richer, locally
+    specific content built from the structured fields (rate_range, deposit,
+    tenure, lenders, nuance). Calculator markup is left untouched."""
+    rr = d["rate_range"]; rr = rr[:-1] if rr.endswith(".") else rr
+    L = _plist(d["lenders"])
+    dep = ("A deposit of around %s of the car's price is typical. " % d["deposit"]) if d.get("deposit") else "Deposit requirements vary by lender. "
+    ten = ("Loan terms run up to about %s. " % d["tenure"]) if d.get("tenure") else ""
+    depq = ("Lenders typically look for a deposit of around %s of the price. " % d["deposit"]) if d.get("deposit") else "Deposit requirements vary by lender. "
+    faq = [
+        ("What is the typical car loan rate in %s?" % country,
+         "As a 2026 reference, car finance in %s runs about %s. Your actual rate depends on the lender, your credit profile, and whether the car is new or used." % (country, rr)),
+        ("How much deposit do I need for a car loan in %s?" % country,
+         depq + "A larger deposit lowers both your monthly payment and the total interest you pay."),
+        ("Which lenders offer car loans in %s?" % country,
+         "Commonly used providers include %s. It pays to compare two or three offers, since rates and terms vary by lender and by your credit profile." % L),
+        ("How is the car loan installment calculated?", REDBAL),
+    ]
+    secs = [
+        '    <section>\n      <h2>Car finance rates in %s (2026)</h2>\n      <p>Car loans in %s typically run about %s. %s</p>\n      <p class="note">These are reference figures for 2026 - always confirm the current rate and the effective (reducing-balance) APR with the lender before you commit.</p>\n    </section>' % (country, country, rr, d["nuance"]),
+        '    <section>\n      <h2>Where to get a car loan in %s</h2>\n      <p>Commonly used providers include %s. Rates and terms vary by lender, your credit profile, and whether you are buying new or used - it pays to compare at least two or three offers.</p>\n    </section>' % (country, L),
+        '    <section>\n      <h2>Deposit and loan term</h2>\n      <p>%s%sA bigger deposit and a shorter term both cut the total interest you pay - use the calculator above to see the trade-off for your own numbers.</p>\n    </section>' % (dep, ten),
+        '    <section>\n      <h2>Worked example</h2>\n      <p>For every <strong>%s</strong> financed at <strong>%s%%</strong> over <strong>5 years</strong>:</p>\n      <ul>\n        <li>Monthly installment: <strong>%s</strong></li>\n        <li>Total repaid: <strong>%s</strong></li>\n        <li>Total interest: <strong>%s</strong></li>\n      </ul>\n      <p>Scale to your financed amount, and remember a bigger deposit and shorter term lower the total interest.</p>\n    </section>' % (N["hundredk"], rate2, N["we"], N["wt"], N["wi"]),
+        '    <section>\n      <h2>How to pay less interest on your car loan</h2>\n      <ul>\n        <li>Put down a larger deposit - it reduces both the monthly payment and the total interest.</li>\n        <li>Pick the shortest term you can comfortably afford; a longer term lowers the monthly cost but raises the total.</li>\n        <li>Compare the effective reducing-balance rate, not a headline flat rate - a flat rate looks cheaper than it really is.</li>\n        <li>A stronger credit profile usually earns a lower rate, so it is worth checking before you apply.</li>\n      </ul>\n    </section>',
+        '    <section>\n      <h2>Frequently Asked Questions</h2>\n' + "\n".join('      <h3>%s</h3>\n      <p>%s</p>' % (q, a) for q, a in faq) + '\n    </section>',
+    ]
+    cta = re.search(r'    <a href="[^"]*" class="cta">[^<]*</a>', h).group(0)
+    content = "\n".join(secs) + "\n" + cta
+    h = re.sub(r'    <section>\s*<h2>Local rates.*?    <a href="[^"]*" class="cta">[^<]*</a>', lambda m: content, h, count=1, flags=re.S)
+    ent = [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]
+    faqld = json.dumps({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": ent}, ensure_ascii=True, separators=(",", ":"))
+    h = re.sub(r'  <script type="application/ld\+json">\s*\{"@context":"https://schema.org","@type":"FAQPage".*?\}\s*</script>',
+               lambda m: '  <script type="application/ld+json">\n  ' + faqld + '\n  </script>', h, count=1, flags=re.S)
     return h
 
 def main():
