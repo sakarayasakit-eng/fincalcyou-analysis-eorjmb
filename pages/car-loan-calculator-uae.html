@@ -158,7 +158,7 @@
         if(out('total'))out('total').textContent=money(o.total);
         var ba=el.querySelector('[data-bar="a"]'),bb=el.querySelector('[data-bar="b"]');
         if(ba){ba.style.width=o.aPct.toFixed(1)+'%';bb.style.width=(100-o.aPct).toFixed(1)+'%';}
-        if(push){var u=new URLSearchParams();u.set('amount',amount);if(get('rate'))u.set('rate',+get('rate').value);if(get('years'))u.set('tenure',+get('years').value);history.replaceState(null,'',location.pathname+'?'+u.toString());}
+        if(push){var u=new URLSearchParams();u.set('amount',amount);if(get('rate'))u.set('rate',+get('rate').value);if(get('years'))u.set('tenure',+get('years').value);history.replaceState(null,'',location.pathname+'?'+u.toString());var _a=el.querySelector('[data-f="amount"]'),_r=el.querySelector('[data-f="rate"]'),_y=el.querySelector('[data-f="years"]'),_nl=el.querySelector('.fc-note a');if(_nl){var _q='?cur='+CFG.cur+'&tab='+(CFG.tab||CFG.type)+'&amount='+_a.value;if(_r)_q+='&rate='+_r.value;if(_y)_q+='&years='+_y.value;_nl.setAttribute('href','../index.html'+_q);}}
       }
       el.addEventListener('input',function(){calc(true);});
       calc(sp.toString().length>0);
