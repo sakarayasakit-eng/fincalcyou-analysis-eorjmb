@@ -1,17 +1,21 @@
 #!/usr/bin/env python3
 """
-fin-calc car-loan cluster generator (single source of truth).
+fin-calc cluster generator (single source of truth).
 
-Renders the 26 *templated* car-loan pages from `countries.json` using one shared
-HTML template, and leaves the 8 hand-differentiated pages (India, UAE, Turkey,
-South Africa, Indonesia, Pakistan, Philippines, Nigeria) untouched.
+Renders the *templated* landing pages for each calculator cluster from
+`countries.json` using one shared HTML template per cluster, and leaves the
+hand-differentiated pages (marked "custom": true) untouched.
+
+Clusters currently generated:
+  - car_loan   (template: car-loan-calculator-usa.html)
+  - sip        (template: sip-calculator-usa.html)
 
 Currency figures are formatted by Node's Intl.NumberFormat with each country's
 locale + currency -- the SAME call the live calculator uses -- so the static
 "hint" numbers on the page always match what the live tool computes.
 
 Usage (from the repo root):
-    python build.py            # regenerates the 26 pages in ./pages/
+    python build.py                      # regenerate all clusters into ./pages/
     FINCALC_OUT=/tmp/x python build.py   # dry run: write elsewhere, diff first
 
 Requires: python3 and node (node is used only for locale-accurate money formatting).
@@ -23,27 +27,42 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 PAGES = os.path.join(HERE, "pages")
 OUT = os.environ.get("FINCALC_OUT", PAGES)
 REG = json.load(open(os.path.join(HERE, "countries.json"), encoding="utf-8"))
-CARS = REG["car_loan"]
-TEMPLATE_SLUG = "car-loan-calculator-usa"
-T = open(os.path.join(PAGES, TEMPLATE_SLUG + ".html"), encoding="utf-8").read()
-# reuse the template's own reducing-balance answer (keeps its unicode correct)
+
+TEMPLATES = os.path.join(HERE, "templates")
+
+def _tpl(name):
+    # stable skeleton templates (original section structure), NOT the generated
+    # pages -- so re-runs stay idempotent even after enrichment.
+    return open(os.path.join(TEMPLATES, name + ".html"), encoding="utf-8").read()
+
+T = _tpl("car-loan")               # car skeleton template
+SIP_T = _tpl("sip")                # sip skeleton template
+# reuse the car template's own reducing-balance answer (keeps its unicode correct)
 REDBAL = re.search(r'<h3>How is car loan installment calculated[^<]*</h3>\s*<p>(.+?)</p>', T, re.S).group(1).strip()
 
-# ---- locale-accurate money via Node (same formatter as the live page) ----
+# ---- locale-accurate money via Node (same formatter as the live pages) ----
 NODE = r"""
 const fs=require('fs');
-const cars=JSON.parse(fs.readFileSync(process.argv[1],'utf8')).car_loan;
+const doc=JSON.parse(fs.readFileSync(process.argv[1],'utf8'));
+function M(loc,cur){const nf=new Intl.NumberFormat(loc,{style:'currency',currency:cur,maximumFractionDigits:0});return v=>nf.format(Math.round(v));}
 function emi(P,r,y){const n=Math.round(y*12),m=r/1200;let e;if(m===0){e=P/n;}else{const g=Math.pow(1+m,n);e=P*m*g/(g-1);}const t=e*n;return{e,t,interest:t-P};}
-const out={};
-for(const d of cars){
+function sipfv(P,r,y){const i=r/1200,n=Math.round(y*12),inv=P*n,fv=(i===0?inv:P*((Math.pow(1+i,n)-1)/i)*(1+i));return{fv,inv,gain:fv-inv};}
+const out={car_loan:{},sip:{}};
+for(const d of (doc.car_loan||[])){
   if(d.custom) continue;
-  const nf=new Intl.NumberFormat(d.locale,{style:'currency',currency:d.cur_code,maximumFractionDigits:0});
-  const M=v=>nf.format(Math.round(v));
+  const f=M(d.locale,d.cur_code);
   const fin=80000,x=emi(fin,d.rate,5),w=emi(100000,d.rate,5);
   const barA=Math.max(2,Math.min(98,fin/x.t*100));
-  out[d.slug]={headline:M(x.e),a:M(fin),b:M(x.interest),total:M(x.t),
+  out.car_loan[d.slug]={headline:f(x.e),a:f(fin),b:f(x.interest),total:f(x.t),
     barA:barA.toFixed(1),barB:(100-barA).toFixed(1),
-    we:M(w.e),wt:M(w.t),wi:M(w.interest),hundredk:M(100000)};
+    we:f(w.e),wt:f(w.t),wi:f(w.interest),hundredk:f(100000)};
+}
+for(const d of (doc.sip||[])){
+  if(d.custom) continue;
+  const f=M(d.locale,d.cur_code);
+  const x=sipfv(10000,d.rate,15),barA=Math.max(2,Math.min(98,x.inv/x.fv*100));
+  out.sip[d.slug]={monthly:f(10000),headline:f(x.fv),a:f(x.inv),b:f(x.gain),total:f(x.fv),
+    barA:barA.toFixed(1),barB:(100-barA).toFixed(1),mult:(x.fv/x.inv).toFixed(1)};
 }
 process.stdout.write(JSON.stringify(out));
 """
@@ -58,6 +77,10 @@ def compute_numbers():
 def s1(pat, repl, s):
     return re.sub(pat, lambda m: repl(m), s, count=1, flags=re.S)
 
+def _plist(xs):
+    return xs[0] if len(xs) == 1 else ", ".join(xs[:-1]) + " and " + xs[-1]
+
+# ============================ CAR LOAN ============================
 def render(d, N):
     c = d["country"]; art = d["country_article"]; lc = c.lower()
     sym = d["cur_symbol"]; cur = d["cur_code"]; loc = d["locale"]; rate = d["rate"]
@@ -104,13 +127,8 @@ def render(d, N):
         h = enrich(h, d, N, c, r2)
     return h
 
-def _plist(xs):
-    return xs[0] if len(xs) == 1 else ", ".join(xs[:-1]) + " and " + xs[-1]
-
 def enrich(h, d, N, country, rate2):
-    """Replace the generic content sections + FAQ schema with richer, locally
-    specific content built from the structured fields (rate_range, deposit,
-    tenure, lenders, nuance). Calculator markup is left untouched."""
+    """Richer, locally specific car content from the structured fields."""
     rr = d["rate_range"]; rr = rr[:-1] if rr.endswith(".") else rr
     L = _plist(d["lenders"])
     dep = ("A deposit of around %s of the car's price is typical. " % d["deposit"]) if d.get("deposit") else "Deposit requirements vary by lender. "
@@ -142,20 +160,81 @@ def enrich(h, d, N, country, rate2):
                lambda m: '  <script type="application/ld+json">\n  ' + faqld + '\n  </script>', h, count=1, flags=re.S)
     return h
 
+# ============================ SIP ============================
+def render_sip(d, N):
+    c = d["country"]; art = d["country_article"]; lc = c.lower()
+    sym = d["cur_symbol"]; cur = d["cur_code"]; loc = d["locale"]; rate = d["rate"]
+    rs = "%g" % rate; note = d["invest_note"]
+    h = SIP_T
+    h = s1(r'(<title>SIP Calculator in ).+?( . Monthly Investment)', lambda m: m.group(1) + art + m.group(2), h)
+    h = s1(r'(Calculate how your monthly SIP grows in ).+?( over 10)', lambda m: m.group(1) + art + m.group(2), h)
+    h = s1(r'(name="keywords" content="sip calculator )usa(, mutual fund calculator )usa(, monthly investment )usa(, monthly investment calculator, investment growth )usa(")', lambda m: m.group(1) + lc + m.group(2) + lc + m.group(3) + lc + m.group(4) + lc + m.group(5), h)
+    h = s1(r'(rel="canonical" href="[^"]*/pages/)[^"]+(")', lambda m: m.group(1) + d["slug"] + ".html" + m.group(2), h)
+    h = s1(r'(property="og:url" content="[^"]*/pages/)[^"]+(")', lambda m: m.group(1) + d["slug"] + ".html" + m.group(2), h)
+    h = s1(r'(property="og:title" content="Monthly Investment Calculator ).+?( 2026)', lambda m: m.group(1) + c + m.group(2), h)
+    h = s1(r'(property="og:description" content="Free ).+?( monthly investment calculator\. See how a monthly investment grows at ~)[\d.]+(% historical returns\. Compounding, total gains in )[A-Z]+', lambda m: m.group(1) + c + m.group(2) + rs + m.group(3) + cur, h)
+    h = s1(r'("name":"Monthly Investment Calculator . )USA(","item":"[^"]*/pages/)[^"]+(")', lambda m: m.group(1) + c + m.group(2) + d["slug"] + ".html" + m.group(3), h)
+    h = s1(r'(<h1>Monthly Investment Calculator . )USA(</h1>)', lambda m: m.group(1) + c + m.group(2), h)
+    h = s1(r"(<p class=\"sub\">See how a monthly investment grows over time at )USA('s historical returns)", lambda m: m.group(1) + c + m.group(2), h)
+    h = s1(r'(<div class="fc-in"><span>)[^<]+(</span><input data-f="amount")', lambda m: m.group(1) + sym + m.group(2), h)
+    h = s1(r'(<input data-f="rate"[^>]*value=")[\d.]+(")', lambda m: m.group(1) + rs + m.group(2), h)
+    h = s1(r'(<strong data-o="headline">)[^<]+(</strong>)', lambda m: m.group(1) + N["headline"] + m.group(2), h)
+    h = s1(r'(<b data-o="a">)[^<]+(</b>)', lambda m: m.group(1) + N["a"] + m.group(2), h)
+    h = s1(r'(<b data-o="b">)[^<]+(</b>)', lambda m: m.group(1) + N["b"] + m.group(2), h)
+    h = s1(r'(<b data-o="total">)[^<]+(</b>)', lambda m: m.group(1) + N["total"] + m.group(2), h)
+    h = s1(r'(<i data-bar="a" style="width:)[\d.]+(%;background:#0e7a4a"></i><i data-bar="b" style="width:)[\d.]+(%)', lambda m: m.group(1) + N["barA"] + m.group(2) + N["barB"] + m.group(3), h)
+    h = s1(r'(\?cur=)USD(&tab=sip&amount=10000&rate=)[\d.]+(&years=15)', lambda m: m.group(1) + cur + m.group(2) + rs + m.group(3), h)
+    h = s1(r'("type":"sip","cur":")USD(","locale":")en-US(","def":\{"amount":10000,"rate":)[\d.]+(,"years":15\})', lambda m: m.group(1) + cur + m.group(2) + loc + m.group(3) + rs + m.group(4), h)
+    h = s1(r'(\?cur=)USD(&amp;tab=sip&amp;amount=10000&amp;rate=)[\d.]+(&amp;years=15)', lambda m: m.group(1) + cur + m.group(2) + rs + m.group(3), h)
+    h = enrich_sip(h, d, N, c, rs, note)
+    relhtml = "\n".join("        " + l for l in d["related"])
+    h = re.sub(r'(<h2>Related calculators</h2>\s*<ul>).*?(\s*</ul>)', lambda m: m.group(1) + "\n" + relhtml + "\n      </ul>", h, count=1, flags=re.S)
+    return h
+
+def enrich_sip(h, d, N, country, rs, note):
+    faq = [
+        ("How does a monthly investment work in %s?" % country,
+         "You invest a fixed amount each month into funds or an index. You buy more units when prices are low and fewer when high (cost averaging), and returns compound over time."),
+        ("What return can I expect in %s?" % country,
+         "Long-term historical equity returns are around %s%% per year here, though any single year can be sharply up or down. %s" % (rs, note)),
+        ("How much do I need to start investing in %s?" % country,
+         "Most platforms let you start small and increase later. Setting up an automatic monthly investment builds discipline and smooths out market timing."),
+        ("Should I invest a lump sum or monthly in %s?" % country,
+         "Investing monthly spreads your entry across market ups and downs (cost averaging) and is easier to budget. A lump sum can do better in a steadily rising market but carries more timing risk."),
+        ("Is investing better than a fixed deposit in %s?" % country,
+         "Investing targets higher long-term growth but carries market risk; fixed deposits are safer but usually return less. Many people hold both, matched to their time horizon."),
+    ]
+    secs = [
+        '    <section>\n      <h2>Where to invest in %s</h2>\n      <p>%s</p>\n      <p class="note">Returns are long-term historical averages, not guarantees - markets fall as well as rise. Invest for the long term and diversify.</p>\n    </section>' % (country, note),
+        '    <section>\n      <h2>The power of compounding</h2>\n      <p>Investing <strong>%s per month for 15 years</strong> at <strong>%s%%</strong> p.a.:</p>\n      <ul>\n        <li>Future value: <strong>%s</strong></li>\n        <li>Total invested: <strong>%s</strong></li>\n        <li>Estimated gains: <strong>%s</strong></li>\n      </ul>\n      <p>That is roughly <strong>%s&#215;</strong> your money - most of it from compounding. Scale the %s to your own monthly amount, and remember that starting earlier matters more than investing more.</p>\n    </section>' % (N["monthly"], rs, N["headline"], N["a"], N["b"], N["mult"], N["monthly"]),
+        '    <section>\n      <h2>How to start - and stay - invested in %s</h2>\n      <ul>\n        <li>Automate a fixed monthly amount so you invest through good months and bad.</li>\n        <li>Start small; you can raise the amount as your income grows.</li>\n        <li>Favour low-cost, diversified funds over picking individual stocks.</li>\n        <li>Stay invested through market dips - time in the market beats timing the market.</li>\n      </ul>\n    </section>' % country,
+        '    <section>\n      <h2>Frequently Asked Questions</h2>\n' + "\n".join('      <h3>%s</h3>\n      <p>%s</p>' % (q, a) for q, a in faq) + '\n    </section>',
+    ]
+    cta = re.search(r'    <a href="[^"]*" class="cta">[^<]*</a>', h).group(0)
+    content = "\n".join(secs) + "\n" + cta
+    h = re.sub(r'    <section>\s*<h2>Where to invest.*?    <a href="[^"]*" class="cta">[^<]*</a>', lambda m: content, h, count=1, flags=re.S)
+    ent = [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]
+    faqld = json.dumps({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": ent}, ensure_ascii=True, separators=(",", ":"))
+    h = re.sub(r'  <script type="application/ld\+json">\s*\{"@context":"https://schema.org","@type":"FAQPage".*?\}\s*</script>',
+               lambda m: '  <script type="application/ld+json">\n  ' + faqld + '\n  </script>', h, count=1, flags=re.S)
+    return h
+
+CLUSTERS = [("car_loan", render, "car"), ("sip", render_sip, "SIP")]
+
 def main():
     nums = compute_numbers()
     os.makedirs(OUT, exist_ok=True)
-    gen = skip = 0
-    for d in CARS:
-        if d.get("custom"):
-            skip += 1
-            continue
-        html = render(d, nums[d["slug"]])
-        with open(os.path.join(OUT, d["slug"] + ".html"), "w", encoding="utf-8", newline="") as f:
-            f.write(html)
-        gen += 1
-    print("generated %d templated car pages -> %s" % (gen, OUT))
-    print("left %d hand-differentiated pages untouched" % skip)
+    for key, fn, label in CLUSTERS:
+        gen = skip = 0
+        for d in REG.get(key, []):
+            if d.get("custom"):
+                skip += 1
+                continue
+            html = fn(d, nums[key][d["slug"]])
+            with open(os.path.join(OUT, d["slug"] + ".html"), "w", encoding="utf-8", newline="") as f:
+                f.write(html)
+            gen += 1
+        print("%-9s: generated %d templated pages, left %d custom untouched" % (label, gen, skip))
 
 if __name__ == "__main__":
     main()

@@ -732,5 +732,462 @@
    "slug": "vehicle-finance-south-africa",
    "custom": true
   }
+ ],
+ "sip": [
+  {
+   "slug": "sip-calculator-australia",
+   "country_article": "Australia",
+   "country": "Australia",
+   "cur_symbol": "$",
+   "cur_code": "AUD",
+   "locale": "en-AU",
+   "rate": 8.0,
+   "invest_note": "ASX 200 long-term ≈ 8–9% (incl. dividends). Super contribution cap A$30k/yr concessional. Platforms: CommSec, SelfWealth, Vanguard Personal Investor, Stake.",
+   "related": [
+    "<li><a href=\"fixed-deposit-calculator-australia.html\">Fixed Deposit Calculator – Australia</a></li>",
+    "<li><a href=\"home-loan-calculator-australia.html\">Home Loan Calculator – Australia</a></li>",
+    "<li><a href=\"sip-calculator-india-20-years.html\">SIP Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "sip-calculator-bahrain",
+   "country_article": "Bahrain",
+   "country": "Bahrain",
+   "cur_symbol": "BHD",
+   "cur_code": "BHD",
+   "locale": "en-BH",
+   "rate": 6.0,
+   "invest_note": "Bahrain All-Share Index long-term ≈ 5–7% BHD. Asset managers: Investcorp, SICO, NBB Capital. Bahrain is a regional Islamic finance hub.",
+   "related": [
+    "<li><a href=\"fixed-deposit-calculator-bahrain.html\">Fixed Deposit Calculator – Bahrain</a></li>",
+    "<li><a href=\"home-finance-calculator-bahrain.html\">Home Loan Calculator – Bahrain</a></li>",
+    "<li><a href=\"sip-calculator-india-20-years.html\">SIP Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "sip-calculator-brazil",
+   "country_article": "Brazil",
+   "country": "Brazil",
+   "cur_symbol": "R$",
+   "cur_code": "BRL",
+   "locale": "pt-BR",
+   "rate": 14.0,
+   "invest_note": "Ibovespa long-term ≈ 12–15% nominal. Tesouro Selic ≈ Selic rate (15%). Platforms: XP, Clear, Rico, Nubank Invest, Inter Invest. Tax: 15–22.5% on gains (progressive).",
+   "related": [
+    "<li><a href=\"fixed-deposit-calculator-brazil.html\">Fixed Deposit Calculator – Brazil</a></li>",
+    "<li><a href=\"financiamento-imobiliario-brasil.html\">Home Loan Calculator – Brazil</a></li>",
+    "<li><a href=\"sip-calculator-india-20-years.html\">SIP Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "sip-calculator-canada",
+   "country_article": "Canada",
+   "country": "Canada",
+   "cur_symbol": "$",
+   "cur_code": "CAD",
+   "locale": "en-CA",
+   "rate": 8.0,
+   "invest_note": "TFSA limit C$7k/yr (2026), RRSP up to 18% of income. TSX long-term ≈ 7–9%. S&P 500 via VFV or XUS. Platforms: Wealthsimple, Questrade, TD Direct Investing.",
+   "related": [
+    "<li><a href=\"fixed-deposit-calculator-canada.html\">Fixed Deposit Calculator – Canada</a></li>",
+    "<li><a href=\"mortgage-calculator-canada.html\">Home Loan Calculator – Canada</a></li>",
+    "<li><a href=\"sip-calculator-india-20-years.html\">SIP Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "sip-calculator-china",
+   "country_article": "China",
+   "country": "China",
+   "cur_symbol": "¥",
+   "cur_code": "CNY",
+   "locale": "zh-CN",
+   "rate": 8.0,
+   "invest_note": "CSI 300 long-term ≈ 6–9%. Platforms: Ant Fortune, Tiantian Fund, E Fund. Capital controls limit foreign investing; QDII funds provide limited access.",
+   "related": [
+    "<li><a href=\"fixed-deposit-calculator-china.html\">Fixed Deposit Calculator – China</a></li>",
+    "<li><a href=\"mortgage-calculator-china.html\">Home Loan Calculator – China</a></li>",
+    "<li><a href=\"sip-calculator-india-20-years.html\">SIP Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "sip-calculator-egypt",
+   "country_article": "Egypt",
+   "country": "Egypt",
+   "cur_symbol": "EGP",
+   "cur_code": "EGP",
+   "locale": "en-EG",
+   "rate": 20.0,
+   "invest_note": "EGX 30 long-term ≈ 18–22% nominal (EGP). Inflation high, so consider USD-linked or gold certificates. Providers: EFG Hermes, CI Capital.",
+   "related": [
+    "<li><a href=\"fixed-deposit-calculator-egypt.html\">Fixed Deposit Calculator – Egypt</a></li>",
+    "<li><a href=\"mortgage-calculator-egypt.html\">Home Loan Calculator – Egypt</a></li>",
+    "<li><a href=\"sip-calculator-india-20-years.html\">SIP Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "sip-calculator-eurozone",
+   "country_article": "the Eurozone",
+   "country": "Eurozone",
+   "cur_symbol": "€",
+   "cur_code": "EUR",
+   "locale": "en-IE",
+   "rate": 8.0,
+   "invest_note": "MSCI Europe long-term ≈ 7–8% p.a. ETF providers: iShares, Amundi, Xtrackers.",
+   "related": [
+    "<li><a href=\"fixed-deposit-calculator-eurozone.html\">Fixed Deposit Calculator – the Eurozone</a></li>",
+    "<li><a href=\"mortgage-calculator-eurozone.html\">Home Loan Calculator – the Eurozone</a></li>",
+    "<li><a href=\"sip-calculator-india-20-years.html\">SIP Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "sip-calculator-hong-kong",
+   "country_article": "Hong Kong",
+   "country": "Hong Kong",
+   "cur_symbol": "HK$",
+   "cur_code": "HKD",
+   "locale": "en-HK",
+   "rate": 7.0,
+   "invest_note": "Hang Seng Index long-term ≈ 5–8% HKD. Platforms: HSBC, Hang Seng Invest, Futu, Tiger Brokers, Interactive Brokers. MPF employer+employee 5%+5% mandatory.",
+   "related": [
+    "<li><a href=\"fixed-deposit-calculator-hong-kong.html\">Fixed Deposit Calculator – Hong Kong</a></li>",
+    "<li><a href=\"mortgage-calculator-hong-kong.html\">Home Loan Calculator – Hong Kong</a></li>",
+    "<li><a href=\"sip-calculator-india-20-years.html\">SIP Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "sip-calculator-japan",
+   "country_article": "Japan",
+   "country": "Japan",
+   "cur_symbol": "￥",
+   "cur_code": "JPY",
+   "locale": "ja-JP",
+   "rate": 6.0,
+   "invest_note": "Nikkei 225 long-term ≈ 5–7% nominal, global ETFs ≈ 7–10% in JPY terms. New NISA annual limit ¥3.6M (¥1.8M accumulation). Platforms: SBI Securities, Rakuten Securities, Monex.",
+   "related": [
+    "<li><a href=\"fixed-deposit-calculator-japan.html\">Fixed Deposit Calculator – Japan</a></li>",
+    "<li><a href=\"mortgage-calculator-japan.html\">Home Loan Calculator – Japan</a></li>",
+    "<li><a href=\"sip-calculator-india-20-years.html\">SIP Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "sip-calculator-kenya",
+   "country_article": "Kenya",
+   "country": "Kenya",
+   "cur_symbol": "Ksh",
+   "cur_code": "KES",
+   "locale": "en-KE",
+   "rate": 12.0,
+   "invest_note": "MMFs ≈ 9–13% p.a. (Cytonn, CIC, Sanlam). NSE long-term ≈ 10–13%. M-Shwari/KCB M-Pesa for short-term savings.",
+   "related": [
+    "<li><a href=\"fixed-deposit-calculator-kenya.html\">Fixed Deposit Calculator – Kenya</a></li>",
+    "<li><a href=\"home-loan-calculator-kenya.html\">Home Loan Calculator – Kenya</a></li>",
+    "<li><a href=\"sip-calculator-india-20-years.html\">SIP Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "sip-calculator-kuwait",
+   "country_article": "Kuwait",
+   "country": "Kuwait",
+   "cur_symbol": "KWD",
+   "cur_code": "KWD",
+   "locale": "en-KW",
+   "rate": 6.0,
+   "invest_note": "Boursa Kuwait Premier long-term ≈ 6–8% KWD. Major asset managers: NBK Capital, KFH Capital, KAMCO, Markaz. Retirement: PIFSS for nationals, private plans for expats.",
+   "related": [
+    "<li><a href=\"fixed-deposit-calculator-kuwait.html\">Fixed Deposit Calculator – Kuwait</a></li>",
+    "<li><a href=\"home-finance-calculator-kuwait.html\">Home Loan Calculator – Kuwait</a></li>",
+    "<li><a href=\"sip-calculator-india-20-years.html\">SIP Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "sip-calculator-malaysia",
+   "country_article": "Malaysia",
+   "country": "Malaysia",
+   "cur_symbol": "RM",
+   "cur_code": "MYR",
+   "locale": "ms-MY",
+   "rate": 8.0,
+   "invest_note": "ASB long-term ≈ 5–6% tax-free. KLCI long-term ≈ 7–8%. EPF contributions also key for retirement.",
+   "related": [
+    "<li><a href=\"fixed-deposit-calculator-malaysia.html\">Fixed Deposit Calculator – Malaysia</a></li>",
+    "<li><a href=\"home-loan-calculator-malaysia.html\">Home Loan Calculator – Malaysia</a></li>",
+    "<li><a href=\"sip-calculator-india-20-years.html\">SIP Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "sip-calculator-mexico",
+   "country_article": "Mexico",
+   "country": "Mexico",
+   "cur_symbol": "$",
+   "cur_code": "MXN",
+   "locale": "es-MX",
+   "rate": 11.0,
+   "invest_note": "IPC long-term ≈ 9–12% nominal. Afores: voluntary contributions on top of mandatory 6.5%. Platforms: GBM+, Actinver, Kuspit, Fintual, Bitso (crypto).",
+   "related": [
+    "<li><a href=\"fixed-deposit-calculator-mexico.html\">Fixed Deposit Calculator – Mexico</a></li>",
+    "<li><a href=\"credito-hipotecario-mexico.html\">Home Loan Calculator – Mexico</a></li>",
+    "<li><a href=\"sip-calculator-india-20-years.html\">SIP Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "sip-calculator-new-zealand",
+   "country_article": "New Zealand",
+   "country": "New Zealand",
+   "cur_symbol": "$",
+   "cur_code": "NZD",
+   "locale": "en-NZ",
+   "rate": 8.0,
+   "invest_note": "KiwiSaver growth funds long-term ≈ 7–8% NZD. Default providers: ANZ, ASB, BNZ, Westpac, Kiwi Wealth. Plus Simplicity, Milford, Generate, Sharesies.",
+   "related": [
+    "<li><a href=\"fixed-deposit-calculator-new-zealand.html\">Fixed Deposit Calculator – New Zealand</a></li>",
+    "<li><a href=\"mortgage-calculator-new-zealand.html\">Home Loan Calculator – New Zealand</a></li>",
+    "<li><a href=\"sip-calculator-india-20-years.html\">SIP Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "sip-calculator-nigeria",
+   "country_article": "Nigeria",
+   "country": "Nigeria",
+   "cur_symbol": "₦",
+   "cur_code": "NGN",
+   "locale": "en-NG",
+   "rate": 18.0,
+   "invest_note": "NGX All-Share long-term ≈ 15–20% (nominal, NGN). Many investors use USD funds via Cowrywise, Bamboo to hedge inflation.",
+   "related": [
+    "<li><a href=\"fixed-deposit-calculator-nigeria.html\">Fixed Deposit Calculator – Nigeria</a></li>",
+    "<li><a href=\"loan-calculator-nigeria.html\">Home Loan Calculator – Nigeria</a></li>",
+    "<li><a href=\"sip-calculator-india-20-years.html\">SIP Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "sip-calculator-qatar",
+   "country_article": "Qatar",
+   "country": "Qatar",
+   "cur_symbol": "QAR",
+   "cur_code": "QAR",
+   "locale": "en-QA",
+   "rate": 6.0,
+   "invest_note": "QE Index long-term ≈ 5–7% QAR. Many expats invest via brokers in UAE (EFG Hermes, ADCB Securities). QFC-licensed platforms also available.",
+   "related": [
+    "<li><a href=\"fixed-deposit-calculator-qatar.html\">Fixed Deposit Calculator – Qatar</a></li>",
+    "<li><a href=\"home-finance-calculator-qatar.html\">Home Loan Calculator – Qatar</a></li>",
+    "<li><a href=\"sip-calculator-india-20-years.html\">SIP Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "sip-calculator-russia",
+   "country_article": "Russia",
+   "country": "Russia",
+   "cur_symbol": "₽",
+   "cur_code": "RUB",
+   "locale": "ru-RU",
+   "rate": 18.0,
+   "invest_note": "MOEX long-term ≈ 15–20% nominal. OFZ (government bonds) yields ≈ 15%. Many Russians hold gold or foreign-currency deposits. Platforms: Tinkoff Investments, Sber Invest, Finam.",
+   "related": [
+    "<li><a href=\"fixed-deposit-calculator-russia.html\">Fixed Deposit Calculator – Russia</a></li>",
+    "<li><a href=\"mortgage-calculator-russia.html\">Home Loan Calculator – Russia</a></li>",
+    "<li><a href=\"sip-calculator-india-20-years.html\">SIP Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "sip-calculator-saudi-arabia",
+   "country_article": "Saudi Arabia",
+   "country": "Saudi Arabia",
+   "cur_symbol": "SAR",
+   "cur_code": "SAR",
+   "locale": "en-SA",
+   "rate": 10.0,
+   "invest_note": "Tadawul TASI long-term ≈ 9–11%. Shariah-screened indexes popular. Al Rajhi Capital, SNB Capital are major asset managers.",
+   "related": [
+    "<li><a href=\"fixed-deposit-calculator-saudi-arabia.html\">Fixed Deposit Calculator – Saudi Arabia</a></li>",
+    "<li><a href=\"home-finance-calculator-saudi-arabia.html\">Home Loan Calculator – Saudi Arabia</a></li>",
+    "<li><a href=\"sip-calculator-india-20-years.html\">SIP Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "sip-calculator-singapore",
+   "country_article": "Singapore",
+   "country": "Singapore",
+   "cur_symbol": "$",
+   "cur_code": "SGD",
+   "locale": "en-SG",
+   "rate": 7.0,
+   "invest_note": "STI long-term ≈ 5–7%. Most Singaporeans use global ETFs (VWRA, CSPX) via Endowus, SYFE, Interactive Brokers. CPF SA earns 4%/yr guaranteed.",
+   "related": [
+    "<li><a href=\"fixed-deposit-calculator-singapore.html\">Fixed Deposit Calculator – Singapore</a></li>",
+    "<li><a href=\"home-loan-calculator-singapore.html\">Home Loan Calculator – Singapore</a></li>",
+    "<li><a href=\"sip-calculator-india-20-years.html\">SIP Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "sip-calculator-south-africa",
+   "country_article": "South Africa",
+   "country": "South Africa",
+   "cur_symbol": "R",
+   "cur_code": "ZAR",
+   "locale": "en-ZA",
+   "rate": 11.0,
+   "invest_note": "TFSA limit R36k/year, R500k lifetime. JSE Top 40 long-term ≈ 10–12%. Providers: EasyEquities, Satrix, Allan Gray, Coronation.",
+   "related": [
+    "<li><a href=\"fixed-deposit-calculator-south-africa.html\">Fixed Deposit Calculator – South Africa</a></li>",
+    "<li><a href=\"home-loan-calculator-south-africa.html\">Home Loan Calculator – South Africa</a></li>",
+    "<li><a href=\"sip-calculator-india-20-years.html\">SIP Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "sip-calculator-south-korea",
+   "country_article": "South Korea",
+   "country": "South Korea",
+   "cur_symbol": "₩",
+   "cur_code": "KRW",
+   "locale": "ko-KR",
+   "rate": 7.0,
+   "invest_note": "KOSPI long-term ≈ 5–8% KRW. Major AMCs: Samsung, Mirae Asset, KB, Shinhan. Retail platforms: Toss Invest, Kakao Pay Securities. IRP gets tax deduction up to 9M KRW/yr.",
+   "related": [
+    "<li><a href=\"fixed-deposit-calculator-south-korea.html\">Fixed Deposit Calculator – South Korea</a></li>",
+    "<li><a href=\"mortgage-calculator-south-korea.html\">Home Loan Calculator – South Korea</a></li>",
+    "<li><a href=\"sip-calculator-india-20-years.html\">SIP Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "sip-calculator-taiwan",
+   "country_article": "Taiwan",
+   "country": "Taiwan",
+   "cur_symbol": "$",
+   "cur_code": "TWD",
+   "locale": "zh-TW",
+   "rate": 7.0,
+   "invest_note": "TAIEX long-term ≈ 7–9% TWD. ETF leaders: Yuanta (00878, 0050), Cathay (00929), Fubon. Many retail investors use SIPs into dividend ETFs.",
+   "related": [
+    "<li><a href=\"fixed-deposit-calculator-taiwan.html\">Fixed Deposit Calculator – Taiwan</a></li>",
+    "<li><a href=\"mortgage-calculator-taiwan.html\">Home Loan Calculator – Taiwan</a></li>",
+    "<li><a href=\"sip-calculator-india-20-years.html\">SIP Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "sip-calculator-thailand",
+   "country_article": "Thailand",
+   "country": "Thailand",
+   "cur_symbol": "฿",
+   "cur_code": "THB",
+   "locale": "th-TH",
+   "rate": 7.0,
+   "invest_note": "SET Index long-term ≈ 6–9% THB. Major AMCs: KAsset, SCBAM, BBLAM, UOBAM, TISCO. Retirement (RMF) and long-term (SSF) funds are tax-deductible.",
+   "related": [
+    "<li><a href=\"fixed-deposit-calculator-thailand.html\">Fixed Deposit Calculator – Thailand</a></li>",
+    "<li><a href=\"home-loan-calculator-thailand.html\">Home Loan Calculator – Thailand</a></li>",
+    "<li><a href=\"sip-calculator-india-20-years.html\">SIP Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "sip-calculator-turkey",
+   "country_article": "Turkey",
+   "country": "Turkey",
+   "cur_symbol": "₺",
+   "cur_code": "TRY",
+   "locale": "tr-TR",
+   "rate": 35.0,
+   "invest_note": "BIST 100 nominal ≈ 35–45% p.a. (but TRY inflation is ~35%, so real returns are modest). Many Turks use gold, USD, or Eurobond funds to hedge. Platforms: Garanti BBVA, İş Yatırım.",
+   "related": [
+    "<li><a href=\"fixed-deposit-calculator-turkey.html\">Fixed Deposit Calculator – Turkey</a></li>",
+    "<li><a href=\"konut-kredisi-hesaplama.html\">Home Loan Calculator – Turkey</a></li>",
+    "<li><a href=\"sip-calculator-india-20-years.html\">SIP Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "sip-calculator-uae",
+   "country_article": "the UAE",
+   "country": "UAE",
+   "cur_symbol": "AED",
+   "cur_code": "AED",
+   "locale": "en-AE",
+   "rate": 9.0,
+   "invest_note": "ADX and DFM long-term ≈ 8–10%. International ETFs via Interactive Brokers, Sarwa, StashAway popular for expats.",
+   "related": [
+    "<li><a href=\"fixed-deposit-calculator-uae.html\">Fixed Deposit Calculator – the UAE</a></li>",
+    "<li><a href=\"retirement-calculator-uae.html\">Retirement Calculator – the UAE</a></li>",
+    "<li><a href=\"mortgage-calculator-uae.html\">Home Loan Calculator – the UAE</a></li>",
+    "<li><a href=\"sip-calculator-india-20-years.html\">SIP Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "sip-calculator-uk",
+   "country_article": "the UK",
+   "country": "UK",
+   "cur_symbol": "£",
+   "cur_code": "GBP",
+   "locale": "en-GB",
+   "rate": 9.0,
+   "invest_note": "ISA allowance £20k/year tax-free. Providers: Vanguard, Hargreaves Lansdown, AJ Bell. FTSE 100 historical ≈ 7%.",
+   "related": [
+    "<li><a href=\"fixed-deposit-calculator-uk.html\">Fixed Deposit Calculator – the UK</a></li>",
+    "<li><a href=\"retirement-calculator-uk.html\">Retirement Calculator – the UK</a></li>",
+    "<li><a href=\"mortgage-calculator-uk.html\">Home Loan Calculator – the UK</a></li>",
+    "<li><a href=\"sip-calculator-india-20-years.html\">SIP Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "sip-calculator-usa",
+   "country_article": "the USA",
+   "country": "USA",
+   "cur_symbol": "$",
+   "cur_code": "USD",
+   "locale": "en-US",
+   "rate": 10.0,
+   "invest_note": "Vanguard VOO/VTI, Fidelity FZROX. S&P 500 historical average ≈ 10% nominal. Use 401(k), Roth IRA for tax advantages.",
+   "related": [
+    "<li><a href=\"fixed-deposit-calculator-usa.html\">Fixed Deposit Calculator – the USA</a></li>",
+    "<li><a href=\"retirement-calculator-usa.html\">Retirement Calculator – the USA</a></li>",
+    "<li><a href=\"mortgage-calculator-usa.html\">Home Loan Calculator – the USA</a></li>",
+    "<li><a href=\"sip-calculator-india-20-years.html\">SIP Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "sip-calculator-vietnam",
+   "country_article": "Vietnam",
+   "country": "Vietnam",
+   "cur_symbol": "₫",
+   "cur_code": "VND",
+   "locale": "vi-VN",
+   "rate": 10.0,
+   "invest_note": "VN-Index long-term ≈ 10–14% VND (high volatility). Fund managers: Dragon Capital, VinaCapital, Techcom Capital, SSI Asset Management. Retail platforms: Finhay, Fincorp, Tikop.",
+   "related": [
+    "<li><a href=\"fixed-deposit-calculator-vietnam.html\">Fixed Deposit Calculator – Vietnam</a></li>",
+    "<li><a href=\"home-loan-calculator-vietnam.html\">Home Loan Calculator – Vietnam</a></li>",
+    "<li><a href=\"sip-calculator-india-20-years.html\">SIP Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "sip-calculator-1-crore",
+   "custom": true
+  },
+  {
+   "slug": "sip-calculator-bangladesh",
+   "custom": true
+  },
+  {
+   "slug": "sip-calculator-india-20-years",
+   "custom": true
+  },
+  {
+   "slug": "sip-calculator-india",
+   "custom": true
+  },
+  {
+   "slug": "sip-calculator-indonesia",
+   "custom": true
+  },
+  {
+   "slug": "sip-calculator-pakistan",
+   "custom": true
+  },
+  {
+   "slug": "sip-calculator-philippines",
+   "custom": true
+  },
+  {
+   "slug": "sip-calculator-sri-lanka",
+   "custom": true
+  }
  ]
 }
