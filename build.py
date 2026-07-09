@@ -39,6 +39,8 @@ T = _tpl("car-loan")               # car skeleton template
 SIP_T = _tpl("sip")                # sip skeleton template
 # reuse the car template's own reducing-balance answer (keeps its unicode correct)
 REDBAL = re.search(r'<h3>How is car loan installment calculated[^<]*</h3>\s*<p>(.+?)</p>', T, re.S).group(1).strip()
+FD_T = _tpl("fixed-deposit")       # fixed-deposit skeleton template
+FDCALC = re.search(r'<h3>How is FD maturity calculated[^<]*</h3>\s*<p>(.+?)</p>', FD_T, re.S).group(1).strip()
 
 # ---- locale-accurate money via Node (same formatter as the live pages) ----
 NODE = r"""
@@ -47,7 +49,8 @@ const doc=JSON.parse(fs.readFileSync(process.argv[1],'utf8'));
 function M(loc,cur){const nf=new Intl.NumberFormat(loc,{style:'currency',currency:cur,maximumFractionDigits:0});return v=>nf.format(Math.round(v));}
 function emi(P,r,y){const n=Math.round(y*12),m=r/1200;let e;if(m===0){e=P/n;}else{const g=Math.pow(1+m,n);e=P*m*g/(g-1);}const t=e*n;return{e,t,interest:t-P};}
 function sipfv(P,r,y){const i=r/1200,n=Math.round(y*12),inv=P*n,fv=(i===0?inv:P*((Math.pow(1+i,n)-1)/i)*(1+i));return{fv,inv,gain:fv-inv};}
-const out={car_loan:{},sip:{}};
+function fddep(P,r,y){const k=4,Mv=P*Math.pow(1+r/(100*k),k*y);return{M:Mv,a:P,b:Mv-P};}
+const out={car_loan:{},sip:{},fixed_deposit:{}};
 for(const d of (doc.car_loan||[])){
   if(d.custom) continue;
   const f=M(d.locale,d.cur_code);
@@ -63,6 +66,13 @@ for(const d of (doc.sip||[])){
   const x=sipfv(10000,d.rate,15),barA=Math.max(2,Math.min(98,x.inv/x.fv*100));
   out.sip[d.slug]={monthly:f(10000),headline:f(x.fv),a:f(x.inv),b:f(x.gain),total:f(x.fv),
     barA:barA.toFixed(1),barB:(100-barA).toFixed(1),mult:(x.fv/x.inv).toFixed(1)};
+}
+for(const d of (doc.fixed_deposit||[])){
+  if(d.custom) continue;
+  const f=M(d.locale,d.cur_code);
+  const x=fddep(100000,d.rate,5),barA=Math.max(2,Math.min(98,x.a/x.M*100));
+  out.fixed_deposit[d.slug]={headline:f(x.M),a:f(x.a),b:f(x.b),total:f(x.M),
+    barA:barA.toFixed(1),barB:(100-barA).toFixed(1),hundredk:f(100000),mat:f(x.M),intr:f(x.b)};
 }
 process.stdout.write(JSON.stringify(out));
 """
@@ -219,7 +229,65 @@ def enrich_sip(h, d, N, country, rs, note):
                lambda m: '  <script type="application/ld+json">\n  ' + faqld + '\n  </script>', h, count=1, flags=re.S)
     return h
 
-CLUSTERS = [("car_loan", render, "car"), ("sip", render_sip, "SIP")]
+# ============================ FIXED DEPOSIT ============================
+def render_fd(d, N):
+    c = d["country"]; art = d["country_article"]; lc = c.lower()
+    sym = d["cur_symbol"]; cur = d["cur_code"]; loc = d["locale"]; rate = d["rate"]
+    rs = "%g" % rate; r1 = "%.1f" % rate; r2 = "%.2f" % rate; note = d["fd_note"]
+    h = FD_T
+    h = s1(r'(<title>Fixed Deposit Calculator in ).+?( . Maturity)', lambda m: m.group(1) + art + m.group(2), h)
+    h = s1(r'(total interest earned in )[^ ]+( for ).+?(, using current bank)', lambda m: m.group(1) + sym + m.group(2) + art + m.group(3), h)
+    h = s1(r'(fixed deposit calculator )usa(, fd calculator )usa(, term deposit )usa(, fd interest rate )usa( 2026, fd maturity calculator)', lambda m: m.group(1) + lc + m.group(2) + lc + m.group(3) + lc + m.group(4) + lc + m.group(5), h)
+    h = s1(r'(rel="canonical" href="[^"]*/pages/)[^"]+(")', lambda m: m.group(1) + d["slug"] + ".html" + m.group(2), h)
+    h = s1(r'(property="og:url" content="[^"]*/pages/)[^"]+(")', lambda m: m.group(1) + d["slug"] + ".html" + m.group(2), h)
+    h = s1(r'(property="og:title" content="Fixed Deposit Calculator ).+?( 2026 . FD Maturity)', lambda m: m.group(1) + c + m.group(2), h)
+    h = s1(r'(property="og:description" content="Free ).+?( fixed deposit calculator\. Maturity value and interest at ~)[\d.]+(% p\.a\. \(quarterly compounding\) in )[A-Z]+', lambda m: m.group(1) + c + m.group(2) + r1 + m.group(3) + cur, h)
+    h = s1(r'("name":"Fixed Deposit Calculator . )USA(","item":"[^"]*/pages/)[^"]+(")', lambda m: m.group(1) + c + m.group(2) + d["slug"] + ".html" + m.group(3), h)
+    h = s1(r'(<h1>Fixed Deposit Calculator . )USA(</h1>)', lambda m: m.group(1) + c + m.group(2), h)
+    h = s1(r'(fixed-deposit maturity value and interest in )USD( at current rates)', lambda m: m.group(1) + cur + m.group(2), h)
+    h = s1(r'(<div class="fc-in"><span>)[^<]+(</span><input data-f="amount")', lambda m: m.group(1) + sym + m.group(2), h)
+    h = s1(r'(<input data-f="rate"[^>]*value=")[\d.]+(")', lambda m: m.group(1) + rs + m.group(2), h)
+    h = s1(r'(<strong data-o="headline">)[^<]+(</strong>)', lambda m: m.group(1) + N["headline"] + m.group(2), h)
+    h = s1(r'(<b data-o="a">)[^<]+(</b>)', lambda m: m.group(1) + N["a"] + m.group(2), h)
+    h = s1(r'(<b data-o="b">)[^<]+(</b>)', lambda m: m.group(1) + N["b"] + m.group(2), h)
+    h = s1(r'(data-o="total">)[^<]+(<)', lambda m: m.group(1) + N["total"] + m.group(2), h)
+    h = s1(r'(<i data-bar="a" style="width:)[\d.]+(%;background:#0e7a4a"></i><i data-bar="b" style="width:)[\d.]+(%)', lambda m: m.group(1) + N["barA"] + m.group(2) + N["barB"] + m.group(3), h)
+    h = s1(r'(\?cur=)USD(&tab=fd&amount=100000&rate=)[\d.]+(&years=5)', lambda m: m.group(1) + cur + m.group(2) + rs + m.group(3), h)
+    h = s1(r'("type":"fd","cur":")USD(","locale":")en-US(","def":\{"amount":100000,"rate":)[\d.]+(,"years":5\})', lambda m: m.group(1) + cur + m.group(2) + loc + m.group(3) + rs + m.group(4), h)
+    h = s1(r'(\?cur=)USD(&amp;tab=fd&amp;amount=100000&amp;rate=)[\d.]+(&amp;years=5)', lambda m: m.group(1) + cur + m.group(2) + r1 + m.group(3), h)
+    h = enrich_fd(h, d, N, c, rs, r2, note)
+    relhtml = "\n".join("        " + l for l in d["related"])
+    h = re.sub(r'(<h2>Related calculators</h2>\s*<ul>).*?(\s*</ul>)', lambda m: m.group(1) + "\n" + relhtml + "\n      </ul>", h, count=1, flags=re.S)
+    return h
+
+def enrich_fd(h, d, N, country, rs, r2, note):
+    faq = [
+        ("How is FD maturity calculated in %s?" % country, FDCALC),
+        ("What is the current FD rate in %s?" % country,
+         "As a 2026 reference, fixed-deposit rates are around %s%% per year, varying by bank and tenure. %s" % (rs, note)),
+        ("Is FD interest taxable in %s?" % country,
+         "In most countries FD interest is taxable as income; some offer tax-advantaged or senior-citizen options. Check your local rules - the calculator shows the pre-tax maturity value."),
+        ("Is a fixed deposit safe in %s?" % country,
+         "Fixed deposits carry no market risk and are often protected by a deposit-insurance scheme up to a limit. They trade higher safety for lower long-term returns than equities."),
+        ("Should I choose a fixed deposit or invest instead in %s?" % country,
+         "A fixed deposit gives a guaranteed return and suits money you cannot afford to risk. Investing targets higher long-term growth but can fall in value. Many people keep an FD for safety and invest separately for growth."),
+    ]
+    secs = [
+        '    <section>\n      <h2>Fixed deposit rates in %s (2026)</h2>\n      <p>%s</p>\n      <p class="note">Reference figures, ~2026. FD interest is often taxable and rates vary by bank and tenure - verify the current rate before depositing.</p>\n    </section>' % (country, note),
+        '    <section>\n      <h2>Worked example</h2>\n      <p>For every <strong>%s</strong> deposited at <strong>%s%%</strong> for <strong>5 years</strong> (quarterly compounding):</p>\n      <ul>\n        <li>Maturity value: <strong>%s</strong></li>\n        <li>Interest earned: <strong>%s</strong></li>\n      </ul>\n      <p>Scale to your deposit amount. Longer tenures and higher rates grow the maturity value; compare banks before locking in.</p>\n    </section>' % (N["hundredk"], r2, N["mat"], N["intr"]),
+        '    <section>\n      <h2>How to get the best fixed-deposit return in %s</h2>\n      <ul>\n        <li>Compare several banks - smaller and digital banks often pay more than the big high-street names.</li>\n        <li>Ladder your deposits across different tenures so some matures regularly and you can reinvest at new rates.</li>\n        <li>Check how often interest compounds; more frequent compounding grows the maturity value.</li>\n        <li>Factor in tax on the interest, and compare against short-term government bills or bonds.</li>\n      </ul>\n    </section>' % country,
+        '    <section>\n      <h2>Frequently Asked Questions</h2>\n' + "\n".join('      <h3>%s</h3>\n      <p>%s</p>' % (q, a) for q, a in faq) + '\n    </section>',
+    ]
+    cta = re.search(r'    <a href="[^"]*" class="cta">[^<]*</a>', h).group(0)
+    content = "\n".join(secs) + "\n" + cta
+    h = re.sub(r'    <section>\s*<h2>Local FD rates.*?    <a href="[^"]*" class="cta">[^<]*</a>', lambda m: content, h, count=1, flags=re.S)
+    ent = [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]
+    faqld = json.dumps({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": ent}, ensure_ascii=True, separators=(",", ":"))
+    h = re.sub(r'  <script type="application/ld\+json">\s*\{"@context":"https://schema.org","@type":"FAQPage".*?\}\s*</script>',
+               lambda m: '  <script type="application/ld+json">\n  ' + faqld + '\n  </script>', h, count=1, flags=re.S)
+    return h
+
+CLUSTERS = [("car_loan", render, "car"), ("sip", render_sip, "SIP"), ("fixed_deposit", render_fd, "FD")]
 
 def main():
     nums = compute_numbers()

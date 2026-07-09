@@ -1189,5 +1189,520 @@
    "slug": "sip-calculator-sri-lanka",
    "custom": true
   }
+ ],
+ "fixed_deposit": [
+  {
+   "slug": "fixed-deposit-calculator-australia",
+   "country_article": "Australia",
+   "country": "Australia",
+   "cur_symbol": "$",
+   "cur_code": "AUD",
+   "locale": "en-AU",
+   "rate": 4.5,
+   "fd_note": "Term deposit rates ≈ 4.2–4.8% p.a. for 1-2 year terms. Top rates at Macquarie, Judo Bank, Bank of Sydney. Compare on Canstar, Mozo.",
+   "related": [
+    "<li><a href=\"sip-calculator-australia.html\">SIP Calculator – Australia</a></li>",
+    "<li><a href=\"home-loan-calculator-australia.html\">Home Loan Calculator – Australia</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-india.html\">Fixed Deposit Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "fixed-deposit-calculator-bahrain",
+   "country_article": "Bahrain",
+   "country": "Bahrain",
+   "cur_symbol": "BHD",
+   "cur_code": "BHD",
+   "locale": "en-BH",
+   "rate": 4.0,
+   "fd_note": "Term deposit rates ≈ 3.5–4.5% p.a. Top yields at NBB, BBK, Ahli United for 1+ year tenures.",
+   "related": [
+    "<li><a href=\"sip-calculator-bahrain.html\">SIP Calculator – Bahrain</a></li>",
+    "<li><a href=\"home-finance-calculator-bahrain.html\">Home Loan Calculator – Bahrain</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-india.html\">Fixed Deposit Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "fixed-deposit-calculator-bangladesh",
+   "country_article": "Bangladesh",
+   "country": "Bangladesh",
+   "cur_symbol": "BDT",
+   "cur_code": "BDT",
+   "locale": "en-BD",
+   "rate": 10.5,
+   "fd_note": "FDR rates ≈ 9–11% p.a. for 3+ year tenures. Islamic banks offer Mudarabah-based alternatives with similar profit rates.",
+   "related": [
+    "<li><a href=\"sip-calculator-bangladesh.html\">SIP Calculator – Bangladesh</a></li>",
+    "<li><a href=\"home-loan-calculator-bangladesh.html\">Home Loan Calculator – Bangladesh</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-india.html\">Fixed Deposit Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "fixed-deposit-calculator-brazil",
+   "country_article": "Brazil",
+   "country": "Brazil",
+   "cur_symbol": "R$",
+   "cur_code": "BRL",
+   "locale": "pt-BR",
+   "rate": 13.5,
+   "fd_note": "CDBs ≈ 100–120% of CDI (≈ 13–16% p.a.). LCI/LCA tax-free on real estate/agro. Tesouro Selic ≈ Selic. Platforms: all major broker apps.",
+   "related": [
+    "<li><a href=\"sip-calculator-brazil.html\">SIP Calculator – Brazil</a></li>",
+    "<li><a href=\"financiamento-imobiliario-brasil.html\">Home Loan Calculator – Brazil</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-india.html\">Fixed Deposit Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "fixed-deposit-calculator-canada",
+   "country_article": "Canada",
+   "country": "Canada",
+   "cur_symbol": "$",
+   "cur_code": "CAD",
+   "locale": "en-CA",
+   "rate": 4.0,
+   "fd_note": "GIC rates ≈ 3.5–4.25% p.a. for 1-5 year terms. Top rates at EQ Bank, Oaken, Tangerine. Tax-free inside a TFSA.",
+   "related": [
+    "<li><a href=\"sip-calculator-canada.html\">SIP Calculator – Canada</a></li>",
+    "<li><a href=\"mortgage-calculator-canada.html\">Home Loan Calculator – Canada</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-india.html\">Fixed Deposit Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "fixed-deposit-calculator-china",
+   "country_article": "China",
+   "country": "China",
+   "cur_symbol": "¥",
+   "cur_code": "CNY",
+   "locale": "zh-CN",
+   "rate": 2.0,
+   "fd_note": "Time deposit rates ≈ 1.5–2.5% p.a. for 1-5 year terms. Large state banks lower; small/regional banks slightly higher. Rates have fallen significantly over the past 3 years.",
+   "related": [
+    "<li><a href=\"sip-calculator-china.html\">SIP Calculator – China</a></li>",
+    "<li><a href=\"mortgage-calculator-china.html\">Home Loan Calculator – China</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-india.html\">Fixed Deposit Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "fixed-deposit-calculator-egypt",
+   "country_article": "Egypt",
+   "country": "Egypt",
+   "cur_symbol": "EGP",
+   "cur_code": "EGP",
+   "locale": "en-EG",
+   "rate": 18.5,
+   "fd_note": "Gold certificates and standard savings certs ≈ 18–23% p.a. (yields dropped after 2024–2026 rate cuts). 3-year tenure most common. Issued by NBE, Banque Misr.",
+   "related": [
+    "<li><a href=\"sip-calculator-egypt.html\">SIP Calculator – Egypt</a></li>",
+    "<li><a href=\"mortgage-calculator-egypt.html\">Home Loan Calculator – Egypt</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-india.html\">Fixed Deposit Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "fixed-deposit-calculator-eurozone",
+   "country_article": "the Eurozone",
+   "country": "Eurozone",
+   "cur_symbol": "€",
+   "cur_code": "EUR",
+   "locale": "en-IE",
+   "rate": 2.5,
+   "fd_note": "Fixed deposit rates ≈ 2.5–3.5% p.a. Higher rates in Central/Eastern Europe. Check Raisin or Scalable for comparison.",
+   "related": [
+    "<li><a href=\"sip-calculator-eurozone.html\">SIP Calculator – the Eurozone</a></li>",
+    "<li><a href=\"mortgage-calculator-eurozone.html\">Home Loan Calculator – the Eurozone</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-india.html\">Fixed Deposit Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "fixed-deposit-calculator-hong-kong",
+   "country_article": "Hong Kong",
+   "country": "Hong Kong",
+   "cur_symbol": "HK$",
+   "cur_code": "HKD",
+   "locale": "en-HK",
+   "rate": 2.5,
+   "fd_note": "HKD time deposit ≈ 2.5–3.5% for 1-yr. USD deposits often higher. Top rates at virtual banks: ZA Bank, Mox, livi, WeLab.",
+   "related": [
+    "<li><a href=\"sip-calculator-hong-kong.html\">SIP Calculator – Hong Kong</a></li>",
+    "<li><a href=\"mortgage-calculator-hong-kong.html\">Home Loan Calculator – Hong Kong</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-india.html\">Fixed Deposit Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "fixed-deposit-calculator-india",
+   "country_article": "India",
+   "country": "India",
+   "cur_symbol": "₹",
+   "cur_code": "INR",
+   "locale": "en-IN",
+   "rate": 6.5,
+   "fd_note": "Bank FDs: SBI, HDFC, ICICI typically 6–7% p.a. for 5+ year tenures. Senior citizens get +0.5%. Interest is taxable as per slab.",
+   "related": [
+    "<li><a href=\"sip-calculator-india.html\">SIP Calculator – India</a></li>",
+    "<li><a href=\"home-loan-emi-calculator-india.html\">Home Loan Calculator – India</a></li>",
+    "<li><a href=\"retirement-calculator-india.html\">Retirement Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "fixed-deposit-calculator-indonesia",
+   "country_article": "Indonesia",
+   "country": "Indonesia",
+   "cur_symbol": "Rp",
+   "cur_code": "IDR",
+   "locale": "id-ID",
+   "rate": 5.2,
+   "fd_note": "Deposito rates ≈ 4.5–5.5% p.a. at major banks. LPS guarantee rate (Oct 2025): 4.00% for conventional, 6.25% for rural banks.",
+   "related": [
+    "<li><a href=\"sip-calculator-indonesia.html\">SIP Calculator – Indonesia</a></li>",
+    "<li><a href=\"kpr-calculator-indonesia.html\">Home Loan Calculator – Indonesia</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-india.html\">Fixed Deposit Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "fixed-deposit-calculator-japan",
+   "country_article": "Japan",
+   "country": "Japan",
+   "cur_symbol": "￥",
+   "cur_code": "JPY",
+   "locale": "ja-JP",
+   "rate": 0.4,
+   "fd_note": "Time deposit rates ≈ 0.3–0.6% p.a. for 1-5 year terms. Rates edging up from historic zero-lower-bound. Top rates at online banks: SBI Shinsei, Aeon Bank.",
+   "related": [
+    "<li><a href=\"sip-calculator-japan.html\">SIP Calculator – Japan</a></li>",
+    "<li><a href=\"mortgage-calculator-japan.html\">Home Loan Calculator – Japan</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-india.html\">Fixed Deposit Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "fixed-deposit-calculator-kenya",
+   "country_article": "Kenya",
+   "country": "Kenya",
+   "cur_symbol": "Ksh",
+   "cur_code": "KES",
+   "locale": "en-KE",
+   "rate": 9.5,
+   "fd_note": "FD rates ≈ 7–12% p.a. depending on bank. Treasury bills (91/182/364 day) often pay similar or better.",
+   "related": [
+    "<li><a href=\"sip-calculator-kenya.html\">SIP Calculator – Kenya</a></li>",
+    "<li><a href=\"home-loan-calculator-kenya.html\">Home Loan Calculator – Kenya</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-india.html\">Fixed Deposit Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "fixed-deposit-calculator-kuwait",
+   "country_article": "Kuwait",
+   "country": "Kuwait",
+   "cur_symbol": "KWD",
+   "cur_code": "KWD",
+   "locale": "en-KW",
+   "rate": 3.2,
+   "fd_note": "FD rates ≈ 3–4% p.a. Islamic profit-sharing (Mudarabah) similar. Top rates typically at NBK, Gulf Bank, KIB.",
+   "related": [
+    "<li><a href=\"sip-calculator-kuwait.html\">SIP Calculator – Kuwait</a></li>",
+    "<li><a href=\"home-finance-calculator-kuwait.html\">Home Loan Calculator – Kuwait</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-india.html\">Fixed Deposit Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "fixed-deposit-calculator-malaysia",
+   "country_article": "Malaysia",
+   "country": "Malaysia",
+   "cur_symbol": "RM",
+   "cur_code": "MYR",
+   "locale": "ms-MY",
+   "rate": 3.5,
+   "fd_note": "FD rates ≈ 3.5–4% p.a. for 12+ months. PIDM insured up to RM250k. Islamic Commodity Murabaha deposits similar rates.",
+   "related": [
+    "<li><a href=\"sip-calculator-malaysia.html\">SIP Calculator – Malaysia</a></li>",
+    "<li><a href=\"home-loan-calculator-malaysia.html\">Home Loan Calculator – Malaysia</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-india.html\">Fixed Deposit Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "fixed-deposit-calculator-mexico",
+   "country_article": "Mexico",
+   "country": "Mexico",
+   "cur_symbol": "$",
+   "cur_code": "MXN",
+   "locale": "es-MX",
+   "rate": 9.5,
+   "fd_note": "Pagaré rates ≈ 8–10% p.a. for 1-yr tenures. CETES (28/91/182/364d) via Cetesdirecto ≈ 9%. Top bank rates at Banco Azteca, Banco del Bajío.",
+   "related": [
+    "<li><a href=\"sip-calculator-mexico.html\">SIP Calculator – Mexico</a></li>",
+    "<li><a href=\"credito-hipotecario-mexico.html\">Home Loan Calculator – Mexico</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-india.html\">Fixed Deposit Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "fixed-deposit-calculator-new-zealand",
+   "country_article": "New Zealand",
+   "country": "New Zealand",
+   "cur_symbol": "$",
+   "cur_code": "NZD",
+   "locale": "en-NZ",
+   "rate": 4.0,
+   "fd_note": "Term deposit rates ≈ 3.5–4.5% for 1-yr. No deposit guarantee scheme yet (one planned). Top rates often at smaller banks: SBS, Heartland, Rabobank.",
+   "related": [
+    "<li><a href=\"sip-calculator-new-zealand.html\">SIP Calculator – New Zealand</a></li>",
+    "<li><a href=\"mortgage-calculator-new-zealand.html\">Home Loan Calculator – New Zealand</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-india.html\">Fixed Deposit Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "fixed-deposit-calculator-nigeria",
+   "country_article": "Nigeria",
+   "country": "Nigeria",
+   "cur_symbol": "₦",
+   "cur_code": "NGN",
+   "locale": "en-NG",
+   "rate": 14.0,
+   "fd_note": "Term deposit rates ≈ 12–18% p.a. Treasury bills often comparable. NDIC insures deposits up to ₦500K.",
+   "related": [
+    "<li><a href=\"sip-calculator-nigeria.html\">SIP Calculator – Nigeria</a></li>",
+    "<li><a href=\"loan-calculator-nigeria.html\">Home Loan Calculator – Nigeria</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-india.html\">Fixed Deposit Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "fixed-deposit-calculator-pakistan",
+   "country_article": "Pakistan",
+   "country": "Pakistan",
+   "cur_symbol": "Rs",
+   "cur_code": "PKR",
+   "locale": "en-PK",
+   "rate": 13.0,
+   "fd_note": "Regular Income Certificates ≈ 13% p.a., Behbood Savings ≈ 16.5% (seniors/widows), Defense Savings Certificates 10-yr ≈ 13%. Bank term deposits ≈ 11–12%.",
+   "related": [
+    "<li><a href=\"sip-calculator-pakistan.html\">SIP Calculator – Pakistan</a></li>",
+    "<li><a href=\"home-loan-emi-pakistan.html\">Home Loan Calculator – Pakistan</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-india.html\">Fixed Deposit Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "fixed-deposit-calculator-philippines",
+   "country_article": "the Philippines",
+   "country": "Philippines",
+   "cur_symbol": "₱",
+   "cur_code": "PHP",
+   "locale": "en-PH",
+   "rate": 5.2,
+   "fd_note": "Time deposit rates ≈ 4.5–5.5% p.a. for 1+ year terms. Digital banks (CIMB, Maya Bank, ING) offer 4–6% on savings.",
+   "related": [
+    "<li><a href=\"sip-calculator-philippines.html\">SIP Calculator – the Philippines</a></li>",
+    "<li><a href=\"home-loan-calculator-philippines.html\">Home Loan Calculator – the Philippines</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-india.html\">Fixed Deposit Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "fixed-deposit-calculator-qatar",
+   "country_article": "Qatar",
+   "country": "Qatar",
+   "cur_symbol": "QAR",
+   "cur_code": "QAR",
+   "locale": "en-QA",
+   "rate": 3.9,
+   "fd_note": "Term deposit rates ≈ 3.5–4.5% p.a. QNB, CBQ, Doha Bank offer higher tiers for larger deposits. Islamic profit-sharing alternatives at QIB, Masraf Al Rayan.",
+   "related": [
+    "<li><a href=\"sip-calculator-qatar.html\">SIP Calculator – Qatar</a></li>",
+    "<li><a href=\"home-finance-calculator-qatar.html\">Home Loan Calculator – Qatar</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-india.html\">Fixed Deposit Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "fixed-deposit-calculator-russia",
+   "country_article": "Russia",
+   "country": "Russia",
+   "cur_symbol": "₽",
+   "cur_code": "RUB",
+   "locale": "ru-RU",
+   "rate": 16.0,
+   "fd_note": "Deposit rates ≈ 14–18% p.a. for 6-12 month tenures. Short-term rates near CBR key rate. Top banks: Sberbank, VTB, Alfa, Tinkoff.",
+   "related": [
+    "<li><a href=\"sip-calculator-russia.html\">SIP Calculator – Russia</a></li>",
+    "<li><a href=\"mortgage-calculator-russia.html\">Home Loan Calculator – Russia</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-india.html\">Fixed Deposit Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "fixed-deposit-calculator-saudi-arabia",
+   "country_article": "Saudi Arabia",
+   "country": "Saudi Arabia",
+   "cur_symbol": "SAR",
+   "cur_code": "SAR",
+   "locale": "en-SA",
+   "rate": 4.0,
+   "fd_note": "Mudarabah term deposits ≈ 4–5% expected profit rate. Al Rajhi, Alinma are major Islamic banks.",
+   "related": [
+    "<li><a href=\"sip-calculator-saudi-arabia.html\">SIP Calculator – Saudi Arabia</a></li>",
+    "<li><a href=\"home-finance-calculator-saudi-arabia.html\">Home Loan Calculator – Saudi Arabia</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-india.html\">Fixed Deposit Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "fixed-deposit-calculator-singapore",
+   "country_article": "Singapore",
+   "country": "Singapore",
+   "cur_symbol": "$",
+   "cur_code": "SGD",
+   "locale": "en-SG",
+   "rate": 2.8,
+   "fd_note": "FD rates ≈ 2.5–3% p.a. for 1-year tenures. T-bills (6-month) often better yield. Compare at DBS, UOB, OCBC, ICBC SG, Maybank.",
+   "related": [
+    "<li><a href=\"sip-calculator-singapore.html\">SIP Calculator – Singapore</a></li>",
+    "<li><a href=\"home-loan-calculator-singapore.html\">Home Loan Calculator – Singapore</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-india.html\">Fixed Deposit Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "fixed-deposit-calculator-south-africa",
+   "country_article": "South Africa",
+   "country": "South Africa",
+   "cur_symbol": "R",
+   "cur_code": "ZAR",
+   "locale": "en-ZA",
+   "rate": 8.5,
+   "fd_note": "FD rates ≈ 8–9% p.a. for 12+ month terms. Tax-free up to R23,800/year interest exemption (under 65). Providers: African Bank, Capitec, FNB.",
+   "related": [
+    "<li><a href=\"sip-calculator-south-africa.html\">SIP Calculator – South Africa</a></li>",
+    "<li><a href=\"home-loan-calculator-south-africa.html\">Home Loan Calculator – South Africa</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-india.html\">Fixed Deposit Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "fixed-deposit-calculator-south-korea",
+   "country_article": "South Korea",
+   "country": "South Korea",
+   "cur_symbol": "₩",
+   "cur_code": "KRW",
+   "locale": "ko-KR",
+   "rate": 3.0,
+   "fd_note": "1-yr FD rates ≈ 2.8–3.3%. Internet banks (Kakao, Toss, K Bank) often beat traditional banks. Savings banks (저축은행) pay higher but watch KDIC limit.",
+   "related": [
+    "<li><a href=\"sip-calculator-south-korea.html\">SIP Calculator – South Korea</a></li>",
+    "<li><a href=\"mortgage-calculator-south-korea.html\">Home Loan Calculator – South Korea</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-india.html\">Fixed Deposit Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "fixed-deposit-calculator-sri-lanka",
+   "country_article": "Sri Lanka",
+   "country": "Sri Lanka",
+   "cur_symbol": "LKR",
+   "cur_code": "LKR",
+   "locale": "en-LK",
+   "rate": 9.0,
+   "fd_note": "FD rates ≈ 8–10% p.a. for 1+ year. Senior citizens +1%. Licensed finance companies offer higher rates but have higher risk.",
+   "related": [
+    "<li><a href=\"sip-calculator-sri-lanka.html\">SIP Calculator – Sri Lanka</a></li>",
+    "<li><a href=\"housing-loan-calculator-sri-lanka.html\">Home Loan Calculator – Sri Lanka</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-india.html\">Fixed Deposit Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "fixed-deposit-calculator-taiwan",
+   "country_article": "Taiwan",
+   "country": "Taiwan",
+   "cur_symbol": "$",
+   "cur_code": "TWD",
+   "locale": "zh-TW",
+   "rate": 1.6,
+   "fd_note": "1-yr TD rates ≈ 1.5–1.8% p.a. Foreign currency TDs (USD, AUD) can pay much higher — popular among savers.",
+   "related": [
+    "<li><a href=\"sip-calculator-taiwan.html\">SIP Calculator – Taiwan</a></li>",
+    "<li><a href=\"mortgage-calculator-taiwan.html\">Home Loan Calculator – Taiwan</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-india.html\">Fixed Deposit Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "fixed-deposit-calculator-thailand",
+   "country_article": "Thailand",
+   "country": "Thailand",
+   "cur_symbol": "฿",
+   "cur_code": "THB",
+   "locale": "th-TH",
+   "rate": 1.5,
+   "fd_note": "FD rates ≈ 1.25–2% for 1-yr. Higher at smaller banks (KTB, TMB, CIMB Thai). Digital accounts from Kbank (K-Plus), SCB (EASY) sometimes beat this.",
+   "related": [
+    "<li><a href=\"sip-calculator-thailand.html\">SIP Calculator – Thailand</a></li>",
+    "<li><a href=\"home-loan-calculator-thailand.html\">Home Loan Calculator – Thailand</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-india.html\">Fixed Deposit Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "fixed-deposit-calculator-turkey",
+   "country_article": "Turkey",
+   "country": "Turkey",
+   "cur_symbol": "₺",
+   "cur_code": "TRY",
+   "locale": "tr-TR",
+   "rate": 40.0,
+   "fd_note": "Vadeli mevduat ≈ 38–42% p.a. for 3-month tenures. Most deposits are short-term due to rate volatility. Withholding tax 7.5–15% on interest.",
+   "related": [
+    "<li><a href=\"sip-calculator-turkey.html\">SIP Calculator – Turkey</a></li>",
+    "<li><a href=\"konut-kredisi-hesaplama.html\">Home Loan Calculator – Turkey</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-india.html\">Fixed Deposit Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "fixed-deposit-calculator-uae",
+   "country_article": "the UAE",
+   "country": "UAE",
+   "cur_symbol": "AED",
+   "cur_code": "AED",
+   "locale": "en-AE",
+   "rate": 3.5,
+   "fd_note": "FD rates ≈ 3.5–4.5% p.a. Islamic alternatives: Wakalah/Mudarabah deposits at similar profit rates.",
+   "related": [
+    "<li><a href=\"sip-calculator-uae.html\">SIP Calculator – the UAE</a></li>",
+    "<li><a href=\"mortgage-calculator-uae.html\">Home Loan Calculator – the UAE</a></li>",
+    "<li><a href=\"retirement-calculator-uae.html\">Retirement Calculator – the UAE</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-india.html\">Fixed Deposit Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "fixed-deposit-calculator-uk",
+   "country_article": "the UK",
+   "country": "UK",
+   "cur_symbol": "£",
+   "cur_code": "GBP",
+   "locale": "en-GB",
+   "rate": 4.0,
+   "fd_note": "Fixed-rate bonds ≈ 4–4.5% p.a. for 1–3 year terms. Best rates on MoneySavingExpert or Raisin UK.",
+   "related": [
+    "<li><a href=\"sip-calculator-uk.html\">SIP Calculator – the UK</a></li>",
+    "<li><a href=\"mortgage-calculator-uk.html\">Home Loan Calculator – the UK</a></li>",
+    "<li><a href=\"retirement-calculator-uk.html\">Retirement Calculator – the UK</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-india.html\">Fixed Deposit Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "fixed-deposit-calculator-usa",
+   "country_article": "the USA",
+   "country": "USA",
+   "cur_symbol": "$",
+   "cur_code": "USD",
+   "locale": "en-US",
+   "rate": 4.0,
+   "fd_note": "CD rates ≈ 4–5% p.a. for 1–5 year terms. Top providers: Marcus by Goldman, Ally Bank, Capital One 360.",
+   "related": [
+    "<li><a href=\"sip-calculator-usa.html\">SIP Calculator – the USA</a></li>",
+    "<li><a href=\"mortgage-calculator-usa.html\">Home Loan Calculator – the USA</a></li>",
+    "<li><a href=\"retirement-calculator-usa.html\">Retirement Calculator – the USA</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-india.html\">Fixed Deposit Calculator – India</a></li>"
+   ]
+  },
+  {
+   "slug": "fixed-deposit-calculator-vietnam",
+   "country_article": "Vietnam",
+   "country": "Vietnam",
+   "cur_symbol": "₫",
+   "cur_code": "VND",
+   "locale": "vi-VN",
+   "rate": 5.5,
+   "fd_note": "FD rates ≈ 5–7% p.a. for 1-yr. Higher at private banks (VP, VIB, NCB) vs state-owned (VCB, BIDV). Gold-linked savings also popular.",
+   "related": [
+    "<li><a href=\"sip-calculator-vietnam.html\">SIP Calculator – Vietnam</a></li>",
+    "<li><a href=\"home-loan-calculator-vietnam.html\">Home Loan Calculator – Vietnam</a></li>",
+    "<li><a href=\"fixed-deposit-calculator-india.html\">Fixed Deposit Calculator – India</a></li>"
+   ]
+  }
  ]
 }
