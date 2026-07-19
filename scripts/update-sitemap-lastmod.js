@@ -6,7 +6,7 @@ const { execSync } = require("child_process");
 
 const REPO_ROOT = path.join(__dirname, "..");
 const SITEMAP_PATH = path.join(REPO_ROOT, "sitemap.xml");
-const HOST = "https://fincalcyou.netlify.app";
+const HOST = "https://fincalcyou.com";
 
 function localPathForUrl(url) {
   const rel = url.replace(HOST, "").replace(/^\//, "");

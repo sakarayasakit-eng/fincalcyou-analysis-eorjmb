@@ -155,6 +155,7 @@ def generate_sitemap():
         else:
             push(HOST + "/" + f, "0.6")
     for f in sorted(glob.glob("pages/*.html")):
+        f = f.replace("\\", "/")   # normalize Windows backslash -> URL forward slash
         b = os.path.basename(f)[:-5]
         if b == "index.html" or _noindex(f):
             continue

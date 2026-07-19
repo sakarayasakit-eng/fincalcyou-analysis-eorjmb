@@ -1,1 +1,12 @@
-/pages/sip-calculator-india    /pages/sip-calculator-india-20-years    301
+# India pages removed 2026 — 301 to cluster hubs (preserve link equity, no 404s)
+/pages/car-loan-calculator-india.html       /pages/car-loan-calculator       301
+/pages/sip-calculator-india.html            /pages/sip-calculator            301
+/pages/sip-calculator-india-20-years.html   /pages/sip-calculator            301
+/pages/fixed-deposit-calculator-india.html  /pages/fixed-deposit-calculator  301
+/pages/home-loan-emi-calculator-india.html  /pages/home-loan-calculator      301
+/pages/education-loan-calculator-india.html /pages/education-loan-calculator 301
+/pages/rent-vs-buy-calculator-india.html    /pages/rent-vs-buy-calculator    301
+/pages/retirement-calculator-india.html     /pages/retirement-calculator     301
+/pages/zakat-calculator-india.html          /pages/zakat-calculator          301
+/pages/india-financial-calculators.html     /pages/                          301
+/pages/DEMO-self-contained-emi-india.html   /pages/                          301
