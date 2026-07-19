@@ -1,7 +1,7 @@
 import os, re, glob
 from datetime import date
 
-HOST = "https://fincalcyou.netlify.app"
+HOST = "https://fincalcyou.com"
 
 # Top 10 US Real Estate Markets for Airbnb/STR Investments
 markets = [
