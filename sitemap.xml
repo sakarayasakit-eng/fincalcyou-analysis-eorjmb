@@ -1,35 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<<<<<<< HEAD
   <url><loc>https://fincalcyou.com/</loc><lastmod>2026-07-19</lastmod><priority>1.0</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://fincalcyou.com/pages/index.html</loc><lastmod>2026-07-19</lastmod><priority>0.9</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://fincalcyou.com/about.html</loc><lastmod>2026-07-19</lastmod><priority>0.4</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://fincalcyou.com/contact.html</loc><lastmod>2026-07-19</lastmod><priority>0.4</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://fincalcyou.com/dscr-calculator-atlanta-ga.html</loc><lastmod>2026-07-19</lastmod><priority>0.7</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://fincalcyou.com/dscr-calculator-austin-tx.html</loc><lastmod>2026-07-19</lastmod><priority>0.7</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://fincalcyou.com/dscr-calculator-charlotte-nc.html</loc><lastmod>2026-07-19</lastmod><priority>0.7</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://fincalcyou.com/dscr-calculator-dallas-tx.html</loc><lastmod>2026-07-19</lastmod><priority>0.7</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://fincalcyou.com/dscr-calculator-denver-co.html</loc><lastmod>2026-07-19</lastmod><priority>0.7</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://fincalcyou.com/dscr-calculator-las-vegas-nv.html</loc><lastmod>2026-07-19</lastmod><priority>0.7</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://fincalcyou.com/dscr-calculator-locations.html</loc><lastmod>2026-07-19</lastmod><priority>0.7</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://fincalcyou.com/dscr-calculator-miami-fl.html</loc><lastmod>2026-07-19</lastmod><priority>0.7</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://fincalcyou.com/dscr-calculator-nashville-tn.html</loc><lastmod>2026-07-19</lastmod><priority>0.7</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://fincalcyou.com/dscr-calculator-phoenix-az.html</loc><lastmod>2026-07-19</lastmod><priority>0.7</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://fincalcyou.com/dscr-calculator-tampa-fl.html</loc><lastmod>2026-07-19</lastmod><priority>0.7</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://fincalcyou.com/dscr-calculator-atlanta-ga.html</loc><lastmod>2026-07-19</lastmod><priority>0.6</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://fincalcyou.com/dscr-calculator-austin-tx.html</loc><lastmod>2026-07-19</lastmod><priority>0.6</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://fincalcyou.com/dscr-calculator-charlotte-nc.html</loc><lastmod>2026-07-19</lastmod><priority>0.6</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://fincalcyou.com/dscr-calculator-dallas-tx.html</loc><lastmod>2026-07-19</lastmod><priority>0.6</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://fincalcyou.com/dscr-calculator-denver-co.html</loc><lastmod>2026-07-19</lastmod><priority>0.6</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://fincalcyou.com/dscr-calculator-las-vegas-nv.html</loc><lastmod>2026-07-19</lastmod><priority>0.6</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://fincalcyou.com/dscr-calculator-locations.html</loc><lastmod>2026-07-19</lastmod><priority>0.6</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://fincalcyou.com/dscr-calculator-miami-fl.html</loc><lastmod>2026-07-19</lastmod><priority>0.6</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://fincalcyou.com/dscr-calculator-nashville-tn.html</loc><lastmod>2026-07-19</lastmod><priority>0.6</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://fincalcyou.com/dscr-calculator-phoenix-az.html</loc><lastmod>2026-07-19</lastmod><priority>0.6</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://fincalcyou.com/dscr-calculator-tampa-fl.html</loc><lastmod>2026-07-19</lastmod><priority>0.6</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://fincalcyou.com/dscr-calculator.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://fincalcyou.com/editorial-policy.html</loc><lastmod>2026-07-19</lastmod><priority>0.4</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://fincalcyou.com/methodology.html</loc><lastmod>2026-07-19</lastmod><priority>0.4</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://fincalcyou.com/privacy.html</loc><lastmod>2026-07-19</lastmod><priority>0.4</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://fincalcyou.com/pages/1-crore-home-loan-emi-calculator.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://fincalcyou.com/pages/1.5-crore-home-loan-emi-calculator.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://fincalcyou.com/pages/2-crore-home-loan-emi-calculator.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://fincalcyou.com/pages/20-lakh-home-loan-emi-calculator.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://fincalcyou.com/pages/25-lakh-home-loan-emi-calculator.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://fincalcyou.com/pages/30-lakh-home-loan-emi-calculator.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://fincalcyou.com/pages/40-lakh-home-loan-emi-calculator.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://fincalcyou.com/pages/50-lakh-home-loan-emi-calculator.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://fincalcyou.com/pages/60-lakh-home-loan-emi-calculator.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://fincalcyou.com/pages/75-lakh-home-loan-emi-calculator.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://fincalcyou.com/pages/access-bank-loan-calculator.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://fincalcyou.com/pages/adcb-mortgage-calculator.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://fincalcyou.com/pages/aed-to-inr-converter.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
@@ -38,7 +27,6 @@
   <url><loc>https://fincalcyou.com/pages/alinma-home-finance-calculator.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://fincalcyou.com/pages/anz-home-loan-calculator.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://fincalcyou.com/pages/aud-to-inr-converter.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://fincalcyou.com/pages/axis-home-loan-emi-calculator.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://fincalcyou.com/pages/bank-alfalah-car-finance-calculator.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://fincalcyou.com/pages/bank-of-america-mortgage-calculator.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://fincalcyou.com/pages/barclays-mortgage-calculator.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
@@ -142,8 +130,6 @@
   <url><loc>https://fincalcyou.com/pages/halifax-mortgage-calculator.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://fincalcyou.com/pages/hbl-car-finance-calculator.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://fincalcyou.com/pages/hbl-home-financing-calculator.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://fincalcyou.com/pages/hdfc-fd-calculator.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://fincalcyou.com/pages/hdfc-home-loan-emi-calculator.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://fincalcyou.com/pages/home-finance-calculator-bahrain.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://fincalcyou.com/pages/home-finance-calculator-kuwait.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://fincalcyou.com/pages/home-finance-calculator-qatar.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
@@ -159,14 +145,11 @@
   <url><loc>https://fincalcyou.com/pages/home-loan-calculator-vietnam.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://fincalcyou.com/pages/home-loan-calculator.html</loc><lastmod>2026-07-19</lastmod><priority>0.9</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://fincalcyou.com/pages/home-loan-emi-pakistan.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://fincalcyou.com/pages/home-loan-on-1-lakh-salary.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://fincalcyou.com/pages/home-loan-on-30000-salary.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://fincalcyou.com/pages/home-loan-on-50000-salary.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://fincalcyou.com/pages/housing-loan-calculator-sri-lanka.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://fincalcyou.com/pages/how-to-calculate-emi.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://fincalcyou.com/pages/hsbc-uk-mortgage-calculator.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://fincalcyou.com/pages/icici-fd-calculator.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://fincalcyou.com/pages/icici-home-loan-emi-calculator.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://fincalcyou.com/pages/index.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://fincalcyou.com/pages/indonesia-financial-calculators.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://fincalcyou.com/pages/konut-kredisi-hesaplama.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
@@ -212,15 +195,7 @@
   <url><loc>https://fincalcyou.com/pages/santander-uk-mortgage-calculator.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://fincalcyou.com/pages/sar-to-inr-converter.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://fincalcyou.com/pages/sar-to-pkr-converter.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://fincalcyou.com/pages/sbi-fd-calculator.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://fincalcyou.com/pages/sbi-home-loan-emi-calculator.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://fincalcyou.com/pages/scotiabank-mortgage-calculator.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://fincalcyou.com/pages/sip-10000-per-month.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://fincalcyou.com/pages/sip-15000-per-month.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://fincalcyou.com/pages/sip-20000-per-month.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://fincalcyou.com/pages/sip-25000-per-month.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://fincalcyou.com/pages/sip-5000-per-month.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://fincalcyou.com/pages/sip-calculator-1-crore.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://fincalcyou.com/pages/sip-calculator-australia.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://fincalcyou.com/pages/sip-calculator-bahrain.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://fincalcyou.com/pages/sip-calculator-bangladesh.html</loc><lastmod>2026-07-19</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
