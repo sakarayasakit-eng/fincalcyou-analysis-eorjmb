@@ -2751,10 +2751,7 @@
 
       <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px;">
         <button class="sub-tab" onclick="quickConv('USD','PKR')">USD → PKR</button>
-        <button class="sub-tab" onclick="quickConv('USD','INR')">USD → INR</button>
-        <button class="sub-tab" onclick="quickConv('PKR','INR')">PKR → INR</button>
         <button class="sub-tab" onclick="quickConv('AED','PKR')">AED → PKR</button>
-        <button class="sub-tab" onclick="quickConv('SAR','INR')">SAR → INR</button>
         <button class="sub-tab" onclick="quickConv('GBP','PKR')">GBP → PKR</button>
       </div>
     </div>
@@ -2869,7 +2866,6 @@
     // CURRENCIES — 50 total
     // ================================================================
     const currencies = [
-      { sym: '₹',  code: 'INR', name: 'Indian Rupee',          flag: '🇮🇳' },
       { sym: '₨',  code: 'PKR', name: 'Pakistani Rupee',       flag: '🇵🇰' },
       { sym: '৳',  code: 'BDT', name: 'Bangladeshi Taka',      flag: '🇧🇩' },
       { sym: '$',  code: 'USD', name: 'US Dollar',             flag: '🇺🇸' },
@@ -4088,7 +4084,7 @@
     let rates = null;
     let ratesDate = null;
     const FALLBACK_RATES = {
-      USD: 1, INR: 83.5, PKR: 280, BDT: 110, EUR: 0.92, GBP: 0.79,
+      USD: 1, PKR: 280, BDT: 110, EUR: 0.92, GBP: 0.79,
       JPY: 155, CNY: 7.1, AED: 3.67, SAR: 3.75, QAR: 3.64, KWD: 0.31,
       OMR: 0.38, BHD: 0.38, JOD: 0.71, LBP: 89500, EGP: 48,
       TRY: 34, NPR: 133, LKR: 300, AFN: 70, IRR: 42000,
@@ -4145,7 +4141,7 @@
     // Country-aware "EMI" vs "Monthly Payment" wording.
     // Returns 'EMI' for South Asia, 'Monthly Payment' elsewhere.
     // Used in both static labels (via applyCountryProfile) and dynamic text.
-    const SOUTH_ASIA_CODES = ['INR','PKR','BDT','LKR','NPR'];
+    const SOUTH_ASIA_CODES = ['PKR','BDT','LKR','NPR'];
     function paymentWord() {
       return SOUTH_ASIA_CODES.includes(currentCur.code) ? 'EMI' : 'monthly payment';
     }
@@ -4176,7 +4172,6 @@
     // Format: { emiAmt, emiYears, carPrice, carDown, carYears, sipAmt, sipYears, fdAmt, eduAmt, eduYears }
     const SMART_DEFAULTS = {
       // South Asia
-      INR: { emiAmt: 3000000, emiYears: 20, carPrice: 800000, carDown: 200000, carYears: 5, sipAmt: 10000, sipYears: 15, fdAmt: 100000, fdYears: 5, eduAmt: 2000000, eduYears: 7 },
       PKR: { emiAmt: 5000000, emiYears: 20, carPrice: 3500000, carDown: 1000000, carYears: 5, sipAmt: 10000, sipYears: 10, fdAmt: 500000, fdYears: 3, eduAmt: 1500000, eduYears: 5 },
       BDT: { emiAmt: 3000000, emiYears: 20, carPrice: 2500000, carDown: 750000, carYears: 5, sipAmt: 5000, sipYears: 10, fdAmt: 200000, fdYears: 3, eduAmt: 1000000, eduYears: 5 },
       LKR: { emiAmt: 8000000, emiYears: 20, carPrice: 6000000, carDown: 1500000, carYears: 5, sipAmt: 25000, sipYears: 10, fdAmt: 500000, fdYears: 3, eduAmt: 3000000, eduYears: 5 },
@@ -4289,7 +4284,7 @@
     // no GPS prompt, no network). Only a default; overridable by ?cur= and picker.
     function detectCurrencyCode() {
       const TZ_CUR = {
-        'Asia/Kolkata':'INR','Asia/Calcutta':'INR','Asia/Karachi':'PKR','Asia/Dhaka':'BDT',
+'Asia/Karachi':'PKR','Asia/Dhaka':'BDT',
         'Asia/Colombo':'LKR','Asia/Kathmandu':'NPR','Asia/Dubai':'AED','Asia/Riyadh':'SAR',
         'Asia/Qatar':'QAR','Asia/Bahrain':'BHD','Asia/Kuwait':'KWD','Asia/Muscat':'OMR',
         'Asia/Singapore':'SGD','Asia/Kuala_Lumpur':'MYR','Asia/Jakarta':'IDR','Asia/Manila':'PHP',
@@ -4328,7 +4323,7 @@
       let initialCode = null;
       try { initialCode = localStorage.getItem('fincalc_cur'); } catch (e) {}
       if (!initialCode) initialCode = detectCurrencyCode();
-      if (!initialCode) initialCode = 'USD'; // neutral global default (was implicitly INR via currencies[0])
+      if (!initialCode || !currencies.some(c => c.code === initialCode)) initialCode = 'USD'; // neutral global default; ignore removed/invalid codes
       if (initialCode) {
         const found = currencies.find(c => c.code === initialCode);
         if (found) {
@@ -4381,7 +4376,7 @@
       }
 
       // Country-aware Islamic finance: surface Zakat/Murabaha only where relevant.
-      const ISLAMIC_CODES = ['PKR','BDT','AED','SAR','QAR','KWD','OMR','BHD','JOD','LBP','EGP','TRY','AFN','IRR','MYR','IDR','NGN','INR','LKR'];
+      const ISLAMIC_CODES = ['PKR','BDT','AED','SAR','QAR','KWD','OMR','BHD','JOD','LBP','EGP','TRY','AFN','IRR','MYR','IDR','NGN','LKR'];
       const showIslamic = ISLAMIC_CODES.includes(currentCur.code);
       const islamicTab = document.getElementById('tabIslamic');
       if (islamicTab) {
@@ -4555,7 +4550,7 @@
     function fmtNum(n) {
       if (!isFinite(n) || isNaN(n)) return '0';
       n = Math.round(n);
-      if (['INR','PKR','BDT','NPR','LKR'].includes(currentCur.code)) {
+      if (['PKR','BDT','NPR','LKR'].includes(currentCur.code)) {
         const s = Math.abs(n).toString();
         const last3 = s.slice(-3);
         const rest = s.slice(0, -3);
@@ -5747,7 +5742,7 @@
       if (cc > 0) {
         // Country-specific credit card APR (approximate typical rate)
         const ccAprByCountry = {
-          INR: 42, PKR: 40, BDT: 30, USD: 24, GBP: 24, EUR: 18, AED: 36,
+          PKR: 40, BDT: 30, USD: 24, GBP: 24, EUR: 18, AED: 36,
           SAR: 30, QAR: 30, KWD: 18, BHD: 21, OMR: 21, MYR: 18, IDR: 29,
           PHP: 36, KES: 36, NGN: 30, ZAR: 22, TRY: 95, EGP: 35, RUB: 35,
           CNY: 18, JPY: 15, CAD: 20, AUD: 21, SGD: 27, BRL: 300, MXN: 60,
@@ -5957,7 +5952,6 @@
       if (clamped >= 70 && findings.filter(f => f.level === 'bad').length === 0) {
         // Country-specific tax-advantaged account guidance
         const taxAccountsByCountry = {
-          INR: 'tax-advantaged accounts (80C up to ₹1.5L, NPS extra ₹50k, ELSS/PPF)',
           PKR: 'Voluntary Pension System (VPS) and National Savings Schemes for tax relief',
           BDT: 'DPS (Deposit Pension Scheme) for tax rebate',
           USD: '401(k), IRA, and HSA — all tax-advantaged',
@@ -6954,7 +6948,7 @@
       // Build country grid (lazy, once)
       const grid = document.getElementById('welcomeCountryGrid');
       if (grid && grid.children.length === 0) {
-        const popular = ['INR','USD','GBP','PKR','AED','BDT','SAR','MYR','IDR','CAD','AUD','SGD','EUR','PHP','TRY','ZAR','EGP','NGN','BRL','MXN','JPY','CNY','HKD','LKR'];
+        const popular = ['USD','GBP','PKR','AED','BDT','SAR','MYR','IDR','CAD','AUD','SGD','EUR','PHP','TRY','ZAR','EGP','NGN','BRL','MXN','JPY','CNY','HKD','LKR'];
         const detected = detectCurrencyCode();
         if (detected && popular.includes(detected)) { popular.splice(popular.indexOf(detected), 1); popular.unshift(detected); }
         const lookup = {};
