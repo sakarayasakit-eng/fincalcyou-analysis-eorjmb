@@ -35,3 +35,12 @@
 /pages/sip-15000-per-month.html                 /pages/sip-calculator             301
 /pages/sip-20000-per-month.html                 /pages/sip-calculator             301
 /pages/sip-25000-per-month.html                 /pages/sip-calculator             301
+# India full-purge batch 3 — 301
+/pages/home-loan-on-30000-salary.html   /pages/home-loan-calculator   301
+/pages/home-loan-on-50000-salary.html   /pages/home-loan-calculator   301
+/pages/usd-to-inr-converter.html        /                             301
+/pages/aed-to-inr-converter.html        /                             301
+/pages/aud-to-inr-converter.html        /                             301
+/pages/cad-to-inr-converter.html        /                             301
+/pages/gbp-to-inr-converter.html        /                             301
+/pages/sar-to-inr-converter.html        /                             301
