@@ -111,6 +111,7 @@ def render(d, N):
     h = s1(r'(What is the current car loan rate in )USA(\?)', lambda m: m.group(1) + c + m.group(2), h)
     h = s1(r'(rate in ' + re.escape(c) + r'\?","acceptedAnswer":\{"@type":"Answer","text":"As a 2026 reference, auto-finance rates are around )[\d.]+(% per year\. ).+?("\}\})', lambda m: m.group(1) + rs + m.group(2) + jnote + m.group(3), h)
     h = s1(r'("name":"Car Loan Calculator )\S+ USA(","item")', lambda m: m.group(1) + "— " + c + m.group(2), h)
+    h = s1(r'("@type":"SoftwareApplication","name":"Car Loan Calculator )\S+ USA(","url":"[^"]*/pages/)[^"]+(")', lambda m: m.group(1) + "— " + c + m.group(2) + d["slug"] + ".html" + m.group(3), h)
     h = s1(r'(<h1>).*?(</h1>)', lambda m: m.group(1) + h1 + m.group(2), h)
     h = s1(r"(installment in )USD( using ).+?('s typical)", lambda m: m.group(1) + cur + m.group(2) + c + m.group(3), h)
     h = s1(r'(<div class="fc-in"><span>)[^<]+(</span><input data-f="amount")', lambda m: m.group(1) + sym + m.group(2), h)
