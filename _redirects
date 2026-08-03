@@ -44,3 +44,33 @@
 /pages/cad-to-inr-converter.html        /                             301
 /pages/gbp-to-inr-converter.html        /                             301
 /pages/sar-to-inr-converter.html        /                             301
+
+# --- Security: block internal source & docs from public access (2026) ---
+# Force (!) is required because these files exist in the deploy; without it
+# Netlify would serve the file instead of applying the rule.
+/node_modules/*                     /404.html   404!
+/templates/*                        /404.html   404!
+/scripts/*                          /404.html   404!
+/netlify/*                          /404.html   404!
+/.github/*                          /404.html   404!
+/.claude/*                          /404.html   404!
+/build.py                           /404.html   404!
+/generate_pages.py                  /404.html   404!
+/fix_seo.py                         /404.html   404!
+/countries.json                     /404.html   404!
+/package.json                       /404.html   404!
+/package-lock.json                  /404.html   404!
+/ARCHITECTURE_REVIEW.md             /404.html   404!
+/ARCHITECTURE_REVIEW_FACT_CHECK.md  /404.html   404!
+/CLAUDE.md                          /404.html   404!
+/CTO_AUDIT_2026.md                  /404.html   404!
+/DEPLOY-AND-TRAFFIC-STEPS.md        /404.html   404!
+/GROWTH_PLAN.md                     /404.html   404!
+/INDEXING_PLAYBOOK.md               /404.html   404!
+/LAUNCH_GUIDE.md                    /404.html   404!
+/NETLIFY_LAUNCH_STEPS.md            /404.html   404!
+/PROJECT_REVIEW_v19.md              /404.html   404!
+/README.md                          /404.html   404!
+/SESSION_MEMORY.md                  /404.html   404!
+/SESSION_STATUS.md                  /404.html   404!
+/STRATEGIC_ADVISORY.md              /404.html   404!
