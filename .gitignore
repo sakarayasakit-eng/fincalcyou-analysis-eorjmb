@@ -1,3 +1,6 @@
+# dependencies (Netlify reinstalls from package.json at deploy; never deploy/commit these)
+node_modules/
+
 # build artifacts
 *.zip
 # secrets / environment — NEVER commit these
