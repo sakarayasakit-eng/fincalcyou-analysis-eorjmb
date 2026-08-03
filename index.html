@@ -2758,7 +2758,7 @@
       <p>This calculator adjusts defaults based on your selected country. Your country's central bank rate, typical commercial bank loan rates, and product names all update automatically. You can always override the rate manually using the slider or the exact-amount input box — no guessing.</p>
 
       <h2>How the rates are sourced</h2>
-      <p>Defaults come from each country's central bank publications and typical commercial bank offerings, refreshed August 2026. This covers 34 economies across South Asia, the Gulf, Southeast Asia, Europe, the Americas, and Africa. For each country we link major banks with their typical home and car loan rate ranges — pick your bank from the dropdown to snap to its range.</p>
+      <p>Defaults come from each country's central bank publications and typical commercial bank offerings, refreshed August 2026. This covers 33 economies across South Asia, the Gulf, Southeast Asia, Europe, the Americas, and Africa. For each country we link major banks with their typical home and car loan rate ranges — pick your bank from the dropdown to snap to its range.</p>
 
       <h2>Zakat explained</h2>
       <p><strong>Zakat</strong> is one of the Five Pillars of Islam — a 2.5% annual alms paid on wealth above the <em>nisab</em> threshold (approx. 87.48g of gold) held for a full lunar year. Includes cash, gold, silver, stocks, and business assets; debts owed by you are subtracted. The calculator uses live gold prices to set the nisab in your local currency automatically.</p>
@@ -2812,7 +2812,7 @@
         <a class="explore-link" href="/pages/rent-vs-buy-calculator.html">🔑 Rent vs Buy</a>
         <a class="explore-link" href="/pages/education-loan-calculator.html">🎓 Education Loan</a>
         <a class="explore-link" href="/pages/zakat-calculator.html">☪ Zakat</a>
-        <a class="explore-link" href="/dscr-calculator.html">🏘 DSCR (US rentals)</a>
+        <a class="explore-link" id="dscrExplore" href="/dscr-calculator.html">🏘 DSCR (US rentals)</a>
       </div>
       <p style="color:var(--muted);font-size:13px;margin:18px 0 10px;">Popular countries:
         <a href="/pages/uae-financial-calculators.html">UAE</a> ·
@@ -4386,6 +4386,10 @@
           ? "Loan, savings, investment and Zakat calculators that know your country's central bank rate."
           : "Loan, savings, investment and retirement calculators that know your country's central bank rate.";
       }
+
+      // US-only: the DSCR (US rental) explore link is relevant only to the US market.
+      const dscrEx = document.getElementById('dscrExplore');
+      if (dscrEx) dscrEx.style.display = (currentCur.code === 'USD') ? '' : 'none';
 
       if (!p) {
         // No profile — show generic message
