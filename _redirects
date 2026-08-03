@@ -46,31 +46,31 @@
 /pages/sar-to-inr-converter.html        /                             301
 
 # --- Security: block internal source & docs from public access (2026) ---
-# Force (!) is required because these files exist in the deploy; without it
-# Netlify would serve the file instead of applying the rule.
-/node_modules/*                     /404.html   404!
-/templates/*                        /404.html   404!
-/scripts/*                          /404.html   404!
-/netlify/*                          /404.html   404!
-/.github/*                          /404.html   404!
-/.claude/*                          /404.html   404!
-/build.py                           /404.html   404!
-/generate_pages.py                  /404.html   404!
-/fix_seo.py                         /404.html   404!
-/countries.json                     /404.html   404!
-/package.json                       /404.html   404!
-/package-lock.json                  /404.html   404!
-/ARCHITECTURE_REVIEW.md             /404.html   404!
-/ARCHITECTURE_REVIEW_FACT_CHECK.md  /404.html   404!
-/CLAUDE.md                          /404.html   404!
-/CTO_AUDIT_2026.md                  /404.html   404!
-/DEPLOY-AND-TRAFFIC-STEPS.md        /404.html   404!
-/GROWTH_PLAN.md                     /404.html   404!
-/INDEXING_PLAYBOOK.md               /404.html   404!
-/LAUNCH_GUIDE.md                    /404.html   404!
-/NETLIFY_LAUNCH_STEPS.md            /404.html   404!
-/PROJECT_REVIEW_v19.md              /404.html   404!
-/README.md                          /404.html   404!
-/SESSION_MEMORY.md                  /404.html   404!
-/SESSION_STATUS.md                  /404.html   404!
-/STRATEGIC_ADVISORY.md              /404.html   404!
+# Force 301 to home. Netlify honors force (!) on 301 to shadow existing files;
+# it does NOT honor force on 404 for existing files, so 301 is used here.
+/node_modules/*                     /  301!
+/templates/*                        /  301!
+/scripts/*                          /  301!
+/netlify/*                          /  301!
+/.github/*                          /  301!
+/.claude/*                          /  301!
+/build.py                           /  301!
+/generate_pages.py                  /  301!
+/fix_seo.py                         /  301!
+/countries.json                     /  301!
+/package.json                       /  301!
+/package-lock.json                  /  301!
+/ARCHITECTURE_REVIEW.md             /  301!
+/ARCHITECTURE_REVIEW_FACT_CHECK.md  /  301!
+/CLAUDE.md                          /  301!
+/CTO_AUDIT_2026.md                  /  301!
+/DEPLOY-AND-TRAFFIC-STEPS.md        /  301!
+/GROWTH_PLAN.md                     /  301!
+/INDEXING_PLAYBOOK.md               /  301!
+/LAUNCH_GUIDE.md                    /  301!
+/NETLIFY_LAUNCH_STEPS.md            /  301!
+/PROJECT_REVIEW_v19.md              /  301!
+/README.md                          /  301!
+/SESSION_MEMORY.md                  /  301!
+/SESSION_STATUS.md                  /  301!
+/STRATEGIC_ADVISORY.md              /  301!
