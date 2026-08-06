@@ -129,3 +129,25 @@ footer {
   font-family: 'JetBrains Mono', monospace;
 }
 footer a { color: var(--muted); text-decoration: none; }
+
+/* GEO/AEO: extractable "Key facts" callout near the top of calculator pages */
+.keyfacts {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin: 0 0 26px;
+  box-shadow: 0 1px 2px rgba(16,38,58,0.05);
+}
+.keyfacts h2 {
+  font-size: 13px; font-weight: 700; margin: 0 0 8px;
+  color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em;
+}
+.keyfacts dl { margin: 0; display: grid; grid-template-columns: 130px 1fr; gap: 5px 16px; }
+.keyfacts dt { font-weight: 700; color: var(--ink); font-size: 13px; }
+.keyfacts dd { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.5; }
+@media (max-width: 520px) {
+  .keyfacts dl { grid-template-columns: 1fr; gap: 2px 0; }
+  .keyfacts dt { margin-top: 8px; }
+}

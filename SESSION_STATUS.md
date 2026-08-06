@@ -1,4 +1,4 @@
-# fin·calc — Session Status & Handoff (as of 2026-07-31)
+# fin·calc — Session Status & Handoff (as of 2026-08-06)
 
 Read this first in any new session, alongside `CLAUDE.md` (working rules) and
 `INDEXING_PLAYBOOK.md` (off-site plan). Repo = `fincalcyou` (the ONE source of truth
@@ -6,56 +6,69 @@ Read this first in any new session, alongside `CLAUDE.md` (working rules) and
 
 ---
 
-## ✅ DONE THIS SESSION (committed & pushed, verified live)
-- **Canonical host migration** netlify.app → `fincalcyou.com` across all pages (0 netlify.app left).
-- **India fully removed** from the whole project (app logic in `index.html`, all cluster data in
-  `countries.json`, ~43 pages, glossary/guides/converter mentions, sitemap, hreflang, `llms.txt`).
-  Redirects added in `_redirects` (India URLs 301 → cluster hubs). Verified live: India gone.
-- **Structured data / SEO:**
-  - `SoftwareApplication` JSON-LD on all **87 cluster pages** (via generator) + homepage `WebApplication`.
-  - Removed fake `aggregateRating` (Google policy risk).
-  - Fixed currency mojibake (`Â ` NBSP) via Node-Intl regeneration.
-  - `llms.txt` cleaned (33 countries, India removed, date fixed).
-  - `sitemap.xml` clean = 274 URLs, no India, no backslash bug.
-  - Bing/IndexNow: host fixed to fincalcyou.com; verified-domain URL filter added to
-    `scripts/submit-indexnow.js`.
-- **Docs created:** `CLAUDE.md`, `GROWTH_PLAN.md`, `CTO_AUDIT_2026.md`, `INDEXING_PLAYBOOK.md`.
+## ✅ DONE & SHIPPED (2026-08-06 session — verified live)
 
-## ⚠️ UNCOMMITTED — COMMIT THIS FIRST in the new session
-Two changes are on disk but NOT yet committed/pushed:
-1. `SoftwareApplication` JSON-LD added to the **8 hub pages** (home-loan, car-loan, sip,
-   fixed-deposit, education-loan, zakat, retirement, rent-vs-buy) — inserted before `</head>`,
-   all verified valid JSON + end with `</html>`.
-2. `INDEXING_PLAYBOOK.md` (+ this `SESSION_STATUS.md`).
+**Security / privacy**
+- **Public-file exposure closed.** Netlify was serving the whole repo root, so internal docs
+  (`SESSION_MEMORY.md`, `CTO_AUDIT_2026.md`, `STRATEGIC_ADVISORY.md`, …), `build.py`,
+  `countries.json`, scripts, `node_modules/`, `templates/` were all publicly fetchable.
+  Fixed via `_redirects`: **force-301 (`301!`) block** on those paths → homepage. (Note:
+  Netlify **ignores force on `404`** for existing files — `301!` is what works.) Verified live:
+  `build.py`, `countries.json`, the `.md` docs now 301 to `/`. Added a branded `404.html`.
+- `node_modules/` added to `.gitignore` (run `git rm -r --cached node_modules` to untrack).
 
-Commit command (use REBASE, never plain `git pull` — a plain merge once reverted the India work):
-```
-git add -A
-git commit -m "SEO: SoftwareApplication on 8 hubs + indexing playbook + session status"
-git pull --rebase origin main
-git push
-```
+**Content correctness**
+- **India purge completed** (leftovers the prior pass missed): `about.html` (country list + SBI/
+  HDFC/ICICI + anecdote), Zakat page `INR` nisab row + "zakat india" keyword, homepage `HDFC`
+  mention, `/pages/` Zakat `INR`, the India related-links in all 3 `templates/*.html`, and the
+  dead `sip-calculator-1-crore` custom stub in `countries.json`. Verified: 0 India refs in
+  shipped files (Japanese "SBI Securities" + Pakistani "Lakh" are legit, left in place).
+- **Counts corrected 34/340 → 33/330** across 30 pages (titles, meta, OG/Twitter, hero, about,
+  hubs, schema) + "34 economies" + homepage "290+"→"250+". Confirmed exactly **33 country
+  profiles** in `index.html`.
+- **DSCR scoped to US** (it's a US-only product): `/pages/` directory cards set
+  `data-country="us"`; homepage "Explore" link gated in `applyCountryProfile()` (shows only when
+  `currentCur.code==='USD'`, mirrors the existing Islamic-tab toggle — no switch-logic/math change).
+
+**New backlink assets (live)**
+- **Data study:** `pages/where-home-loans-are-cheapest-2026.html` — 33-country home/car loan
+  rate ranking (Japan 1.5% → Türkiye 44%, 29× gap), CSS bar charts, Article+Breadcrumb schema.
+  In sitemap + linked from `central-bank-rates-2026.html` and the `/pages/` directory.
+- **Embeddable widget:** `embed.js` (root) + `pages/embed.html` landing page with copy-paste
+  script-embed snippets (EMI/car/SIP/FD), each carrying a "by fin·calc" backlink. No iframe (so
+  no `X-Frame-Options` change needed). Math copied verbatim from the existing inline widget.
+  In sitemap + directory.
+
+**Indexing (GSC)**
+- Domain property verified; `sitemap.xml` **Success, 274 discovered**. **38 indexed / 312 not**
+  (300 "Discovered – not indexed" = authority/crawl-budget signal → fixed by backlinks, not by
+  more requests). Hubs + `mortgage-calculator-usa` already indexed. **Request-indexed:** homepage
+  + the new data study.
 
 ---
 
-## 🔎 BING SUBMISSION PROGRESS (manual, in Bing Webmaster Tools)
-Submitting all 263 non-priority sitemap URLs in batches of 50. **~200 of 263 submitted.**
-**62 URLs remain** (final batch: remaining localized bank/converter/guide pages).
-→ In a new session, ask me for "the last 62 Bing URLs" and I'll pull them fresh from `sitemap.xml`,
-   ordered and India-free. (The priority ~20 + 4 batches of 50 are already submitted.)
+## 📋 PENDING — YOUR ACTIONS (nothing here needs code)
+1. **Push any uncommitted local work**, then verify: `git add -A && git commit -m "…" &&
+   git pull --rebase origin main && git push`.
+2. **Send 3 outreach emails** — finished + personalized in `outputs/emails-to-send.md`
+   (calculators.org, The Calculator Site, Patrik Shore). Paste into Gmail, Send. (I cannot send/
+   forward mail — no tool available does; the Gmail connector only *drafts*, and it's currently
+   read-only. Grant it "compose & manage drafts" if you want me to create drafts.)
+3. **GSC:** request-index `pages/embed.html` (Inspect URL → Test Live URL → Request Indexing).
+4. **Bing:** sign in at bing.com/webmasters (usman.aa12024) so backlinks can be read; optionally
+   finish the ~62-URL manual submission (ask me to regenerate the list).
+5. **DSCR revenue — decision needed.** The Resend function `netlify/functions/lead_capture.js`
+   is fine, but **NO page has a lead form** wired to it — lead capture currently captures nothing.
+   Decide: wire an opt-in form on the DSCR page(s)? Also confirm `RESEND_API_KEY` in Netlify env
+   and line up a DSCR lender partner. (User asked to HOLD wiring the form for now.)
 
-## 📋 STILL TO DO (priority order)
-1. **Commit the uncommitted hub schema + docs** (above).
-2. **Finish Bing** — submit the final 62 URLs.
-3. **GSC (biggest lever)** — add Domain property for fincalcyou.com, submit `sitemap.xml`,
-   request-index the ~20 priority URLs. See `INDEXING_PLAYBOOK.md` Part 1.
-4. **GEO TL;DR build (item 2, NOT started)** — add a compact, extractable "Key facts" callout
-   near the top of each calculator page (what the tool does, coverage, free/no-signup, formula
-   in one line) so AI answer engines can cite it. Plan: wire through the generator (templates +
-   `build.py`) for the 87 cluster pages, then add to the 8 hubs directly. Open question I asked:
-   **visible styled callout (recommended) vs SR-only** — user hadn't answered yet.
-5. **Backlinks / revenue** — embed landing page, one data study, DSCR lead capture (confirm
-   `RESEND_API_KEY` in Netlify). See `INDEXING_PLAYBOOK.md` Parts 2–3 + `GROWTH_PLAN.md`.
+## 🔜 OPTIONAL / NOT STARTED
+- **GEO "Key facts" callout** — compact extractable summary near the top of each calculator page
+  for AI answer engines. Wire via generator (templates + `build.py`) for 87 cluster pages, then
+  the 8 hubs. Open question: visible styled callout (recommended) vs SR-only.
+- More backlink outreach (target list in `outputs/backlink-target-list.md`); embed on partner
+  sites; guest posts; directory listings.
+- Weekly GSC monitoring (indexed count, impressions, top queries).
 
 ---
 
@@ -66,6 +79,8 @@ Submitting all 263 non-priority sitemap URLs in batches of 50. **~200 of 263 sub
   `templates/*.html` / `build.py`, then run `python build.py`. NEVER hand-edit generated
   `pages/{car-loan,sip,fixed-deposit}-*.html`. Idempotency check: `python build.py && git status`
   must be clean. (Hubs + home-loan/dscr/education/zakat/retirement/rent-vs-buy are hand-maintained.)
-- **Env reliability:** bash mount truncates large-file reads/writes — host Read/Edit/Write are
+- **Env reliability:** bash mount truncates/goes stale on large files — host Read/Edit/Write are
   authoritative; use `git show HEAD:<path>` for truth; verify every write ends with `</html>`.
-- **Git:** always `git pull --rebase origin main` before push (plain merge once reverted India work).
+- **Git:** always `git pull --rebase origin main` before push (a plain merge once reverted India work).
+- **Security headers:** keep `X-Frame-Options: DENY` global; the `_redirects` `301!` block hides
+  internal files — don't remove it.
