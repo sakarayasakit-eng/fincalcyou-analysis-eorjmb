@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#f4f6f7" />
+  <title>Embed a Free Calculator on Your Website — fin·calc</title>
+  <meta name="description" content="Add a free mortgage, car-loan, investment or fixed-deposit calculator to your website. Copy-paste one snippet — no iframe, no signup, no tracking. Free to use with attribution." />
+  <meta name="keywords" content="embed calculator, free mortgage calculator widget, loan calculator embed code, add calculator to website, free finance calculator widget" />
+  <link rel="canonical" href="https://fincalcyou.com/pages/embed.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://fincalcyou.com/pages/embed.html" />
+  <meta property="og:title" content="Embed a Free Calculator on Your Website — fin·calc" />
+  <meta property="og:description" content="Copy-paste a free mortgage, car-loan, SIP or fixed-deposit calculator onto your site. No iframe, no signup." />
+  <meta property="og:image" content="https://fincalcyou.com/og-image.png" />
+  <meta property="og:site_name" content="fin·calc" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://fincalcyou.com/og-image.png" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://fincalcyou.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://fincalcyou.com/pages/"},{"@type":"ListItem","position":3,"name":"Embed a calculator","item":"https://fincalcyou.com/pages/embed.html"}]}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="landing.css" />
+  <style>
+    .embed-code{background:#0f172a;color:#e2e8f0;border-radius:12px;padding:14px 16px;overflow:auto;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;line-height:1.5;white-space:pre;-webkit-user-select:all;user-select:all}
+    .embed-item{border-top:1px solid #e3e8ee;padding-top:8px}
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <a href="../index.html" class="brand">fin<span class="dot">·</span>calc</a>
+      <nav><a href="../index.html">Home</a><a href="index.html">Guides</a></nav>
+    </header>
+    <h1>Embed a free calculator on your website</h1>
+    <p class="sub">Add a working mortgage, car-loan, investment or fixed-deposit calculator to your blog or site in one paste. It renders right inside your page — <strong>no iframe</strong>, no signup, no tracking, and the math runs entirely in the visitor's browser. Free to use; please keep the small “by fin·calc” link.</p>
+
+    <section>
+      <h2>How it works</h2>
+      <p>Pick a calculator below, copy its code block, and paste it where you want the calculator to appear. Include the one <code>&lt;script&gt;</code> line once per page. You can change the starting numbers and the <code>data-cur</code> / <code>data-locale</code> attributes (e.g. <code>data-cur="GBP" data-locale="en-GB"</code>) to localize it.</p>
+    </section>
+
+    <section class="embed-item">
+      <h2>Home Loan / Mortgage</h2>
+      <p class="sub">Live preview — try it, it updates as you type:</p>
+      <div class="fc-embed" data-fincalc-embed="emi" data-cur="USD" data-locale="en-US">
+  <div class="fc-grid">
+    <div><label>Loan amount</label><div class="fc-in"><span>$</span><input data-f="amount" type="number" min="1" step="any" value="350000"></div></div>
+    <div><label>Rate (% p.a.)</label><div class="fc-in"><input data-f="rate" type="number" min="0" step="0.05" value="6.5"><span>%</span></div></div>
+    <div><label>Tenure (years)</label><div class="fc-in"><input data-f="years" type="number" min="1" step="1" value="30"><span>yrs</span></div></div>
+  </div>
+  <div class="fc-head">Your monthly payment<strong data-o="headline">$2,212</strong></div>
+  <div class="fc-mini"><div>Principal<b data-o="a">$350,000</b></div><div>Total interest<b data-o="b">$446,406</b></div><div>Total<b data-o="total">$796,406</b></div></div>
+  <div class="fc-bar"><i data-bar="a" style="width:44%;background:#0e7a4a"></i><i data-bar="b" style="width:56%;background:#e0932f"></i></div>
+  <div class="fc-note">Free home loan calculator by <a href="https://fincalcyou.com/pages/home-loan-calculator.html" target="_blank" rel="noopener">fin·calc</a></div>
+</div>
+      <p class="sub">Copy this code into your page (once per site is enough for the script tag):</p>
+      <pre class="embed-code"><code>&lt;div class=&quot;fc-embed&quot; data-fincalc-embed=&quot;emi&quot; data-cur=&quot;USD&quot; data-locale=&quot;en-US&quot;&gt;
+  &lt;div class=&quot;fc-grid&quot;&gt;
+    &lt;div&gt;&lt;label&gt;Loan amount&lt;/label&gt;&lt;div class=&quot;fc-in&quot;&gt;&lt;span&gt;$&lt;/span&gt;&lt;input data-f=&quot;amount&quot; type=&quot;number&quot; min=&quot;1&quot; step=&quot;any&quot; value=&quot;350000&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;label&gt;Rate (% p.a.)&lt;/label&gt;&lt;div class=&quot;fc-in&quot;&gt;&lt;input data-f=&quot;rate&quot; type=&quot;number&quot; min=&quot;0&quot; step=&quot;0.05&quot; value=&quot;6.5&quot;&gt;&lt;span&gt;%&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;label&gt;Tenure (years)&lt;/label&gt;&lt;div class=&quot;fc-in&quot;&gt;&lt;input data-f=&quot;years&quot; type=&quot;number&quot; min=&quot;1&quot; step=&quot;1&quot; value=&quot;30&quot;&gt;&lt;span&gt;yrs&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;fc-head&quot;&gt;Your monthly payment&lt;strong data-o=&quot;headline&quot;&gt;$2,212&lt;/strong&gt;&lt;/div&gt;
+  &lt;div class=&quot;fc-mini&quot;&gt;&lt;div&gt;Principal&lt;b data-o=&quot;a&quot;&gt;$350,000&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Total interest&lt;b data-o=&quot;b&quot;&gt;$446,406&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Total&lt;b data-o=&quot;total&quot;&gt;$796,406&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&quot;fc-bar&quot;&gt;&lt;i data-bar=&quot;a&quot; style=&quot;width:44%;background:#0e7a4a&quot;&gt;&lt;/i&gt;&lt;i data-bar=&quot;b&quot; style=&quot;width:56%;background:#e0932f&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+  &lt;div class=&quot;fc-note&quot;&gt;Free home loan calculator by &lt;a href=&quot;https://fincalcyou.com/pages/home-loan-calculator.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;fin·calc&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;script src=&quot;https://fincalcyou.com/embed.js&quot; async&gt;&lt;/script&gt;</code></pre>
+    </section>
+    <section class="embed-item">
+      <h2>Car Loan / Auto Finance</h2>
+      <p class="sub">Live preview — try it, it updates as you type:</p>
+      <div class="fc-embed" data-fincalc-embed="car" data-cur="USD" data-locale="en-US">
+  <div class="fc-grid">
+    <div><label>Car price</label><div class="fc-in"><span>$</span><input data-f="amount" type="number" min="1" step="any" value="30000"></div></div>
+    <div><label>Rate (% p.a.)</label><div class="fc-in"><input data-f="rate" type="number" min="0" step="0.05" value="8"><span>%</span></div></div>
+    <div><label>Tenure (years)</label><div class="fc-in"><input data-f="years" type="number" min="1" step="1" value="5"><span>yrs</span></div></div>
+  </div>
+  <div class="fc-head">Your monthly payment<strong data-o="headline">$608</strong></div>
+  <div class="fc-mini"><div>Principal<b data-o="a">$30,000</b></div><div>Total interest<b data-o="b">$6,498</b></div><div>Total<b data-o="total">$36,498</b></div></div>
+  <div class="fc-bar"><i data-bar="a" style="width:82%;background:#0e7a4a"></i><i data-bar="b" style="width:18%;background:#e0932f"></i></div>
+  <div class="fc-note">Free car loan calculator by <a href="https://fincalcyou.com/pages/car-loan-calculator.html" target="_blank" rel="noopener">fin·calc</a></div>
+</div>
+      <p class="sub">Copy this code into your page (once per site is enough for the script tag):</p>
+      <pre class="embed-code"><code>&lt;div class=&quot;fc-embed&quot; data-fincalc-embed=&quot;car&quot; data-cur=&quot;USD&quot; data-locale=&quot;en-US&quot;&gt;
+  &lt;div class=&quot;fc-grid&quot;&gt;
+    &lt;div&gt;&lt;label&gt;Car price&lt;/label&gt;&lt;div class=&quot;fc-in&quot;&gt;&lt;span&gt;$&lt;/span&gt;&lt;input data-f=&quot;amount&quot; type=&quot;number&quot; min=&quot;1&quot; step=&quot;any&quot; value=&quot;30000&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;label&gt;Rate (% p.a.)&lt;/label&gt;&lt;div class=&quot;fc-in&quot;&gt;&lt;input data-f=&quot;rate&quot; type=&quot;number&quot; min=&quot;0&quot; step=&quot;0.05&quot; value=&quot;8&quot;&gt;&lt;span&gt;%&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;label&gt;Tenure (years)&lt;/label&gt;&lt;div class=&quot;fc-in&quot;&gt;&lt;input data-f=&quot;years&quot; type=&quot;number&quot; min=&quot;1&quot; step=&quot;1&quot; value=&quot;5&quot;&gt;&lt;span&gt;yrs&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;fc-head&quot;&gt;Your monthly payment&lt;strong data-o=&quot;headline&quot;&gt;$608&lt;/strong&gt;&lt;/div&gt;
+  &lt;div class=&quot;fc-mini&quot;&gt;&lt;div&gt;Principal&lt;b data-o=&quot;a&quot;&gt;$30,000&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Total interest&lt;b data-o=&quot;b&quot;&gt;$6,498&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Total&lt;b data-o=&quot;total&quot;&gt;$36,498&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&quot;fc-bar&quot;&gt;&lt;i data-bar=&quot;a&quot; style=&quot;width:82%;background:#0e7a4a&quot;&gt;&lt;/i&gt;&lt;i data-bar=&quot;b&quot; style=&quot;width:18%;background:#e0932f&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+  &lt;div class=&quot;fc-note&quot;&gt;Free car loan calculator by &lt;a href=&quot;https://fincalcyou.com/pages/car-loan-calculator.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;fin·calc&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;script src=&quot;https://fincalcyou.com/embed.js&quot; async&gt;&lt;/script&gt;</code></pre>
+    </section>
+    <section class="embed-item">
+      <h2>SIP / Monthly Investment</h2>
+      <p class="sub">Live preview — try it, it updates as you type:</p>
+      <div class="fc-embed" data-fincalc-embed="sip" data-cur="USD" data-locale="en-US">
+  <div class="fc-grid">
+    <div><label>Monthly investment</label><div class="fc-in"><span>$</span><input data-f="amount" type="number" min="1" step="any" value="500"></div></div>
+    <div><label>Return (% p.a.)</label><div class="fc-in"><input data-f="rate" type="number" min="0" step="0.05" value="12"><span>%</span></div></div>
+    <div><label>Years</label><div class="fc-in"><input data-f="years" type="number" min="1" step="1" value="15"><span>yrs</span></div></div>
+  </div>
+  <div class="fc-head">Future value<strong data-o="headline">$252,288</strong></div>
+  <div class="fc-mini"><div>Invested<b data-o="a">$90,000</b></div><div>Returns<b data-o="b">$162,288</b></div><div>Total<b data-o="total">$252,288</b></div></div>
+  <div class="fc-bar"><i data-bar="a" style="width:36%;background:#0e7a4a"></i><i data-bar="b" style="width:64%;background:#e0932f"></i></div>
+  <div class="fc-note">Free investment calculator by <a href="https://fincalcyou.com/pages/sip-calculator.html" target="_blank" rel="noopener">fin·calc</a></div>
+</div>
+      <p class="sub">Copy this code into your page (once per site is enough for the script tag):</p>
+      <pre class="embed-code"><code>&lt;div class=&quot;fc-embed&quot; data-fincalc-embed=&quot;sip&quot; data-cur=&quot;USD&quot; data-locale=&quot;en-US&quot;&gt;
+  &lt;div class=&quot;fc-grid&quot;&gt;
+    &lt;div&gt;&lt;label&gt;Monthly investment&lt;/label&gt;&lt;div class=&quot;fc-in&quot;&gt;&lt;span&gt;$&lt;/span&gt;&lt;input data-f=&quot;amount&quot; type=&quot;number&quot; min=&quot;1&quot; step=&quot;any&quot; value=&quot;500&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;label&gt;Return (% p.a.)&lt;/label&gt;&lt;div class=&quot;fc-in&quot;&gt;&lt;input data-f=&quot;rate&quot; type=&quot;number&quot; min=&quot;0&quot; step=&quot;0.05&quot; value=&quot;12&quot;&gt;&lt;span&gt;%&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;label&gt;Years&lt;/label&gt;&lt;div class=&quot;fc-in&quot;&gt;&lt;input data-f=&quot;years&quot; type=&quot;number&quot; min=&quot;1&quot; step=&quot;1&quot; value=&quot;15&quot;&gt;&lt;span&gt;yrs&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;fc-head&quot;&gt;Future value&lt;strong data-o=&quot;headline&quot;&gt;$252,288&lt;/strong&gt;&lt;/div&gt;
+  &lt;div class=&quot;fc-mini&quot;&gt;&lt;div&gt;Invested&lt;b data-o=&quot;a&quot;&gt;$90,000&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Returns&lt;b data-o=&quot;b&quot;&gt;$162,288&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Total&lt;b data-o=&quot;total&quot;&gt;$252,288&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&quot;fc-bar&quot;&gt;&lt;i data-bar=&quot;a&quot; style=&quot;width:36%;background:#0e7a4a&quot;&gt;&lt;/i&gt;&lt;i data-bar=&quot;b&quot; style=&quot;width:64%;background:#e0932f&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+  &lt;div class=&quot;fc-note&quot;&gt;Free investment calculator by &lt;a href=&quot;https://fincalcyou.com/pages/sip-calculator.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;fin·calc&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;script src=&quot;https://fincalcyou.com/embed.js&quot; async&gt;&lt;/script&gt;</code></pre>
+    </section>
+    <section class="embed-item">
+      <h2>Fixed Deposit / CD</h2>
+      <p class="sub">Live preview — try it, it updates as you type:</p>
+      <div class="fc-embed" data-fincalc-embed="fd" data-cur="USD" data-locale="en-US">
+  <div class="fc-grid">
+    <div><label>Deposit amount</label><div class="fc-in"><span>$</span><input data-f="amount" type="number" min="1" step="any" value="10000"></div></div>
+    <div><label>Rate (% p.a.)</label><div class="fc-in"><input data-f="rate" type="number" min="0" step="0.05" value="7"><span>%</span></div></div>
+    <div><label>Years</label><div class="fc-in"><input data-f="years" type="number" min="1" step="1" value="5"><span>yrs</span></div></div>
+  </div>
+  <div class="fc-head">Maturity value<strong data-o="headline">$14,148</strong></div>
+  <div class="fc-mini"><div>Deposit<b data-o="a">$10,000</b></div><div>Interest<b data-o="b">$4,148</b></div><div>Total<b data-o="total">$14,148</b></div></div>
+  <div class="fc-bar"><i data-bar="a" style="width:71%;background:#0e7a4a"></i><i data-bar="b" style="width:29%;background:#e0932f"></i></div>
+  <div class="fc-note">Free fixed deposit calculator by <a href="https://fincalcyou.com/pages/fixed-deposit-calculator.html" target="_blank" rel="noopener">fin·calc</a></div>
+</div>
+      <p class="sub">Copy this code into your page (once per site is enough for the script tag):</p>
+      <pre class="embed-code"><code>&lt;div class=&quot;fc-embed&quot; data-fincalc-embed=&quot;fd&quot; data-cur=&quot;USD&quot; data-locale=&quot;en-US&quot;&gt;
+  &lt;div class=&quot;fc-grid&quot;&gt;
+    &lt;div&gt;&lt;label&gt;Deposit amount&lt;/label&gt;&lt;div class=&quot;fc-in&quot;&gt;&lt;span&gt;$&lt;/span&gt;&lt;input data-f=&quot;amount&quot; type=&quot;number&quot; min=&quot;1&quot; step=&quot;any&quot; value=&quot;10000&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;label&gt;Rate (% p.a.)&lt;/label&gt;&lt;div class=&quot;fc-in&quot;&gt;&lt;input data-f=&quot;rate&quot; type=&quot;number&quot; min=&quot;0&quot; step=&quot;0.05&quot; value=&quot;7&quot;&gt;&lt;span&gt;%&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;div&gt;&lt;label&gt;Years&lt;/label&gt;&lt;div class=&quot;fc-in&quot;&gt;&lt;input data-f=&quot;years&quot; type=&quot;number&quot; min=&quot;1&quot; step=&quot;1&quot; value=&quot;5&quot;&gt;&lt;span&gt;yrs&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;fc-head&quot;&gt;Maturity value&lt;strong data-o=&quot;headline&quot;&gt;$14,148&lt;/strong&gt;&lt;/div&gt;
+  &lt;div class=&quot;fc-mini&quot;&gt;&lt;div&gt;Deposit&lt;b data-o=&quot;a&quot;&gt;$10,000&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Interest&lt;b data-o=&quot;b&quot;&gt;$4,148&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Total&lt;b data-o=&quot;total&quot;&gt;$14,148&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&quot;fc-bar&quot;&gt;&lt;i data-bar=&quot;a&quot; style=&quot;width:71%;background:#0e7a4a&quot;&gt;&lt;/i&gt;&lt;i data-bar=&quot;b&quot; style=&quot;width:29%;background:#e0932f&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+  &lt;div class=&quot;fc-note&quot;&gt;Free fixed deposit calculator by &lt;a href=&quot;https://fincalcyou.com/pages/fixed-deposit-calculator.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;fin·calc&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;script src=&quot;https://fincalcyou.com/embed.js&quot; async&gt;&lt;/script&gt;</code></pre>
+    </section>
+
+    <section>
+      <h2>Terms &amp; attribution</h2>
+      <p class="note">Free for personal and commercial sites. Keep the visible “by fin·calc” link in each widget — that link is the only thing we ask in return. The script is loaded from <code>https://fincalcyou.com/embed.js</code>, contains no tracking, makes no network calls, and stores nothing. Rates you pre-fill are illustrative; visitors can type their own.</p>
+    </section>
+
+    <footer><p>fin·calc · Made for better financial decisions. Free. No signup. No tracking.</p></footer>
+  </main>
+  <script src="/embed.js" async></script>
+</body>
+</html>
