@@ -264,6 +264,19 @@ def render_fd(d, N):
     return h
 
 def enrich_fd(h, d, N, country, rs, r2, note):
+    di = d["deposit_insurance"]
+    rate = d["rate"]
+    if rate < 1:
+        band = "far below the global norm - among the lowest deposit rates anywhere, so keeping fees and charges near zero matters more than the headline rate"
+    elif rate < 3:
+        band = "on the low side by international standards"
+    elif rate < 6:
+        band = "around the typical range for developed-market deposits"
+    elif rate < 10:
+        band = "relatively high in nominal terms"
+    else:
+        band = "very high in nominal terms - but rates this large usually track higher local inflation, so your real, after-inflation return can be far smaller than the headline suggests"
+    ratectx = "At around %s%%, the fixed-deposit rate in %s is %s." % (rs, country, band)
     faq = [
         ("How is FD maturity calculated in %s?" % country, FDCALC),
         ("What is the current FD rate in %s?" % country,
@@ -271,12 +284,12 @@ def enrich_fd(h, d, N, country, rs, r2, note):
         ("Is FD interest taxable in %s?" % country,
          "In most countries FD interest is taxable as income; some offer tax-advantaged or senior-citizen options. Check your local rules - the calculator shows the pre-tax maturity value."),
         ("Is a fixed deposit safe in %s?" % country,
-         "Fixed deposits carry no market risk and are often protected by a deposit-insurance scheme up to a limit. They trade higher safety for lower long-term returns than equities."),
+         "Fixed deposits carry no market risk. %s They trade higher safety for lower long-term returns than equities." % di),
         ("Should I choose a fixed deposit or invest instead in %s?" % country,
          "A fixed deposit gives a guaranteed return and suits money you cannot afford to risk. Investing targets higher long-term growth but can fall in value. Many people keep an FD for safety and invest separately for growth."),
     ]
     secs = [
-        '    <section>\n      <h2>Fixed deposit rates in %s (2026)</h2>\n      <p>%s</p>\n      <p class="note">Reference figures, ~2026. FD interest is often taxable and rates vary by bank and tenure - verify the current rate before depositing.</p>\n    </section>' % (country, note),
+        '    <section>\n      <h2>Fixed deposit rates in %s (2026)</h2>\n      <p>%s</p>\n      <p>%s</p>\n      <p class="note">Reference figures, ~2026. FD interest is often taxable and rates vary by bank and tenure - verify the current rate before depositing.</p>\n    </section>' % (country, note, ratectx),
         '    <section>\n      <h2>Worked example</h2>\n      <p>For every <strong>%s</strong> deposited at <strong>%s%%</strong> for <strong>5 years</strong> (quarterly compounding):</p>\n      <ul>\n        <li>Maturity value: <strong>%s</strong></li>\n        <li>Interest earned: <strong>%s</strong></li>\n      </ul>\n      <p>Scale to your deposit amount. Longer tenures and higher rates grow the maturity value; compare banks before locking in.</p>\n    </section>' % (N["hundredk"], r2, N["mat"], N["intr"]),
         '    <section>\n      <h2>How to get the best fixed-deposit return in %s</h2>\n      <ul>\n        <li>Compare several banks - smaller and digital banks often pay more than the big high-street names.</li>\n        <li>Ladder your deposits across different tenures so some matures regularly and you can reinvest at new rates.</li>\n        <li>Check how often interest compounds; more frequent compounding grows the maturity value.</li>\n        <li>Factor in tax on the interest, and compare against short-term government bills or bonds.</li>\n      </ul>\n    </section>' % country,
         '    <section>\n      <h2>Frequently Asked Questions</h2>\n' + "\n".join('      <h3>%s</h3>\n      <p>%s</p>' % (q, a) for q, a in faq) + '\n    </section>',

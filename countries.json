@@ -1,1590 +1,1623 @@
 {
- "_doc": "Single source of truth for generated calculator clusters. Edit here, then run `python build.py`. Pages marked custom:true are hand-written and left untouched by the generator.",
- "car_loan": [
-  {
-   "slug": "car-finance-calculator-bahrain",
-   "country_article": "Bahrain",
-   "country": "Bahrain",
-   "cur_symbol": "BHD",
-   "cur_code": "BHD",
-   "locale": "en-BH",
-   "rate": 5.5,
-   "car_note": "Car loan rates ≈ 5–7% p.a. Max tenure typically 5 years. Ijarah and Murabaha available at Al Baraka, Bahrain Islamic Bank, Al Salam.",
-   "related": [
-    "<li><a href=\"home-finance-calculator-bahrain.html\">Home Loan Calculator – Bahrain</a></li>",
-    "<li><a href=\"fixed-deposit-calculator-bahrain.html\">Fixed Deposit Calculator – Bahrain</a></li>",
-    "<li><a href=\"sip-calculator-bahrain.html\">SIP Calculator – Bahrain</a></li>",
-    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
-   ],
-   "rate_range": "5–7% p.a.",
-   "deposit": null,
-   "tenure": "5 years",
-   "lenders": [
-    "Al Baraka",
-    "Bahrain Islamic Bank",
-    "Al Salam"
-   ],
-   "nuance": "Islamic financing (Ijarah and Murabaha) is widely available alongside conventional loans."
-  },
-  {
-   "slug": "car-finance-calculator-qatar",
-   "country_article": "Qatar",
-   "country": "Qatar",
-   "cur_symbol": "QAR",
-   "cur_code": "QAR",
-   "locale": "en-QA",
-   "rate": 5.2,
-   "car_note": "Car loan rates ≈ 4.5–6% p.a. (conventional). Shariah options (Murabaha/Ijarah) via QIB, Masraf Al Rayan. Max tenure 5–7 years depending on income.",
-   "related": [
-    "<li><a href=\"home-finance-calculator-qatar.html\">Home Loan Calculator – Qatar</a></li>",
-    "<li><a href=\"fixed-deposit-calculator-qatar.html\">Fixed Deposit Calculator – Qatar</a></li>",
-    "<li><a href=\"sip-calculator-qatar.html\">SIP Calculator – Qatar</a></li>",
-    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
-   ],
-   "rate_range": "4.5–6% p.a. for conventional loans",
-   "deposit": null,
-   "tenure": "5–7 years",
-   "lenders": [
-    "QIB",
-    "Masraf Al Rayan"
-   ],
-   "nuance": "Shariah-compliant options (Murabaha and Ijarah) are common, and the maximum tenure depends on your income."
-  },
-  {
-   "slug": "car-finance-calculator-saudi-arabia",
-   "country_article": "Saudi Arabia",
-   "country": "Saudi Arabia",
-   "cur_symbol": "SAR",
-   "cur_code": "SAR",
-   "locale": "en-SA",
-   "rate": 5.0,
-   "car_note": "Auto Murabaha effective rate ≈ 4–6% p.a. Max tenure 5 years. Providers: Al Rajhi Bank, SNB, Alinma, Bank Albilad. SIMAH credit check required.",
-   "related": [
-    "<li><a href=\"home-finance-calculator-saudi-arabia.html\">Home Loan Calculator – Saudi Arabia</a></li>",
-    "<li><a href=\"fixed-deposit-calculator-saudi-arabia.html\">Fixed Deposit Calculator – Saudi Arabia</a></li>",
-    "<li><a href=\"sip-calculator-saudi-arabia.html\">SIP Calculator – Saudi Arabia</a></li>",
-    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
-   ],
-   "rate_range": "4–6% p.a. (Auto Murabaha effective rate)",
-   "deposit": null,
-   "tenure": "5 years",
-   "lenders": [
-    "Al Rajhi Bank",
-    "SNB",
-    "Alinma",
-    "Bank Albilad"
-   ],
-   "nuance": "Most financing is Shariah-compliant Murabaha, and a SIMAH credit check is required."
-  },
-  {
-   "slug": "car-finance-calculator-uk",
-   "country_article": "the UK",
-   "country": "UK",
-   "cur_symbol": "£",
-   "cur_code": "GBP",
-   "locale": "en-GB",
-   "rate": 8.0,
-   "car_note": "HP rates ≈ 7–10% APR, PCP rates ≈ 6–9% APR. PCP has a final balloon payment; HP pays off fully. Typical tenure 3–5 years. Dealers and banks both offer financing.",
-   "related": [
-    "<li><a href=\"mortgage-calculator-uk.html\">Home Loan Calculator – the UK</a></li>",
-    "<li><a href=\"fixed-deposit-calculator-uk.html\">Fixed Deposit Calculator – the UK</a></li>",
-    "<li><a href=\"sip-calculator-uk.html\">SIP Calculator – the UK</a></li>",
-    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
-   ],
-   "rate_range": "6–10% APR (HP 7–10%, PCP 6–9%)",
-   "deposit": null,
-   "tenure": "3–5 years",
-   "lenders": [
-    "high-street banks",
-    "dealer finance houses"
-   ],
-   "nuance": "Hire Purchase (HP) pays the car off in full, while PCP has a lower monthly cost but a final balloon payment."
-  },
-  {
-   "slug": "car-loan-calculator-australia",
-   "country_article": "Australia",
-   "country": "Australia",
-   "cur_symbol": "$",
-   "cur_code": "AUD",
-   "locale": "en-AU",
-   "rate": 8.0,
-   "car_note": "Secured car loans ≈ 6.5–9% p.a., unsecured 10–14%. Max tenure 7 years. Dealer finance sometimes has balloon payment options. Providers: CommBank, Westpac, Toyota Finance, Plenti, Pepper Money.",
-   "related": [
-    "<li><a href=\"home-loan-calculator-australia.html\">Home Loan Calculator – Australia</a></li>",
-    "<li><a href=\"fixed-deposit-calculator-australia.html\">Fixed Deposit Calculator – Australia</a></li>",
-    "<li><a href=\"sip-calculator-australia.html\">SIP Calculator – Australia</a></li>",
-    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
-   ],
-   "rate_range": "6.5–9% p.a. for secured loans (10–14% unsecured)",
-   "deposit": null,
-   "tenure": "7 years",
-   "lenders": [
-    "CommBank",
-    "Westpac",
-    "Toyota Finance",
-    "Plenti",
-    "Pepper Money"
-   ],
-   "nuance": "Secured loans (where the car is collateral) are cheaper than unsecured personal loans, and some dealer finance includes a balloon payment due at the end."
-  },
-  {
-   "slug": "car-loan-calculator-bangladesh",
-   "country_article": "Bangladesh",
-   "country": "Bangladesh",
-   "cur_symbol": "BDT",
-   "cur_code": "BDT",
-   "locale": "en-BD",
-   "rate": 13.0,
-   "car_note": "Car loan rates ≈ 11–14% p.a. Max tenure 6 years for new cars. DBBL, BRAC, Eastern Bank offer auto loans.",
-   "related": [
-    "<li><a href=\"home-loan-calculator-bangladesh.html\">Home Loan Calculator – Bangladesh</a></li>",
-    "<li><a href=\"fixed-deposit-calculator-bangladesh.html\">Fixed Deposit Calculator – Bangladesh</a></li>",
-    "<li><a href=\"sip-calculator-bangladesh.html\">SIP Calculator – Bangladesh</a></li>",
-    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
-   ],
-   "rate_range": "11–14% p.a.",
-   "deposit": null,
-   "tenure": "6 years for new cars",
-   "lenders": [
-    "Dutch-Bangla Bank (DBBL)",
-    "BRAC Bank",
-    "Eastern Bank"
-   ],
-   "nuance": "Both new and used vehicles can be financed, with used cars usually carrying a slightly higher rate."
-  },
-  {
-   "slug": "car-loan-calculator-brazil",
-   "country_article": "Brazil",
-   "country": "Brazil",
-   "cur_symbol": "R$",
-   "cur_code": "BRL",
-   "locale": "pt-BR",
-   "rate": 25.0,
-   "car_note": "Auto loan rates ≈ 1.8–2.5% a.m. (22–30% p.a. effective). Down payment typical 20–30%. Max tenure 5 years (60 months). Providers: Bradesco Financiamentos, Itaú, Santander Financiamentos, BV, Omni.",
-   "related": [
-    "<li><a href=\"financiamento-imobiliario-brasil.html\">Home Loan Calculator – Brazil</a></li>",
-    "<li><a href=\"fixed-deposit-calculator-brazil.html\">Fixed Deposit Calculator – Brazil</a></li>",
-    "<li><a href=\"sip-calculator-brazil.html\">SIP Calculator – Brazil</a></li>",
-    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
-   ],
-   "rate_range": "22–30% p.a. effective (about 1.8–2.5% per month)",
-   "deposit": "20–30%",
-   "tenure": "5 years (60 months)",
-   "lenders": [
-    "Bradesco Financiamentos",
-    "Itaú",
-    "Santander Financiamentos",
-    "BV",
-    "Omni"
-   ],
-   "nuance": "Rates are usually quoted per month and are among the highest of any major market, so the effective annual cost is steep."
-  },
-  {
-   "slug": "car-loan-calculator-canada",
-   "country_article": "Canada",
-   "country": "Canada",
-   "cur_symbol": "$",
-   "cur_code": "CAD",
-   "locale": "en-CA",
-   "rate": 7.0,
-   "car_note": "New car loans ≈ 6–8% p.a., used ≈ 8–11%. Tenure up to 96 months (8 years). Manufacturer promos ≈ 0–3.99% on select models. Providers: TD Auto Finance, Scotiabank, RBC, Ford Credit Canada.",
-   "related": [
-    "<li><a href=\"mortgage-calculator-canada.html\">Home Loan Calculator – Canada</a></li>",
-    "<li><a href=\"fixed-deposit-calculator-canada.html\">Fixed Deposit Calculator – Canada</a></li>",
-    "<li><a href=\"sip-calculator-canada.html\">SIP Calculator – Canada</a></li>",
-    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
-   ],
-   "rate_range": "6–8% p.a. new, 8–11% used",
-   "deposit": null,
-   "tenure": "96 months (8 years)",
-   "lenders": [
-    "TD Auto Finance",
-    "Scotiabank",
-    "RBC",
-    "Ford Credit Canada"
-   ],
-   "nuance": "Manufacturers often run promotional rates around 0–3.99% on select models."
-  },
-  {
-   "slug": "car-loan-calculator-china",
-   "country_article": "China",
-   "country": "China",
-   "cur_symbol": "¥",
-   "cur_code": "CNY",
-   "locale": "zh-CN",
-   "rate": 4.5,
-   "car_note": "Auto loan rates ≈ 4–7% p.a. Min 20% down for conventional, 15% for new-energy vehicles (NEVs). Max tenure 5 years. Providers: ICBC, BoC, BYD Auto Finance, Geely Auto Finance, Toyota Auto Finance.",
-   "related": [
-    "<li><a href=\"mortgage-calculator-china.html\">Home Loan Calculator – China</a></li>",
-    "<li><a href=\"fixed-deposit-calculator-china.html\">Fixed Deposit Calculator – China</a></li>",
-    "<li><a href=\"sip-calculator-china.html\">SIP Calculator – China</a></li>",
-    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
-   ],
-   "rate_range": "4–7% p.a.",
-   "deposit": "20% (15% for new-energy vehicles)",
-   "tenure": "5 years",
-   "lenders": [
-    "ICBC",
-    "Bank of China",
-    "BYD Auto Finance",
-    "Geely Auto Finance",
-    "Toyota Auto Finance"
-   ],
-   "nuance": "New-energy vehicles (NEVs) qualify for a lower minimum down payment."
-  },
-  {
-   "slug": "car-loan-calculator-egypt",
-   "country_article": "Egypt",
-   "country": "Egypt",
-   "cur_symbol": "EGP",
-   "cur_code": "EGP",
-   "locale": "en-EG",
-   "rate": 23.0,
-   "car_note": "Car loan rates ≈ 22–26% p.a. New and used financing available. Min 20% down payment typical. Providers: CIB, QNB Alahli, NBE, Banque Misr.",
-   "related": [
-    "<li><a href=\"mortgage-calculator-egypt.html\">Home Loan Calculator – Egypt</a></li>",
-    "<li><a href=\"fixed-deposit-calculator-egypt.html\">Fixed Deposit Calculator – Egypt</a></li>",
-    "<li><a href=\"sip-calculator-egypt.html\">SIP Calculator – Egypt</a></li>",
-    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
-   ],
-   "rate_range": "22–26% p.a.",
-   "deposit": "20% (typical minimum)",
-   "tenure": null,
-   "lenders": [
-    "CIB",
-    "QNB Alahli",
-    "NBE",
-    "Banque Misr"
-   ],
-   "nuance": "Both new and used cars can be financed."
-  },
-  {
-   "slug": "car-loan-calculator-eurozone",
-   "country_article": "the Eurozone",
-   "country": "Eurozone",
-   "cur_symbol": "€",
-   "cur_code": "EUR",
-   "locale": "en-IE",
-   "rate": 5.5,
-   "car_note": "Car loan rates ≈ 5–7% p.a. Manufacturer financing (BMW, VW, Mercedes) often has promotional 0% deals on specific models. Typical tenure 3–7 years.",
-   "related": [
-    "<li><a href=\"mortgage-calculator-eurozone.html\">Home Loan Calculator – the Eurozone</a></li>",
-    "<li><a href=\"fixed-deposit-calculator-eurozone.html\">Fixed Deposit Calculator – the Eurozone</a></li>",
-    "<li><a href=\"sip-calculator-eurozone.html\">SIP Calculator – the Eurozone</a></li>",
-    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
-   ],
-   "rate_range": "5–7% p.a.",
-   "deposit": null,
-   "tenure": "3–7 years",
-   "lenders": [
-    "manufacturer finance (BMW, VW, Mercedes)",
-    "high-street banks"
-   ],
-   "nuance": "Manufacturer financing often includes promotional 0% deals on specific models."
-  },
-  {
-   "slug": "car-loan-calculator-hong-kong",
-   "country_article": "Hong Kong",
-   "country": "Hong Kong",
-   "cur_symbol": "HK$",
-   "cur_code": "HKD",
-   "locale": "en-HK",
-   "rate": 5.0,
-   "car_note": "Auto loan rates ≈ 4–6% p.a. Lenders: HSBC, Hang Seng, Bank of East Asia, plus dealer-arranged finance. First registration tax is steep, making cars expensive.",
-   "related": [
-    "<li><a href=\"mortgage-calculator-hong-kong.html\">Home Loan Calculator – Hong Kong</a></li>",
-    "<li><a href=\"fixed-deposit-calculator-hong-kong.html\">Fixed Deposit Calculator – Hong Kong</a></li>",
-    "<li><a href=\"sip-calculator-hong-kong.html\">SIP Calculator – Hong Kong</a></li>",
-    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
-   ],
-   "rate_range": "4–6% p.a.",
-   "deposit": null,
-   "tenure": null,
-   "lenders": [
-    "HSBC",
-    "Hang Seng",
-    "Bank of East Asia"
-   ],
-   "nuance": "First-registration tax is steep, which raises the total cost of buying a car; dealer-arranged finance is also common."
-  },
-  {
-   "slug": "car-loan-calculator-japan",
-   "country_article": "Japan",
-   "country": "Japan",
-   "cur_symbol": "￥",
-   "cur_code": "JPY",
-   "locale": "ja-JP",
-   "rate": 2.5,
-   "car_note": "Car loan rates ≈ 1.9–4.5% p.a. (dealer financing) or 1.5–3% (bank loans). Max tenure 7 years. Providers: Toyota Financial Services, Nissan Financial, Rakuten Bank, Orix Auto Leasing.",
-   "related": [
-    "<li><a href=\"mortgage-calculator-japan.html\">Home Loan Calculator – Japan</a></li>",
-    "<li><a href=\"fixed-deposit-calculator-japan.html\">Fixed Deposit Calculator – Japan</a></li>",
-    "<li><a href=\"sip-calculator-japan.html\">SIP Calculator – Japan</a></li>",
-    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
-   ],
-   "rate_range": "1.5–4.5% p.a. (bank loans 1.5–3%, dealer 1.9–4.5%)",
-   "deposit": null,
-   "tenure": "7 years",
-   "lenders": [
-    "Toyota Financial Services",
-    "Nissan Financial",
-    "Rakuten Bank",
-    "Orix Auto Leasing"
-   ],
-   "nuance": "Bank loans are usually cheaper than dealer financing."
-  },
-  {
-   "slug": "car-loan-calculator-kenya",
-   "country_article": "Kenya",
-   "country": "Kenya",
-   "cur_symbol": "Ksh",
-   "cur_code": "KES",
-   "locale": "en-KE",
-   "rate": 15.0,
-   "car_note": "Auto loans ≈ 13–18% p.a. 20–30% down payment typical. Tenure up to 6 years. Providers: KCB, NCBA, Stanbic, Co-op Bank, Absa.",
-   "related": [
-    "<li><a href=\"home-loan-calculator-kenya.html\">Home Loan Calculator – Kenya</a></li>",
-    "<li><a href=\"fixed-deposit-calculator-kenya.html\">Fixed Deposit Calculator – Kenya</a></li>",
-    "<li><a href=\"sip-calculator-kenya.html\">SIP Calculator – Kenya</a></li>",
-    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
-   ],
-   "rate_range": "13–18% p.a.",
-   "deposit": "20–30%",
-   "tenure": "6 years",
-   "lenders": [
-    "KCB",
-    "NCBA",
-    "Stanbic",
-    "Co-op Bank",
-    "Absa"
-   ],
-   "nuance": "Both new and used vehicles can be financed, with used cars usually carrying a slightly higher rate."
-  },
-  {
-   "slug": "car-loan-calculator-kuwait",
-   "country_article": "Kuwait",
-   "country": "Kuwait",
-   "cur_symbol": "KWD",
-   "cur_code": "KWD",
-   "locale": "en-KW",
-   "rate": 5.0,
-   "car_note": "Auto loan rates ≈ 4.5–6% p.a. (conventional), capped at CBK discount + 3%. Max 5 years. Islamic (Murabaha) via KFH, Boubyan, Warba.",
-   "related": [
-    "<li><a href=\"home-finance-calculator-kuwait.html\">Home Loan Calculator – Kuwait</a></li>",
-    "<li><a href=\"fixed-deposit-calculator-kuwait.html\">Fixed Deposit Calculator – Kuwait</a></li>",
-    "<li><a href=\"sip-calculator-kuwait.html\">SIP Calculator – Kuwait</a></li>",
-    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
-   ],
-   "rate_range": "4.5–6% p.a. for conventional loans",
-   "deposit": null,
-   "tenure": "5 years",
-   "lenders": [
-    "KFH",
-    "Boubyan",
-    "Warba"
-   ],
-   "nuance": "Conventional rates are capped at the CBK discount rate + 3%, and Islamic Murabaha is widely available."
-  },
-  {
-   "slug": "car-loan-calculator-malaysia",
-   "country_article": "Malaysia",
-   "country": "Malaysia",
-   "cur_symbol": "RM",
-   "cur_code": "MYR",
-   "locale": "ms-MY",
-   "rate": 3.5,
-   "car_note": "HP flat rate ≈ 2–3.5% p.a. (reducing balance ≈ 4–7%). Max 9 years new, 7 years used. Providers: Maybank, CIMB, Public Bank. Islamic AITAB via Bank Islam.",
-   "related": [
-    "<li><a href=\"home-loan-calculator-malaysia.html\">Home Loan Calculator – Malaysia</a></li>",
-    "<li><a href=\"fixed-deposit-calculator-malaysia.html\">Fixed Deposit Calculator – Malaysia</a></li>",
-    "<li><a href=\"sip-calculator-malaysia.html\">SIP Calculator – Malaysia</a></li>",
-    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
-   ],
-   "rate_range": "flat 2–3.5% p.a. (about 4–7% reducing balance)",
-   "deposit": null,
-   "tenure": "9 years new, 7 years used",
-   "lenders": [
-    "Maybank",
-    "CIMB",
-    "Public Bank"
-   ],
-   "nuance": "Rates are usually quoted as a flat rate, and Islamic AITAB financing is available via Bank Islam."
-  },
-  {
-   "slug": "car-loan-calculator-mexico",
-   "country_article": "Mexico",
-   "country": "Mexico",
-   "cur_symbol": "$",
-   "cur_code": "MXN",
-   "locale": "es-MX",
-   "rate": 13.5,
-   "car_note": "Auto loans ≈ 11–16% p.a. Min 10–20% down. Max tenure 60-72 months. Captive financing (Ford Credit, Toyota Financial México) often competitive. Providers: BBVA, HSBC, Banorte, Ford Credit.",
-   "related": [
-    "<li><a href=\"credito-hipotecario-mexico.html\">Home Loan Calculator – Mexico</a></li>",
-    "<li><a href=\"fixed-deposit-calculator-mexico.html\">Fixed Deposit Calculator – Mexico</a></li>",
-    "<li><a href=\"sip-calculator-mexico.html\">SIP Calculator – Mexico</a></li>",
-    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
-   ],
-   "rate_range": "11–16% p.a.",
-   "deposit": "10–20% (minimum)",
-   "tenure": "60–72 months",
-   "lenders": [
-    "BBVA",
-    "HSBC",
-    "Banorte",
-    "Ford Credit"
-   ],
-   "nuance": "Captive financing (Ford Credit, Toyota Financial México) is often competitive."
-  },
-  {
-   "slug": "car-loan-calculator-new-zealand",
-   "country_article": "New Zealand",
-   "country": "New Zealand",
-   "cur_symbol": "$",
-   "cur_code": "NZD",
-   "locale": "en-NZ",
-   "rate": 10.0,
-   "car_note": "Car loan rates ≈ 8–14% p.a. Main lenders: MTF, UDC, Heartland, Motor Trade Finances, plus bank-owned (ASB, ANZ). Peer-to-peer options via Harmoney.",
-   "related": [
-    "<li><a href=\"mortgage-calculator-new-zealand.html\">Home Loan Calculator – New Zealand</a></li>",
-    "<li><a href=\"fixed-deposit-calculator-new-zealand.html\">Fixed Deposit Calculator – New Zealand</a></li>",
-    "<li><a href=\"sip-calculator-new-zealand.html\">SIP Calculator – New Zealand</a></li>",
-    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
-   ],
-   "rate_range": "8–14% p.a.",
-   "deposit": null,
-   "tenure": null,
-   "lenders": [
-    "MTF",
-    "UDC",
-    "Heartland",
-    "Motor Trade Finances",
-    "ASB",
-    "ANZ"
-   ],
-   "nuance": "Peer-to-peer finance (for example Harmoney) is also an option."
-  },
-  {
-   "slug": "car-loan-calculator-russia",
-   "country_article": "Russia",
-   "country": "Russia",
-   "cur_symbol": "₽",
-   "cur_code": "RUB",
-   "locale": "ru-RU",
-   "rate": 24.0,
-   "car_note": "Auto loan rates ≈ 22–28% p.a. State auto-subsidy program offers reduced rates for domestic vehicles. Max tenure 5 years. Providers: Sberbank, Gazprombank, RSHB, Rosbank, VTB.",
-   "related": [
-    "<li><a href=\"mortgage-calculator-russia.html\">Home Loan Calculator – Russia</a></li>",
-    "<li><a href=\"fixed-deposit-calculator-russia.html\">Fixed Deposit Calculator – Russia</a></li>",
-    "<li><a href=\"sip-calculator-russia.html\">SIP Calculator – Russia</a></li>",
-    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
-   ],
-   "rate_range": "22–28% p.a.",
-   "deposit": null,
-   "tenure": "5 years",
-   "lenders": [
-    "Sberbank",
-    "Gazprombank",
-    "RSHB",
-    "Rosbank",
-    "VTB"
-   ],
-   "nuance": "A state auto-subsidy programme offers reduced rates on qualifying domestic vehicles."
-  },
-  {
-   "slug": "car-loan-calculator-singapore",
-   "country_article": "Singapore",
-   "country": "Singapore",
-   "cur_symbol": "$",
-   "cur_code": "SGD",
-   "locale": "en-SG",
-   "rate": 3.5,
-   "car_note": "Car loan rates ≈ 2.5–4% p.a. flat (roughly 4.5–7.5% reducing equivalent). MAS rules: Max 60% LTV for cars ≤S$20k OMV, 70% for higher. Max tenure 7 years. Providers: DBS, UOB, Hong Leong Finance.",
-   "related": [
-    "<li><a href=\"home-loan-calculator-singapore.html\">Home Loan Calculator – Singapore</a></li>",
-    "<li><a href=\"fixed-deposit-calculator-singapore.html\">Fixed Deposit Calculator – Singapore</a></li>",
-    "<li><a href=\"sip-calculator-singapore.html\">SIP Calculator – Singapore</a></li>",
-    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
-   ],
-   "rate_range": "flat 2.5–4% p.a. (about 4.5–7.5% reducing balance)",
-   "deposit": null,
-   "tenure": "7 years",
-   "lenders": [
-    "DBS",
-    "UOB",
-    "Hong Leong Finance"
-   ],
-   "nuance": "MAS rules cap the loan at 60% of the car's value (OMV up to S$20k) or 70% above that."
-  },
-  {
-   "slug": "car-loan-calculator-south-korea",
-   "country_article": "South Korea",
-   "country": "South Korea",
-   "cur_symbol": "₩",
-   "cur_code": "KRW",
-   "locale": "ko-KR",
-   "rate": 5.5,
-   "car_note": "Auto loan rates ≈ 4.5–7% p.a. Max 5–7 years. Captives: Hyundai Capital, KB Capital. Banks: KB, Shinhan, Hana, plus card companies (Shinhan Card, Samsung Card).",
-   "related": [
-    "<li><a href=\"mortgage-calculator-south-korea.html\">Home Loan Calculator – South Korea</a></li>",
-    "<li><a href=\"fixed-deposit-calculator-south-korea.html\">Fixed Deposit Calculator – South Korea</a></li>",
-    "<li><a href=\"sip-calculator-south-korea.html\">SIP Calculator – South Korea</a></li>",
-    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
-   ],
-   "rate_range": "4.5–7% p.a.",
-   "deposit": null,
-   "tenure": "5–7 years",
-   "lenders": [
-    "Hyundai Capital",
-    "KB Capital",
-    "KB",
-    "Shinhan",
-    "Hana"
-   ],
-   "nuance": "Captive lenders and card companies (Shinhan Card, Samsung Card) also finance cars."
-  },
-  {
-   "slug": "car-loan-calculator-sri-lanka",
-   "country_article": "Sri Lanka",
-   "country": "Sri Lanka",
-   "cur_symbol": "LKR",
-   "cur_code": "LKR",
-   "locale": "en-LK",
-   "rate": 13.0,
-   "car_note": "Vehicle loan rates ≈ 12–14% p.a. Post-cyclone vehicle imports surged 2025. Max tenure typically 7 years. Providers: Commercial Bank, DFCC, HNB, Seylan.",
-   "related": [
-    "<li><a href=\"housing-loan-calculator-sri-lanka.html\">Home Loan Calculator – Sri Lanka</a></li>",
-    "<li><a href=\"fixed-deposit-calculator-sri-lanka.html\">Fixed Deposit Calculator – Sri Lanka</a></li>",
-    "<li><a href=\"sip-calculator-sri-lanka.html\">SIP Calculator – Sri Lanka</a></li>",
-    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
-   ],
-   "rate_range": "12–14% p.a.",
-   "deposit": null,
-   "tenure": "7 years",
-   "lenders": [
-    "Commercial Bank",
-    "DFCC",
-    "HNB",
-    "Seylan"
-   ],
-   "nuance": "Vehicle imports surged after import restrictions eased in 2025."
-  },
-  {
-   "slug": "car-loan-calculator-taiwan",
-   "country_article": "Taiwan",
-   "country": "Taiwan",
-   "cur_symbol": "$",
-   "cur_code": "TWD",
-   "locale": "zh-TW",
-   "rate": 4.0,
-   "car_note": "Auto loan rates ≈ 3.5–5% p.a. Tenure up to 84 months. Major lenders: CTBC, Taishin, E.Sun, Fubon, plus captives (Hotai, Toyota Leasing).",
-   "related": [
-    "<li><a href=\"mortgage-calculator-taiwan.html\">Home Loan Calculator – Taiwan</a></li>",
-    "<li><a href=\"fixed-deposit-calculator-taiwan.html\">Fixed Deposit Calculator – Taiwan</a></li>",
-    "<li><a href=\"sip-calculator-taiwan.html\">SIP Calculator – Taiwan</a></li>",
-    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
-   ],
-   "rate_range": "3.5–5% p.a.",
-   "deposit": null,
-   "tenure": "84 months",
-   "lenders": [
-    "CTBC",
-    "Taishin",
-    "E.Sun",
-    "Fubon"
-   ],
-   "nuance": "Captive lenders (Hotai, Toyota Leasing) are common for new cars."
-  },
-  {
-   "slug": "car-loan-calculator-thailand",
-   "country_article": "Thailand",
-   "country": "Thailand",
-   "cur_symbol": "฿",
-   "cur_code": "THB",
-   "locale": "th-TH",
-   "rate": 4.5,
-   "car_note": "Auto loan flat rates ≈ 2.5–4.5% (effective ~5–9% reducing). Max tenure 84 months. Providers: Toyota Leasing, Siam Kubota, bank auto loans (KBank, SCB, Krungthai).",
-   "related": [
-    "<li><a href=\"home-loan-calculator-thailand.html\">Home Loan Calculator – Thailand</a></li>",
-    "<li><a href=\"fixed-deposit-calculator-thailand.html\">Fixed Deposit Calculator – Thailand</a></li>",
-    "<li><a href=\"sip-calculator-thailand.html\">SIP Calculator – Thailand</a></li>",
-    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
-   ],
-   "rate_range": "flat 2.5–4.5% p.a. (about 5–9% reducing balance)",
-   "deposit": null,
-   "tenure": "84 months",
-   "lenders": [
-    "Toyota Leasing",
-    "Siam Kubota",
-    "KBank",
-    "SCB",
-    "Krungthai"
-   ],
-   "nuance": "Rates are usually quoted as a flat rate, so the effective reducing-balance cost is higher."
-  },
-  {
-   "slug": "car-loan-calculator-usa",
-   "country_article": "the USA",
-   "country": "USA",
-   "cur_symbol": "$",
-   "cur_code": "USD",
-   "locale": "en-US",
-   "rate": 7.5,
-   "car_note": "New car loans ≈ 7–8% p.a., used car ≈ 9–11%. Captive lenders (Toyota Financial, Ford Credit) and banks (Chase, Capital One) are common. Credit score materially affects rate.",
-   "related": [
-    "<li><a href=\"mortgage-calculator-usa.html\">Home Loan Calculator – the USA</a></li>",
-    "<li><a href=\"fixed-deposit-calculator-usa.html\">Fixed Deposit Calculator – the USA</a></li>",
-    "<li><a href=\"sip-calculator-usa.html\">SIP Calculator – the USA</a></li>",
-    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
-   ],
-   "rate_range": "7–8% p.a. new, 9–11% used",
-   "deposit": null,
-   "tenure": null,
-   "lenders": [
-    "Chase",
-    "Capital One",
-    "Toyota Financial",
-    "Ford Credit"
-   ],
-   "nuance": "Your credit score materially affects the rate you are offered."
-  },
-  {
-   "slug": "car-loan-calculator-vietnam",
-   "country_article": "Vietnam",
-   "country": "Vietnam",
-   "cur_symbol": "₫",
-   "cur_code": "VND",
-   "locale": "vi-VN",
-   "rate": 10.5,
-   "car_note": "Auto loan rates ≈ 9–12% p.a. Tenure up to 7–8 years. Major lenders: Vietcombank, Techcombank, VPBank (FE Credit), plus Toyota Financial Services.",
-   "related": [
-    "<li><a href=\"home-loan-calculator-vietnam.html\">Home Loan Calculator – Vietnam</a></li>",
-    "<li><a href=\"fixed-deposit-calculator-vietnam.html\">Fixed Deposit Calculator – Vietnam</a></li>",
-    "<li><a href=\"sip-calculator-vietnam.html\">SIP Calculator – Vietnam</a></li>",
-    "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
-   ],
-   "rate_range": "9–12% p.a.",
-   "deposit": null,
-   "tenure": "7–8 years",
-   "lenders": [
-    "Vietcombank",
-    "Techcombank",
-    "VPBank (FE Credit)",
-    "Toyota Financial Services"
-   ],
-   "nuance": "Both new and used vehicles can be financed."
-  },
-  {
-   "slug": "car-loan-calculator-indonesia",
-   "custom": true
-  },
-  {
-   "slug": "car-loan-calculator-nigeria",
-   "custom": true
-  },
-  {
-   "slug": "car-loan-calculator-pakistan",
-   "custom": true
-  },
-  {
-   "slug": "car-loan-calculator-philippines",
-   "custom": true
-  },
-  {
-   "slug": "car-loan-calculator-uae",
-   "custom": true
-  },
-  {
-   "slug": "tasit-kredisi-hesaplama",
-   "custom": true
-  },
-  {
-   "slug": "vehicle-finance-south-africa",
-   "custom": true
-  }
- ],
- "sip": [
-  {
-   "slug": "sip-calculator-australia",
-   "country_article": "Australia",
-   "country": "Australia",
-   "cur_symbol": "$",
-   "cur_code": "AUD",
-   "locale": "en-AU",
-   "rate": 8.0,
-   "invest_note": "ASX 200 long-term ≈ 8–9% (incl. dividends). Super contribution cap A$30k/yr concessional. Platforms: CommSec, SelfWealth, Vanguard Personal Investor, Stake.",
-   "related": [
-    "<li><a href=\"fixed-deposit-calculator-australia.html\">Fixed Deposit Calculator – Australia</a></li>",
-    "<li><a href=\"home-loan-calculator-australia.html\">Home Loan Calculator – Australia</a></li>"
-   ]
-  },
-  {
-   "slug": "sip-calculator-bahrain",
-   "country_article": "Bahrain",
-   "country": "Bahrain",
-   "cur_symbol": "BHD",
-   "cur_code": "BHD",
-   "locale": "en-BH",
-   "rate": 6.0,
-   "invest_note": "Bahrain All-Share Index long-term ≈ 5–7% BHD. Asset managers: Investcorp, SICO, NBB Capital. Bahrain is a regional Islamic finance hub.",
-   "related": [
-    "<li><a href=\"fixed-deposit-calculator-bahrain.html\">Fixed Deposit Calculator – Bahrain</a></li>",
-    "<li><a href=\"home-finance-calculator-bahrain.html\">Home Loan Calculator – Bahrain</a></li>"
-   ]
-  },
-  {
-   "slug": "sip-calculator-brazil",
-   "country_article": "Brazil",
-   "country": "Brazil",
-   "cur_symbol": "R$",
-   "cur_code": "BRL",
-   "locale": "pt-BR",
-   "rate": 14.0,
-   "invest_note": "Ibovespa long-term ≈ 12–15% nominal. Tesouro Selic ≈ Selic rate (15%). Platforms: XP, Clear, Rico, Nubank Invest, Inter Invest. Tax: 15–22.5% on gains (progressive).",
-   "related": [
-    "<li><a href=\"fixed-deposit-calculator-brazil.html\">Fixed Deposit Calculator – Brazil</a></li>",
-    "<li><a href=\"financiamento-imobiliario-brasil.html\">Home Loan Calculator – Brazil</a></li>"
-   ]
-  },
-  {
-   "slug": "sip-calculator-canada",
-   "country_article": "Canada",
-   "country": "Canada",
-   "cur_symbol": "$",
-   "cur_code": "CAD",
-   "locale": "en-CA",
-   "rate": 8.0,
-   "invest_note": "TFSA limit C$7k/yr (2026), RRSP up to 18% of income. TSX long-term ≈ 7–9%. S&P 500 via VFV or XUS. Platforms: Wealthsimple, Questrade, TD Direct Investing.",
-   "related": [
-    "<li><a href=\"fixed-deposit-calculator-canada.html\">Fixed Deposit Calculator – Canada</a></li>",
-    "<li><a href=\"mortgage-calculator-canada.html\">Home Loan Calculator – Canada</a></li>"
-   ]
-  },
-  {
-   "slug": "sip-calculator-china",
-   "country_article": "China",
-   "country": "China",
-   "cur_symbol": "¥",
-   "cur_code": "CNY",
-   "locale": "zh-CN",
-   "rate": 8.0,
-   "invest_note": "CSI 300 long-term ≈ 6–9%. Platforms: Ant Fortune, Tiantian Fund, E Fund. Capital controls limit foreign investing; QDII funds provide limited access.",
-   "related": [
-    "<li><a href=\"fixed-deposit-calculator-china.html\">Fixed Deposit Calculator – China</a></li>",
-    "<li><a href=\"mortgage-calculator-china.html\">Home Loan Calculator – China</a></li>"
-   ]
-  },
-  {
-   "slug": "sip-calculator-egypt",
-   "country_article": "Egypt",
-   "country": "Egypt",
-   "cur_symbol": "EGP",
-   "cur_code": "EGP",
-   "locale": "en-EG",
-   "rate": 20.0,
-   "invest_note": "EGX 30 long-term ≈ 18–22% nominal (EGP). Inflation high, so consider USD-linked or gold certificates. Providers: EFG Hermes, CI Capital.",
-   "related": [
-    "<li><a href=\"fixed-deposit-calculator-egypt.html\">Fixed Deposit Calculator – Egypt</a></li>",
-    "<li><a href=\"mortgage-calculator-egypt.html\">Home Loan Calculator – Egypt</a></li>"
-   ]
-  },
-  {
-   "slug": "sip-calculator-eurozone",
-   "country_article": "the Eurozone",
-   "country": "Eurozone",
-   "cur_symbol": "€",
-   "cur_code": "EUR",
-   "locale": "en-IE",
-   "rate": 8.0,
-   "invest_note": "MSCI Europe long-term ≈ 7–8% p.a. ETF providers: iShares, Amundi, Xtrackers.",
-   "related": [
-    "<li><a href=\"fixed-deposit-calculator-eurozone.html\">Fixed Deposit Calculator – the Eurozone</a></li>",
-    "<li><a href=\"mortgage-calculator-eurozone.html\">Home Loan Calculator – the Eurozone</a></li>"
-   ]
-  },
-  {
-   "slug": "sip-calculator-hong-kong",
-   "country_article": "Hong Kong",
-   "country": "Hong Kong",
-   "cur_symbol": "HK$",
-   "cur_code": "HKD",
-   "locale": "en-HK",
-   "rate": 7.0,
-   "invest_note": "Hang Seng Index long-term ≈ 5–8% HKD. Platforms: HSBC, Hang Seng Invest, Futu, Tiger Brokers, Interactive Brokers. MPF employer+employee 5%+5% mandatory.",
-   "related": [
-    "<li><a href=\"fixed-deposit-calculator-hong-kong.html\">Fixed Deposit Calculator – Hong Kong</a></li>",
-    "<li><a href=\"mortgage-calculator-hong-kong.html\">Home Loan Calculator – Hong Kong</a></li>"
-   ]
-  },
-  {
-   "slug": "sip-calculator-japan",
-   "country_article": "Japan",
-   "country": "Japan",
-   "cur_symbol": "￥",
-   "cur_code": "JPY",
-   "locale": "ja-JP",
-   "rate": 6.0,
-   "invest_note": "Nikkei 225 long-term ≈ 5–7% nominal, global ETFs ≈ 7–10% in JPY terms. New NISA annual limit ¥3.6M (¥1.8M accumulation). Platforms: SBI Securities, Rakuten Securities, Monex.",
-   "related": [
-    "<li><a href=\"fixed-deposit-calculator-japan.html\">Fixed Deposit Calculator – Japan</a></li>",
-    "<li><a href=\"mortgage-calculator-japan.html\">Home Loan Calculator – Japan</a></li>"
-   ]
-  },
-  {
-   "slug": "sip-calculator-kenya",
-   "country_article": "Kenya",
-   "country": "Kenya",
-   "cur_symbol": "Ksh",
-   "cur_code": "KES",
-   "locale": "en-KE",
-   "rate": 12.0,
-   "invest_note": "MMFs ≈ 9–13% p.a. (Cytonn, CIC, Sanlam). NSE long-term ≈ 10–13%. M-Shwari/KCB M-Pesa for short-term savings.",
-   "related": [
-    "<li><a href=\"fixed-deposit-calculator-kenya.html\">Fixed Deposit Calculator – Kenya</a></li>",
-    "<li><a href=\"home-loan-calculator-kenya.html\">Home Loan Calculator – Kenya</a></li>"
-   ]
-  },
-  {
-   "slug": "sip-calculator-kuwait",
-   "country_article": "Kuwait",
-   "country": "Kuwait",
-   "cur_symbol": "KWD",
-   "cur_code": "KWD",
-   "locale": "en-KW",
-   "rate": 6.0,
-   "invest_note": "Boursa Kuwait Premier long-term ≈ 6–8% KWD. Major asset managers: NBK Capital, KFH Capital, KAMCO, Markaz. Retirement: PIFSS for nationals, private plans for expats.",
-   "related": [
-    "<li><a href=\"fixed-deposit-calculator-kuwait.html\">Fixed Deposit Calculator – Kuwait</a></li>",
-    "<li><a href=\"home-finance-calculator-kuwait.html\">Home Loan Calculator – Kuwait</a></li>"
-   ]
-  },
-  {
-   "slug": "sip-calculator-malaysia",
-   "country_article": "Malaysia",
-   "country": "Malaysia",
-   "cur_symbol": "RM",
-   "cur_code": "MYR",
-   "locale": "ms-MY",
-   "rate": 8.0,
-   "invest_note": "ASB long-term ≈ 5–6% tax-free. KLCI long-term ≈ 7–8%. EPF contributions also key for retirement.",
-   "related": [
-    "<li><a href=\"fixed-deposit-calculator-malaysia.html\">Fixed Deposit Calculator – Malaysia</a></li>",
-    "<li><a href=\"home-loan-calculator-malaysia.html\">Home Loan Calculator – Malaysia</a></li>"
-   ]
-  },
-  {
-   "slug": "sip-calculator-mexico",
-   "country_article": "Mexico",
-   "country": "Mexico",
-   "cur_symbol": "$",
-   "cur_code": "MXN",
-   "locale": "es-MX",
-   "rate": 11.0,
-   "invest_note": "IPC long-term ≈ 9–12% nominal. Afores: voluntary contributions on top of mandatory 6.5%. Platforms: GBM+, Actinver, Kuspit, Fintual, Bitso (crypto).",
-   "related": [
-    "<li><a href=\"fixed-deposit-calculator-mexico.html\">Fixed Deposit Calculator – Mexico</a></li>",
-    "<li><a href=\"credito-hipotecario-mexico.html\">Home Loan Calculator – Mexico</a></li>"
-   ]
-  },
-  {
-   "slug": "sip-calculator-new-zealand",
-   "country_article": "New Zealand",
-   "country": "New Zealand",
-   "cur_symbol": "$",
-   "cur_code": "NZD",
-   "locale": "en-NZ",
-   "rate": 8.0,
-   "invest_note": "KiwiSaver growth funds long-term ≈ 7–8% NZD. Default providers: ANZ, ASB, BNZ, Westpac, Kiwi Wealth. Plus Simplicity, Milford, Generate, Sharesies.",
-   "related": [
-    "<li><a href=\"fixed-deposit-calculator-new-zealand.html\">Fixed Deposit Calculator – New Zealand</a></li>",
-    "<li><a href=\"mortgage-calculator-new-zealand.html\">Home Loan Calculator – New Zealand</a></li>"
-   ]
-  },
-  {
-   "slug": "sip-calculator-nigeria",
-   "country_article": "Nigeria",
-   "country": "Nigeria",
-   "cur_symbol": "₦",
-   "cur_code": "NGN",
-   "locale": "en-NG",
-   "rate": 18.0,
-   "invest_note": "NGX All-Share long-term ≈ 15–20% (nominal, NGN). Many investors use USD funds via Cowrywise, Bamboo to hedge inflation.",
-   "related": [
-    "<li><a href=\"fixed-deposit-calculator-nigeria.html\">Fixed Deposit Calculator – Nigeria</a></li>",
-    "<li><a href=\"loan-calculator-nigeria.html\">Home Loan Calculator – Nigeria</a></li>"
-   ]
-  },
-  {
-   "slug": "sip-calculator-qatar",
-   "country_article": "Qatar",
-   "country": "Qatar",
-   "cur_symbol": "QAR",
-   "cur_code": "QAR",
-   "locale": "en-QA",
-   "rate": 6.0,
-   "invest_note": "QE Index long-term ≈ 5–7% QAR. Many expats invest via brokers in UAE (EFG Hermes, ADCB Securities). QFC-licensed platforms also available.",
-   "related": [
-    "<li><a href=\"fixed-deposit-calculator-qatar.html\">Fixed Deposit Calculator – Qatar</a></li>",
-    "<li><a href=\"home-finance-calculator-qatar.html\">Home Loan Calculator – Qatar</a></li>"
-   ]
-  },
-  {
-   "slug": "sip-calculator-russia",
-   "country_article": "Russia",
-   "country": "Russia",
-   "cur_symbol": "₽",
-   "cur_code": "RUB",
-   "locale": "ru-RU",
-   "rate": 18.0,
-   "invest_note": "MOEX long-term ≈ 15–20% nominal. OFZ (government bonds) yields ≈ 15%. Many Russians hold gold or foreign-currency deposits. Platforms: Tinkoff Investments, Sber Invest, Finam.",
-   "related": [
-    "<li><a href=\"fixed-deposit-calculator-russia.html\">Fixed Deposit Calculator – Russia</a></li>",
-    "<li><a href=\"mortgage-calculator-russia.html\">Home Loan Calculator – Russia</a></li>"
-   ]
-  },
-  {
-   "slug": "sip-calculator-saudi-arabia",
-   "country_article": "Saudi Arabia",
-   "country": "Saudi Arabia",
-   "cur_symbol": "SAR",
-   "cur_code": "SAR",
-   "locale": "en-SA",
-   "rate": 10.0,
-   "invest_note": "Tadawul TASI long-term ≈ 9–11%. Shariah-screened indexes popular. Al Rajhi Capital, SNB Capital are major asset managers.",
-   "related": [
-    "<li><a href=\"fixed-deposit-calculator-saudi-arabia.html\">Fixed Deposit Calculator – Saudi Arabia</a></li>",
-    "<li><a href=\"home-finance-calculator-saudi-arabia.html\">Home Loan Calculator – Saudi Arabia</a></li>"
-   ]
-  },
-  {
-   "slug": "sip-calculator-singapore",
-   "country_article": "Singapore",
-   "country": "Singapore",
-   "cur_symbol": "$",
-   "cur_code": "SGD",
-   "locale": "en-SG",
-   "rate": 7.0,
-   "invest_note": "STI long-term ≈ 5–7%. Most Singaporeans use global ETFs (VWRA, CSPX) via Endowus, SYFE, Interactive Brokers. CPF SA earns 4%/yr guaranteed.",
-   "related": [
-    "<li><a href=\"fixed-deposit-calculator-singapore.html\">Fixed Deposit Calculator – Singapore</a></li>",
-    "<li><a href=\"home-loan-calculator-singapore.html\">Home Loan Calculator – Singapore</a></li>"
-   ]
-  },
-  {
-   "slug": "sip-calculator-south-africa",
-   "country_article": "South Africa",
-   "country": "South Africa",
-   "cur_symbol": "R",
-   "cur_code": "ZAR",
-   "locale": "en-ZA",
-   "rate": 11.0,
-   "invest_note": "TFSA limit R36k/year, R500k lifetime. JSE Top 40 long-term ≈ 10–12%. Providers: EasyEquities, Satrix, Allan Gray, Coronation.",
-   "related": [
-    "<li><a href=\"fixed-deposit-calculator-south-africa.html\">Fixed Deposit Calculator – South Africa</a></li>",
-    "<li><a href=\"home-loan-calculator-south-africa.html\">Home Loan Calculator – South Africa</a></li>"
-   ]
-  },
-  {
-   "slug": "sip-calculator-south-korea",
-   "country_article": "South Korea",
-   "country": "South Korea",
-   "cur_symbol": "₩",
-   "cur_code": "KRW",
-   "locale": "ko-KR",
-   "rate": 7.0,
-   "invest_note": "KOSPI long-term ≈ 5–8% KRW. Major AMCs: Samsung, Mirae Asset, KB, Shinhan. Retail platforms: Toss Invest, Kakao Pay Securities. IRP gets tax deduction up to 9M KRW/yr.",
-   "related": [
-    "<li><a href=\"fixed-deposit-calculator-south-korea.html\">Fixed Deposit Calculator – South Korea</a></li>",
-    "<li><a href=\"mortgage-calculator-south-korea.html\">Home Loan Calculator – South Korea</a></li>"
-   ]
-  },
-  {
-   "slug": "sip-calculator-taiwan",
-   "country_article": "Taiwan",
-   "country": "Taiwan",
-   "cur_symbol": "$",
-   "cur_code": "TWD",
-   "locale": "zh-TW",
-   "rate": 7.0,
-   "invest_note": "TAIEX long-term ≈ 7–9% TWD. ETF leaders: Yuanta (00878, 0050), Cathay (00929), Fubon. Many retail investors use SIPs into dividend ETFs.",
-   "related": [
-    "<li><a href=\"fixed-deposit-calculator-taiwan.html\">Fixed Deposit Calculator – Taiwan</a></li>",
-    "<li><a href=\"mortgage-calculator-taiwan.html\">Home Loan Calculator – Taiwan</a></li>"
-   ]
-  },
-  {
-   "slug": "sip-calculator-thailand",
-   "country_article": "Thailand",
-   "country": "Thailand",
-   "cur_symbol": "฿",
-   "cur_code": "THB",
-   "locale": "th-TH",
-   "rate": 7.0,
-   "invest_note": "SET Index long-term ≈ 6–9% THB. Major AMCs: KAsset, SCBAM, BBLAM, UOBAM, TISCO. Retirement (RMF) and long-term (SSF) funds are tax-deductible.",
-   "related": [
-    "<li><a href=\"fixed-deposit-calculator-thailand.html\">Fixed Deposit Calculator – Thailand</a></li>",
-    "<li><a href=\"home-loan-calculator-thailand.html\">Home Loan Calculator – Thailand</a></li>"
-   ]
-  },
-  {
-   "slug": "sip-calculator-turkey",
-   "country_article": "Turkey",
-   "country": "Turkey",
-   "cur_symbol": "₺",
-   "cur_code": "TRY",
-   "locale": "tr-TR",
-   "rate": 35.0,
-   "invest_note": "BIST 100 nominal ≈ 35–45% p.a. (but TRY inflation is ~35%, so real returns are modest). Many Turks use gold, USD, or Eurobond funds to hedge. Platforms: Garanti BBVA, İş Yatırım.",
-   "related": [
-    "<li><a href=\"fixed-deposit-calculator-turkey.html\">Fixed Deposit Calculator – Turkey</a></li>",
-    "<li><a href=\"konut-kredisi-hesaplama.html\">Home Loan Calculator – Turkey</a></li>"
-   ]
-  },
-  {
-   "slug": "sip-calculator-uae",
-   "country_article": "the UAE",
-   "country": "UAE",
-   "cur_symbol": "AED",
-   "cur_code": "AED",
-   "locale": "en-AE",
-   "rate": 9.0,
-   "invest_note": "ADX and DFM long-term ≈ 8–10%. International ETFs via Interactive Brokers, Sarwa, StashAway popular for expats.",
-   "related": [
-    "<li><a href=\"fixed-deposit-calculator-uae.html\">Fixed Deposit Calculator – the UAE</a></li>",
-    "<li><a href=\"retirement-calculator-uae.html\">Retirement Calculator – the UAE</a></li>",
-    "<li><a href=\"mortgage-calculator-uae.html\">Home Loan Calculator – the UAE</a></li>"
-   ]
-  },
-  {
-   "slug": "sip-calculator-uk",
-   "country_article": "the UK",
-   "country": "UK",
-   "cur_symbol": "£",
-   "cur_code": "GBP",
-   "locale": "en-GB",
-   "rate": 9.0,
-   "invest_note": "ISA allowance £20k/year tax-free. Providers: Vanguard, Hargreaves Lansdown, AJ Bell. FTSE 100 historical ≈ 7%.",
-   "related": [
-    "<li><a href=\"fixed-deposit-calculator-uk.html\">Fixed Deposit Calculator – the UK</a></li>",
-    "<li><a href=\"retirement-calculator-uk.html\">Retirement Calculator – the UK</a></li>",
-    "<li><a href=\"mortgage-calculator-uk.html\">Home Loan Calculator – the UK</a></li>"
-   ]
-  },
-  {
-   "slug": "sip-calculator-usa",
-   "country_article": "the USA",
-   "country": "USA",
-   "cur_symbol": "$",
-   "cur_code": "USD",
-   "locale": "en-US",
-   "rate": 10.0,
-   "invest_note": "Vanguard VOO/VTI, Fidelity FZROX. S&P 500 historical average ≈ 10% nominal. Use 401(k), Roth IRA for tax advantages.",
-   "related": [
-    "<li><a href=\"fixed-deposit-calculator-usa.html\">Fixed Deposit Calculator – the USA</a></li>",
-    "<li><a href=\"retirement-calculator-usa.html\">Retirement Calculator – the USA</a></li>",
-    "<li><a href=\"mortgage-calculator-usa.html\">Home Loan Calculator – the USA</a></li>"
-   ]
-  },
-  {
-   "slug": "sip-calculator-vietnam",
-   "country_article": "Vietnam",
-   "country": "Vietnam",
-   "cur_symbol": "₫",
-   "cur_code": "VND",
-   "locale": "vi-VN",
-   "rate": 10.0,
-   "invest_note": "VN-Index long-term ≈ 10–14% VND (high volatility). Fund managers: Dragon Capital, VinaCapital, Techcom Capital, SSI Asset Management. Retail platforms: Finhay, Fincorp, Tikop.",
-   "related": [
-    "<li><a href=\"fixed-deposit-calculator-vietnam.html\">Fixed Deposit Calculator – Vietnam</a></li>",
-    "<li><a href=\"home-loan-calculator-vietnam.html\">Home Loan Calculator – Vietnam</a></li>"
-   ]
-  },
-  {
-   "slug": "sip-calculator-bangladesh",
-   "custom": true
-  },
-  {
-   "slug": "sip-calculator-indonesia",
-   "custom": true
-  },
-  {
-   "slug": "sip-calculator-pakistan",
-   "custom": true
-  },
-  {
-   "slug": "sip-calculator-philippines",
-   "custom": true
-  },
-  {
-   "slug": "sip-calculator-sri-lanka",
-   "custom": true
-  }
- ],
- "fixed_deposit": [
-  {
-   "slug": "fixed-deposit-calculator-australia",
-   "country_article": "Australia",
-   "country": "Australia",
-   "cur_symbol": "$",
-   "cur_code": "AUD",
-   "locale": "en-AU",
-   "rate": 4.5,
-   "fd_note": "Term deposit rates ≈ 4.2–4.8% p.a. for 1-2 year terms. Top rates at Macquarie, Judo Bank, Bank of Sydney. Compare on Canstar, Mozo.",
-   "related": [
-    "<li><a href=\"sip-calculator-australia.html\">SIP Calculator – Australia</a></li>",
-    "<li><a href=\"home-loan-calculator-australia.html\">Home Loan Calculator – Australia</a></li>"
-   ]
-  },
-  {
-   "slug": "fixed-deposit-calculator-bahrain",
-   "country_article": "Bahrain",
-   "country": "Bahrain",
-   "cur_symbol": "BHD",
-   "cur_code": "BHD",
-   "locale": "en-BH",
-   "rate": 4.0,
-   "fd_note": "Term deposit rates ≈ 3.5–4.5% p.a. Top yields at NBB, BBK, Ahli United for 1+ year tenures.",
-   "related": [
-    "<li><a href=\"sip-calculator-bahrain.html\">SIP Calculator – Bahrain</a></li>",
-    "<li><a href=\"home-finance-calculator-bahrain.html\">Home Loan Calculator – Bahrain</a></li>"
-   ]
-  },
-  {
-   "slug": "fixed-deposit-calculator-bangladesh",
-   "country_article": "Bangladesh",
-   "country": "Bangladesh",
-   "cur_symbol": "BDT",
-   "cur_code": "BDT",
-   "locale": "en-BD",
-   "rate": 10.5,
-   "fd_note": "FDR rates ≈ 9–11% p.a. for 3+ year tenures. Islamic banks offer Mudarabah-based alternatives with similar profit rates.",
-   "related": [
-    "<li><a href=\"sip-calculator-bangladesh.html\">SIP Calculator – Bangladesh</a></li>",
-    "<li><a href=\"home-loan-calculator-bangladesh.html\">Home Loan Calculator – Bangladesh</a></li>"
-   ]
-  },
-  {
-   "slug": "fixed-deposit-calculator-brazil",
-   "country_article": "Brazil",
-   "country": "Brazil",
-   "cur_symbol": "R$",
-   "cur_code": "BRL",
-   "locale": "pt-BR",
-   "rate": 13.5,
-   "fd_note": "CDBs ≈ 100–120% of CDI (≈ 13–16% p.a.). LCI/LCA tax-free on real estate/agro. Tesouro Selic ≈ Selic. Platforms: all major broker apps.",
-   "related": [
-    "<li><a href=\"sip-calculator-brazil.html\">SIP Calculator – Brazil</a></li>",
-    "<li><a href=\"financiamento-imobiliario-brasil.html\">Home Loan Calculator – Brazil</a></li>"
-   ]
-  },
-  {
-   "slug": "fixed-deposit-calculator-canada",
-   "country_article": "Canada",
-   "country": "Canada",
-   "cur_symbol": "$",
-   "cur_code": "CAD",
-   "locale": "en-CA",
-   "rate": 4.0,
-   "fd_note": "GIC rates ≈ 3.5–4.25% p.a. for 1-5 year terms. Top rates at EQ Bank, Oaken, Tangerine. Tax-free inside a TFSA.",
-   "related": [
-    "<li><a href=\"sip-calculator-canada.html\">SIP Calculator – Canada</a></li>",
-    "<li><a href=\"mortgage-calculator-canada.html\">Home Loan Calculator – Canada</a></li>"
-   ]
-  },
-  {
-   "slug": "fixed-deposit-calculator-china",
-   "country_article": "China",
-   "country": "China",
-   "cur_symbol": "¥",
-   "cur_code": "CNY",
-   "locale": "zh-CN",
-   "rate": 2.0,
-   "fd_note": "Time deposit rates ≈ 1.5–2.5% p.a. for 1-5 year terms. Large state banks lower; small/regional banks slightly higher. Rates have fallen significantly over the past 3 years.",
-   "related": [
-    "<li><a href=\"sip-calculator-china.html\">SIP Calculator – China</a></li>",
-    "<li><a href=\"mortgage-calculator-china.html\">Home Loan Calculator – China</a></li>"
-   ]
-  },
-  {
-   "slug": "fixed-deposit-calculator-egypt",
-   "country_article": "Egypt",
-   "country": "Egypt",
-   "cur_symbol": "EGP",
-   "cur_code": "EGP",
-   "locale": "en-EG",
-   "rate": 18.5,
-   "fd_note": "Gold certificates and standard savings certs ≈ 18–23% p.a. (yields dropped after 2024–2026 rate cuts). 3-year tenure most common. Issued by NBE, Banque Misr.",
-   "related": [
-    "<li><a href=\"sip-calculator-egypt.html\">SIP Calculator – Egypt</a></li>",
-    "<li><a href=\"mortgage-calculator-egypt.html\">Home Loan Calculator – Egypt</a></li>"
-   ]
-  },
-  {
-   "slug": "fixed-deposit-calculator-eurozone",
-   "country_article": "the Eurozone",
-   "country": "Eurozone",
-   "cur_symbol": "€",
-   "cur_code": "EUR",
-   "locale": "en-IE",
-   "rate": 2.5,
-   "fd_note": "Fixed deposit rates ≈ 2.5–3.5% p.a. Higher rates in Central/Eastern Europe. Check Raisin or Scalable for comparison.",
-   "related": [
-    "<li><a href=\"sip-calculator-eurozone.html\">SIP Calculator – the Eurozone</a></li>",
-    "<li><a href=\"mortgage-calculator-eurozone.html\">Home Loan Calculator – the Eurozone</a></li>"
-   ]
-  },
-  {
-   "slug": "fixed-deposit-calculator-hong-kong",
-   "country_article": "Hong Kong",
-   "country": "Hong Kong",
-   "cur_symbol": "HK$",
-   "cur_code": "HKD",
-   "locale": "en-HK",
-   "rate": 2.5,
-   "fd_note": "HKD time deposit ≈ 2.5–3.5% for 1-yr. USD deposits often higher. Top rates at virtual banks: ZA Bank, Mox, livi, WeLab.",
-   "related": [
-    "<li><a href=\"sip-calculator-hong-kong.html\">SIP Calculator – Hong Kong</a></li>",
-    "<li><a href=\"mortgage-calculator-hong-kong.html\">Home Loan Calculator – Hong Kong</a></li>"
-   ]
-  },
-  {
-   "slug": "fixed-deposit-calculator-indonesia",
-   "country_article": "Indonesia",
-   "country": "Indonesia",
-   "cur_symbol": "Rp",
-   "cur_code": "IDR",
-   "locale": "id-ID",
-   "rate": 5.2,
-   "fd_note": "Deposito rates ≈ 4.5–5.5% p.a. at major banks. LPS guarantee rate (Oct 2025): 4.00% for conventional, 6.25% for rural banks.",
-   "related": [
-    "<li><a href=\"sip-calculator-indonesia.html\">SIP Calculator – Indonesia</a></li>",
-    "<li><a href=\"kpr-calculator-indonesia.html\">Home Loan Calculator – Indonesia</a></li>"
-   ]
-  },
-  {
-   "slug": "fixed-deposit-calculator-japan",
-   "country_article": "Japan",
-   "country": "Japan",
-   "cur_symbol": "￥",
-   "cur_code": "JPY",
-   "locale": "ja-JP",
-   "rate": 0.4,
-   "fd_note": "Time deposit rates ≈ 0.3–0.6% p.a. for 1-5 year terms. Rates edging up from historic zero-lower-bound. Top rates at online banks: SBI Shinsei, Aeon Bank.",
-   "related": [
-    "<li><a href=\"sip-calculator-japan.html\">SIP Calculator – Japan</a></li>",
-    "<li><a href=\"mortgage-calculator-japan.html\">Home Loan Calculator – Japan</a></li>"
-   ]
-  },
-  {
-   "slug": "fixed-deposit-calculator-kenya",
-   "country_article": "Kenya",
-   "country": "Kenya",
-   "cur_symbol": "Ksh",
-   "cur_code": "KES",
-   "locale": "en-KE",
-   "rate": 9.5,
-   "fd_note": "FD rates ≈ 7–12% p.a. depending on bank. Treasury bills (91/182/364 day) often pay similar or better.",
-   "related": [
-    "<li><a href=\"sip-calculator-kenya.html\">SIP Calculator – Kenya</a></li>",
-    "<li><a href=\"home-loan-calculator-kenya.html\">Home Loan Calculator – Kenya</a></li>"
-   ]
-  },
-  {
-   "slug": "fixed-deposit-calculator-kuwait",
-   "country_article": "Kuwait",
-   "country": "Kuwait",
-   "cur_symbol": "KWD",
-   "cur_code": "KWD",
-   "locale": "en-KW",
-   "rate": 3.2,
-   "fd_note": "FD rates ≈ 3–4% p.a. Islamic profit-sharing (Mudarabah) similar. Top rates typically at NBK, Gulf Bank, KIB.",
-   "related": [
-    "<li><a href=\"sip-calculator-kuwait.html\">SIP Calculator – Kuwait</a></li>",
-    "<li><a href=\"home-finance-calculator-kuwait.html\">Home Loan Calculator – Kuwait</a></li>"
-   ]
-  },
-  {
-   "slug": "fixed-deposit-calculator-malaysia",
-   "country_article": "Malaysia",
-   "country": "Malaysia",
-   "cur_symbol": "RM",
-   "cur_code": "MYR",
-   "locale": "ms-MY",
-   "rate": 3.5,
-   "fd_note": "FD rates ≈ 3.5–4% p.a. for 12+ months. PIDM insured up to RM250k. Islamic Commodity Murabaha deposits similar rates.",
-   "related": [
-    "<li><a href=\"sip-calculator-malaysia.html\">SIP Calculator – Malaysia</a></li>",
-    "<li><a href=\"home-loan-calculator-malaysia.html\">Home Loan Calculator – Malaysia</a></li>"
-   ]
-  },
-  {
-   "slug": "fixed-deposit-calculator-mexico",
-   "country_article": "Mexico",
-   "country": "Mexico",
-   "cur_symbol": "$",
-   "cur_code": "MXN",
-   "locale": "es-MX",
-   "rate": 9.5,
-   "fd_note": "Pagaré rates ≈ 8–10% p.a. for 1-yr tenures. CETES (28/91/182/364d) via Cetesdirecto ≈ 9%. Top bank rates at Banco Azteca, Banco del Bajío.",
-   "related": [
-    "<li><a href=\"sip-calculator-mexico.html\">SIP Calculator – Mexico</a></li>",
-    "<li><a href=\"credito-hipotecario-mexico.html\">Home Loan Calculator – Mexico</a></li>"
-   ]
-  },
-  {
-   "slug": "fixed-deposit-calculator-new-zealand",
-   "country_article": "New Zealand",
-   "country": "New Zealand",
-   "cur_symbol": "$",
-   "cur_code": "NZD",
-   "locale": "en-NZ",
-   "rate": 4.0,
-   "fd_note": "Term deposit rates ≈ 3.5–4.5% for 1-yr. No deposit guarantee scheme yet (one planned). Top rates often at smaller banks: SBS, Heartland, Rabobank.",
-   "related": [
-    "<li><a href=\"sip-calculator-new-zealand.html\">SIP Calculator – New Zealand</a></li>",
-    "<li><a href=\"mortgage-calculator-new-zealand.html\">Home Loan Calculator – New Zealand</a></li>"
-   ]
-  },
-  {
-   "slug": "fixed-deposit-calculator-nigeria",
-   "country_article": "Nigeria",
-   "country": "Nigeria",
-   "cur_symbol": "₦",
-   "cur_code": "NGN",
-   "locale": "en-NG",
-   "rate": 14.0,
-   "fd_note": "Term deposit rates ≈ 12–18% p.a. Treasury bills often comparable. NDIC insures deposits up to ₦500K.",
-   "related": [
-    "<li><a href=\"sip-calculator-nigeria.html\">SIP Calculator – Nigeria</a></li>",
-    "<li><a href=\"loan-calculator-nigeria.html\">Home Loan Calculator – Nigeria</a></li>"
-   ]
-  },
-  {
-   "slug": "fixed-deposit-calculator-pakistan",
-   "country_article": "Pakistan",
-   "country": "Pakistan",
-   "cur_symbol": "Rs",
-   "cur_code": "PKR",
-   "locale": "en-PK",
-   "rate": 13.0,
-   "fd_note": "Regular Income Certificates ≈ 13% p.a., Behbood Savings ≈ 16.5% (seniors/widows), Defense Savings Certificates 10-yr ≈ 13%. Bank term deposits ≈ 11–12%.",
-   "related": [
-    "<li><a href=\"sip-calculator-pakistan.html\">SIP Calculator – Pakistan</a></li>",
-    "<li><a href=\"home-loan-emi-pakistan.html\">Home Loan Calculator – Pakistan</a></li>"
-   ]
-  },
-  {
-   "slug": "fixed-deposit-calculator-philippines",
-   "country_article": "the Philippines",
-   "country": "Philippines",
-   "cur_symbol": "₱",
-   "cur_code": "PHP",
-   "locale": "en-PH",
-   "rate": 5.2,
-   "fd_note": "Time deposit rates ≈ 4.5–5.5% p.a. for 1+ year terms. Digital banks (CIMB, Maya Bank, ING) offer 4–6% on savings.",
-   "related": [
-    "<li><a href=\"sip-calculator-philippines.html\">SIP Calculator – the Philippines</a></li>",
-    "<li><a href=\"home-loan-calculator-philippines.html\">Home Loan Calculator – the Philippines</a></li>"
-   ]
-  },
-  {
-   "slug": "fixed-deposit-calculator-qatar",
-   "country_article": "Qatar",
-   "country": "Qatar",
-   "cur_symbol": "QAR",
-   "cur_code": "QAR",
-   "locale": "en-QA",
-   "rate": 3.9,
-   "fd_note": "Term deposit rates ≈ 3.5–4.5% p.a. QNB, CBQ, Doha Bank offer higher tiers for larger deposits. Islamic profit-sharing alternatives at QIB, Masraf Al Rayan.",
-   "related": [
-    "<li><a href=\"sip-calculator-qatar.html\">SIP Calculator – Qatar</a></li>",
-    "<li><a href=\"home-finance-calculator-qatar.html\">Home Loan Calculator – Qatar</a></li>"
-   ]
-  },
-  {
-   "slug": "fixed-deposit-calculator-russia",
-   "country_article": "Russia",
-   "country": "Russia",
-   "cur_symbol": "₽",
-   "cur_code": "RUB",
-   "locale": "ru-RU",
-   "rate": 16.0,
-   "fd_note": "Deposit rates ≈ 14–18% p.a. for 6-12 month tenures. Short-term rates near CBR key rate. Top banks: Sberbank, VTB, Alfa, Tinkoff.",
-   "related": [
-    "<li><a href=\"sip-calculator-russia.html\">SIP Calculator – Russia</a></li>",
-    "<li><a href=\"mortgage-calculator-russia.html\">Home Loan Calculator – Russia</a></li>"
-   ]
-  },
-  {
-   "slug": "fixed-deposit-calculator-saudi-arabia",
-   "country_article": "Saudi Arabia",
-   "country": "Saudi Arabia",
-   "cur_symbol": "SAR",
-   "cur_code": "SAR",
-   "locale": "en-SA",
-   "rate": 4.0,
-   "fd_note": "Mudarabah term deposits ≈ 4–5% expected profit rate. Al Rajhi, Alinma are major Islamic banks.",
-   "related": [
-    "<li><a href=\"sip-calculator-saudi-arabia.html\">SIP Calculator – Saudi Arabia</a></li>",
-    "<li><a href=\"home-finance-calculator-saudi-arabia.html\">Home Loan Calculator – Saudi Arabia</a></li>"
-   ]
-  },
-  {
-   "slug": "fixed-deposit-calculator-singapore",
-   "country_article": "Singapore",
-   "country": "Singapore",
-   "cur_symbol": "$",
-   "cur_code": "SGD",
-   "locale": "en-SG",
-   "rate": 2.8,
-   "fd_note": "FD rates ≈ 2.5–3% p.a. for 1-year tenures. T-bills (6-month) often better yield. Compare at DBS, UOB, OCBC, ICBC SG, Maybank.",
-   "related": [
-    "<li><a href=\"sip-calculator-singapore.html\">SIP Calculator – Singapore</a></li>",
-    "<li><a href=\"home-loan-calculator-singapore.html\">Home Loan Calculator – Singapore</a></li>"
-   ]
-  },
-  {
-   "slug": "fixed-deposit-calculator-south-africa",
-   "country_article": "South Africa",
-   "country": "South Africa",
-   "cur_symbol": "R",
-   "cur_code": "ZAR",
-   "locale": "en-ZA",
-   "rate": 8.5,
-   "fd_note": "FD rates ≈ 8–9% p.a. for 12+ month terms. Tax-free up to R23,800/year interest exemption (under 65). Providers: African Bank, Capitec, FNB.",
-   "related": [
-    "<li><a href=\"sip-calculator-south-africa.html\">SIP Calculator – South Africa</a></li>",
-    "<li><a href=\"home-loan-calculator-south-africa.html\">Home Loan Calculator – South Africa</a></li>"
-   ]
-  },
-  {
-   "slug": "fixed-deposit-calculator-south-korea",
-   "country_article": "South Korea",
-   "country": "South Korea",
-   "cur_symbol": "₩",
-   "cur_code": "KRW",
-   "locale": "ko-KR",
-   "rate": 3.0,
-   "fd_note": "1-yr FD rates ≈ 2.8–3.3%. Internet banks (Kakao, Toss, K Bank) often beat traditional banks. Savings banks (저축은행) pay higher but watch KDIC limit.",
-   "related": [
-    "<li><a href=\"sip-calculator-south-korea.html\">SIP Calculator – South Korea</a></li>",
-    "<li><a href=\"mortgage-calculator-south-korea.html\">Home Loan Calculator – South Korea</a></li>"
-   ]
-  },
-  {
-   "slug": "fixed-deposit-calculator-sri-lanka",
-   "country_article": "Sri Lanka",
-   "country": "Sri Lanka",
-   "cur_symbol": "LKR",
-   "cur_code": "LKR",
-   "locale": "en-LK",
-   "rate": 9.0,
-   "fd_note": "FD rates ≈ 8–10% p.a. for 1+ year. Senior citizens +1%. Licensed finance companies offer higher rates but have higher risk.",
-   "related": [
-    "<li><a href=\"sip-calculator-sri-lanka.html\">SIP Calculator – Sri Lanka</a></li>",
-    "<li><a href=\"housing-loan-calculator-sri-lanka.html\">Home Loan Calculator – Sri Lanka</a></li>"
-   ]
-  },
-  {
-   "slug": "fixed-deposit-calculator-taiwan",
-   "country_article": "Taiwan",
-   "country": "Taiwan",
-   "cur_symbol": "$",
-   "cur_code": "TWD",
-   "locale": "zh-TW",
-   "rate": 1.6,
-   "fd_note": "1-yr TD rates ≈ 1.5–1.8% p.a. Foreign currency TDs (USD, AUD) can pay much higher — popular among savers.",
-   "related": [
-    "<li><a href=\"sip-calculator-taiwan.html\">SIP Calculator – Taiwan</a></li>",
-    "<li><a href=\"mortgage-calculator-taiwan.html\">Home Loan Calculator – Taiwan</a></li>"
-   ]
-  },
-  {
-   "slug": "fixed-deposit-calculator-thailand",
-   "country_article": "Thailand",
-   "country": "Thailand",
-   "cur_symbol": "฿",
-   "cur_code": "THB",
-   "locale": "th-TH",
-   "rate": 1.5,
-   "fd_note": "FD rates ≈ 1.25–2% for 1-yr. Higher at smaller banks (KTB, TMB, CIMB Thai). Digital accounts from Kbank (K-Plus), SCB (EASY) sometimes beat this.",
-   "related": [
-    "<li><a href=\"sip-calculator-thailand.html\">SIP Calculator – Thailand</a></li>",
-    "<li><a href=\"home-loan-calculator-thailand.html\">Home Loan Calculator – Thailand</a></li>"
-   ]
-  },
-  {
-   "slug": "fixed-deposit-calculator-turkey",
-   "country_article": "Turkey",
-   "country": "Turkey",
-   "cur_symbol": "₺",
-   "cur_code": "TRY",
-   "locale": "tr-TR",
-   "rate": 40.0,
-   "fd_note": "Vadeli mevduat ≈ 38–42% p.a. for 3-month tenures. Most deposits are short-term due to rate volatility. Withholding tax 7.5–15% on interest.",
-   "related": [
-    "<li><a href=\"sip-calculator-turkey.html\">SIP Calculator – Turkey</a></li>",
-    "<li><a href=\"konut-kredisi-hesaplama.html\">Home Loan Calculator – Turkey</a></li>"
-   ]
-  },
-  {
-   "slug": "fixed-deposit-calculator-uae",
-   "country_article": "the UAE",
-   "country": "UAE",
-   "cur_symbol": "AED",
-   "cur_code": "AED",
-   "locale": "en-AE",
-   "rate": 3.5,
-   "fd_note": "FD rates ≈ 3.5–4.5% p.a. Islamic alternatives: Wakalah/Mudarabah deposits at similar profit rates.",
-   "related": [
-    "<li><a href=\"sip-calculator-uae.html\">SIP Calculator – the UAE</a></li>",
-    "<li><a href=\"mortgage-calculator-uae.html\">Home Loan Calculator – the UAE</a></li>",
-    "<li><a href=\"retirement-calculator-uae.html\">Retirement Calculator – the UAE</a></li>"
-   ]
-  },
-  {
-   "slug": "fixed-deposit-calculator-uk",
-   "country_article": "the UK",
-   "country": "UK",
-   "cur_symbol": "£",
-   "cur_code": "GBP",
-   "locale": "en-GB",
-   "rate": 4.0,
-   "fd_note": "Fixed-rate bonds ≈ 4–4.5% p.a. for 1–3 year terms. Best rates on MoneySavingExpert or Raisin UK.",
-   "related": [
-    "<li><a href=\"sip-calculator-uk.html\">SIP Calculator – the UK</a></li>",
-    "<li><a href=\"mortgage-calculator-uk.html\">Home Loan Calculator – the UK</a></li>",
-    "<li><a href=\"retirement-calculator-uk.html\">Retirement Calculator – the UK</a></li>"
-   ]
-  },
-  {
-   "slug": "fixed-deposit-calculator-usa",
-   "country_article": "the USA",
-   "country": "USA",
-   "cur_symbol": "$",
-   "cur_code": "USD",
-   "locale": "en-US",
-   "rate": 4.0,
-   "fd_note": "CD rates ≈ 4–5% p.a. for 1–5 year terms. Top providers: Marcus by Goldman, Ally Bank, Capital One 360.",
-   "related": [
-    "<li><a href=\"sip-calculator-usa.html\">SIP Calculator – the USA</a></li>",
-    "<li><a href=\"mortgage-calculator-usa.html\">Home Loan Calculator – the USA</a></li>",
-    "<li><a href=\"retirement-calculator-usa.html\">Retirement Calculator – the USA</a></li>"
-   ]
-  },
-  {
-   "slug": "fixed-deposit-calculator-vietnam",
-   "country_article": "Vietnam",
-   "country": "Vietnam",
-   "cur_symbol": "₫",
-   "cur_code": "VND",
-   "locale": "vi-VN",
-   "rate": 5.5,
-   "fd_note": "FD rates ≈ 5–7% p.a. for 1-yr. Higher at private banks (VP, VIB, NCB) vs state-owned (VCB, BIDV). Gold-linked savings also popular.",
-   "related": [
-    "<li><a href=\"sip-calculator-vietnam.html\">SIP Calculator – Vietnam</a></li>",
-    "<li><a href=\"home-loan-calculator-vietnam.html\">Home Loan Calculator – Vietnam</a></li>"
-   ]
-  }
- ]
+  "_doc": "Single source of truth for generated calculator clusters. Edit here, then run `python build.py`. Pages marked custom:true are hand-written and left untouched by the generator.",
+  "car_loan": [
+    {
+      "slug": "car-finance-calculator-bahrain",
+      "country_article": "Bahrain",
+      "country": "Bahrain",
+      "cur_symbol": "BHD",
+      "cur_code": "BHD",
+      "locale": "en-BH",
+      "rate": 5.5,
+      "car_note": "Car loan rates ≈ 5–7% p.a. Max tenure typically 5 years. Ijarah and Murabaha available at Al Baraka, Bahrain Islamic Bank, Al Salam.",
+      "related": [
+        "<li><a href=\"home-finance-calculator-bahrain.html\">Home Loan Calculator – Bahrain</a></li>",
+        "<li><a href=\"fixed-deposit-calculator-bahrain.html\">Fixed Deposit Calculator – Bahrain</a></li>",
+        "<li><a href=\"sip-calculator-bahrain.html\">SIP Calculator – Bahrain</a></li>",
+        "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
+      ],
+      "rate_range": "5–7% p.a.",
+      "deposit": null,
+      "tenure": "5 years",
+      "lenders": [
+        "Al Baraka",
+        "Bahrain Islamic Bank",
+        "Al Salam"
+      ],
+      "nuance": "Islamic financing (Ijarah and Murabaha) is widely available alongside conventional loans."
+    },
+    {
+      "slug": "car-finance-calculator-qatar",
+      "country_article": "Qatar",
+      "country": "Qatar",
+      "cur_symbol": "QAR",
+      "cur_code": "QAR",
+      "locale": "en-QA",
+      "rate": 5.2,
+      "car_note": "Car loan rates ≈ 4.5–6% p.a. (conventional). Shariah options (Murabaha/Ijarah) via QIB, Masraf Al Rayan. Max tenure 5–7 years depending on income.",
+      "related": [
+        "<li><a href=\"home-finance-calculator-qatar.html\">Home Loan Calculator – Qatar</a></li>",
+        "<li><a href=\"fixed-deposit-calculator-qatar.html\">Fixed Deposit Calculator – Qatar</a></li>",
+        "<li><a href=\"sip-calculator-qatar.html\">SIP Calculator – Qatar</a></li>",
+        "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
+      ],
+      "rate_range": "4.5–6% p.a. for conventional loans",
+      "deposit": null,
+      "tenure": "5–7 years",
+      "lenders": [
+        "QIB",
+        "Masraf Al Rayan"
+      ],
+      "nuance": "Shariah-compliant options (Murabaha and Ijarah) are common, and the maximum tenure depends on your income."
+    },
+    {
+      "slug": "car-finance-calculator-saudi-arabia",
+      "country_article": "Saudi Arabia",
+      "country": "Saudi Arabia",
+      "cur_symbol": "SAR",
+      "cur_code": "SAR",
+      "locale": "en-SA",
+      "rate": 5.0,
+      "car_note": "Auto Murabaha effective rate ≈ 4–6% p.a. Max tenure 5 years. Providers: Al Rajhi Bank, SNB, Alinma, Bank Albilad. SIMAH credit check required.",
+      "related": [
+        "<li><a href=\"home-finance-calculator-saudi-arabia.html\">Home Loan Calculator – Saudi Arabia</a></li>",
+        "<li><a href=\"fixed-deposit-calculator-saudi-arabia.html\">Fixed Deposit Calculator – Saudi Arabia</a></li>",
+        "<li><a href=\"sip-calculator-saudi-arabia.html\">SIP Calculator – Saudi Arabia</a></li>",
+        "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
+      ],
+      "rate_range": "4–6% p.a. (Auto Murabaha effective rate)",
+      "deposit": null,
+      "tenure": "5 years",
+      "lenders": [
+        "Al Rajhi Bank",
+        "SNB",
+        "Alinma",
+        "Bank Albilad"
+      ],
+      "nuance": "Most financing is Shariah-compliant Murabaha, and a SIMAH credit check is required."
+    },
+    {
+      "slug": "car-finance-calculator-uk",
+      "country_article": "the UK",
+      "country": "UK",
+      "cur_symbol": "£",
+      "cur_code": "GBP",
+      "locale": "en-GB",
+      "rate": 8.0,
+      "car_note": "HP rates ≈ 7–10% APR, PCP rates ≈ 6–9% APR. PCP has a final balloon payment; HP pays off fully. Typical tenure 3–5 years. Dealers and banks both offer financing.",
+      "related": [
+        "<li><a href=\"mortgage-calculator-uk.html\">Home Loan Calculator – the UK</a></li>",
+        "<li><a href=\"fixed-deposit-calculator-uk.html\">Fixed Deposit Calculator – the UK</a></li>",
+        "<li><a href=\"sip-calculator-uk.html\">SIP Calculator – the UK</a></li>",
+        "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
+      ],
+      "rate_range": "6–10% APR (HP 7–10%, PCP 6–9%)",
+      "deposit": null,
+      "tenure": "3–5 years",
+      "lenders": [
+        "high-street banks",
+        "dealer finance houses"
+      ],
+      "nuance": "Hire Purchase (HP) pays the car off in full, while PCP has a lower monthly cost but a final balloon payment."
+    },
+    {
+      "slug": "car-loan-calculator-australia",
+      "country_article": "Australia",
+      "country": "Australia",
+      "cur_symbol": "$",
+      "cur_code": "AUD",
+      "locale": "en-AU",
+      "rate": 8.0,
+      "car_note": "Secured car loans ≈ 6.5–9% p.a., unsecured 10–14%. Max tenure 7 years. Dealer finance sometimes has balloon payment options. Providers: CommBank, Westpac, Toyota Finance, Plenti, Pepper Money.",
+      "related": [
+        "<li><a href=\"home-loan-calculator-australia.html\">Home Loan Calculator – Australia</a></li>",
+        "<li><a href=\"fixed-deposit-calculator-australia.html\">Fixed Deposit Calculator – Australia</a></li>",
+        "<li><a href=\"sip-calculator-australia.html\">SIP Calculator – Australia</a></li>",
+        "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
+      ],
+      "rate_range": "6.5–9% p.a. for secured loans (10–14% unsecured)",
+      "deposit": null,
+      "tenure": "7 years",
+      "lenders": [
+        "CommBank",
+        "Westpac",
+        "Toyota Finance",
+        "Plenti",
+        "Pepper Money"
+      ],
+      "nuance": "Secured loans (where the car is collateral) are cheaper than unsecured personal loans, and some dealer finance includes a balloon payment due at the end."
+    },
+    {
+      "slug": "car-loan-calculator-bangladesh",
+      "country_article": "Bangladesh",
+      "country": "Bangladesh",
+      "cur_symbol": "BDT",
+      "cur_code": "BDT",
+      "locale": "en-BD",
+      "rate": 13.0,
+      "car_note": "Car loan rates ≈ 11–14% p.a. Max tenure 6 years for new cars. DBBL, BRAC, Eastern Bank offer auto loans.",
+      "related": [
+        "<li><a href=\"home-loan-calculator-bangladesh.html\">Home Loan Calculator – Bangladesh</a></li>",
+        "<li><a href=\"fixed-deposit-calculator-bangladesh.html\">Fixed Deposit Calculator – Bangladesh</a></li>",
+        "<li><a href=\"sip-calculator-bangladesh.html\">SIP Calculator – Bangladesh</a></li>",
+        "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
+      ],
+      "rate_range": "11–14% p.a.",
+      "deposit": null,
+      "tenure": "6 years for new cars",
+      "lenders": [
+        "Dutch-Bangla Bank (DBBL)",
+        "BRAC Bank",
+        "Eastern Bank"
+      ],
+      "nuance": "Both new and used vehicles can be financed, with used cars usually carrying a slightly higher rate."
+    },
+    {
+      "slug": "car-loan-calculator-brazil",
+      "country_article": "Brazil",
+      "country": "Brazil",
+      "cur_symbol": "R$",
+      "cur_code": "BRL",
+      "locale": "pt-BR",
+      "rate": 25.0,
+      "car_note": "Auto loan rates ≈ 1.8–2.5% a.m. (22–30% p.a. effective). Down payment typical 20–30%. Max tenure 5 years (60 months). Providers: Bradesco Financiamentos, Itaú, Santander Financiamentos, BV, Omni.",
+      "related": [
+        "<li><a href=\"financiamento-imobiliario-brasil.html\">Home Loan Calculator – Brazil</a></li>",
+        "<li><a href=\"fixed-deposit-calculator-brazil.html\">Fixed Deposit Calculator – Brazil</a></li>",
+        "<li><a href=\"sip-calculator-brazil.html\">SIP Calculator – Brazil</a></li>",
+        "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
+      ],
+      "rate_range": "22–30% p.a. effective (about 1.8–2.5% per month)",
+      "deposit": "20–30%",
+      "tenure": "5 years (60 months)",
+      "lenders": [
+        "Bradesco Financiamentos",
+        "Itaú",
+        "Santander Financiamentos",
+        "BV",
+        "Omni"
+      ],
+      "nuance": "Rates are usually quoted per month and are among the highest of any major market, so the effective annual cost is steep."
+    },
+    {
+      "slug": "car-loan-calculator-canada",
+      "country_article": "Canada",
+      "country": "Canada",
+      "cur_symbol": "$",
+      "cur_code": "CAD",
+      "locale": "en-CA",
+      "rate": 7.0,
+      "car_note": "New car loans ≈ 6–8% p.a., used ≈ 8–11%. Tenure up to 96 months (8 years). Manufacturer promos ≈ 0–3.99% on select models. Providers: TD Auto Finance, Scotiabank, RBC, Ford Credit Canada.",
+      "related": [
+        "<li><a href=\"mortgage-calculator-canada.html\">Home Loan Calculator – Canada</a></li>",
+        "<li><a href=\"fixed-deposit-calculator-canada.html\">Fixed Deposit Calculator – Canada</a></li>",
+        "<li><a href=\"sip-calculator-canada.html\">SIP Calculator – Canada</a></li>",
+        "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
+      ],
+      "rate_range": "6–8% p.a. new, 8–11% used",
+      "deposit": null,
+      "tenure": "96 months (8 years)",
+      "lenders": [
+        "TD Auto Finance",
+        "Scotiabank",
+        "RBC",
+        "Ford Credit Canada"
+      ],
+      "nuance": "Manufacturers often run promotional rates around 0–3.99% on select models."
+    },
+    {
+      "slug": "car-loan-calculator-china",
+      "country_article": "China",
+      "country": "China",
+      "cur_symbol": "¥",
+      "cur_code": "CNY",
+      "locale": "zh-CN",
+      "rate": 4.5,
+      "car_note": "Auto loan rates ≈ 4–7% p.a. Min 20% down for conventional, 15% for new-energy vehicles (NEVs). Max tenure 5 years. Providers: ICBC, BoC, BYD Auto Finance, Geely Auto Finance, Toyota Auto Finance.",
+      "related": [
+        "<li><a href=\"mortgage-calculator-china.html\">Home Loan Calculator – China</a></li>",
+        "<li><a href=\"fixed-deposit-calculator-china.html\">Fixed Deposit Calculator – China</a></li>",
+        "<li><a href=\"sip-calculator-china.html\">SIP Calculator – China</a></li>",
+        "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
+      ],
+      "rate_range": "4–7% p.a.",
+      "deposit": "20% (15% for new-energy vehicles)",
+      "tenure": "5 years",
+      "lenders": [
+        "ICBC",
+        "Bank of China",
+        "BYD Auto Finance",
+        "Geely Auto Finance",
+        "Toyota Auto Finance"
+      ],
+      "nuance": "New-energy vehicles (NEVs) qualify for a lower minimum down payment."
+    },
+    {
+      "slug": "car-loan-calculator-egypt",
+      "country_article": "Egypt",
+      "country": "Egypt",
+      "cur_symbol": "EGP",
+      "cur_code": "EGP",
+      "locale": "en-EG",
+      "rate": 23.0,
+      "car_note": "Car loan rates ≈ 22–26% p.a. New and used financing available. Min 20% down payment typical. Providers: CIB, QNB Alahli, NBE, Banque Misr.",
+      "related": [
+        "<li><a href=\"mortgage-calculator-egypt.html\">Home Loan Calculator – Egypt</a></li>",
+        "<li><a href=\"fixed-deposit-calculator-egypt.html\">Fixed Deposit Calculator – Egypt</a></li>",
+        "<li><a href=\"sip-calculator-egypt.html\">SIP Calculator – Egypt</a></li>",
+        "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
+      ],
+      "rate_range": "22–26% p.a.",
+      "deposit": "20% (typical minimum)",
+      "tenure": null,
+      "lenders": [
+        "CIB",
+        "QNB Alahli",
+        "NBE",
+        "Banque Misr"
+      ],
+      "nuance": "Both new and used cars can be financed."
+    },
+    {
+      "slug": "car-loan-calculator-eurozone",
+      "country_article": "the Eurozone",
+      "country": "Eurozone",
+      "cur_symbol": "€",
+      "cur_code": "EUR",
+      "locale": "en-IE",
+      "rate": 5.5,
+      "car_note": "Car loan rates ≈ 5–7% p.a. Manufacturer financing (BMW, VW, Mercedes) often has promotional 0% deals on specific models. Typical tenure 3–7 years.",
+      "related": [
+        "<li><a href=\"mortgage-calculator-eurozone.html\">Home Loan Calculator – the Eurozone</a></li>",
+        "<li><a href=\"fixed-deposit-calculator-eurozone.html\">Fixed Deposit Calculator – the Eurozone</a></li>",
+        "<li><a href=\"sip-calculator-eurozone.html\">SIP Calculator – the Eurozone</a></li>",
+        "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
+      ],
+      "rate_range": "5–7% p.a.",
+      "deposit": null,
+      "tenure": "3–7 years",
+      "lenders": [
+        "manufacturer finance (BMW, VW, Mercedes)",
+        "high-street banks"
+      ],
+      "nuance": "Manufacturer financing often includes promotional 0% deals on specific models."
+    },
+    {
+      "slug": "car-loan-calculator-hong-kong",
+      "country_article": "Hong Kong",
+      "country": "Hong Kong",
+      "cur_symbol": "HK$",
+      "cur_code": "HKD",
+      "locale": "en-HK",
+      "rate": 5.0,
+      "car_note": "Auto loan rates ≈ 4–6% p.a. Lenders: HSBC, Hang Seng, Bank of East Asia, plus dealer-arranged finance. First registration tax is steep, making cars expensive.",
+      "related": [
+        "<li><a href=\"mortgage-calculator-hong-kong.html\">Home Loan Calculator – Hong Kong</a></li>",
+        "<li><a href=\"fixed-deposit-calculator-hong-kong.html\">Fixed Deposit Calculator – Hong Kong</a></li>",
+        "<li><a href=\"sip-calculator-hong-kong.html\">SIP Calculator – Hong Kong</a></li>",
+        "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
+      ],
+      "rate_range": "4–6% p.a.",
+      "deposit": null,
+      "tenure": null,
+      "lenders": [
+        "HSBC",
+        "Hang Seng",
+        "Bank of East Asia"
+      ],
+      "nuance": "First-registration tax is steep, which raises the total cost of buying a car; dealer-arranged finance is also common."
+    },
+    {
+      "slug": "car-loan-calculator-japan",
+      "country_article": "Japan",
+      "country": "Japan",
+      "cur_symbol": "￥",
+      "cur_code": "JPY",
+      "locale": "ja-JP",
+      "rate": 2.5,
+      "car_note": "Car loan rates ≈ 1.9–4.5% p.a. (dealer financing) or 1.5–3% (bank loans). Max tenure 7 years. Providers: Toyota Financial Services, Nissan Financial, Rakuten Bank, Orix Auto Leasing.",
+      "related": [
+        "<li><a href=\"mortgage-calculator-japan.html\">Home Loan Calculator – Japan</a></li>",
+        "<li><a href=\"fixed-deposit-calculator-japan.html\">Fixed Deposit Calculator – Japan</a></li>",
+        "<li><a href=\"sip-calculator-japan.html\">SIP Calculator – Japan</a></li>",
+        "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
+      ],
+      "rate_range": "1.5–4.5% p.a. (bank loans 1.5–3%, dealer 1.9–4.5%)",
+      "deposit": null,
+      "tenure": "7 years",
+      "lenders": [
+        "Toyota Financial Services",
+        "Nissan Financial",
+        "Rakuten Bank",
+        "Orix Auto Leasing"
+      ],
+      "nuance": "Bank loans are usually cheaper than dealer financing."
+    },
+    {
+      "slug": "car-loan-calculator-kenya",
+      "country_article": "Kenya",
+      "country": "Kenya",
+      "cur_symbol": "Ksh",
+      "cur_code": "KES",
+      "locale": "en-KE",
+      "rate": 15.0,
+      "car_note": "Auto loans ≈ 13–18% p.a. 20–30% down payment typical. Tenure up to 6 years. Providers: KCB, NCBA, Stanbic, Co-op Bank, Absa.",
+      "related": [
+        "<li><a href=\"home-loan-calculator-kenya.html\">Home Loan Calculator – Kenya</a></li>",
+        "<li><a href=\"fixed-deposit-calculator-kenya.html\">Fixed Deposit Calculator – Kenya</a></li>",
+        "<li><a href=\"sip-calculator-kenya.html\">SIP Calculator – Kenya</a></li>",
+        "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
+      ],
+      "rate_range": "13–18% p.a.",
+      "deposit": "20–30%",
+      "tenure": "6 years",
+      "lenders": [
+        "KCB",
+        "NCBA",
+        "Stanbic",
+        "Co-op Bank",
+        "Absa"
+      ],
+      "nuance": "Both new and used vehicles can be financed, with used cars usually carrying a slightly higher rate."
+    },
+    {
+      "slug": "car-loan-calculator-kuwait",
+      "country_article": "Kuwait",
+      "country": "Kuwait",
+      "cur_symbol": "KWD",
+      "cur_code": "KWD",
+      "locale": "en-KW",
+      "rate": 5.0,
+      "car_note": "Auto loan rates ≈ 4.5–6% p.a. (conventional), capped at CBK discount + 3%. Max 5 years. Islamic (Murabaha) via KFH, Boubyan, Warba.",
+      "related": [
+        "<li><a href=\"home-finance-calculator-kuwait.html\">Home Loan Calculator – Kuwait</a></li>",
+        "<li><a href=\"fixed-deposit-calculator-kuwait.html\">Fixed Deposit Calculator – Kuwait</a></li>",
+        "<li><a href=\"sip-calculator-kuwait.html\">SIP Calculator – Kuwait</a></li>",
+        "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
+      ],
+      "rate_range": "4.5–6% p.a. for conventional loans",
+      "deposit": null,
+      "tenure": "5 years",
+      "lenders": [
+        "KFH",
+        "Boubyan",
+        "Warba"
+      ],
+      "nuance": "Conventional rates are capped at the CBK discount rate + 3%, and Islamic Murabaha is widely available."
+    },
+    {
+      "slug": "car-loan-calculator-malaysia",
+      "country_article": "Malaysia",
+      "country": "Malaysia",
+      "cur_symbol": "RM",
+      "cur_code": "MYR",
+      "locale": "ms-MY",
+      "rate": 3.5,
+      "car_note": "HP flat rate ≈ 2–3.5% p.a. (reducing balance ≈ 4–7%). Max 9 years new, 7 years used. Providers: Maybank, CIMB, Public Bank. Islamic AITAB via Bank Islam.",
+      "related": [
+        "<li><a href=\"home-loan-calculator-malaysia.html\">Home Loan Calculator – Malaysia</a></li>",
+        "<li><a href=\"fixed-deposit-calculator-malaysia.html\">Fixed Deposit Calculator – Malaysia</a></li>",
+        "<li><a href=\"sip-calculator-malaysia.html\">SIP Calculator – Malaysia</a></li>",
+        "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
+      ],
+      "rate_range": "flat 2–3.5% p.a. (about 4–7% reducing balance)",
+      "deposit": null,
+      "tenure": "9 years new, 7 years used",
+      "lenders": [
+        "Maybank",
+        "CIMB",
+        "Public Bank"
+      ],
+      "nuance": "Rates are usually quoted as a flat rate, and Islamic AITAB financing is available via Bank Islam."
+    },
+    {
+      "slug": "car-loan-calculator-mexico",
+      "country_article": "Mexico",
+      "country": "Mexico",
+      "cur_symbol": "$",
+      "cur_code": "MXN",
+      "locale": "es-MX",
+      "rate": 13.5,
+      "car_note": "Auto loans ≈ 11–16% p.a. Min 10–20% down. Max tenure 60-72 months. Captive financing (Ford Credit, Toyota Financial México) often competitive. Providers: BBVA, HSBC, Banorte, Ford Credit.",
+      "related": [
+        "<li><a href=\"credito-hipotecario-mexico.html\">Home Loan Calculator – Mexico</a></li>",
+        "<li><a href=\"fixed-deposit-calculator-mexico.html\">Fixed Deposit Calculator – Mexico</a></li>",
+        "<li><a href=\"sip-calculator-mexico.html\">SIP Calculator – Mexico</a></li>",
+        "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
+      ],
+      "rate_range": "11–16% p.a.",
+      "deposit": "10–20% (minimum)",
+      "tenure": "60–72 months",
+      "lenders": [
+        "BBVA",
+        "HSBC",
+        "Banorte",
+        "Ford Credit"
+      ],
+      "nuance": "Captive financing (Ford Credit, Toyota Financial México) is often competitive."
+    },
+    {
+      "slug": "car-loan-calculator-new-zealand",
+      "country_article": "New Zealand",
+      "country": "New Zealand",
+      "cur_symbol": "$",
+      "cur_code": "NZD",
+      "locale": "en-NZ",
+      "rate": 10.0,
+      "car_note": "Car loan rates ≈ 8–14% p.a. Main lenders: MTF, UDC, Heartland, Motor Trade Finances, plus bank-owned (ASB, ANZ). Peer-to-peer options via Harmoney.",
+      "related": [
+        "<li><a href=\"mortgage-calculator-new-zealand.html\">Home Loan Calculator – New Zealand</a></li>",
+        "<li><a href=\"fixed-deposit-calculator-new-zealand.html\">Fixed Deposit Calculator – New Zealand</a></li>",
+        "<li><a href=\"sip-calculator-new-zealand.html\">SIP Calculator – New Zealand</a></li>",
+        "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
+      ],
+      "rate_range": "8–14% p.a.",
+      "deposit": null,
+      "tenure": null,
+      "lenders": [
+        "MTF",
+        "UDC",
+        "Heartland",
+        "Motor Trade Finances",
+        "ASB",
+        "ANZ"
+      ],
+      "nuance": "Peer-to-peer finance (for example Harmoney) is also an option."
+    },
+    {
+      "slug": "car-loan-calculator-russia",
+      "country_article": "Russia",
+      "country": "Russia",
+      "cur_symbol": "₽",
+      "cur_code": "RUB",
+      "locale": "ru-RU",
+      "rate": 24.0,
+      "car_note": "Auto loan rates ≈ 22–28% p.a. State auto-subsidy program offers reduced rates for domestic vehicles. Max tenure 5 years. Providers: Sberbank, Gazprombank, RSHB, Rosbank, VTB.",
+      "related": [
+        "<li><a href=\"mortgage-calculator-russia.html\">Home Loan Calculator – Russia</a></li>",
+        "<li><a href=\"fixed-deposit-calculator-russia.html\">Fixed Deposit Calculator – Russia</a></li>",
+        "<li><a href=\"sip-calculator-russia.html\">SIP Calculator – Russia</a></li>",
+        "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
+      ],
+      "rate_range": "22–28% p.a.",
+      "deposit": null,
+      "tenure": "5 years",
+      "lenders": [
+        "Sberbank",
+        "Gazprombank",
+        "RSHB",
+        "Rosbank",
+        "VTB"
+      ],
+      "nuance": "A state auto-subsidy programme offers reduced rates on qualifying domestic vehicles."
+    },
+    {
+      "slug": "car-loan-calculator-singapore",
+      "country_article": "Singapore",
+      "country": "Singapore",
+      "cur_symbol": "$",
+      "cur_code": "SGD",
+      "locale": "en-SG",
+      "rate": 3.5,
+      "car_note": "Car loan rates ≈ 2.5–4% p.a. flat (roughly 4.5–7.5% reducing equivalent). MAS rules: Max 60% LTV for cars ≤S$20k OMV, 70% for higher. Max tenure 7 years. Providers: DBS, UOB, Hong Leong Finance.",
+      "related": [
+        "<li><a href=\"home-loan-calculator-singapore.html\">Home Loan Calculator – Singapore</a></li>",
+        "<li><a href=\"fixed-deposit-calculator-singapore.html\">Fixed Deposit Calculator – Singapore</a></li>",
+        "<li><a href=\"sip-calculator-singapore.html\">SIP Calculator – Singapore</a></li>",
+        "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
+      ],
+      "rate_range": "flat 2.5–4% p.a. (about 4.5–7.5% reducing balance)",
+      "deposit": null,
+      "tenure": "7 years",
+      "lenders": [
+        "DBS",
+        "UOB",
+        "Hong Leong Finance"
+      ],
+      "nuance": "MAS rules cap the loan at 60% of the car's value (OMV up to S$20k) or 70% above that."
+    },
+    {
+      "slug": "car-loan-calculator-south-korea",
+      "country_article": "South Korea",
+      "country": "South Korea",
+      "cur_symbol": "₩",
+      "cur_code": "KRW",
+      "locale": "ko-KR",
+      "rate": 5.5,
+      "car_note": "Auto loan rates ≈ 4.5–7% p.a. Max 5–7 years. Captives: Hyundai Capital, KB Capital. Banks: KB, Shinhan, Hana, plus card companies (Shinhan Card, Samsung Card).",
+      "related": [
+        "<li><a href=\"mortgage-calculator-south-korea.html\">Home Loan Calculator – South Korea</a></li>",
+        "<li><a href=\"fixed-deposit-calculator-south-korea.html\">Fixed Deposit Calculator – South Korea</a></li>",
+        "<li><a href=\"sip-calculator-south-korea.html\">SIP Calculator – South Korea</a></li>",
+        "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
+      ],
+      "rate_range": "4.5–7% p.a.",
+      "deposit": null,
+      "tenure": "5–7 years",
+      "lenders": [
+        "Hyundai Capital",
+        "KB Capital",
+        "KB",
+        "Shinhan",
+        "Hana"
+      ],
+      "nuance": "Captive lenders and card companies (Shinhan Card, Samsung Card) also finance cars."
+    },
+    {
+      "slug": "car-loan-calculator-sri-lanka",
+      "country_article": "Sri Lanka",
+      "country": "Sri Lanka",
+      "cur_symbol": "LKR",
+      "cur_code": "LKR",
+      "locale": "en-LK",
+      "rate": 13.0,
+      "car_note": "Vehicle loan rates ≈ 12–14% p.a. Post-cyclone vehicle imports surged 2025. Max tenure typically 7 years. Providers: Commercial Bank, DFCC, HNB, Seylan.",
+      "related": [
+        "<li><a href=\"housing-loan-calculator-sri-lanka.html\">Home Loan Calculator – Sri Lanka</a></li>",
+        "<li><a href=\"fixed-deposit-calculator-sri-lanka.html\">Fixed Deposit Calculator – Sri Lanka</a></li>",
+        "<li><a href=\"sip-calculator-sri-lanka.html\">SIP Calculator – Sri Lanka</a></li>",
+        "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
+      ],
+      "rate_range": "12–14% p.a.",
+      "deposit": null,
+      "tenure": "7 years",
+      "lenders": [
+        "Commercial Bank",
+        "DFCC",
+        "HNB",
+        "Seylan"
+      ],
+      "nuance": "Vehicle imports surged after import restrictions eased in 2025."
+    },
+    {
+      "slug": "car-loan-calculator-taiwan",
+      "country_article": "Taiwan",
+      "country": "Taiwan",
+      "cur_symbol": "$",
+      "cur_code": "TWD",
+      "locale": "zh-TW",
+      "rate": 4.0,
+      "car_note": "Auto loan rates ≈ 3.5–5% p.a. Tenure up to 84 months. Major lenders: CTBC, Taishin, E.Sun, Fubon, plus captives (Hotai, Toyota Leasing).",
+      "related": [
+        "<li><a href=\"mortgage-calculator-taiwan.html\">Home Loan Calculator – Taiwan</a></li>",
+        "<li><a href=\"fixed-deposit-calculator-taiwan.html\">Fixed Deposit Calculator – Taiwan</a></li>",
+        "<li><a href=\"sip-calculator-taiwan.html\">SIP Calculator – Taiwan</a></li>",
+        "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
+      ],
+      "rate_range": "3.5–5% p.a.",
+      "deposit": null,
+      "tenure": "84 months",
+      "lenders": [
+        "CTBC",
+        "Taishin",
+        "E.Sun",
+        "Fubon"
+      ],
+      "nuance": "Captive lenders (Hotai, Toyota Leasing) are common for new cars."
+    },
+    {
+      "slug": "car-loan-calculator-thailand",
+      "country_article": "Thailand",
+      "country": "Thailand",
+      "cur_symbol": "฿",
+      "cur_code": "THB",
+      "locale": "th-TH",
+      "rate": 4.5,
+      "car_note": "Auto loan flat rates ≈ 2.5–4.5% (effective ~5–9% reducing). Max tenure 84 months. Providers: Toyota Leasing, Siam Kubota, bank auto loans (KBank, SCB, Krungthai).",
+      "related": [
+        "<li><a href=\"home-loan-calculator-thailand.html\">Home Loan Calculator – Thailand</a></li>",
+        "<li><a href=\"fixed-deposit-calculator-thailand.html\">Fixed Deposit Calculator – Thailand</a></li>",
+        "<li><a href=\"sip-calculator-thailand.html\">SIP Calculator – Thailand</a></li>",
+        "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
+      ],
+      "rate_range": "flat 2.5–4.5% p.a. (about 5–9% reducing balance)",
+      "deposit": null,
+      "tenure": "84 months",
+      "lenders": [
+        "Toyota Leasing",
+        "Siam Kubota",
+        "KBank",
+        "SCB",
+        "Krungthai"
+      ],
+      "nuance": "Rates are usually quoted as a flat rate, so the effective reducing-balance cost is higher."
+    },
+    {
+      "slug": "car-loan-calculator-usa",
+      "country_article": "the USA",
+      "country": "USA",
+      "cur_symbol": "$",
+      "cur_code": "USD",
+      "locale": "en-US",
+      "rate": 7.5,
+      "car_note": "New car loans ≈ 7–8% p.a., used car ≈ 9–11%. Captive lenders (Toyota Financial, Ford Credit) and banks (Chase, Capital One) are common. Credit score materially affects rate.",
+      "related": [
+        "<li><a href=\"mortgage-calculator-usa.html\">Home Loan Calculator – the USA</a></li>",
+        "<li><a href=\"fixed-deposit-calculator-usa.html\">Fixed Deposit Calculator – the USA</a></li>",
+        "<li><a href=\"sip-calculator-usa.html\">SIP Calculator – the USA</a></li>",
+        "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
+      ],
+      "rate_range": "7–8% p.a. new, 9–11% used",
+      "deposit": null,
+      "tenure": null,
+      "lenders": [
+        "Chase",
+        "Capital One",
+        "Toyota Financial",
+        "Ford Credit"
+      ],
+      "nuance": "Your credit score materially affects the rate you are offered."
+    },
+    {
+      "slug": "car-loan-calculator-vietnam",
+      "country_article": "Vietnam",
+      "country": "Vietnam",
+      "cur_symbol": "₫",
+      "cur_code": "VND",
+      "locale": "vi-VN",
+      "rate": 10.5,
+      "car_note": "Auto loan rates ≈ 9–12% p.a. Tenure up to 7–8 years. Major lenders: Vietcombank, Techcombank, VPBank (FE Credit), plus Toyota Financial Services.",
+      "related": [
+        "<li><a href=\"home-loan-calculator-vietnam.html\">Home Loan Calculator – Vietnam</a></li>",
+        "<li><a href=\"fixed-deposit-calculator-vietnam.html\">Fixed Deposit Calculator – Vietnam</a></li>",
+        "<li><a href=\"sip-calculator-vietnam.html\">SIP Calculator – Vietnam</a></li>",
+        "<li><a href=\"home-loan-calculator.html\">Debt Payoff Optimizer</a></li>"
+      ],
+      "rate_range": "9–12% p.a.",
+      "deposit": null,
+      "tenure": "7–8 years",
+      "lenders": [
+        "Vietcombank",
+        "Techcombank",
+        "VPBank (FE Credit)",
+        "Toyota Financial Services"
+      ],
+      "nuance": "Both new and used vehicles can be financed."
+    },
+    {
+      "slug": "car-loan-calculator-indonesia",
+      "custom": true
+    },
+    {
+      "slug": "car-loan-calculator-nigeria",
+      "custom": true
+    },
+    {
+      "slug": "car-loan-calculator-pakistan",
+      "custom": true
+    },
+    {
+      "slug": "car-loan-calculator-philippines",
+      "custom": true
+    },
+    {
+      "slug": "car-loan-calculator-uae",
+      "custom": true
+    },
+    {
+      "slug": "tasit-kredisi-hesaplama",
+      "custom": true
+    },
+    {
+      "slug": "vehicle-finance-south-africa",
+      "custom": true
+    }
+  ],
+  "sip": [
+    {
+      "slug": "sip-calculator-australia",
+      "country_article": "Australia",
+      "country": "Australia",
+      "cur_symbol": "$",
+      "cur_code": "AUD",
+      "locale": "en-AU",
+      "rate": 8.0,
+      "invest_note": "ASX 200 long-term ≈ 8–9% (incl. dividends). Super contribution cap A$30k/yr concessional. Platforms: CommSec, SelfWealth, Vanguard Personal Investor, Stake.",
+      "related": [
+        "<li><a href=\"fixed-deposit-calculator-australia.html\">Fixed Deposit Calculator – Australia</a></li>",
+        "<li><a href=\"home-loan-calculator-australia.html\">Home Loan Calculator – Australia</a></li>"
+      ]
+    },
+    {
+      "slug": "sip-calculator-bahrain",
+      "country_article": "Bahrain",
+      "country": "Bahrain",
+      "cur_symbol": "BHD",
+      "cur_code": "BHD",
+      "locale": "en-BH",
+      "rate": 6.0,
+      "invest_note": "Bahrain All-Share Index long-term ≈ 5–7% BHD. Asset managers: Investcorp, SICO, NBB Capital. Bahrain is a regional Islamic finance hub.",
+      "related": [
+        "<li><a href=\"fixed-deposit-calculator-bahrain.html\">Fixed Deposit Calculator – Bahrain</a></li>",
+        "<li><a href=\"home-finance-calculator-bahrain.html\">Home Loan Calculator – Bahrain</a></li>"
+      ]
+    },
+    {
+      "slug": "sip-calculator-brazil",
+      "country_article": "Brazil",
+      "country": "Brazil",
+      "cur_symbol": "R$",
+      "cur_code": "BRL",
+      "locale": "pt-BR",
+      "rate": 14.0,
+      "invest_note": "Ibovespa long-term ≈ 12–15% nominal. Tesouro Selic ≈ Selic rate (15%). Platforms: XP, Clear, Rico, Nubank Invest, Inter Invest. Tax: 15–22.5% on gains (progressive).",
+      "related": [
+        "<li><a href=\"fixed-deposit-calculator-brazil.html\">Fixed Deposit Calculator – Brazil</a></li>",
+        "<li><a href=\"financiamento-imobiliario-brasil.html\">Home Loan Calculator – Brazil</a></li>"
+      ]
+    },
+    {
+      "slug": "sip-calculator-canada",
+      "country_article": "Canada",
+      "country": "Canada",
+      "cur_symbol": "$",
+      "cur_code": "CAD",
+      "locale": "en-CA",
+      "rate": 8.0,
+      "invest_note": "TFSA limit C$7k/yr (2026), RRSP up to 18% of income. TSX long-term ≈ 7–9%. S&P 500 via VFV or XUS. Platforms: Wealthsimple, Questrade, TD Direct Investing.",
+      "related": [
+        "<li><a href=\"fixed-deposit-calculator-canada.html\">Fixed Deposit Calculator – Canada</a></li>",
+        "<li><a href=\"mortgage-calculator-canada.html\">Home Loan Calculator – Canada</a></li>"
+      ]
+    },
+    {
+      "slug": "sip-calculator-china",
+      "country_article": "China",
+      "country": "China",
+      "cur_symbol": "¥",
+      "cur_code": "CNY",
+      "locale": "zh-CN",
+      "rate": 8.0,
+      "invest_note": "CSI 300 long-term ≈ 6–9%. Platforms: Ant Fortune, Tiantian Fund, E Fund. Capital controls limit foreign investing; QDII funds provide limited access.",
+      "related": [
+        "<li><a href=\"fixed-deposit-calculator-china.html\">Fixed Deposit Calculator – China</a></li>",
+        "<li><a href=\"mortgage-calculator-china.html\">Home Loan Calculator – China</a></li>"
+      ]
+    },
+    {
+      "slug": "sip-calculator-egypt",
+      "country_article": "Egypt",
+      "country": "Egypt",
+      "cur_symbol": "EGP",
+      "cur_code": "EGP",
+      "locale": "en-EG",
+      "rate": 20.0,
+      "invest_note": "EGX 30 long-term ≈ 18–22% nominal (EGP). Inflation high, so consider USD-linked or gold certificates. Providers: EFG Hermes, CI Capital.",
+      "related": [
+        "<li><a href=\"fixed-deposit-calculator-egypt.html\">Fixed Deposit Calculator – Egypt</a></li>",
+        "<li><a href=\"mortgage-calculator-egypt.html\">Home Loan Calculator – Egypt</a></li>"
+      ]
+    },
+    {
+      "slug": "sip-calculator-eurozone",
+      "country_article": "the Eurozone",
+      "country": "Eurozone",
+      "cur_symbol": "€",
+      "cur_code": "EUR",
+      "locale": "en-IE",
+      "rate": 8.0,
+      "invest_note": "MSCI Europe long-term ≈ 7–8% p.a. ETF providers: iShares, Amundi, Xtrackers.",
+      "related": [
+        "<li><a href=\"fixed-deposit-calculator-eurozone.html\">Fixed Deposit Calculator – the Eurozone</a></li>",
+        "<li><a href=\"mortgage-calculator-eurozone.html\">Home Loan Calculator – the Eurozone</a></li>"
+      ]
+    },
+    {
+      "slug": "sip-calculator-hong-kong",
+      "country_article": "Hong Kong",
+      "country": "Hong Kong",
+      "cur_symbol": "HK$",
+      "cur_code": "HKD",
+      "locale": "en-HK",
+      "rate": 7.0,
+      "invest_note": "Hang Seng Index long-term ≈ 5–8% HKD. Platforms: HSBC, Hang Seng Invest, Futu, Tiger Brokers, Interactive Brokers. MPF employer+employee 5%+5% mandatory.",
+      "related": [
+        "<li><a href=\"fixed-deposit-calculator-hong-kong.html\">Fixed Deposit Calculator – Hong Kong</a></li>",
+        "<li><a href=\"mortgage-calculator-hong-kong.html\">Home Loan Calculator – Hong Kong</a></li>"
+      ]
+    },
+    {
+      "slug": "sip-calculator-japan",
+      "country_article": "Japan",
+      "country": "Japan",
+      "cur_symbol": "￥",
+      "cur_code": "JPY",
+      "locale": "ja-JP",
+      "rate": 6.0,
+      "invest_note": "Nikkei 225 long-term ≈ 5–7% nominal, global ETFs ≈ 7–10% in JPY terms. New NISA annual limit ¥3.6M (¥1.8M accumulation). Platforms: SBI Securities, Rakuten Securities, Monex.",
+      "related": [
+        "<li><a href=\"fixed-deposit-calculator-japan.html\">Fixed Deposit Calculator – Japan</a></li>",
+        "<li><a href=\"mortgage-calculator-japan.html\">Home Loan Calculator – Japan</a></li>"
+      ]
+    },
+    {
+      "slug": "sip-calculator-kenya",
+      "country_article": "Kenya",
+      "country": "Kenya",
+      "cur_symbol": "Ksh",
+      "cur_code": "KES",
+      "locale": "en-KE",
+      "rate": 12.0,
+      "invest_note": "MMFs ≈ 9–13% p.a. (Cytonn, CIC, Sanlam). NSE long-term ≈ 10–13%. M-Shwari/KCB M-Pesa for short-term savings.",
+      "related": [
+        "<li><a href=\"fixed-deposit-calculator-kenya.html\">Fixed Deposit Calculator – Kenya</a></li>",
+        "<li><a href=\"home-loan-calculator-kenya.html\">Home Loan Calculator – Kenya</a></li>"
+      ]
+    },
+    {
+      "slug": "sip-calculator-kuwait",
+      "country_article": "Kuwait",
+      "country": "Kuwait",
+      "cur_symbol": "KWD",
+      "cur_code": "KWD",
+      "locale": "en-KW",
+      "rate": 6.0,
+      "invest_note": "Boursa Kuwait Premier long-term ≈ 6–8% KWD. Major asset managers: NBK Capital, KFH Capital, KAMCO, Markaz. Retirement: PIFSS for nationals, private plans for expats.",
+      "related": [
+        "<li><a href=\"fixed-deposit-calculator-kuwait.html\">Fixed Deposit Calculator – Kuwait</a></li>",
+        "<li><a href=\"home-finance-calculator-kuwait.html\">Home Loan Calculator – Kuwait</a></li>"
+      ]
+    },
+    {
+      "slug": "sip-calculator-malaysia",
+      "country_article": "Malaysia",
+      "country": "Malaysia",
+      "cur_symbol": "RM",
+      "cur_code": "MYR",
+      "locale": "ms-MY",
+      "rate": 8.0,
+      "invest_note": "ASB long-term ≈ 5–6% tax-free. KLCI long-term ≈ 7–8%. EPF contributions also key for retirement.",
+      "related": [
+        "<li><a href=\"fixed-deposit-calculator-malaysia.html\">Fixed Deposit Calculator – Malaysia</a></li>",
+        "<li><a href=\"home-loan-calculator-malaysia.html\">Home Loan Calculator – Malaysia</a></li>"
+      ]
+    },
+    {
+      "slug": "sip-calculator-mexico",
+      "country_article": "Mexico",
+      "country": "Mexico",
+      "cur_symbol": "$",
+      "cur_code": "MXN",
+      "locale": "es-MX",
+      "rate": 11.0,
+      "invest_note": "IPC long-term ≈ 9–12% nominal. Afores: voluntary contributions on top of mandatory 6.5%. Platforms: GBM+, Actinver, Kuspit, Fintual, Bitso (crypto).",
+      "related": [
+        "<li><a href=\"fixed-deposit-calculator-mexico.html\">Fixed Deposit Calculator – Mexico</a></li>",
+        "<li><a href=\"credito-hipotecario-mexico.html\">Home Loan Calculator – Mexico</a></li>"
+      ]
+    },
+    {
+      "slug": "sip-calculator-new-zealand",
+      "country_article": "New Zealand",
+      "country": "New Zealand",
+      "cur_symbol": "$",
+      "cur_code": "NZD",
+      "locale": "en-NZ",
+      "rate": 8.0,
+      "invest_note": "KiwiSaver growth funds long-term ≈ 7–8% NZD. Default providers: ANZ, ASB, BNZ, Westpac, Kiwi Wealth. Plus Simplicity, Milford, Generate, Sharesies.",
+      "related": [
+        "<li><a href=\"fixed-deposit-calculator-new-zealand.html\">Fixed Deposit Calculator – New Zealand</a></li>",
+        "<li><a href=\"mortgage-calculator-new-zealand.html\">Home Loan Calculator – New Zealand</a></li>"
+      ]
+    },
+    {
+      "slug": "sip-calculator-nigeria",
+      "country_article": "Nigeria",
+      "country": "Nigeria",
+      "cur_symbol": "₦",
+      "cur_code": "NGN",
+      "locale": "en-NG",
+      "rate": 18.0,
+      "invest_note": "NGX All-Share long-term ≈ 15–20% (nominal, NGN). Many investors use USD funds via Cowrywise, Bamboo to hedge inflation.",
+      "related": [
+        "<li><a href=\"fixed-deposit-calculator-nigeria.html\">Fixed Deposit Calculator – Nigeria</a></li>",
+        "<li><a href=\"loan-calculator-nigeria.html\">Home Loan Calculator – Nigeria</a></li>"
+      ]
+    },
+    {
+      "slug": "sip-calculator-qatar",
+      "country_article": "Qatar",
+      "country": "Qatar",
+      "cur_symbol": "QAR",
+      "cur_code": "QAR",
+      "locale": "en-QA",
+      "rate": 6.0,
+      "invest_note": "QE Index long-term ≈ 5–7% QAR. Many expats invest via brokers in UAE (EFG Hermes, ADCB Securities). QFC-licensed platforms also available.",
+      "related": [
+        "<li><a href=\"fixed-deposit-calculator-qatar.html\">Fixed Deposit Calculator – Qatar</a></li>",
+        "<li><a href=\"home-finance-calculator-qatar.html\">Home Loan Calculator – Qatar</a></li>"
+      ]
+    },
+    {
+      "slug": "sip-calculator-russia",
+      "country_article": "Russia",
+      "country": "Russia",
+      "cur_symbol": "₽",
+      "cur_code": "RUB",
+      "locale": "ru-RU",
+      "rate": 18.0,
+      "invest_note": "MOEX long-term ≈ 15–20% nominal. OFZ (government bonds) yields ≈ 15%. Many Russians hold gold or foreign-currency deposits. Platforms: Tinkoff Investments, Sber Invest, Finam.",
+      "related": [
+        "<li><a href=\"fixed-deposit-calculator-russia.html\">Fixed Deposit Calculator – Russia</a></li>",
+        "<li><a href=\"mortgage-calculator-russia.html\">Home Loan Calculator – Russia</a></li>"
+      ]
+    },
+    {
+      "slug": "sip-calculator-saudi-arabia",
+      "country_article": "Saudi Arabia",
+      "country": "Saudi Arabia",
+      "cur_symbol": "SAR",
+      "cur_code": "SAR",
+      "locale": "en-SA",
+      "rate": 10.0,
+      "invest_note": "Tadawul TASI long-term ≈ 9–11%. Shariah-screened indexes popular. Al Rajhi Capital, SNB Capital are major asset managers.",
+      "related": [
+        "<li><a href=\"fixed-deposit-calculator-saudi-arabia.html\">Fixed Deposit Calculator – Saudi Arabia</a></li>",
+        "<li><a href=\"home-finance-calculator-saudi-arabia.html\">Home Loan Calculator – Saudi Arabia</a></li>"
+      ]
+    },
+    {
+      "slug": "sip-calculator-singapore",
+      "country_article": "Singapore",
+      "country": "Singapore",
+      "cur_symbol": "$",
+      "cur_code": "SGD",
+      "locale": "en-SG",
+      "rate": 7.0,
+      "invest_note": "STI long-term ≈ 5–7%. Most Singaporeans use global ETFs (VWRA, CSPX) via Endowus, SYFE, Interactive Brokers. CPF SA earns 4%/yr guaranteed.",
+      "related": [
+        "<li><a href=\"fixed-deposit-calculator-singapore.html\">Fixed Deposit Calculator – Singapore</a></li>",
+        "<li><a href=\"home-loan-calculator-singapore.html\">Home Loan Calculator – Singapore</a></li>"
+      ]
+    },
+    {
+      "slug": "sip-calculator-south-africa",
+      "country_article": "South Africa",
+      "country": "South Africa",
+      "cur_symbol": "R",
+      "cur_code": "ZAR",
+      "locale": "en-ZA",
+      "rate": 11.0,
+      "invest_note": "TFSA limit R36k/year, R500k lifetime. JSE Top 40 long-term ≈ 10–12%. Providers: EasyEquities, Satrix, Allan Gray, Coronation.",
+      "related": [
+        "<li><a href=\"fixed-deposit-calculator-south-africa.html\">Fixed Deposit Calculator – South Africa</a></li>",
+        "<li><a href=\"home-loan-calculator-south-africa.html\">Home Loan Calculator – South Africa</a></li>"
+      ]
+    },
+    {
+      "slug": "sip-calculator-south-korea",
+      "country_article": "South Korea",
+      "country": "South Korea",
+      "cur_symbol": "₩",
+      "cur_code": "KRW",
+      "locale": "ko-KR",
+      "rate": 7.0,
+      "invest_note": "KOSPI long-term ≈ 5–8% KRW. Major AMCs: Samsung, Mirae Asset, KB, Shinhan. Retail platforms: Toss Invest, Kakao Pay Securities. IRP gets tax deduction up to 9M KRW/yr.",
+      "related": [
+        "<li><a href=\"fixed-deposit-calculator-south-korea.html\">Fixed Deposit Calculator – South Korea</a></li>",
+        "<li><a href=\"mortgage-calculator-south-korea.html\">Home Loan Calculator – South Korea</a></li>"
+      ]
+    },
+    {
+      "slug": "sip-calculator-taiwan",
+      "country_article": "Taiwan",
+      "country": "Taiwan",
+      "cur_symbol": "$",
+      "cur_code": "TWD",
+      "locale": "zh-TW",
+      "rate": 7.0,
+      "invest_note": "TAIEX long-term ≈ 7–9% TWD. ETF leaders: Yuanta (00878, 0050), Cathay (00929), Fubon. Many retail investors use SIPs into dividend ETFs.",
+      "related": [
+        "<li><a href=\"fixed-deposit-calculator-taiwan.html\">Fixed Deposit Calculator – Taiwan</a></li>",
+        "<li><a href=\"mortgage-calculator-taiwan.html\">Home Loan Calculator – Taiwan</a></li>"
+      ]
+    },
+    {
+      "slug": "sip-calculator-thailand",
+      "country_article": "Thailand",
+      "country": "Thailand",
+      "cur_symbol": "฿",
+      "cur_code": "THB",
+      "locale": "th-TH",
+      "rate": 7.0,
+      "invest_note": "SET Index long-term ≈ 6–9% THB. Major AMCs: KAsset, SCBAM, BBLAM, UOBAM, TISCO. Retirement (RMF) and long-term (SSF) funds are tax-deductible.",
+      "related": [
+        "<li><a href=\"fixed-deposit-calculator-thailand.html\">Fixed Deposit Calculator – Thailand</a></li>",
+        "<li><a href=\"home-loan-calculator-thailand.html\">Home Loan Calculator – Thailand</a></li>"
+      ]
+    },
+    {
+      "slug": "sip-calculator-turkey",
+      "country_article": "Turkey",
+      "country": "Turkey",
+      "cur_symbol": "₺",
+      "cur_code": "TRY",
+      "locale": "tr-TR",
+      "rate": 35.0,
+      "invest_note": "BIST 100 nominal ≈ 35–45% p.a. (but TRY inflation is ~35%, so real returns are modest). Many Turks use gold, USD, or Eurobond funds to hedge. Platforms: Garanti BBVA, İş Yatırım.",
+      "related": [
+        "<li><a href=\"fixed-deposit-calculator-turkey.html\">Fixed Deposit Calculator – Turkey</a></li>",
+        "<li><a href=\"konut-kredisi-hesaplama.html\">Home Loan Calculator – Turkey</a></li>"
+      ]
+    },
+    {
+      "slug": "sip-calculator-uae",
+      "country_article": "the UAE",
+      "country": "UAE",
+      "cur_symbol": "AED",
+      "cur_code": "AED",
+      "locale": "en-AE",
+      "rate": 9.0,
+      "invest_note": "ADX and DFM long-term ≈ 8–10%. International ETFs via Interactive Brokers, Sarwa, StashAway popular for expats.",
+      "related": [
+        "<li><a href=\"fixed-deposit-calculator-uae.html\">Fixed Deposit Calculator – the UAE</a></li>",
+        "<li><a href=\"retirement-calculator-uae.html\">Retirement Calculator – the UAE</a></li>",
+        "<li><a href=\"mortgage-calculator-uae.html\">Home Loan Calculator – the UAE</a></li>"
+      ]
+    },
+    {
+      "slug": "sip-calculator-uk",
+      "country_article": "the UK",
+      "country": "UK",
+      "cur_symbol": "£",
+      "cur_code": "GBP",
+      "locale": "en-GB",
+      "rate": 9.0,
+      "invest_note": "ISA allowance £20k/year tax-free. Providers: Vanguard, Hargreaves Lansdown, AJ Bell. FTSE 100 historical ≈ 7%.",
+      "related": [
+        "<li><a href=\"fixed-deposit-calculator-uk.html\">Fixed Deposit Calculator – the UK</a></li>",
+        "<li><a href=\"retirement-calculator-uk.html\">Retirement Calculator – the UK</a></li>",
+        "<li><a href=\"mortgage-calculator-uk.html\">Home Loan Calculator – the UK</a></li>"
+      ]
+    },
+    {
+      "slug": "sip-calculator-usa",
+      "country_article": "the USA",
+      "country": "USA",
+      "cur_symbol": "$",
+      "cur_code": "USD",
+      "locale": "en-US",
+      "rate": 10.0,
+      "invest_note": "Vanguard VOO/VTI, Fidelity FZROX. S&P 500 historical average ≈ 10% nominal. Use 401(k), Roth IRA for tax advantages.",
+      "related": [
+        "<li><a href=\"fixed-deposit-calculator-usa.html\">Fixed Deposit Calculator – the USA</a></li>",
+        "<li><a href=\"retirement-calculator-usa.html\">Retirement Calculator – the USA</a></li>",
+        "<li><a href=\"mortgage-calculator-usa.html\">Home Loan Calculator – the USA</a></li>"
+      ]
+    },
+    {
+      "slug": "sip-calculator-vietnam",
+      "country_article": "Vietnam",
+      "country": "Vietnam",
+      "cur_symbol": "₫",
+      "cur_code": "VND",
+      "locale": "vi-VN",
+      "rate": 10.0,
+      "invest_note": "VN-Index long-term ≈ 10–14% VND (high volatility). Fund managers: Dragon Capital, VinaCapital, Techcom Capital, SSI Asset Management. Retail platforms: Finhay, Fincorp, Tikop.",
+      "related": [
+        "<li><a href=\"fixed-deposit-calculator-vietnam.html\">Fixed Deposit Calculator – Vietnam</a></li>",
+        "<li><a href=\"home-loan-calculator-vietnam.html\">Home Loan Calculator – Vietnam</a></li>"
+      ]
+    },
+    {
+      "slug": "sip-calculator-bangladesh",
+      "custom": true
+    },
+    {
+      "slug": "sip-calculator-indonesia",
+      "custom": true
+    },
+    {
+      "slug": "sip-calculator-pakistan",
+      "custom": true
+    },
+    {
+      "slug": "sip-calculator-philippines",
+      "custom": true
+    },
+    {
+      "slug": "sip-calculator-sri-lanka",
+      "custom": true
+    }
+  ],
+  "fixed_deposit": [
+    {
+      "slug": "fixed-deposit-calculator-australia",
+      "country_article": "Australia",
+      "country": "Australia",
+      "cur_symbol": "$",
+      "cur_code": "AUD",
+      "locale": "en-AU",
+      "rate": 4.5,
+      "fd_note": "Term deposit rates ≈ 4.2–4.8% p.a. for 1-2 year terms. Top rates at Macquarie, Judo Bank, Bank of Sydney. Compare on Canstar, Mozo.",
+      "related": [
+        "<li><a href=\"sip-calculator-australia.html\">SIP Calculator – Australia</a></li>",
+        "<li><a href=\"home-loan-calculator-australia.html\">Home Loan Calculator – Australia</a></li>"
+      ],
+      "deposit_insurance": "In Australia, deposits are guaranteed under the Financial Claims Scheme up to A$250,000 per account-holder, per licensed bank."
+    },
+    {
+      "slug": "fixed-deposit-calculator-bahrain",
+      "country_article": "Bahrain",
+      "country": "Bahrain",
+      "cur_symbol": "BHD",
+      "cur_code": "BHD",
+      "locale": "en-BH",
+      "rate": 4.0,
+      "fd_note": "Term deposit rates ≈ 3.5–4.5% p.a. Top yields at NBB, BBK, Ahli United for 1+ year tenures.",
+      "related": [
+        "<li><a href=\"sip-calculator-bahrain.html\">SIP Calculator – Bahrain</a></li>",
+        "<li><a href=\"home-finance-calculator-bahrain.html\">Home Loan Calculator – Bahrain</a></li>"
+      ],
+      "deposit_insurance": "In Bahrain, bank deposits are typically protected by a national deposit-insurance scheme up to a set per-depositor limit. Confirm the current cap and which banks qualify before you deposit."
+    },
+    {
+      "slug": "fixed-deposit-calculator-bangladesh",
+      "country_article": "Bangladesh",
+      "country": "Bangladesh",
+      "cur_symbol": "BDT",
+      "cur_code": "BDT",
+      "locale": "en-BD",
+      "rate": 10.5,
+      "fd_note": "FDR rates ≈ 9–11% p.a. for 3+ year tenures. Islamic banks offer Mudarabah-based alternatives with similar profit rates.",
+      "related": [
+        "<li><a href=\"sip-calculator-bangladesh.html\">SIP Calculator – Bangladesh</a></li>",
+        "<li><a href=\"home-loan-calculator-bangladesh.html\">Home Loan Calculator – Bangladesh</a></li>"
+      ],
+      "deposit_insurance": "In Bangladesh, bank deposits are typically protected by a national deposit-insurance scheme up to a set per-depositor limit. Confirm the current cap and which banks qualify before you deposit."
+    },
+    {
+      "slug": "fixed-deposit-calculator-brazil",
+      "country_article": "Brazil",
+      "country": "Brazil",
+      "cur_symbol": "R$",
+      "cur_code": "BRL",
+      "locale": "pt-BR",
+      "rate": 13.5,
+      "fd_note": "CDBs ≈ 100–120% of CDI (≈ 13–16% p.a.). LCI/LCA tax-free on real estate/agro. Tesouro Selic ≈ Selic. Platforms: all major broker apps.",
+      "related": [
+        "<li><a href=\"sip-calculator-brazil.html\">SIP Calculator – Brazil</a></li>",
+        "<li><a href=\"financiamento-imobiliario-brasil.html\">Home Loan Calculator – Brazil</a></li>"
+      ],
+      "deposit_insurance": "In Brazil, bank deposits are typically protected by a national deposit-insurance scheme up to a set per-depositor limit. Confirm the current cap and which banks qualify before you deposit."
+    },
+    {
+      "slug": "fixed-deposit-calculator-canada",
+      "country_article": "Canada",
+      "country": "Canada",
+      "cur_symbol": "$",
+      "cur_code": "CAD",
+      "locale": "en-CA",
+      "rate": 4.0,
+      "fd_note": "GIC rates ≈ 3.5–4.25% p.a. for 1-5 year terms. Top rates at EQ Bank, Oaken, Tangerine. Tax-free inside a TFSA.",
+      "related": [
+        "<li><a href=\"sip-calculator-canada.html\">SIP Calculator – Canada</a></li>",
+        "<li><a href=\"mortgage-calculator-canada.html\">Home Loan Calculator – Canada</a></li>"
+      ],
+      "deposit_insurance": "In Canada, eligible deposits are protected by the CDIC up to C$100,000 per insured category, per member institution."
+    },
+    {
+      "slug": "fixed-deposit-calculator-china",
+      "country_article": "China",
+      "country": "China",
+      "cur_symbol": "¥",
+      "cur_code": "CNY",
+      "locale": "zh-CN",
+      "rate": 2.0,
+      "fd_note": "Time deposit rates ≈ 1.5–2.5% p.a. for 1-5 year terms. Large state banks lower; small/regional banks slightly higher. Rates have fallen significantly over the past 3 years.",
+      "related": [
+        "<li><a href=\"sip-calculator-china.html\">SIP Calculator – China</a></li>",
+        "<li><a href=\"mortgage-calculator-china.html\">Home Loan Calculator – China</a></li>"
+      ],
+      "deposit_insurance": "In China, bank deposits are typically protected by a national deposit-insurance scheme up to a set per-depositor limit. Confirm the current cap and which banks qualify before you deposit."
+    },
+    {
+      "slug": "fixed-deposit-calculator-egypt",
+      "country_article": "Egypt",
+      "country": "Egypt",
+      "cur_symbol": "EGP",
+      "cur_code": "EGP",
+      "locale": "en-EG",
+      "rate": 18.5,
+      "fd_note": "Gold certificates and standard savings certs ≈ 18–23% p.a. (yields dropped after 2024–2026 rate cuts). 3-year tenure most common. Issued by NBE, Banque Misr.",
+      "related": [
+        "<li><a href=\"sip-calculator-egypt.html\">SIP Calculator – Egypt</a></li>",
+        "<li><a href=\"mortgage-calculator-egypt.html\">Home Loan Calculator – Egypt</a></li>"
+      ],
+      "deposit_insurance": "In Egypt, bank deposits are typically protected by a national deposit-insurance scheme up to a set per-depositor limit. Confirm the current cap and which banks qualify before you deposit."
+    },
+    {
+      "slug": "fixed-deposit-calculator-eurozone",
+      "country_article": "the Eurozone",
+      "country": "Eurozone",
+      "cur_symbol": "€",
+      "cur_code": "EUR",
+      "locale": "en-IE",
+      "rate": 2.5,
+      "fd_note": "Fixed deposit rates ≈ 2.5–3.5% p.a. Higher rates in Central/Eastern Europe. Check Raisin or Scalable for comparison.",
+      "related": [
+        "<li><a href=\"sip-calculator-eurozone.html\">SIP Calculator – the Eurozone</a></li>",
+        "<li><a href=\"mortgage-calculator-eurozone.html\">Home Loan Calculator – the Eurozone</a></li>"
+      ],
+      "deposit_insurance": "In the Eurozone, bank deposits are typically protected by a national deposit-insurance scheme up to a set per-depositor limit. Confirm the current cap and which banks qualify before you deposit."
+    },
+    {
+      "slug": "fixed-deposit-calculator-hong-kong",
+      "country_article": "Hong Kong",
+      "country": "Hong Kong",
+      "cur_symbol": "HK$",
+      "cur_code": "HKD",
+      "locale": "en-HK",
+      "rate": 2.5,
+      "fd_note": "HKD time deposit ≈ 2.5–3.5% for 1-yr. USD deposits often higher. Top rates at virtual banks: ZA Bank, Mox, livi, WeLab.",
+      "related": [
+        "<li><a href=\"sip-calculator-hong-kong.html\">SIP Calculator – Hong Kong</a></li>",
+        "<li><a href=\"mortgage-calculator-hong-kong.html\">Home Loan Calculator – Hong Kong</a></li>"
+      ],
+      "deposit_insurance": "In Hong Kong, deposits are protected by the Deposit Protection Scheme up to HK$800,000 per depositor, per Scheme member."
+    },
+    {
+      "slug": "fixed-deposit-calculator-indonesia",
+      "country_article": "Indonesia",
+      "country": "Indonesia",
+      "cur_symbol": "Rp",
+      "cur_code": "IDR",
+      "locale": "id-ID",
+      "rate": 5.2,
+      "fd_note": "Deposito rates ≈ 4.5–5.5% p.a. at major banks. LPS guarantee rate (Oct 2025): 4.00% for conventional, 6.25% for rural banks.",
+      "related": [
+        "<li><a href=\"sip-calculator-indonesia.html\">SIP Calculator – Indonesia</a></li>",
+        "<li><a href=\"kpr-calculator-indonesia.html\">Home Loan Calculator – Indonesia</a></li>"
+      ],
+      "deposit_insurance": "In Indonesia, bank deposits are typically protected by a national deposit-insurance scheme up to a set per-depositor limit. Confirm the current cap and which banks qualify before you deposit."
+    },
+    {
+      "slug": "fixed-deposit-calculator-japan",
+      "country_article": "Japan",
+      "country": "Japan",
+      "cur_symbol": "￥",
+      "cur_code": "JPY",
+      "locale": "ja-JP",
+      "rate": 0.4,
+      "fd_note": "Time deposit rates ≈ 0.3–0.6% p.a. for 1-5 year terms. Rates edging up from historic zero-lower-bound. Top rates at online banks: SBI Shinsei, Aeon Bank.",
+      "related": [
+        "<li><a href=\"sip-calculator-japan.html\">SIP Calculator – Japan</a></li>",
+        "<li><a href=\"mortgage-calculator-japan.html\">Home Loan Calculator – Japan</a></li>"
+      ],
+      "deposit_insurance": "In Japan, deposits are protected by the DICJ up to ¥10 million plus interest per depositor, per bank."
+    },
+    {
+      "slug": "fixed-deposit-calculator-kenya",
+      "country_article": "Kenya",
+      "country": "Kenya",
+      "cur_symbol": "Ksh",
+      "cur_code": "KES",
+      "locale": "en-KE",
+      "rate": 9.5,
+      "fd_note": "FD rates ≈ 7–12% p.a. depending on bank. Treasury bills (91/182/364 day) often pay similar or better.",
+      "related": [
+        "<li><a href=\"sip-calculator-kenya.html\">SIP Calculator – Kenya</a></li>",
+        "<li><a href=\"home-loan-calculator-kenya.html\">Home Loan Calculator – Kenya</a></li>"
+      ],
+      "deposit_insurance": "In Kenya, bank deposits are typically protected by a national deposit-insurance scheme up to a set per-depositor limit. Confirm the current cap and which banks qualify before you deposit."
+    },
+    {
+      "slug": "fixed-deposit-calculator-kuwait",
+      "country_article": "Kuwait",
+      "country": "Kuwait",
+      "cur_symbol": "KWD",
+      "cur_code": "KWD",
+      "locale": "en-KW",
+      "rate": 3.2,
+      "fd_note": "FD rates ≈ 3–4% p.a. Islamic profit-sharing (Mudarabah) similar. Top rates typically at NBK, Gulf Bank, KIB.",
+      "related": [
+        "<li><a href=\"sip-calculator-kuwait.html\">SIP Calculator – Kuwait</a></li>",
+        "<li><a href=\"home-finance-calculator-kuwait.html\">Home Loan Calculator – Kuwait</a></li>"
+      ],
+      "deposit_insurance": "In Kuwait, bank deposits are typically protected by a national deposit-insurance scheme up to a set per-depositor limit. Confirm the current cap and which banks qualify before you deposit."
+    },
+    {
+      "slug": "fixed-deposit-calculator-malaysia",
+      "country_article": "Malaysia",
+      "country": "Malaysia",
+      "cur_symbol": "RM",
+      "cur_code": "MYR",
+      "locale": "ms-MY",
+      "rate": 3.5,
+      "fd_note": "FD rates ≈ 3.5–4% p.a. for 12+ months. PIDM insured up to RM250k. Islamic Commodity Murabaha deposits similar rates.",
+      "related": [
+        "<li><a href=\"sip-calculator-malaysia.html\">SIP Calculator – Malaysia</a></li>",
+        "<li><a href=\"home-loan-calculator-malaysia.html\">Home Loan Calculator – Malaysia</a></li>"
+      ],
+      "deposit_insurance": "In Malaysia, deposits are protected by PIDM up to RM250,000 per depositor, per member bank."
+    },
+    {
+      "slug": "fixed-deposit-calculator-mexico",
+      "country_article": "Mexico",
+      "country": "Mexico",
+      "cur_symbol": "$",
+      "cur_code": "MXN",
+      "locale": "es-MX",
+      "rate": 9.5,
+      "fd_note": "Pagaré rates ≈ 8–10% p.a. for 1-yr tenures. CETES (28/91/182/364d) via Cetesdirecto ≈ 9%. Top bank rates at Banco Azteca, Banco del Bajío.",
+      "related": [
+        "<li><a href=\"sip-calculator-mexico.html\">SIP Calculator – Mexico</a></li>",
+        "<li><a href=\"credito-hipotecario-mexico.html\">Home Loan Calculator – Mexico</a></li>"
+      ],
+      "deposit_insurance": "In Mexico, bank deposits are typically protected by a national deposit-insurance scheme up to a set per-depositor limit. Confirm the current cap and which banks qualify before you deposit."
+    },
+    {
+      "slug": "fixed-deposit-calculator-new-zealand",
+      "country_article": "New Zealand",
+      "country": "New Zealand",
+      "cur_symbol": "$",
+      "cur_code": "NZD",
+      "locale": "en-NZ",
+      "rate": 4.0,
+      "fd_note": "Term deposit rates ≈ 3.5–4.5% for 1-yr. No deposit guarantee scheme yet (one planned). Top rates often at smaller banks: SBS, Heartland, Rabobank.",
+      "related": [
+        "<li><a href=\"sip-calculator-new-zealand.html\">SIP Calculator – New Zealand</a></li>",
+        "<li><a href=\"mortgage-calculator-new-zealand.html\">Home Loan Calculator – New Zealand</a></li>"
+      ],
+      "deposit_insurance": "In New Zealand, bank deposits are typically protected by a national deposit-insurance scheme up to a set per-depositor limit. Confirm the current cap and which banks qualify before you deposit."
+    },
+    {
+      "slug": "fixed-deposit-calculator-nigeria",
+      "country_article": "Nigeria",
+      "country": "Nigeria",
+      "cur_symbol": "₦",
+      "cur_code": "NGN",
+      "locale": "en-NG",
+      "rate": 14.0,
+      "fd_note": "Term deposit rates ≈ 12–18% p.a. Treasury bills often comparable. NDIC insures deposits up to ₦500K.",
+      "related": [
+        "<li><a href=\"sip-calculator-nigeria.html\">SIP Calculator – Nigeria</a></li>",
+        "<li><a href=\"loan-calculator-nigeria.html\">Home Loan Calculator – Nigeria</a></li>"
+      ],
+      "deposit_insurance": "In Nigeria, bank deposits are typically protected by a national deposit-insurance scheme up to a set per-depositor limit. Confirm the current cap and which banks qualify before you deposit."
+    },
+    {
+      "slug": "fixed-deposit-calculator-pakistan",
+      "country_article": "Pakistan",
+      "country": "Pakistan",
+      "cur_symbol": "Rs",
+      "cur_code": "PKR",
+      "locale": "en-PK",
+      "rate": 13.0,
+      "fd_note": "Regular Income Certificates ≈ 13% p.a., Behbood Savings ≈ 16.5% (seniors/widows), Defense Savings Certificates 10-yr ≈ 13%. Bank term deposits ≈ 11–12%.",
+      "related": [
+        "<li><a href=\"sip-calculator-pakistan.html\">SIP Calculator – Pakistan</a></li>",
+        "<li><a href=\"home-loan-emi-pakistan.html\">Home Loan Calculator – Pakistan</a></li>"
+      ],
+      "deposit_insurance": "In Pakistan, bank deposits are typically protected by a national deposit-insurance scheme up to a set per-depositor limit. Confirm the current cap and which banks qualify before you deposit."
+    },
+    {
+      "slug": "fixed-deposit-calculator-philippines",
+      "country_article": "the Philippines",
+      "country": "Philippines",
+      "cur_symbol": "₱",
+      "cur_code": "PHP",
+      "locale": "en-PH",
+      "rate": 5.2,
+      "fd_note": "Time deposit rates ≈ 4.5–5.5% p.a. for 1+ year terms. Digital banks (CIMB, Maya Bank, ING) offer 4–6% on savings.",
+      "related": [
+        "<li><a href=\"sip-calculator-philippines.html\">SIP Calculator – the Philippines</a></li>",
+        "<li><a href=\"home-loan-calculator-philippines.html\">Home Loan Calculator – the Philippines</a></li>"
+      ],
+      "deposit_insurance": "In the Philippines, bank deposits are typically protected by a national deposit-insurance scheme up to a set per-depositor limit. Confirm the current cap and which banks qualify before you deposit."
+    },
+    {
+      "slug": "fixed-deposit-calculator-qatar",
+      "country_article": "Qatar",
+      "country": "Qatar",
+      "cur_symbol": "QAR",
+      "cur_code": "QAR",
+      "locale": "en-QA",
+      "rate": 3.9,
+      "fd_note": "Term deposit rates ≈ 3.5–4.5% p.a. QNB, CBQ, Doha Bank offer higher tiers for larger deposits. Islamic profit-sharing alternatives at QIB, Masraf Al Rayan.",
+      "related": [
+        "<li><a href=\"sip-calculator-qatar.html\">SIP Calculator – Qatar</a></li>",
+        "<li><a href=\"home-finance-calculator-qatar.html\">Home Loan Calculator – Qatar</a></li>"
+      ],
+      "deposit_insurance": "In Qatar, bank deposits are typically protected by a national deposit-insurance scheme up to a set per-depositor limit. Confirm the current cap and which banks qualify before you deposit."
+    },
+    {
+      "slug": "fixed-deposit-calculator-russia",
+      "country_article": "Russia",
+      "country": "Russia",
+      "cur_symbol": "₽",
+      "cur_code": "RUB",
+      "locale": "ru-RU",
+      "rate": 16.0,
+      "fd_note": "Deposit rates ≈ 14–18% p.a. for 6-12 month tenures. Short-term rates near CBR key rate. Top banks: Sberbank, VTB, Alfa, Tinkoff.",
+      "related": [
+        "<li><a href=\"sip-calculator-russia.html\">SIP Calculator – Russia</a></li>",
+        "<li><a href=\"mortgage-calculator-russia.html\">Home Loan Calculator – Russia</a></li>"
+      ],
+      "deposit_insurance": "In Russia, bank deposits are typically protected by a national deposit-insurance scheme up to a set per-depositor limit. Confirm the current cap and which banks qualify before you deposit."
+    },
+    {
+      "slug": "fixed-deposit-calculator-saudi-arabia",
+      "country_article": "Saudi Arabia",
+      "country": "Saudi Arabia",
+      "cur_symbol": "SAR",
+      "cur_code": "SAR",
+      "locale": "en-SA",
+      "rate": 4.0,
+      "fd_note": "Mudarabah term deposits ≈ 4–5% expected profit rate. Al Rajhi, Alinma are major Islamic banks.",
+      "related": [
+        "<li><a href=\"sip-calculator-saudi-arabia.html\">SIP Calculator – Saudi Arabia</a></li>",
+        "<li><a href=\"home-finance-calculator-saudi-arabia.html\">Home Loan Calculator – Saudi Arabia</a></li>"
+      ],
+      "deposit_insurance": "In Saudi Arabia, bank deposits are typically protected by a national deposit-insurance scheme up to a set per-depositor limit. Confirm the current cap and which banks qualify before you deposit."
+    },
+    {
+      "slug": "fixed-deposit-calculator-singapore",
+      "country_article": "Singapore",
+      "country": "Singapore",
+      "cur_symbol": "$",
+      "cur_code": "SGD",
+      "locale": "en-SG",
+      "rate": 2.8,
+      "fd_note": "FD rates ≈ 2.5–3% p.a. for 1-year tenures. T-bills (6-month) often better yield. Compare at DBS, UOB, OCBC, ICBC SG, Maybank.",
+      "related": [
+        "<li><a href=\"sip-calculator-singapore.html\">SIP Calculator – Singapore</a></li>",
+        "<li><a href=\"home-loan-calculator-singapore.html\">Home Loan Calculator – Singapore</a></li>"
+      ],
+      "deposit_insurance": "In Singapore, deposits are insured by SDIC up to S$100,000 per depositor, per Scheme member."
+    },
+    {
+      "slug": "fixed-deposit-calculator-south-africa",
+      "country_article": "South Africa",
+      "country": "South Africa",
+      "cur_symbol": "R",
+      "cur_code": "ZAR",
+      "locale": "en-ZA",
+      "rate": 8.5,
+      "fd_note": "FD rates ≈ 8–9% p.a. for 12+ month terms. Tax-free up to R23,800/year interest exemption (under 65). Providers: African Bank, Capitec, FNB.",
+      "related": [
+        "<li><a href=\"sip-calculator-south-africa.html\">SIP Calculator – South Africa</a></li>",
+        "<li><a href=\"home-loan-calculator-south-africa.html\">Home Loan Calculator – South Africa</a></li>"
+      ],
+      "deposit_insurance": "In South Africa, bank deposits are typically protected by a national deposit-insurance scheme up to a set per-depositor limit. Confirm the current cap and which banks qualify before you deposit."
+    },
+    {
+      "slug": "fixed-deposit-calculator-south-korea",
+      "country_article": "South Korea",
+      "country": "South Korea",
+      "cur_symbol": "₩",
+      "cur_code": "KRW",
+      "locale": "ko-KR",
+      "rate": 3.0,
+      "fd_note": "1-yr FD rates ≈ 2.8–3.3%. Internet banks (Kakao, Toss, K Bank) often beat traditional banks. Savings banks (저축은행) pay higher but watch KDIC limit.",
+      "related": [
+        "<li><a href=\"sip-calculator-south-korea.html\">SIP Calculator – South Korea</a></li>",
+        "<li><a href=\"mortgage-calculator-south-korea.html\">Home Loan Calculator – South Korea</a></li>"
+      ],
+      "deposit_insurance": "In South Korea, bank deposits are typically protected by a national deposit-insurance scheme up to a set per-depositor limit. Confirm the current cap and which banks qualify before you deposit."
+    },
+    {
+      "slug": "fixed-deposit-calculator-sri-lanka",
+      "country_article": "Sri Lanka",
+      "country": "Sri Lanka",
+      "cur_symbol": "LKR",
+      "cur_code": "LKR",
+      "locale": "en-LK",
+      "rate": 9.0,
+      "fd_note": "FD rates ≈ 8–10% p.a. for 1+ year. Senior citizens +1%. Licensed finance companies offer higher rates but have higher risk.",
+      "related": [
+        "<li><a href=\"sip-calculator-sri-lanka.html\">SIP Calculator – Sri Lanka</a></li>",
+        "<li><a href=\"housing-loan-calculator-sri-lanka.html\">Home Loan Calculator – Sri Lanka</a></li>"
+      ],
+      "deposit_insurance": "In Sri Lanka, bank deposits are typically protected by a national deposit-insurance scheme up to a set per-depositor limit. Confirm the current cap and which banks qualify before you deposit."
+    },
+    {
+      "slug": "fixed-deposit-calculator-taiwan",
+      "country_article": "Taiwan",
+      "country": "Taiwan",
+      "cur_symbol": "$",
+      "cur_code": "TWD",
+      "locale": "zh-TW",
+      "rate": 1.6,
+      "fd_note": "1-yr TD rates ≈ 1.5–1.8% p.a. Foreign currency TDs (USD, AUD) can pay much higher — popular among savers.",
+      "related": [
+        "<li><a href=\"sip-calculator-taiwan.html\">SIP Calculator – Taiwan</a></li>",
+        "<li><a href=\"mortgage-calculator-taiwan.html\">Home Loan Calculator – Taiwan</a></li>"
+      ],
+      "deposit_insurance": "In Taiwan, bank deposits are typically protected by a national deposit-insurance scheme up to a set per-depositor limit. Confirm the current cap and which banks qualify before you deposit."
+    },
+    {
+      "slug": "fixed-deposit-calculator-thailand",
+      "country_article": "Thailand",
+      "country": "Thailand",
+      "cur_symbol": "฿",
+      "cur_code": "THB",
+      "locale": "th-TH",
+      "rate": 1.5,
+      "fd_note": "FD rates ≈ 1.25–2% for 1-yr. Higher at smaller banks (KTB, TMB, CIMB Thai). Digital accounts from Kbank (K-Plus), SCB (EASY) sometimes beat this.",
+      "related": [
+        "<li><a href=\"sip-calculator-thailand.html\">SIP Calculator – Thailand</a></li>",
+        "<li><a href=\"home-loan-calculator-thailand.html\">Home Loan Calculator – Thailand</a></li>"
+      ],
+      "deposit_insurance": "In Thailand, bank deposits are typically protected by a national deposit-insurance scheme up to a set per-depositor limit. Confirm the current cap and which banks qualify before you deposit."
+    },
+    {
+      "slug": "fixed-deposit-calculator-turkey",
+      "country_article": "Turkey",
+      "country": "Turkey",
+      "cur_symbol": "₺",
+      "cur_code": "TRY",
+      "locale": "tr-TR",
+      "rate": 40.0,
+      "fd_note": "Vadeli mevduat ≈ 38–42% p.a. for 3-month tenures. Most deposits are short-term due to rate volatility. Withholding tax 7.5–15% on interest.",
+      "related": [
+        "<li><a href=\"sip-calculator-turkey.html\">SIP Calculator – Turkey</a></li>",
+        "<li><a href=\"konut-kredisi-hesaplama.html\">Home Loan Calculator – Turkey</a></li>"
+      ],
+      "deposit_insurance": "In Turkey, bank deposits are typically protected by a national deposit-insurance scheme up to a set per-depositor limit. Confirm the current cap and which banks qualify before you deposit."
+    },
+    {
+      "slug": "fixed-deposit-calculator-uae",
+      "country_article": "the UAE",
+      "country": "UAE",
+      "cur_symbol": "AED",
+      "cur_code": "AED",
+      "locale": "en-AE",
+      "rate": 3.5,
+      "fd_note": "FD rates ≈ 3.5–4.5% p.a. Islamic alternatives: Wakalah/Mudarabah deposits at similar profit rates.",
+      "related": [
+        "<li><a href=\"sip-calculator-uae.html\">SIP Calculator – the UAE</a></li>",
+        "<li><a href=\"mortgage-calculator-uae.html\">Home Loan Calculator – the UAE</a></li>",
+        "<li><a href=\"retirement-calculator-uae.html\">Retirement Calculator – the UAE</a></li>"
+      ],
+      "deposit_insurance": "In the UAE, bank deposits are typically protected by a national deposit-insurance scheme up to a set per-depositor limit. Confirm the current cap and which banks qualify before you deposit."
+    },
+    {
+      "slug": "fixed-deposit-calculator-uk",
+      "country_article": "the UK",
+      "country": "UK",
+      "cur_symbol": "£",
+      "cur_code": "GBP",
+      "locale": "en-GB",
+      "rate": 4.0,
+      "fd_note": "Fixed-rate bonds ≈ 4–4.5% p.a. for 1–3 year terms. Best rates on MoneySavingExpert or Raisin UK.",
+      "related": [
+        "<li><a href=\"sip-calculator-uk.html\">SIP Calculator – the UK</a></li>",
+        "<li><a href=\"mortgage-calculator-uk.html\">Home Loan Calculator – the UK</a></li>",
+        "<li><a href=\"retirement-calculator-uk.html\">Retirement Calculator – the UK</a></li>"
+      ],
+      "deposit_insurance": "In the UK, deposits are protected by the FSCS up to £120,000 per eligible person, per authorised firm (raised from £85,000 in December 2025)."
+    },
+    {
+      "slug": "fixed-deposit-calculator-usa",
+      "country_article": "the USA",
+      "country": "USA",
+      "cur_symbol": "$",
+      "cur_code": "USD",
+      "locale": "en-US",
+      "rate": 4.0,
+      "fd_note": "CD rates ≈ 4–5% p.a. for 1–5 year terms. Top providers: Marcus by Goldman, Ally Bank, Capital One 360.",
+      "related": [
+        "<li><a href=\"sip-calculator-usa.html\">SIP Calculator – the USA</a></li>",
+        "<li><a href=\"mortgage-calculator-usa.html\">Home Loan Calculator – the USA</a></li>",
+        "<li><a href=\"retirement-calculator-usa.html\">Retirement Calculator – the USA</a></li>"
+      ],
+      "deposit_insurance": "In the US, bank deposits are protected by the FDIC up to $250,000 per depositor, per insured bank."
+    },
+    {
+      "slug": "fixed-deposit-calculator-vietnam",
+      "country_article": "Vietnam",
+      "country": "Vietnam",
+      "cur_symbol": "₫",
+      "cur_code": "VND",
+      "locale": "vi-VN",
+      "rate": 5.5,
+      "fd_note": "FD rates ≈ 5–7% p.a. for 1-yr. Higher at private banks (VP, VIB, NCB) vs state-owned (VCB, BIDV). Gold-linked savings also popular.",
+      "related": [
+        "<li><a href=\"sip-calculator-vietnam.html\">SIP Calculator – Vietnam</a></li>",
+        "<li><a href=\"home-loan-calculator-vietnam.html\">Home Loan Calculator – Vietnam</a></li>"
+      ],
+      "deposit_insurance": "In Vietnam, bank deposits are typically protected by a national deposit-insurance scheme up to a set per-depositor limit. Confirm the current cap and which banks qualify before you deposit."
+    }
+  ]
 }
