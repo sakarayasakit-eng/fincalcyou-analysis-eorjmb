@@ -38,7 +38,39 @@
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
+  # Embed script is loaded cross-origin by third-party sites (backlink channel),
+  # so it MUST override the global CORP=same-origin or browsers block it.
+  # More specific than /*.js, so its values win for this path.
+  # Shorter cache than /*.js so widget fixes reach embedders within the hour.
+  for = "/embed.js"
+  [headers.values]
+    Cross-Origin-Resource-Policy = "cross-origin"
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+[[headers]]
   # Short cache for HTML so updates roll out quickly
   for = "/*.html"
   [headers.values]
     Cache-Control = "public, max-age=300, must-revalidate"
+
+[[headers]]
+  # Images rarely change — cache 30 days (not immutable, so favicon/og swaps aren't stuck a year)
+  for = "/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/*.ico"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  # Sitemap: let crawlers refetch hourly rather than serve a stale copy
+  for = "/sitemap.xml"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
