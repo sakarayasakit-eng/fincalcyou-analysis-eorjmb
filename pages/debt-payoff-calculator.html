@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#f4f6f7" />
+  <title>Debt Payoff Calculator — Avalanche vs Snowball (2026)</title>
+  <meta name="description" content="Free debt payoff calculator. Enter your credit cards and loans to compare the avalanche and snowball methods — see months to debt-free, total interest, and how much extra payments save. No signup." />
+  <meta name="keywords" content="debt payoff calculator, debt avalanche calculator, debt snowball calculator, credit card payoff calculator, debt free date, pay off debt faster, extra payment calculator" />
+  <link rel="canonical" href="https://fincalcyou.com/pages/debt-payoff-calculator.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://fincalcyou.com/pages/debt-payoff-calculator.html" />
+  <meta property="og:title" content="Debt Payoff Calculator — Avalanche vs Snowball" />
+  <meta property="og:description" content="Compare the avalanche and snowball methods across all your debts. See your debt-free date, total interest, and the effect of extra payments. Free, no signup." />
+  <meta property="og:image" content="https://fincalcyou.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="fin·calc" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://fincalcyou.com/og-image.png" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"What is the difference between the debt avalanche and debt snowball?","acceptedAnswer":{"@type":"Answer","text":"Both pay the minimum on every debt and throw all spare money at one target debt. The avalanche targets the highest interest rate first, which mathematically costs the least interest and clears debt soonest. The snowball targets the smallest balance first, which clears individual debts faster for motivation but usually costs a little more interest. This calculator shows both so you can compare."}},
+    {"@type":"Question","name":"Is the avalanche or snowball method better?","acceptedAnswer":{"@type":"Answer","text":"The avalanche always pays the least total interest and is never slower, because it kills the most expensive debt first. The snowball can be better in practice if the quick wins of clearing a small debt keep you motivated to stick with the plan. If the interest difference between the two is small, choose whichever you will actually follow."}},
+    {"@type":"Question","name":"How much do extra payments help?","acceptedAnswer":{"@type":"Answer","text":"A lot. Because interest is charged on the remaining balance, every extra dollar goes straight to principal and stops accruing interest for the rest of the payoff. Raising your extra payment usually cuts both the time to debt-free and the total interest sharply — increase the extra-payment field to see the effect."}},
+    {"@type":"Question","name":"What if my minimum payments do not cover the interest?","acceptedAnswer":{"@type":"Answer","text":"If the total you pay each month is less than the interest being charged, the balance grows and the debt is never repaid. The calculator will warn you if your payments are too low to clear the debt. The fix is to increase the extra payment or reduce the interest rate (for example with a balance transfer)."}}
+  ]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://fincalcyou.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://fincalcyou.com/pages/"},{"@type":"ListItem","position":3,"name":"Debt Payoff Calculator","item":"https://fincalcyou.com/pages/debt-payoff-calculator.html"}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Debt Payoff Calculator (Avalanche vs Snowball)","url":"https://fincalcyou.com/pages/debt-payoff-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any (web-based)","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"isAccessibleForFree":true}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="landing.css" />
+</head>
+<body>
+  <main>
+    <header>
+      <a href="../index.html" class="brand">fin<span class="dot">·</span>calc</a>
+      <nav><a href="../index.html">Home</a><a href="index.html">Guides</a></nav>
+    </header>
+    <h1>Debt Payoff Calculator</h1>
+    <p style="font-size:0.72rem;color:#7a8299;margin-top:6px;"><time class="last-updated" datetime="2026-08-11">Updated: August 2026 · Estimates only — verify with your lender.</time></p>
+    <p class="intro">Enter your credit cards and loans, add any extra you can pay each month, and this tool compares the two proven payoff strategies — <strong>avalanche</strong> (highest rate first) and <strong>snowball</strong> (smallest balance first) — showing your debt-free date and total interest for each. It works in any currency.</p>
+
+    <aside class="keyfacts" aria-label="Key facts">
+      <h2>Key facts</h2>
+      <dl>
+        <dt>What it does</dt><dd>Compares the avalanche and snowball methods across all your debts and shows months to debt-free and total interest for each.</dd>
+        <dt>Method</dt><dd>Month-by-month simulation: interest accrues on each balance, minimums are paid on every debt, and all spare money (extra + freed-up minimums) is rolled onto one target debt.</dd>
+        <dt>Coverage</dt><dd>Any currency. Handles up to four debts; leave a row blank to ignore it.</dd>
+        <dt>Cost</dt><dd>Free &mdash; no signup, no login, no tracking. Runs entirely in your browser.</dd>
+      </dl>
+    </aside>
+
+<style id="fc-embed-css">
+.fc-embed{display:block;background:#fff;border:1px solid #e3e8ee;border-radius:16px;padding:16px;margin:14px 0;color:#1a2733;font-family:Inter,-apple-system,Segoe UI,Roboto,sans-serif}
+.fc-embed label{display:block;font-size:11px;color:#5c6b7a;margin-bottom:5px;text-transform:uppercase;letter-spacing:.05em}
+.fc-embed .fc-in{display:flex;align-items:center;gap:6px;background:#f4f6f7;border:1px solid #e3e8ee;border-radius:9px;padding:7px 9px}
+.fc-embed .fc-in span{color:#5c6b7a;font-size:13px}
+.fc-embed .fc-in input{flex:1;width:100%;background:transparent;border:0;color:#1a2733;font-size:15px;font-weight:600;outline:none;min-width:0}
+.fc-embed .dp-head,.fc-embed .dp-row{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:8px;align-items:end}
+.fc-embed .dp-head>div{font-size:11px;color:#5c6b7a;text-transform:uppercase;letter-spacing:.05em;font-weight:600;padding:0 2px}
+.fc-embed .dp-row{margin-bottom:8px}
+.fc-embed .dp-extra{margin-top:8px;max-width:280px}
+.fc-embed .fc-cols{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+@media(max-width:560px){.fc-embed .fc-cols{grid-template-columns:1fr}}
+.fc-embed .fc-card{background:#f4f6f7;border:1px solid #e3e8ee;border-radius:12px;padding:12px}
+.fc-embed .fc-card.win{border-color:#0e7a4a;background:#eef7f1}
+.fc-embed .fc-card h4{margin:0 0 2px;font-size:13px;color:#1a2733}
+.fc-embed .fc-card .big{font-size:26px;color:#0e7a4a;font-weight:800;line-height:1.1}
+.fc-embed .fc-card .sub{font-size:12px;color:#5c6b7a;margin-top:6px}
+.fc-embed .fc-verdict{margin-top:12px;font-size:13px;color:#1a2733;background:#eef7f1;border:1px solid #cfe8db;border-radius:10px;padding:10px 12px}
+.fc-embed .fc-warn{margin-top:12px;font-size:13px;color:#8a3b12;background:#fdf0e8;border:1px solid #f3d3c1;border-radius:10px;padding:10px 12px}
+.fc-embed .fc-note{font-size:11px;color:#5c6b7a;margin-top:10px}
+</style>
+<div class="fc-embed" id="dp">
+  <div class="dp-head"><div>Debt (balance)</div><div>Rate % APR</div><div>Min / mo</div></div>
+  <div id="dp-rows">
+    <div class="dp-row"><div class="fc-in"><span>$</span><input aria-label="Debt 1 balance" class="dp-bal" type="number" min="0" step="any" value="6000"></div><div class="fc-in"><input aria-label="Debt 1 APR" class="dp-apr" type="number" min="0" step="0.1" value="24"><span>%</span></div><div class="fc-in"><span>$</span><input aria-label="Debt 1 minimum payment" class="dp-min" type="number" min="0" step="any" value="120"></div></div>
+    <div class="dp-row"><div class="fc-in"><span>$</span><input aria-label="Debt 2 balance" class="dp-bal" type="number" min="0" step="any" value="3000"></div><div class="fc-in"><input aria-label="Debt 2 APR" class="dp-apr" type="number" min="0" step="0.1" value="18"><span>%</span></div><div class="fc-in"><span>$</span><input aria-label="Debt 2 minimum payment" class="dp-min" type="number" min="0" step="any" value="75"></div></div>
+    <div class="dp-row"><div class="fc-in"><span>$</span><input aria-label="Debt 3 balance" class="dp-bal" type="number" min="0" step="any" value="9000"></div><div class="fc-in"><input aria-label="Debt 3 APR" class="dp-apr" type="number" min="0" step="0.1" value="11"><span>%</span></div><div class="fc-in"><span>$</span><input aria-label="Debt 3 minimum payment" class="dp-min" type="number" min="0" step="any" value="180"></div></div>
+    <div class="dp-row"><div class="fc-in"><span>$</span><input aria-label="Debt 4 balance" class="dp-bal" type="number" min="0" step="any" value=""></div><div class="fc-in"><input aria-label="Debt 4 APR" class="dp-apr" type="number" min="0" step="0.1" value=""><span>%</span></div><div class="fc-in"><span>$</span><input aria-label="Debt 4 minimum payment" class="dp-min" type="number" min="0" step="any" value=""></div></div>
+  </div>
+  <div class="dp-extra"><label>Extra payment / month (on top of minimums)</label><div class="fc-in"><span>$</span><input aria-label="Extra monthly payment" id="dp-extra" type="number" min="0" step="any" value="200"></div></div>
+
+  <div class="fc-cols">
+    <div class="fc-card" id="dp-av"><h4>❄️ Avalanche (highest rate first)</h4><div class="big" id="dp-av-time">—</div><div class="sub">Total interest <b id="dp-av-int">—</b></div></div>
+    <div class="fc-card" id="dp-sn"><h4>☃️ Snowball (smallest balance first)</h4><div class="big" id="dp-sn-time">—</div><div class="sub">Total interest <b id="dp-sn-int">—</b></div></div>
+  </div>
+  <div class="fc-verdict" id="dp-verdict"></div>
+  <div class="fc-warn" id="dp-warn" style="display:none"></div>
+  <div class="fc-note">Assumes fixed minimum payments and monthly compounding of the APR. A real card minimum is usually a percentage of the balance, so payoff may take a little longer — treat this as a planning estimate. <a href="../index.html?tab=emi" style="color:#0e7a4a">Open the full tool &rarr;</a></div>
+</div>
+<script>
+(function(){
+  var nf=new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0});
+  function money(v){return nf.format(Math.round(v));}
+  function dur(m){var y=Math.floor(m/12),mo=m%12;var s=[];if(y)s.push(y+(y===1?' yr':' yrs'));if(mo)s.push(mo+(mo===1?' mo':' mos'));return s.join(' ')||'0 mos';}
+  function readDebts(){
+    var rows=document.querySelectorAll('#dp-rows .dp-row'),out=[];
+    rows.forEach(function(r){
+      var bal=+r.querySelector('.dp-bal').value||0,apr=+r.querySelector('.dp-apr').value||0,min=+r.querySelector('.dp-min').value||0;
+      if(bal>0)out.push({bal:bal,apr:apr<0?0:apr,min:min<0?0:min});
+    });
+    return out;
+  }
+  // Month-by-month simulation with minimum-payment rollover onto one target debt.
+  function simulate(src,extra,strategy){
+    var d=src.map(function(x){return {bal:x.bal,apr:x.apr,min:x.min};});
+    var budget0=extra+d.reduce(function(s,x){return s+x.min;},0);
+    var months=0,totalInt=0,first=0,MAX=1200;
+    function active(){return d.filter(function(x){return x.bal>0.005;});}
+    while(active().length>0&&months<MAX){
+      months++;
+      d.forEach(function(x){if(x.bal>0.005){var i=x.bal*(x.apr/100/12);x.bal+=i;totalInt+=i;}});
+      var budget=budget0,act=active();
+      act.sort(strategy==='avalanche'
+        ? function(a,b){return b.apr-a.apr||a.bal-b.bal;}
+        : function(a,b){return a.bal-b.bal||b.apr-a.apr;});
+      // minimums on every debt except the primary target
+      for(var k=1;k<act.length;k++){var p=Math.min(act[k].min,act[k].bal,budget);act[k].bal-=p;budget-=p;}
+      // remaining budget cascades onto targets in priority order
+      for(var k=0;k<act.length&&budget>0.0001;k++){var p=Math.min(budget,act[k].bal);act[k].bal-=p;budget-=p;}
+      if(first===0&&active().length<d.length)first=months;
+    }
+    return {months:months,interest:totalInt,first:first,ok:active().length===0};
+  }
+  function calc(){
+    var debts=readDebts(),extra=+document.getElementById('dp-extra').value||0;
+    var av=document.getElementById('dp-av'),sn=document.getElementById('dp-sn'),
+        verdict=document.getElementById('dp-verdict'),warn=document.getElementById('dp-warn');
+    if(debts.length===0){document.getElementById('dp-av-time').textContent='—';document.getElementById('dp-sn-time').textContent='—';document.getElementById('dp-av-int').textContent='—';document.getElementById('dp-sn-int').textContent='—';verdict.textContent='Enter at least one debt balance to compare.';warn.style.display='none';return;}
+    var a=simulate(debts,extra,'avalanche'),s=simulate(debts,extra,'snowball');
+    av.classList.remove('win');sn.classList.remove('win');
+    if(!a.ok||!s.ok){
+      document.getElementById('dp-av-time').textContent='60+ yrs';document.getElementById('dp-sn-time').textContent='60+ yrs';
+      document.getElementById('dp-av-int').textContent='—';document.getElementById('dp-sn-int').textContent='—';
+      verdict.textContent='';
+      warn.style.display='block';
+      warn.innerHTML='Your payments are too low to ever clear this debt — the interest each month is larger than what you pay. Increase the extra payment, or lower the rate with a balance transfer.';
+      return;
+    }
+    warn.style.display='none';
+    document.getElementById('dp-av-time').textContent=dur(a.months);
+    document.getElementById('dp-sn-time').textContent=dur(s.months);
+    document.getElementById('dp-av-int').textContent=money(a.interest);
+    document.getElementById('dp-sn-int').textContent=money(s.interest);
+    var saved=s.interest-a.interest, monthsSaved=s.months-a.months;
+    av.classList.add('win'); // avalanche is never worse
+    if(saved<1&&monthsSaved===0){
+      verdict.innerHTML='Both methods finish at essentially the same time and cost — pick whichever keeps you motivated.';
+    }else{
+      var bits=[];
+      if(saved>=1)bits.push('saves you <b>'+money(saved)+'</b> in interest');
+      if(monthsSaved>0)bits.push('clears the debt <b>'+dur(monthsSaved)+'</b> sooner');
+      verdict.innerHTML='The <b>avalanche</b> method '+bits.join(' and ')+' versus the snowball. The snowball still clears your first debt fastest for a motivation boost — choose the one you will actually stick with.';
+    }
+  }
+  document.getElementById('dp').addEventListener('input',calc);
+  calc();
+})();
+</script>
+
+    <section>
+      <h2>Avalanche vs snowball: what the calculator does</h2>
+      <p>Both strategies rest on the same discipline: pay the minimum on every debt, then put every spare dollar — your extra payment plus the minimums freed up as debts get cleared — onto <em>one</em> target debt until it is gone, then roll everything onto the next. The only difference is which debt you target first:</p>
+      <ul>
+        <li><strong>Avalanche — highest interest rate first.</strong> This kills your most expensive debt soonest, so the least interest accrues. Mathematically it is always the cheapest and never the slowest route to debt-free.</li>
+        <li><strong>Snowball — smallest balance first.</strong> You clear whole debts quickly, which is motivating and simplifies your finances, but you usually pay a little more interest because a high-rate debt may sit longer.</li>
+      </ul>
+      <p>The tool runs a full month-by-month simulation of both and shows the real difference in time and interest for <em>your</em> numbers, so you can decide with evidence rather than a rule of thumb.</p>
+    </section>
+
+    <section>
+      <h2>Why extra payments matter so much</h2>
+      <p>Interest is charged on the balance that remains, so every extra dollar you pay stops accruing interest for the entire rest of the payoff. That compounding-in-reverse effect is why raising the extra-payment field even a little often shaves months off the plan and hundreds or thousands off the interest. If you get a windfall, throwing it at the target debt has an outsized effect.</p>
+    </section>
+
+    <section>
+      <h2>Worked example</h2>
+      <p>Say you have three debts — <strong>$6,000 at 24%</strong> (minimum $120), <strong>$3,000 at 18%</strong> (minimum $75) and <strong>$9,000 at 11%</strong> (minimum $180) — and you can pay <strong>$200 extra</strong> each month on top of the $375 in minimums. Both methods finish in a similar time because the budget is fixed, but the <strong>avalanche</strong> attacks the 24% card first and so pays noticeably less total interest, while the <strong>snowball</strong> clears the $3,000 debt first for an early win. Enter your own balances above to see your exact numbers.</p>
+    </section>
+
+    <section>
+      <h2>Methodology &amp; assumptions</h2>
+      <p class="note">Each month the calculator adds one-twelfth of the annual rate (APR) to every balance, pays the stated minimum on every debt, and applies all remaining money — your extra payment plus any minimums freed by cleared debts — to the target debt chosen by the selected strategy. It assumes a <strong>fixed</strong> monthly minimum (real card minimums are typically a percentage of the balance, which falls as you pay down, so actual payoff can take slightly longer), APR compounded monthly, no new spending on the debts, and no fees. It is a planning estimate, not a statement of your lender's terms. See our <a href="../methodology.html">methodology</a> and <a href="../editorial-policy.html">editorial policy</a>.</p>
+    </section>
+
+    <section>
+      <h2>Frequently Asked Questions</h2>
+      <h3>Which method should I choose?</h3>
+      <p>The avalanche costs the least interest and is never slower. Choose the snowball only if the quick wins of clearing small debts help you stay consistent — the plan you actually follow beats the optimal one you abandon.</p>
+      <h3>Does a balance transfer help?</h3>
+      <p>Often, yes. Moving a high-rate balance to a lower- or 0%-intro-rate card means more of each payment hits principal. Weigh the transfer fee against the interest saved — a dedicated balance-transfer calculator is on our list of related tools.</p>
+      <h3>What counts as a "minimum" here?</h3>
+      <p>Enter the fixed amount you will pay on each debt every month. The extra-payment field is anything above those minimums; that is the money the strategy concentrates on one debt at a time.</p>
+    </section>
+
+    <div class="cta-box">
+      <h3>Turn a lump sum into a plan</h3>
+      <p>See how a single extra payment or a windfall changes your debt-free date — just raise the extra-payment field above.</p>
+      <a href="how-much-do-i-need-to-retire.html" class="cta-btn">Then plan what comes next →</a>
+    </div>
+
+    <section>
+      <h2>Related calculators</h2>
+      <ul>
+        <li><a href="how-much-house-can-i-afford.html">How Much House Can I Afford?</a></li>
+        <li><a href="car-loan-calculator.html">Car Loan &amp; Auto Finance Calculator</a></li>
+        <li><a href="home-loan-calculator.html">Home Loan &amp; Mortgage Calculator</a></li>
+        <li><a href="how-to-calculate-emi.html">How to Calculate EMI</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Sources</h2>
+      <p class="note">The avalanche and snowball methods are widely documented debt-repayment strategies; the calculator uses standard reducing-balance interest math. Figures are estimates for planning, not a statement of any lender's terms — confirm minimums and rates on your statements. See our <a href="../methodology.html">methodology</a> and <a href="../editorial-policy.html">editorial policy</a>.</p>
+    </section>
+
+    <footer><p>fin·calc · Made for better financial decisions. Free. No signup. No tracking. · <a href="../about.html">About</a> · <a href="../contact.html">Contact</a> · <a href="../methodology.html">Methodology</a> · <a href="../editorial-policy.html">Editorial</a> · <a href="../privacy.html">Privacy</a> · <a href="../terms.html">Terms</a></p></footer>
+  </main>
+</body>
+</html>

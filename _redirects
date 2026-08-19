@@ -48,6 +48,8 @@
 # --- Security: block internal source & docs from public access (2026) ---
 # Force 301 to home. Netlify honors force (!) on 301 to shadow existing files;
 # it does NOT honor force on 404 for existing files, so 301 is used here.
+/reports/*                          /  301!
+/CHANGELOG.md                       /  301!
 /node_modules/*                     /  301!
 /templates/*                        /  301!
 /scripts/*                          /  301!

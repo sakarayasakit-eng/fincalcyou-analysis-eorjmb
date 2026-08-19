@@ -1,0 +1,12 @@
+topic,country,intent,page_type,search_demand,commercial_intent,revenue_potential,competition,difficulty,trust_req,data_freshness,build_effort,priority,recommended_action
+Debt payoff (avalanche vs snowball),global,tool,calculator,high,medium,medium,high,low,medium,none,low,P0,DONE cycle 1 - pure math no data
+Credit card payoff / interest,global,tool,calculator,very-high,high,high,high,low,medium,none,low,P0,BUILD next - pure math no data
+Debt-to-income (DTI) calculator,global,tool,calculator,high,medium,medium,medium,low,medium,none,low,P0,BUILD - pure math; feeds affordability cluster
+Balance transfer calculator,global,tool,calculator,high,high,high,medium,low,medium,none,low,P1,BUILD - pure math; upsell path from debt payoff
+Compound interest calculator,global,tool,calculator,very-high,low,medium,high,low,low,none,low,P1,BUILD - pure math; huge evergreen demand
+Amortization schedule (standalone),global,tool,calculator,high,medium,medium,high,medium,low,none,medium,P1,BUILD - extends mortgage cluster
+CAGR / investment return calculator,global,tool,calculator,high,low,medium,medium,low,low,none,low,P1,BUILD - pure math
+Mortgage refinance calculator,global,tool,calculator,high,high,high,high,medium,medium,none,medium,P1,BUILD - pure math; high commercial intent
+Credit card COMPARISON directory,global,commercial,comparison,very-high,very-high,very-high,very-high,high,very-high,high,very-high,GATED,BLOCKED - needs verified card data feed + affiliate program + CFPB-style disclosure. Human/business decision. Do NOT stub fake data.
+Bank / savings / mortgage rate COMPARISON,per-country,commercial,comparison,high,very-high,very-high,very-high,high,very-high,high,very-high,GATED,BLOCKED - needs verified rate feeds updated continuously. Human/data decision.
+Country finance hubs (/banking/<cc>/),per-country,informational,hub,medium,medium,medium,medium,medium,medium,medium,medium,P2,BUILD hubs only where enough unique verified content exists

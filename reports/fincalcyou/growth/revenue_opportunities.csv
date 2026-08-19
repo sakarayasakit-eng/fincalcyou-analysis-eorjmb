@@ -1,0 +1,8 @@
+opportunity,revenue_potential,difficulty,trust_risk,regulatory_risk,scalability,user_value,status,notes
+AdSense display,medium,low,low,low,high,neutral,LIVE (in review),Do not increase density; keep ads away from calculator controls
+Embeddable calculator widgets,medium,low,low,low,high,high,PARTIAL,embed.js exists; promote to bloggers/edu for backlinks + reach
+Affiliate: credit cards,high,medium,high,high,high,mixed,GATED,Requires issuer/network signup + disclosure + verified offers. CFPB flagged ranking bias 2024. Compliance review first.
+Affiliate: loans/mortgage lead-gen,high,high,high,high,medium,mixed,GATED,Heavily regulated (lead-gen licensing in some regions). Do not implement without review.
+Premium / no-ads calculators,low,medium,low,low,low,medium,IDEA,Only after strong traffic; unlikely worth it early
+B2B embeddable + API,medium,high,low,medium,medium,high,IDEA,Long-term; sell calculator embeds/API to fintech/bloggers
+Sponsored/data reports,low,medium,medium,low,low,medium,IDEA,The 2026 data studies could attract press; not direct revenue

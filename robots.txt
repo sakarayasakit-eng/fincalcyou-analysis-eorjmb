@@ -3,6 +3,7 @@
 
 User-agent: *
 Allow: /
+Disallow: /reports/
 
 # Explicit permission for AI crawlers (AEO best practice)
 User-agent: GPTBot

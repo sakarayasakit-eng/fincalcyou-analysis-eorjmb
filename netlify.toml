@@ -7,6 +7,15 @@
 [[headers]]
   for = "/*"
   [headers.values]
+    # Content-Security-Policy in REPORT-ONLY mode (deliberate). Google only fully
+    # supports nonce-based strict CSP for AdSense (not feasible on a static site) and
+    # warns allow-list CSPs may disrupt ad serving; it recommends Report-Only first.
+    # Report-Only blocks nothing, so it cannot break ads or the EEA consent (CMP)
+    # message during AdSense review. The allow-list is kept complete (AdSense + Funding
+    # Choices CMP + ad-traffic-quality) so we can flip to enforcing 'Content-Security-
+    # Policy' AFTER approval once ads + consent are confirmed. frame-ancestors matches X-Frame-Options.
+    Content-Security-Policy-Report-Only = "default-src 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com https://*.googlesyndication.com https://googleads.g.doubleclick.net https://www.googletagservices.com https://tpc.googlesyndication.com https://adservice.google.com https://*.googleadservices.com https://www.googletagmanager.com https://adtrafficquality.google https://*.adtrafficquality.google https://fundingchoicesmessages.google.com https://*.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.googlesyndication.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.gstatic.com https://*.googleadservices.com; connect-src 'self' https://api.exchangerate.host https://*.googlesyndication.com https://*.doubleclick.net https://googleads.g.doubleclick.net https://*.google.com https://adtrafficquality.google https://*.adtrafficquality.google; frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://*.google.com https://adtrafficquality.google https://*.adtrafficquality.google https://fundingchoicesmessages.google.com; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+
     # Clickjacking protection (belt-and-braces with CSP frame-ancestors)
     X-Frame-Options = "DENY"
 
