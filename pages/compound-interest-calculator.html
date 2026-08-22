@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#f4f6f7" />
+  <title>Compound Interest Calculator — Monthly Contributions (2026)</title>
+  <meta name="description" content="Free compound interest calculator. Enter a starting amount, monthly contribution, rate and years to see the future value, what you put in, and the interest earned. No signup." />
+  <meta name="keywords" content="compound interest calculator, future value calculator, investment growth calculator, monthly contribution compound interest, savings growth calculator" />
+  <link rel="canonical" href="https://fincalcyou.com/pages/compound-interest-calculator.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://fincalcyou.com/pages/compound-interest-calculator.html" />
+  <meta property="og:title" content="Compound Interest Calculator — Monthly Contributions" />
+  <meta property="og:description" content="See how a starting amount and monthly contributions grow with compound interest — future value, contributions and interest earned. Free, no signup." />
+  <meta property="og:image" content="https://fincalcyou.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="fin·calc" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://fincalcyou.com/og-image.png" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"What is compound interest?","acceptedAnswer":{"@type":"Answer","text":"Compound interest is interest earned on both your original money and the interest already added. Because each period's interest itself earns interest, savings and investments grow faster and faster over time — the effect that makes starting early so powerful."}},
+    {"@type":"Question","name":"How is the future value calculated?","acceptedAnswer":{"@type":"Answer","text":"The calculator grows your starting balance at the monthly rate and adds each monthly contribution, compounding every month. Future value = starting amount times (1+i)^n, plus contributions times ((1+i)^n minus 1) divided by i, where i is the monthly rate and n the number of months."}},
+    {"@type":"Question","name":"Does starting early really matter that much?","acceptedAnswer":{"@type":"Answer","text":"Enormously. Because compounding builds on itself, money invested earlier has more time to grow, so an early start often beats larger contributions made later. Try lowering the years and raising the contribution to see that an early start is hard to catch up to."}},
+    {"@type":"Question","name":"Is this guaranteed?","acceptedAnswer":{"@type":"Answer","text":"No. The calculator assumes a constant return, but real investment returns vary year to year and can be negative. Use a realistic long-term average and treat the result as an illustration, not a promise. Fixed deposits and savings accounts have set rates; markets do not."}}
+  ]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://fincalcyou.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://fincalcyou.com/pages/"},{"@type":"ListItem","position":3,"name":"Compound Interest Calculator","item":"https://fincalcyou.com/pages/compound-interest-calculator.html"}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Compound Interest Calculator","url":"https://fincalcyou.com/pages/compound-interest-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any (web-based)","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"isAccessibleForFree":true}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="landing.css" />
+</head>
+<body>
+  <main>
+    <header>
+      <a href="../index.html" class="brand">fin<span class="dot">·</span>calc</a>
+      <nav><a href="../index.html">Home</a><a href="index.html">Guides</a></nav>
+    </header>
+    <h1>Compound Interest Calculator</h1>
+    <p style="font-size:0.72rem;color:#7a8299;margin-top:6px;"><time class="last-updated" datetime="2026-08-11">Updated: August 2026 · Illustration — returns are not guaranteed.</time></p>
+    <p class="intro">Enter a starting amount, how much you'll add each month, an expected annual return and a time horizon, and this calculator shows what your money could grow to — separating what you put in from the interest it earns. It works in any currency.</p>
+
+    <aside class="keyfacts" aria-label="Key facts">
+      <h2>Key facts</h2>
+      <dl>
+        <dt>What it does</dt><dd>Projects the future value of a starting amount plus monthly contributions, and splits it into contributions vs interest earned.</dd>
+        <dt>Method</dt><dd>Monthly compounding: the balance grows at one-twelfth of the annual rate each month, with your contribution added every month.</dd>
+        <dt>Coverage</dt><dd>Any currency. Best for a steady assumed return; real market returns vary.</dd>
+        <dt>Cost</dt><dd>Free &mdash; no signup, no login, no tracking. Runs entirely in your browser.</dd>
+      </dl>
+    </aside>
+
+<style id="fc-embed-css">
+.fc-embed{display:block;background:#fff;border:1px solid #e3e8ee;border-radius:16px;padding:16px;margin:14px 0;color:#1a2733;font-family:Inter,-apple-system,Segoe UI,Roboto,sans-serif}
+.fc-embed .fc-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:560px){.fc-embed .fc-grid{grid-template-columns:1fr}}
+.fc-embed label{display:block;font-size:11px;color:#5c6b7a;margin-bottom:5px;text-transform:uppercase;letter-spacing:.05em}
+.fc-embed .fc-in{display:flex;align-items:center;gap:6px;background:#f4f6f7;border:1px solid #e3e8ee;border-radius:9px;padding:7px 9px}
+.fc-embed .fc-in span{color:#5c6b7a;font-size:13px}
+.fc-embed .fc-in input{flex:1;width:100%;background:transparent;border:0;color:#1a2733;font-size:15px;font-weight:600;outline:none;min-width:0}
+.fc-embed .fc-head{font-size:12px;color:#5c6b7a;margin-top:16px}
+.fc-embed .fc-head strong{display:block;font-size:30px;color:#0e7a4a;font-weight:800;line-height:1.1;margin-top:2px}
+.fc-embed .fc-mini{display:flex;gap:18px;margin-top:10px;font-size:12px;color:#5c6b7a;flex-wrap:wrap}
+.fc-embed .fc-mini b{display:block;color:#1a2733;font-size:15px}
+.fc-embed .fc-bar{height:12px;border-radius:7px;overflow:hidden;display:flex;border:1px solid #e3e8ee;margin-top:12px}
+.fc-embed .fc-bar i{display:block;height:100%}
+.fc-embed .fc-note{font-size:11px;color:#5c6b7a;margin-top:10px}
+</style>
+<div class="fc-embed" id="ci">
+  <div class="fc-grid">
+    <div><label>Starting amount</label><div class="fc-in"><span>$</span><input aria-label="Starting amount" id="ci-p" type="number" min="0" step="any" value="1000"></div></div>
+    <div><label>Monthly contribution</label><div class="fc-in"><span>$</span><input aria-label="Monthly contribution" id="ci-c" type="number" min="0" step="any" value="200"></div></div>
+    <div><label>Annual return (%)</label><div class="fc-in"><input aria-label="Annual return" id="ci-r" type="number" min="0" step="0.1" value="7"><span>%</span></div></div>
+    <div><label>Years</label><div class="fc-in"><input aria-label="Years" id="ci-y" type="number" min="1" step="1" value="10"><span>yrs</span></div></div>
+  </div>
+  <div class="fc-head">Future value<strong id="ci-fv">$36,627</strong></div>
+  <div class="fc-mini">
+    <div>You contribute<b id="ci-contrib">$25,000</b></div>
+    <div>Interest earned<b id="ci-int">$11,627</b></div>
+  </div>
+  <div class="fc-bar"><i id="ci-bar-c" style="width:68%;background:#9db7c9"></i><i id="ci-bar-i" style="width:32%;background:#0e7a4a"></i></div>
+  <div class="fc-note">Grey = what you put in · Green = interest earned. Assumes a constant return compounded monthly; real returns vary year to year. <a href="../index.html?tab=sip" style="color:#0e7a4a">Open the full tool &rarr;</a></div>
+</div>
+<script>
+(function(){
+  var nf=new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0});
+  function money(v){return nf.format(Math.round(v));}
+  function calc(){
+    var P=+document.getElementById('ci-p').value||0,C=+document.getElementById('ci-c').value||0,
+        rate=+document.getElementById('ci-r').value||0,years=+document.getElementById('ci-y').value||0;
+    if(years<=0){document.getElementById('ci-fv').textContent='—';return;}
+    var i=rate/100/12,n=Math.round(years*12),g=Math.pow(1+i,n);
+    var fv = i===0 ? P+C*n : P*g + C*(g-1)/i;
+    var contrib=P+C*n, interest=fv-contrib;
+    document.getElementById('ci-fv').textContent=money(fv);
+    document.getElementById('ci-contrib').textContent=money(contrib);
+    document.getElementById('ci-int').textContent=money(interest);
+    var cPct=fv>0?Math.max(2,Math.min(98,contrib/fv*100)):50;
+    document.getElementById('ci-bar-c').style.width=cPct+'%';
+    document.getElementById('ci-bar-i').style.width=(100-cPct)+'%';
+  }
+  document.getElementById('ci').addEventListener('input',calc);
+  calc();
+})();
+</script>
+
+    <section>
+      <h2>Why compounding builds on itself</h2>
+      <p>Compound interest means you earn returns not just on your original money but on the returns already added. Each month's growth becomes part of the balance that grows next month, so the curve gets steeper over time. That is why the interest-earned figure above eventually dwarfs the amount you contributed — and why the length of time invested matters even more than the size of each contribution.</p>
+    </section>
+
+    <section>
+      <h2>Worked example</h2>
+      <p>Start with <strong>$1,000</strong>, add <strong>$200 a month</strong>, and assume a <strong>7% annual return</strong> over <strong>10 years</strong>: your money grows to about <strong>$36,600</strong>. Of that, you contributed <strong>$25,000</strong> and compound interest added roughly <strong>$11,600</strong>. Stretch the horizon to 20 or 30 years and the interest portion grows dramatically — that is the reward for time in the market.</p>
+    </section>
+
+    <section>
+      <h2>What moves the result</h2>
+      <ul>
+        <li><strong>Time</strong> is the most powerful lever — an early start is hard to catch up to because the earliest contributions compound the longest.</li>
+        <li><strong>Contribution size</strong> matters, but adds linearly; compounding rewards consistency over decades more than a big one-off.</li>
+        <li><strong>Rate of return</strong> has an outsized long-run effect, but higher expected returns come with more risk and year-to-year swings — use a realistic average.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Methodology &amp; assumptions</h2>
+      <p class="note">Future value = starting amount &times; (1+i)<sup>n</sup> + contribution &times; ((1+i)<sup>n</sup> &minus; 1) &divide; i, where i is the monthly rate (annual rate &divide; 12) and n is the number of months; contributions are treated as made at the end of each month. It assumes a <strong>constant</strong> return compounded monthly with no fees or taxes — real investment returns vary and can be negative, so treat the figure as an illustration, not a promise. For a guaranteed rate, see the fixed-deposit calculator; for market-style projections, the SIP calculator. See our <a href="../methodology.html">methodology</a> and <a href="../editorial-policy.html">editorial policy</a>.</p>
+    </section>
+
+    <section>
+      <h2>Frequently Asked Questions</h2>
+      <h3>Monthly or annual compounding?</h3>
+      <p>This tool compounds monthly, which matches how most regular-contribution plans work and is slightly higher than annual compounding at the same stated rate.</p>
+      <h3>Is the return guaranteed?</h3>
+      <p>No — markets fluctuate. Use a realistic long-term average and remember the result is an illustration.</p>
+      <h3>What rate should I use?</h3>
+      <p>Use a figure you can justify for your mix of investments and expect lower, steadier numbers than the headlines. A lower assumption gives a safer plan.</p>
+    </section>
+
+    <div class="cta-box">
+      <h3>Planning for a goal or retirement?</h3>
+      <p>See how much to invest each month to hit a target, adjusted for inflation.</p>
+      <a href="how-much-do-i-need-to-retire.html" class="cta-btn">Open the retirement calculator →</a>
+    </div>
+
+    <section>
+      <h2>Related calculators</h2>
+      <ul>
+        <li><a href="how-much-do-i-need-to-retire.html">How Much Do I Need to Retire?</a></li>
+        <li><a href="sip-calculator.html">SIP &amp; Monthly Investment Calculator</a></li>
+        <li><a href="fixed-deposit-calculator.html">Fixed Deposit &amp; CD Calculator</a></li>
+        <li><a href="debt-payoff-calculator.html">Debt Payoff Calculator</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Sources</h2>
+      <p class="note">Uses the standard future-value-of-an-annuity formula with monthly compounding. Projections are illustrations, not guarantees — investment returns vary and can be negative. See our <a href="../methodology.html">methodology</a> and <a href="../editorial-policy.html">editorial policy</a>.</p>
+    </section>
+
+    <footer><p>fin·calc · Made for better financial decisions. Free. No signup. No tracking. · <a href="../about.html">About</a> · <a href="../contact.html">Contact</a> · <a href="../methodology.html">Methodology</a> · <a href="../editorial-policy.html">Editorial</a> · <a href="../privacy.html">Privacy</a> · <a href="../terms.html">Terms</a></p></footer>
+  </main>
+</body>
+</html>

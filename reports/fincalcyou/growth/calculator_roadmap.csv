@@ -1,10 +1,10 @@
 calculator,cluster,formula_complexity,external_data_needed,search_demand,priority,status,notes
 Debt payoff (avalanche/snowball),debt,medium,none,high,P0,DONE,Verified in Node; avalanche<=snowball interest; guard for neg-amortization
-Credit card payoff,debt,low,none,very-high,P0,TODO,Single-debt payoff time + interest given payment or target date
-Debt-to-income (DTI),debt,low,none,high,P0,TODO,front/back ratio; links to affordability
-Balance transfer,debt,low,none,high,P1,TODO,intro APR + fee break-even vs staying put
+Credit card payoff,debt,low,none,very-high,P0,DONE,Single-debt payoff time + interest given payment or target date
+Debt-to-income (DTI),debt,low,none,high,P0,DONE,front/back ratio; links to affordability
+Balance transfer,debt,low,none,high,P1,DONE,intro APR + fee break-even vs staying put
 Debt consolidation,debt,low,none,medium,P1,TODO,blended rate vs single loan
-Compound interest,investment,low,none,very-high,P1,TODO,principal+contrib, freq, years
+Compound interest,investment,low,none,very-high,P1,DONE,principal+contrib, freq, years
 CAGR,investment,low,none,high,P1,TODO,(end/start)^(1/n)-1
 Amortization schedule,home,medium,none,high,P1,TODO,standalone full table + extra payment
 Mortgage refinance,home,low,none,high,P1,TODO,new vs old payment, break-even months incl closing costs

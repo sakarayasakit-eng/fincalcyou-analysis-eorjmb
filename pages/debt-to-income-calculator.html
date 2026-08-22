@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#f4f6f7" />
+  <title>Debt-to-Income (DTI) Ratio Calculator (2026)</title>
+  <meta name="description" content="Free debt-to-income (DTI) calculator. Enter your income, housing payment and other debts to get your front-end and back-end DTI ratios — the numbers lenders use to approve loans. No signup." />
+  <meta name="keywords" content="debt to income calculator, DTI calculator, debt to income ratio, front end back end DTI, mortgage DTI, FOIR calculator" />
+  <link rel="canonical" href="https://fincalcyou.com/pages/debt-to-income-calculator.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://fincalcyou.com/pages/debt-to-income-calculator.html" />
+  <meta property="og:title" content="Debt-to-Income (DTI) Ratio Calculator" />
+  <meta property="og:description" content="Get your front-end and back-end DTI ratios — the numbers lenders use to decide how much you can borrow. Free, no signup." />
+  <meta property="og:image" content="https://fincalcyou.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="fin·calc" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://fincalcyou.com/og-image.png" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"What is a debt-to-income (DTI) ratio?","acceptedAnswer":{"@type":"Answer","text":"Your DTI is the share of your gross monthly income that goes to debt payments. The front-end ratio counts only housing; the back-end ratio counts all debts including housing. Lenders use it to judge how much more you can safely borrow."}},
+    {"@type":"Question","name":"What is a good DTI ratio?","acceptedAnswer":{"@type":"Answer","text":"Lower is better. A back-end DTI under 36% is comfortable and widely preferred; many mortgage programs allow up to about 43%, and some go higher with compensating factors. Above roughly 43-50% it becomes hard to get approved. Outside the US, lenders use a similar limit sometimes called FOIR, often 40-50%."}},
+    {"@type":"Question","name":"Does DTI use gross or net income?","acceptedAnswer":{"@type":"Answer","text":"Lenders use gross (pre-tax) monthly income. Enter your income before tax and deductions for a figure that matches how a lender would calculate it."}},
+    {"@type":"Question","name":"How can I lower my DTI?","acceptedAnswer":{"@type":"Answer","text":"Pay down or pay off a debt (a car loan or credit card), avoid taking on new debt before applying, or increase your documented income. Removing a monthly payment often lifts your borrowing power more than a modest pay rise."}}
+  ]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://fincalcyou.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://fincalcyou.com/pages/"},{"@type":"ListItem","position":3,"name":"Debt-to-Income Calculator","item":"https://fincalcyou.com/pages/debt-to-income-calculator.html"}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Debt-to-Income (DTI) Calculator","url":"https://fincalcyou.com/pages/debt-to-income-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any (web-based)","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"isAccessibleForFree":true}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="landing.css" />
+</head>
+<body>
+  <main>
+    <header>
+      <a href="../index.html" class="brand">fin<span class="dot">·</span>calc</a>
+      <nav><a href="../index.html">Home</a><a href="index.html">Guides</a></nav>
+    </header>
+    <h1>Debt-to-Income (DTI) Calculator</h1>
+    <p style="font-size:0.72rem;color:#7a8299;margin-top:6px;"><time class="last-updated" datetime="2026-08-11">Updated: August 2026 · Guideline ratios — lenders vary.</time></p>
+    <p class="intro">Enter your gross monthly income, your housing payment and your other monthly debt payments, and this calculator gives you the two ratios lenders look at — the <strong>front-end</strong> (housing only) and <strong>back-end</strong> (all debt) DTI — plus what each figure means for a loan application. It works in any currency.</p>
+
+    <aside class="keyfacts" aria-label="Key facts">
+      <h2>Key facts</h2>
+      <dl>
+        <dt>What it does</dt><dd>Calculates your front-end and back-end debt-to-income ratios and rates them against lender norms.</dd>
+        <dt>Method</dt><dd>Front-end = housing &divide; gross income. Back-end = (housing + all other debt) &divide; gross income.</dd>
+        <dt>Coverage</dt><dd>Any currency. US 36% / 43% guidelines shown; outside the US the equivalent (FOIR) is often 40&ndash;50%.</dd>
+        <dt>Cost</dt><dd>Free &mdash; no signup, no login, no tracking. Runs entirely in your browser.</dd>
+      </dl>
+    </aside>
+
+<style id="fc-embed-css">
+.fc-embed{display:block;background:#fff;border:1px solid #e3e8ee;border-radius:16px;padding:16px;margin:14px 0;color:#1a2733;font-family:Inter,-apple-system,Segoe UI,Roboto,sans-serif}
+.fc-embed .fc-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+@media(max-width:560px){.fc-embed .fc-grid{grid-template-columns:1fr}}
+.fc-embed label{display:block;font-size:11px;color:#5c6b7a;margin-bottom:5px;text-transform:uppercase;letter-spacing:.05em}
+.fc-embed .fc-in{display:flex;align-items:center;gap:6px;background:#f4f6f7;border:1px solid #e3e8ee;border-radius:9px;padding:7px 9px}
+.fc-embed .fc-in span{color:#5c6b7a;font-size:13px}
+.fc-embed .fc-in input{flex:1;width:100%;background:transparent;border:0;color:#1a2733;font-size:15px;font-weight:600;outline:none;min-width:0}
+.fc-embed .fc-cols{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+@media(max-width:560px){.fc-embed .fc-cols{grid-template-columns:1fr}}
+.fc-embed .fc-card{background:#f4f6f7;border:1px solid #e3e8ee;border-radius:12px;padding:12px}
+.fc-embed .fc-card h4{margin:0 0 2px;font-size:12px;color:#5c6b7a;text-transform:uppercase;letter-spacing:.05em}
+.fc-embed .fc-card .big{font-size:28px;color:#0e7a4a;font-weight:800;line-height:1.1}
+.fc-embed .fc-verdict{margin-top:12px;font-size:13px;color:#1a2733;border-radius:10px;padding:10px 12px}
+.fc-embed .v-good{background:#eef7f1;border:1px solid #cfe8db}
+.fc-embed .v-ok{background:#fdf7e8;border:1px solid #f0e2b8}
+.fc-embed .v-high{background:#fdf0e8;border:1px solid #f3d3c1;color:#8a3b12}
+.fc-embed .fc-note{font-size:11px;color:#5c6b7a;margin-top:10px}
+</style>
+<div class="fc-embed" id="dti">
+  <div class="fc-grid">
+    <div><label>Gross monthly income</label><div class="fc-in"><span>$</span><input aria-label="Gross monthly income" id="dti-inc" type="number" min="1" step="any" value="6000"></div></div>
+    <div><label>Housing payment / mo</label><div class="fc-in"><span>$</span><input aria-label="Monthly housing payment" id="dti-house" type="number" min="0" step="any" value="1500"></div></div>
+    <div><label>Other debt payments / mo</label><div class="fc-in"><span>$</span><input aria-label="Other monthly debt payments" id="dti-other" type="number" min="0" step="any" value="500"></div></div>
+  </div>
+  <div class="fc-cols">
+    <div class="fc-card"><h4>Front-end DTI (housing)</h4><div class="big" id="dti-front">25%</div></div>
+    <div class="fc-card"><h4>Back-end DTI (all debt)</h4><div class="big" id="dti-back">33%</div></div>
+  </div>
+  <div class="fc-verdict v-good" id="dti-verdict"></div>
+  <div class="fc-note">Lenders use gross (pre-tax) income. The back-end ratio is the one most lenders weigh most heavily. <a href="how-much-house-can-i-afford.html" style="color:#0e7a4a">See how much house this supports &rarr;</a></div>
+</div>
+<script>
+(function(){
+  function calc(){
+    var inc=+document.getElementById('dti-inc').value||0,house=+document.getElementById('dti-house').value||0,other=+document.getElementById('dti-other').value||0;
+    var v=document.getElementById('dti-verdict');
+    if(inc<=0){document.getElementById('dti-front').textContent='—';document.getElementById('dti-back').textContent='—';v.textContent='Enter your gross monthly income to calculate.';v.className='fc-verdict v-ok';return;}
+    var front=house/inc*100, back=(house+other)/inc*100;
+    document.getElementById('dti-front').textContent=front.toFixed(0)+'%';
+    document.getElementById('dti-back').textContent=back.toFixed(0)+'%';
+    var msg,cls;
+    if(back<=36){cls='v-good';msg='A back-end DTI of '+back.toFixed(0)+'% is comfortable — under the 36% most lenders prefer, so you have room to borrow.';}
+    else if(back<=43){cls='v-ok';msg='A back-end DTI of '+back.toFixed(0)+'% is in the acceptable range. Many mortgage programs allow up to about 43%, but paying down a debt would strengthen your application.';}
+    else{cls='v-high';msg='A back-end DTI of '+back.toFixed(0)+'% is high — above roughly 43% it becomes hard to get approved. Paying off a monthly debt before applying will lift your borrowing power.';}
+    v.className='fc-verdict '+cls;v.textContent=msg;
+  }
+  document.getElementById('dti').addEventListener('input',calc);
+  calc();
+})();
+</script>
+
+    <section>
+      <h2>Front-end vs back-end DTI</h2>
+      <p>Lenders look at two versions of the same idea — how much of your income is already committed to debt:</p>
+      <ul>
+        <li><strong>Front-end ratio</strong> counts only your housing payment (rent or mortgage, and often taxes and insurance) as a share of gross income. A common guideline is 28%.</li>
+        <li><strong>Back-end ratio</strong> counts <em>all</em> your monthly debt — housing plus car loans, student loans and credit-card minimums. This is the number most lenders weigh most, and 36% is the classic comfortable ceiling, with many mortgages allowing up to about 43%.</li>
+      </ul>
+      <p>Because the back-end ratio includes everything, it is the figure to watch when you're planning a big loan.</p>
+    </section>
+
+    <section>
+      <h2>Worked example</h2>
+      <p>On <strong>$6,000</strong> gross monthly income with a <strong>$1,500</strong> housing payment and <strong>$500</strong> of other debt payments, your front-end DTI is <strong>25%</strong> and your back-end DTI is <strong>33%</strong> — both under the usual limits, so a lender would see room to lend. Change the numbers above to test a scenario, such as adding a car loan.</p>
+    </section>
+
+    <section>
+      <h2>How to improve your DTI before applying</h2>
+      <ul>
+        <li><strong>Clear a whole payment.</strong> Paying off a car loan or a card removes its monthly payment entirely, which often helps more than a small pay rise.</li>
+        <li><strong>Don't take on new debt</strong> in the months before you apply — a new financing agreement raises your back-end ratio.</li>
+        <li><strong>Document all income.</strong> Bonuses, side income and allowances can count if they're steady and provable.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Methodology &amp; assumptions</h2>
+      <p class="note">Front-end DTI = housing payment &divide; gross monthly income. Back-end DTI = (housing + all other monthly debt payments) &divide; gross monthly income. The 28% / 36% / 43% thresholds are widely used US lender guidelines; exact limits vary by lender and loan program, and outside the US the equivalent limit (often called FOIR) is typically 40&ndash;50%. Use gross (pre-tax) income. See our <a href="../methodology.html">methodology</a> and <a href="../editorial-policy.html">editorial policy</a>.</p>
+    </section>
+
+    <section>
+      <h2>Frequently Asked Questions</h2>
+      <h3>What DTI do I need for a mortgage?</h3>
+      <p>Many programs cap the back-end ratio at about 43%, and under 36% is comfortable. Some loans allow higher with strong credit or a large down payment.</p>
+      <h3>Gross or net income?</h3>
+      <p>Gross — lenders calculate DTI on pre-tax income.</p>
+      <h3>Does rent count as housing?</h3>
+      <p>Yes. Whatever you pay for your home — rent or a mortgage — is the housing figure in the front-end ratio.</p>
+    </section>
+
+    <div class="cta-box">
+      <h3>Turn your DTI into a home budget</h3>
+      <p>See the maximum home price your income and debts support using the 28/36 rule.</p>
+      <a href="how-much-house-can-i-afford.html" class="cta-btn">Open the affordability calculator →</a>
+    </div>
+
+    <section>
+      <h2>Related calculators</h2>
+      <ul>
+        <li><a href="how-much-house-can-i-afford.html">How Much House Can I Afford?</a></li>
+        <li><a href="debt-payoff-calculator.html">Debt Payoff Calculator (Avalanche vs Snowball)</a></li>
+        <li><a href="credit-card-payoff-calculator.html">Credit Card Payoff Calculator</a></li>
+        <li><a href="what-is-foir.html">What is FOIR?</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Sources</h2>
+      <p class="note">The 28/36/43 DTI thresholds are widely used lender guidelines; actual limits vary by lender, program and country. This is guidance, not a lending decision. See our <a href="../methodology.html">methodology</a> and <a href="../editorial-policy.html">editorial policy</a>.</p>
+    </section>
+
+    <footer><p>fin·calc · Made for better financial decisions. Free. No signup. No tracking. · <a href="../about.html">About</a> · <a href="../contact.html">Contact</a> · <a href="../methodology.html">Methodology</a> · <a href="../editorial-policy.html">Editorial</a> · <a href="../privacy.html">Privacy</a> · <a href="../terms.html">Terms</a></p></footer>
+  </main>
+</body>
+</html>
