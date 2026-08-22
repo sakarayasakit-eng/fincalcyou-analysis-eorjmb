@@ -90,7 +90,10 @@
 </div>
 <script>
 (function(){
-  var nf=new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0});
+  var FC_CUR=(function(){try{var c=localStorage.getItem('fincalc_cur');return (c&&/^[A-Za-z]{3}$/.test(c))?c.toUpperCase():'USD';}catch(e){return 'USD';}})();
+  var nf;try{nf=new Intl.NumberFormat(undefined,{style:'currency',currency:FC_CUR,maximumFractionDigits:0});}catch(e){nf=new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0});}
+  var FC_SYM;try{FC_SYM=(0).toLocaleString(undefined,{style:'currency',currency:FC_CUR,maximumFractionDigits:0}).replace(/[\d\s.,]/g,'')||'$';}catch(e){FC_SYM='$';}
+  try{Array.prototype.forEach.call(document.querySelectorAll('.fc-embed .fc-in span'),function(s){if(s.textContent.trim()==='$')s.textContent=FC_SYM;});}catch(e){}
   function money(v){return nf.format(Math.round(v));}
   function calc(){
     var P=+document.getElementById('ci-p').value||0,C=+document.getElementById('ci-c').value||0,
