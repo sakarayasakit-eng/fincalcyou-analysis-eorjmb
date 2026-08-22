@@ -36,6 +36,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="landing.css" />
+  <script src="fc-currency.js"></script>
 </head>
 <body>
   <main>
@@ -95,11 +96,7 @@
 </div>
 <script>
 (function(){
-  var FC_CUR=(function(){try{var c=localStorage.getItem('fincalc_cur');return (c&&/^[A-Za-z]{3}$/.test(c))?c.toUpperCase():'USD';}catch(e){return 'USD';}})();
-  var nf;try{nf=new Intl.NumberFormat(undefined,{style:'currency',currency:FC_CUR,maximumFractionDigits:0});}catch(e){nf=new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0});}
-  var FC_SYM;try{FC_SYM=(0).toLocaleString(undefined,{style:'currency',currency:FC_CUR,maximumFractionDigits:0}).replace(/[\d\s.,]/g,'')||'$';}catch(e){FC_SYM='$';}
-  try{Array.prototype.forEach.call(document.querySelectorAll('.fc-embed .fc-in span'),function(s){if(s.textContent.trim()==='$')s.textContent=FC_SYM;});}catch(e){}
-  function money(v){return nf.format(Math.round(v));}
+  function money(v){return (window.FCCUR?FCCUR.money(v):'$'+Math.round(v).toLocaleString('en-US'));}
   function dur(m){m=Math.round(m);var y=Math.floor(m/12),mo=m%12,s=[];if(y)s.push(y+(y===1?' yr':' yrs'));if(mo)s.push(mo+(mo===1?' mo':' mos'));return s.join(' ')||'0 mos';}
   function pmt(P,apr,n){var r=apr/1200;return r===0?P/n:P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);}
   function run(P,apr,n,extra){ // returns months, totalInterest, and yearly rows
