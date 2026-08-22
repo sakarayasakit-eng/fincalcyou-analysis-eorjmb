@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#f4f6f7" />
+  <title>Amortization Calculator — Schedule &amp; Extra Payments (2026)</title>
+  <meta name="description" content="Free amortization calculator. See your monthly payment, total interest, and a year-by-year schedule of principal vs interest — plus how extra payments shorten the loan. No signup." />
+  <meta name="keywords" content="amortization calculator, amortization schedule, loan amortization, principal vs interest, extra payment calculator, mortgage amortization schedule" />
+  <link rel="canonical" href="https://fincalcyou.com/pages/amortization-calculator.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://fincalcyou.com/pages/amortization-calculator.html" />
+  <meta property="og:title" content="Amortization Calculator — Schedule &amp; Extra Payments" />
+  <meta property="og:description" content="Monthly payment, total interest, and a year-by-year principal-vs-interest schedule — plus how extra payments shorten the loan. Free, no signup." />
+  <meta property="og:image" content="https://fincalcyou.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="fin·calc" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://fincalcyou.com/og-image.png" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"What is an amortization schedule?","acceptedAnswer":{"@type":"Answer","text":"It is a table showing how each loan payment splits between interest and principal over time. Early payments are mostly interest; later ones are mostly principal. The schedule shows the balance falling to zero by the end of the term."}},
+    {"@type":"Question","name":"Why is most of my early payment interest?","acceptedAnswer":{"@type":"Answer","text":"Interest is charged on the outstanding balance, which is largest at the start, so early payments cover mostly interest and only chip away at principal. As the balance falls, more of each fixed payment goes to principal — which is why the principal portion rises every year."}},
+    {"@type":"Question","name":"How do extra payments change the schedule?","acceptedAnswer":{"@type":"Answer","text":"Extra payments go straight to principal, so they cut the balance faster and remove all the future interest that balance would have accrued. Even a small monthly extra can shorten a long mortgage by years and save a large amount of interest — enter an amount to see the effect."}},
+    {"@type":"Question","name":"Is the schedule the same for any loan?","acceptedAnswer":{"@type":"Answer","text":"The same amortization math applies to any fixed-rate installment loan — mortgage, car loan or personal loan. Only the amount, rate and term change. This calculator works for all of them in any currency."}}
+  ]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://fincalcyou.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://fincalcyou.com/pages/"},{"@type":"ListItem","position":3,"name":"Amortization Calculator","item":"https://fincalcyou.com/pages/amortization-calculator.html"}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Amortization Calculator","url":"https://fincalcyou.com/pages/amortization-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any (web-based)","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"isAccessibleForFree":true}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="landing.css" />
+</head>
+<body>
+  <main>
+    <header>
+      <a href="../index.html" class="brand">fin<span class="dot">·</span>calc</a>
+      <nav><a href="../index.html">Home</a><a href="index.html">Guides</a></nav>
+    </header>
+    <h1>Amortization Calculator</h1>
+    <p style="font-size:0.72rem;color:#7a8299;margin-top:6px;"><time class="last-updated" datetime="2026-08-11">Updated: August 2026 · Estimates only — verify with your lender.</time></p>
+    <p class="intro">Enter a loan amount, rate and term to see the monthly payment, the total interest, and a <strong>year-by-year schedule</strong> of how each payment splits between principal and interest. Add an optional extra payment to see how much time and interest it saves. It works in any currency, for any fixed-rate loan.</p>
+
+    <aside class="keyfacts" aria-label="Key facts">
+      <h2>Key facts</h2>
+      <dl>
+        <dt>What it does</dt><dd>Builds a full amortization schedule (payment, principal, interest, balance) and shows the effect of extra payments.</dd>
+        <dt>Method</dt><dd>Fixed monthly payment via the standard amortization formula; each month interest = balance &times; monthly rate, the rest reduces principal.</dd>
+        <dt>Coverage</dt><dd>Any currency; any fixed-rate loan (mortgage, car, personal).</dd>
+        <dt>Cost</dt><dd>Free &mdash; no signup, no login, no tracking. Runs entirely in your browser.</dd>
+      </dl>
+    </aside>
+
+<style id="fc-embed-css">
+.fc-embed{display:block;background:#fff;border:1px solid #e3e8ee;border-radius:16px;padding:16px;margin:14px 0;color:#1a2733;font-family:Inter,-apple-system,Segoe UI,Roboto,sans-serif}
+.fc-embed label{display:block;font-size:11px;color:#5c6b7a;margin-bottom:5px;text-transform:uppercase;letter-spacing:.05em}
+.fc-embed .fc-in{display:flex;align-items:center;gap:6px;background:#f4f6f7;border:1px solid #e3e8ee;border-radius:9px;padding:7px 9px}
+.fc-embed .fc-in span{color:#5c6b7a;font-size:13px}
+.fc-embed .fc-in input{flex:1;width:100%;background:transparent;border:0;color:#1a2733;font-size:15px;font-weight:600;outline:none;min-width:0}
+.fc-embed .fc-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:560px){.fc-embed .fc-grid{grid-template-columns:1fr}}
+.fc-embed .fc-head{font-size:12px;color:#5c6b7a;margin-top:16px}
+.fc-embed .fc-head strong{display:block;font-size:30px;color:#0e7a4a;font-weight:800;line-height:1.1;margin-top:2px}
+.fc-embed .fc-mini{display:flex;gap:18px;margin-top:10px;font-size:12px;color:#5c6b7a;flex-wrap:wrap}
+.fc-embed .fc-mini b{display:block;color:#1a2733;font-size:15px}
+.fc-embed .fc-saving{margin-top:12px;font-size:13px;background:#eef7f1;border:1px solid #cfe8db;border-radius:10px;padding:10px 12px;color:#1a2733;display:none}
+.fc-embed table.amort{width:100%;border-collapse:collapse;margin-top:14px;font-size:12.5px}
+.fc-embed table.amort th,.fc-embed table.amort td{text-align:right;padding:6px 8px;border-bottom:1px solid #eef1f4}
+.fc-embed table.amort th{color:#5c6b7a;text-transform:uppercase;letter-spacing:.04em;font-size:11px}
+.fc-embed table.amort th:first-child,.fc-embed table.amort td:first-child{text-align:left}
+.fc-embed .fc-note{font-size:11px;color:#5c6b7a;margin-top:10px}
+</style>
+<div class="fc-embed" id="am">
+  <div class="fc-grid">
+    <div><label>Loan amount</label><div class="fc-in"><span>$</span><input aria-label="Loan amount" id="am-amt" type="number" min="0" step="any" value="300000"></div></div>
+    <div><label>Interest rate (% p.a.)</label><div class="fc-in"><input aria-label="Interest rate" id="am-rate" type="number" min="0" step="0.01" value="6.5"><span>%</span></div></div>
+    <div><label>Term (years)</label><div class="fc-in"><input aria-label="Term in years" id="am-term" type="number" min="1" step="1" value="30"><span>yrs</span></div></div>
+    <div><label>Extra payment / mo (optional)</label><div class="fc-in"><span>$</span><input aria-label="Extra monthly payment" id="am-extra" type="number" min="0" step="any" value="0"></div></div>
+  </div>
+  <div class="fc-head">Monthly payment<strong id="am-pay">$1,896</strong></div>
+  <div class="fc-mini">
+    <div>Total interest<b id="am-int">$382,633</b></div>
+    <div>Total paid<b id="am-total">$682,633</b></div>
+    <div>Payoff time<b id="am-time">30 yrs</b></div>
+  </div>
+  <div class="fc-saving" id="am-saving"></div>
+  <table class="amort"><thead><tr><th>Year</th><th>Principal paid</th><th>Interest paid</th><th>Balance</th></tr></thead><tbody id="am-body"></tbody></table>
+  <div class="fc-note">Year-by-year summary (principal and interest paid that year, and the year-end balance). Add an extra payment to see the time and interest it saves. <a href="mortgage-refinance-calculator.html" style="color:#0e7a4a">Refinance calculator &rarr;</a></div>
+</div>
+<script>
+(function(){
+  var nf=new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0});
+  function money(v){return nf.format(Math.round(v));}
+  function dur(m){m=Math.round(m);var y=Math.floor(m/12),mo=m%12,s=[];if(y)s.push(y+(y===1?' yr':' yrs'));if(mo)s.push(mo+(mo===1?' mo':' mos'));return s.join(' ')||'0 mos';}
+  function pmt(P,apr,n){var r=apr/1200;return r===0?P/n:P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);}
+  function run(P,apr,n,extra){ // returns months, totalInterest, and yearly rows
+    var r=apr/1200,base=pmt(P,apr,n),pay=base+(extra||0),bal=P,tot=0,m=0,rows=[],yi=0,yp=0,MAX=n+1200;
+    while(bal>0.005&&m<MAX){
+      m++;var i=bal*r,pr=Math.min(pay-i,bal);bal-=pr;tot+=i;yi+=i;yp+=pr;
+      if(m%12===0||bal<=0.005){rows.push({yr:Math.ceil(m/12),prin:yp,intr:yi,bal:Math.max(0,bal)});yi=0;yp=0;}
+    }
+    return {months:m,base:base,totalInterest:tot,rows:rows};
+  }
+  function calc(){
+    var P=+document.getElementById('am-amt').value||0,apr=+document.getElementById('am-rate').value||0,
+        yrs=+document.getElementById('am-term').value||0,extra=+document.getElementById('am-extra').value||0;
+    if(P<=0||yrs<=0){document.getElementById('am-pay').textContent='—';document.getElementById('am-body').innerHTML='';return;}
+    var n=Math.round(yrs*12);
+    var basePlan=run(P,apr,n,0), plan=run(P,apr,n,extra);
+    document.getElementById('am-pay').textContent=money(plan.base+(extra>0?extra:0));
+    document.getElementById('am-int').textContent=money(plan.totalInterest);
+    document.getElementById('am-total').textContent=money(P+plan.totalInterest);
+    document.getElementById('am-time').textContent=dur(plan.months);
+    var sv=document.getElementById('am-saving');
+    if(extra>0){
+      var moSaved=basePlan.months-plan.months, intSaved=basePlan.totalInterest-plan.totalInterest;
+      sv.style.display='block';
+      sv.innerHTML='Paying <b>'+money(extra)+'</b> extra a month clears the loan <b>'+dur(moSaved)+'</b> sooner and saves about <b>'+money(intSaved)+'</b> in interest.';
+    }else sv.style.display='none';
+    var b=document.getElementById('am-body');b.innerHTML='';
+    plan.rows.forEach(function(row){
+      var tr=document.createElement('tr');
+      tr.innerHTML='<td>'+row.yr+'</td><td>'+money(row.prin)+'</td><td>'+money(row.intr)+'</td><td>'+money(row.bal)+'</td>';
+      b.appendChild(tr);
+    });
+  }
+  document.getElementById('am').addEventListener('input',calc);
+  calc();
+})();
+</script>
+
+    <section>
+      <h2>Why the split changes over time</h2>
+      <p>With a fixed-rate loan you pay the same amount every month, but what that payment <em>does</em> changes. Interest is charged on the balance, which is largest at the start, so early payments are mostly interest and barely dent the principal. As the balance falls, the interest portion shrinks and more of each payment goes to principal — which is why, in the schedule above, the principal-paid column climbs every year while the balance drops toward zero.</p>
+    </section>
+
+    <section>
+      <h2>Worked example</h2>
+      <p>A <strong>$300,000</strong> loan at <strong>6.5%</strong> over <strong>30 years</strong> has a monthly payment of about <strong>$1,896</strong> and costs roughly <strong>$382,600 in interest</strong> — more than the amount borrowed. In year one only about <strong>$3,300</strong> of your payments reduces principal; by the final year almost all of it does. Add an extra payment above to watch both the payoff time and that interest total fall.</p>
+    </section>
+
+    <section>
+      <h2>The power of a small extra payment</h2>
+      <ul>
+        <li><strong>Every extra dollar goes to principal,</strong> removing all the future interest that dollar of balance would have accrued — so extra payments early in the loan are worth the most.</li>
+        <li><strong>Even a modest monthly extra</strong> can cut years off a 30-year mortgage and save tens of thousands in interest; the saving line above shows your exact figures.</li>
+        <li><strong>Check for prepayment penalties</strong> on your loan before committing to extra payments — most modern mortgages allow them freely.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Methodology &amp; assumptions</h2>
+      <p class="note">The monthly payment uses the standard amortization formula. Each month, interest = balance &times; (annual rate &divide; 12) and the remainder of the payment reduces principal; the table aggregates principal and interest by year and shows the year-end balance. Extra payments are applied to principal each month. It assumes a fixed rate, no fees, and no changes to the payment; taxes and insurance (for a mortgage) are excluded. It is a planning estimate — your statement may differ slightly if the lender compounds daily. See our <a href="../methodology.html">methodology</a> and <a href="../editorial-policy.html">editorial policy</a>.</p>
+    </section>
+
+    <section>
+      <h2>Frequently Asked Questions</h2>
+      <h3>Does this work for a car or personal loan?</h3>
+      <p>Yes — the same amortization math applies to any fixed-rate installment loan. Just enter that loan's amount, rate and term.</p>
+      <h3>Why is my total interest more than the loan?</h3>
+      <p>On a long term at a typical rate, accumulated interest can exceed the amount borrowed. A shorter term or extra payments cut it sharply.</p>
+      <h3>Where do taxes and insurance fit?</h3>
+      <p>They're not part of amortization — they're added to a mortgage payment separately. This tool shows principal and interest only.</p>
+    </section>
+
+    <div class="cta-box">
+      <h3>Thinking about a lower rate?</h3>
+      <p>See whether refinancing saves money after closing costs, and when it breaks even.</p>
+      <a href="mortgage-refinance-calculator.html" class="cta-btn">Open the refinance calculator →</a>
+    </div>
+
+    <section>
+      <h2>Related calculators</h2>
+      <ul>
+        <li><a href="mortgage-refinance-calculator.html">Mortgage Refinance Calculator</a></li>
+        <li><a href="home-loan-calculator.html">Home Loan &amp; Mortgage Calculator</a></li>
+        <li><a href="how-much-house-can-i-afford.html">How Much House Can I Afford?</a></li>
+        <li><a href="debt-payoff-calculator.html">Debt Payoff Calculator</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Sources</h2>
+      <p class="note">Uses the standard loan amortization formula and reducing-balance interest math. Figures are estimates for planning, not a lender statement — confirm terms with your lender. See our <a href="../methodology.html">methodology</a> and <a href="../editorial-policy.html">editorial policy</a>.</p>
+    </section>
+
+    <footer><p>fin·calc · Made for better financial decisions. Free. No signup. No tracking. · <a href="../about.html">About</a> · <a href="../contact.html">Contact</a> · <a href="../methodology.html">Methodology</a> · <a href="../editorial-policy.html">Editorial</a> · <a href="../privacy.html">Privacy</a> · <a href="../terms.html">Terms</a></p></footer>
+  </main>
+</body>
+</html>

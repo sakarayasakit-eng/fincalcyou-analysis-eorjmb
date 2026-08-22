@@ -1,5 +1,15 @@
 # fincalcyou — Changelog
 
+## 2026-08-11 - Cycle 3
+### New calculators (pure-math, formulas verified in Node)
+- Mortgage Refinance (`/pages/mortgage-refinance-calculator.html`) - current vs new loan, monthly saving, break-even months, interest comparison.
+- Amortization (`/pages/amortization-calculator.html`) - payment, total interest, year-by-year principal/interest schedule, extra-payment effect.
+### Internal linking
+- Wired both into sitemap, directory (Main calculators), and cross-linked with affordability + debt-payoff + US mortgage. Zero orphans (6 inbound each).
+### Next (P1/P2)
+- CAGR, extra-payment/early-payoff, debt-consolidation, savings/APY calculators; then country finance hubs.
+
+
 ## 2026-08-11 - Cycle 2
 ### New calculators (all pure-math, formulas verified in Node)
 - Credit Card Payoff (`/pages/credit-card-payoff-calculator.html`) - balance/APR/payment -> months + interest, with neg-amortization guard.

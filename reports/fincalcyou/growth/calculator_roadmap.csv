@@ -7,7 +7,7 @@ Debt consolidation,debt,low,none,medium,P1,TODO,blended rate vs single loan
 Compound interest,investment,low,none,very-high,P1,DONE,principal+contrib, freq, years
 CAGR,investment,low,none,high,P1,TODO,(end/start)^(1/n)-1
 Amortization schedule,home,medium,none,high,P1,TODO,standalone full table + extra payment
-Mortgage refinance,home,low,none,high,P1,TODO,new vs old payment, break-even months incl closing costs
+Mortgage refinance,home,low,none,high,P1,DONE,new vs old payment, break-even months incl closing costs
 Extra-payment / early payoff,home,low,none,high,P1,TODO,months+interest saved from extra principal
 Savings goal / APY,banking,low,none,medium,P2,TODO,already partly covered; standalone APY worth it
 FIRE / early retirement,investment,medium,none,medium,P2,TODO,extends retirement cluster

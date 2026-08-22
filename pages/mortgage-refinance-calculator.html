@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#f4f6f7" />
+  <title>Mortgage Refinance Calculator — Break-Even &amp; Savings (2026)</title>
+  <meta name="description" content="Free mortgage refinance calculator. Compare your current loan with a new rate and term, including closing costs, to see your monthly saving and break-even point. No signup." />
+  <meta name="keywords" content="mortgage refinance calculator, refinance break even calculator, should i refinance, refinance savings calculator, mortgage refi calculator" />
+  <link rel="canonical" href="https://fincalcyou.com/pages/mortgage-refinance-calculator.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://fincalcyou.com/pages/mortgage-refinance-calculator.html" />
+  <meta property="og:title" content="Mortgage Refinance Calculator — Break-Even &amp; Savings" />
+  <meta property="og:description" content="Compare your current mortgage with a new rate and term, including closing costs, to see the monthly saving and break-even point. Free, no signup." />
+  <meta property="og:image" content="https://fincalcyou.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="fin·calc" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://fincalcyou.com/og-image.png" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"When is refinancing worth it?","acceptedAnswer":{"@type":"Answer","text":"Refinancing is usually worth it when you'll stay in the home past the break-even point — the number of months it takes for your monthly saving to recover the closing costs. If you'll move or sell before then, the fees outweigh the saving. This calculator shows your break-even directly."}},
+    {"@type":"Question","name":"What is the break-even point on a refinance?","acceptedAnswer":{"@type":"Answer","text":"It is the closing costs divided by your monthly saving. For example, $5,000 in costs and a $335 monthly saving break even in about 15 months. Stay longer than that and the refinance saves you money; leave sooner and it costs you."}},
+    {"@type":"Question","name":"Does a lower rate always save money overall?","acceptedAnswer":{"@type":"Answer","text":"Not necessarily. Restarting a 30-year term at a lower rate cuts the monthly payment but can extend how long you pay, so total interest may not fall as much as the rate cut suggests. The calculator shows both the monthly saving and the interest over each term so you can see the full picture."}},
+    {"@type":"Question","name":"Should I roll closing costs into the loan?","acceptedAnswer":{"@type":"Answer","text":"You can, but it raises the balance and the interest you pay, and it pushes the break-even further out. Paying costs upfront gives the fastest payback. Enter the closing costs here to see how many months of saving they take to recover."}}
+  ]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://fincalcyou.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://fincalcyou.com/pages/"},{"@type":"ListItem","position":3,"name":"Mortgage Refinance Calculator","item":"https://fincalcyou.com/pages/mortgage-refinance-calculator.html"}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Mortgage Refinance Calculator","url":"https://fincalcyou.com/pages/mortgage-refinance-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any (web-based)","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"isAccessibleForFree":true}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="landing.css" />
+</head>
+<body>
+  <main>
+    <header>
+      <a href="../index.html" class="brand">fin<span class="dot">·</span>calc</a>
+      <nav><a href="../index.html">Home</a><a href="index.html">Guides</a></nav>
+    </header>
+    <h1>Mortgage Refinance Calculator</h1>
+    <p style="font-size:0.72rem;color:#7a8299;margin-top:6px;"><time class="last-updated" datetime="2026-08-11">Updated: August 2026 · Estimates only — confirm with a lender.</time></p>
+    <p class="intro">Thinking of refinancing? Enter your current loan and the new rate, term and closing costs, and this tool shows your new monthly payment, your monthly saving, and the <strong>break-even point</strong> — the moment the saving finally pays back the fees. It works in any currency.</p>
+
+    <aside class="keyfacts" aria-label="Key facts">
+      <h2>Key facts</h2>
+      <dl>
+        <dt>What it does</dt><dd>Compares your current mortgage with a refinanced one and shows the monthly saving, break-even months, and interest over each term.</dd>
+        <dt>Method</dt><dd>Standard amortization payment on each loan; break-even = closing costs &divide; monthly saving.</dd>
+        <dt>Coverage</dt><dd>Any currency. Assumes you refinance the current balance; costs paid upfront.</dd>
+        <dt>Cost</dt><dd>Free &mdash; no signup, no login, no tracking. Runs entirely in your browser.</dd>
+      </dl>
+    </aside>
+
+<style id="fc-embed-css">
+.fc-embed{display:block;background:#fff;border:1px solid #e3e8ee;border-radius:16px;padding:16px;margin:14px 0;color:#1a2733;font-family:Inter,-apple-system,Segoe UI,Roboto,sans-serif}
+.fc-embed label{display:block;font-size:11px;color:#5c6b7a;margin-bottom:5px;text-transform:uppercase;letter-spacing:.05em}
+.fc-embed .fc-in{display:flex;align-items:center;gap:6px;background:#f4f6f7;border:1px solid #e3e8ee;border-radius:9px;padding:7px 9px}
+.fc-embed .fc-in span{color:#5c6b7a;font-size:13px}
+.fc-embed .fc-in input{flex:1;width:100%;background:transparent;border:0;color:#1a2733;font-size:15px;font-weight:600;outline:none;min-width:0}
+.fc-embed .fc-sub{font-size:11px;color:#8a94a6;margin:12px 0 4px;text-transform:uppercase;letter-spacing:.05em;font-weight:700}
+.fc-embed .fc-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fc-embed .fc-head{font-size:12px;color:#5c6b7a;margin-top:16px}
+.fc-embed .fc-head strong{display:block;font-size:30px;color:#0e7a4a;font-weight:800;line-height:1.1;margin-top:2px}
+.fc-embed .fc-mini{display:flex;gap:18px;margin-top:10px;font-size:12px;color:#5c6b7a;flex-wrap:wrap}
+.fc-embed .fc-mini b{display:block;color:#1a2733;font-size:15px}
+.fc-embed .fc-verdict{margin-top:12px;font-size:13px;border-radius:10px;padding:10px 12px}
+.fc-embed .v-good{background:#eef7f1;border:1px solid #cfe8db;color:#1a2733}
+.fc-embed .v-bad{background:#fdf0e8;border:1px solid #f3d3c1;color:#8a3b12}
+.fc-embed .fc-note{font-size:11px;color:#5c6b7a;margin-top:10px}
+</style>
+<div class="fc-embed" id="rf">
+  <div class="fc-sub">Your current mortgage</div>
+  <div class="fc-grid">
+    <div><label>Balance remaining</label><div class="fc-in"><span>$</span><input aria-label="Current balance" id="rf-bal" type="number" min="0" step="any" value="300000"></div></div>
+    <div><label>Current rate</label><div class="fc-in"><input aria-label="Current rate" id="rf-crate" type="number" min="0" step="0.01" value="7"><span>%</span></div></div>
+    <div><label>Years left</label><div class="fc-in"><input aria-label="Years remaining" id="rf-cterm" type="number" min="1" step="1" value="28"><span>yrs</span></div></div>
+  </div>
+  <div class="fc-sub">The refinance offer</div>
+  <div class="fc-grid">
+    <div><label>New rate</label><div class="fc-in"><input aria-label="New rate" id="rf-nrate" type="number" min="0" step="0.01" value="5.5"><span>%</span></div></div>
+    <div><label>New term</label><div class="fc-in"><input aria-label="New term" id="rf-nterm" type="number" min="1" step="1" value="30"><span>yrs</span></div></div>
+    <div><label>Closing costs</label><div class="fc-in"><span>$</span><input aria-label="Closing costs" id="rf-cost" type="number" min="0" step="any" value="5000"></div></div>
+  </div>
+  <div class="fc-head">New monthly payment<strong id="rf-newpay">$1,703</strong></div>
+  <div class="fc-mini">
+    <div>Monthly saving<b id="rf-save">$335</b></div>
+    <div>Break-even<b id="rf-be">15 months</b></div>
+    <div>Current payment<b id="rf-curpay">$2,039</b></div>
+  </div>
+  <div class="fc-verdict v-good" id="rf-verdict"></div>
+  <div class="fc-note">Break-even = closing costs &divide; monthly saving. Restarting a longer term lowers the payment but can raise total interest — see both figures below. <a href="how-much-house-can-i-afford.html" style="color:#0e7a4a">Affordability &rarr;</a></div>
+</div>
+<script>
+(function(){
+  var nf=new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0});
+  function money(v){return nf.format(Math.round(v));}
+  function pmt(P,apr,n){var r=apr/1200;return r===0?P/n:P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);}
+  function dur(m){m=Math.round(m);var y=Math.floor(m/12),mo=m%12,s=[];if(y)s.push(y+(y===1?' yr':' yrs'));if(mo)s.push(mo+(mo===1?' mo':' mos'));return s.join(' ')||'0 mos';}
+  function calc(){
+    var B=+document.getElementById('rf-bal').value||0,cr=+document.getElementById('rf-crate').value||0,ct=+document.getElementById('rf-cterm').value||0,
+        nr=+document.getElementById('rf-nrate').value||0,nt=+document.getElementById('rf-nterm').value||0,cost=+document.getElementById('rf-cost').value||0;
+    var v=document.getElementById('rf-verdict');
+    if(B<=0||ct<=0||nt<=0){v.textContent='Enter your balance and terms to compare.';return;}
+    var nc=Math.round(ct*12),nn=Math.round(nt*12);
+    var Pc=pmt(B,cr,nc),Pn=pmt(B,nr,nn),saving=Pc-Pn;
+    var intOld=Pc*nc-B,intNew=Pn*nn-B;
+    document.getElementById('rf-newpay').textContent=money(Pn);
+    document.getElementById('rf-curpay').textContent=money(Pc);
+    document.getElementById('rf-save').textContent=money(saving);
+    if(saving>0){
+      var be=cost/saving;
+      document.getElementById('rf-be').textContent=dur(be);
+      v.className='fc-verdict v-good';
+      var intMsg = intNew<intOld ? 'and about <b>'+money(intOld-intNew)+'</b> less interest over the term' : 'though total interest is about <b>'+money(intNew-intOld)+'</b> higher because the term restarts — offset that by keeping your old payoff date or a shorter term';
+      v.innerHTML='Refinancing saves <b>'+money(saving)+'/mo</b> and breaks even in about <b>'+dur(be)+'</b>. Worth it if you\'ll stay past then, '+intMsg+'.';
+    }else{
+      document.getElementById('rf-be').textContent='—';
+      v.className='fc-verdict v-bad';
+      v.innerHTML='This refinance <b>raises</b> your payment by '+money(-saving)+'/mo, so there is no break-even. A lower rate or longer term would be needed to save.';
+    }
+  }
+  document.getElementById('rf').addEventListener('input',calc);
+  calc();
+})();
+</script>
+
+    <section>
+      <h2>The one number that decides it: break-even</h2>
+      <p>A refinance almost always comes with closing costs, so a lower rate only helps if you keep the loan long enough to recover those fees. The break-even point — closing costs divided by your monthly saving — is the honest test. Stay in the home past it and the refinance genuinely saves you money; sell or move before it and you've paid fees for nothing. The calculator puts that number front and centre.</p>
+    </section>
+
+    <section>
+      <h2>Worked example</h2>
+      <p>On a <strong>$300,000</strong> balance with <strong>28 years</strong> left at <strong>7%</strong>, your payment is about <strong>$2,039</strong>. Refinance to <strong>5.5% over 30 years</strong> with <strong>$5,000</strong> in closing costs and the new payment drops to about <strong>$1,703</strong> — a <strong>$335</strong> monthly saving that breaks even in roughly <strong>15 months</strong>. Because the term restarts at 30 years, watch the total-interest figure too. Enter your own loan above.</p>
+    </section>
+
+    <section>
+      <h2>Watch the term, not just the rate</h2>
+      <ul>
+        <li><strong>Restarting the clock</strong> lowers the monthly payment but can raise lifetime interest, even at a lower rate, because you pay for longer.</li>
+        <li><strong>To capture the rate cut without the term penalty,</strong> refinance to a shorter term (say 15 or 20 years) or keep paying your old amount — you'll clear the loan sooner and pay far less interest.</li>
+        <li><strong>Rolling costs into the loan</strong> pushes the break-even further out; paying them upfront gives the fastest payback.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Methodology &amp; assumptions</h2>
+      <p class="note">Both payments use the standard amortization formula on the current balance at each rate and term. Break-even = closing costs &divide; monthly saving. Interest figures are payment &times; months &minus; balance for each loan. It assumes you refinance the existing balance, pay closing costs upfront, and hold each loan to term; it ignores taxes, insurance, PMI and cash-out. Treat it as a planning estimate, not a lender quote. See our <a href="../methodology.html">methodology</a> and <a href="../editorial-policy.html">editorial policy</a>.</p>
+    </section>
+
+    <section>
+      <h2>Frequently Asked Questions</h2>
+      <h3>How do I know if refinancing is worth it?</h3>
+      <p>Compare the break-even months to how long you'll stay. Past break-even, you save; before it, the fees win.</p>
+      <h3>Why might a lower rate still cost more overall?</h3>
+      <p>Because restarting a 30-year term means paying interest for longer. The interest comparison above shows this; a shorter term fixes it.</p>
+      <h3>Should I roll in the closing costs?</h3>
+      <p>It's convenient but adds to the balance and delays break-even. Paying upfront recovers the cost fastest.</p>
+    </section>
+
+    <div class="cta-box">
+      <h3>See the full payment breakdown</h3>
+      <p>Check exactly how each payment splits between principal and interest over the life of the new loan.</p>
+      <a href="amortization-calculator.html" class="cta-btn">Open the amortization calculator →</a>
+    </div>
+
+    <section>
+      <h2>Related calculators</h2>
+      <ul>
+        <li><a href="amortization-calculator.html">Amortization Schedule Calculator</a></li>
+        <li><a href="home-loan-calculator.html">Home Loan &amp; Mortgage Calculator</a></li>
+        <li><a href="how-much-house-can-i-afford.html">How Much House Can I Afford?</a></li>
+        <li><a href="debt-payoff-calculator.html">Debt Payoff Calculator</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Sources</h2>
+      <p class="note">Uses the standard mortgage amortization formula and the closing-cost break-even method. Figures are estimates for planning, not a lender quote — confirm rate, term and fees with a lender. See our <a href="../methodology.html">methodology</a> and <a href="../editorial-policy.html">editorial policy</a>.</p>
+    </section>
+
+    <footer><p>fin·calc · Made for better financial decisions. Free. No signup. No tracking. · <a href="../about.html">About</a> · <a href="../contact.html">Contact</a> · <a href="../methodology.html">Methodology</a> · <a href="../editorial-policy.html">Editorial</a> · <a href="../privacy.html">Privacy</a> · <a href="../terms.html">Terms</a></p></footer>
+  </main>
+</body>
+</html>
