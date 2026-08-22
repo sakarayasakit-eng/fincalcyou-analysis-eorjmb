@@ -1,5 +1,9 @@
 # fin·calc — Working Rules for Claude Code / AI sessions
 
+> **AUTONOMOUS BUILD AGENT:** For continuous platform work (build cycles, calculators,
+> roadmap, git/deploy workflow, guardrails), read **`AGENT.md`** in this repo root and follow it.
+> These Working Rules below still govern; AGENT.md operationalises them for non-stop cycles.
+
 ## ⚠️ FOLDER RULE (most important)
 
 **This repo — `fincalcyou` (GitHub: `sakarayasakit-eng/fincalcyou-analysis-eorjmb`) — is the ONE source of truth AND the deploy target. Do ALL work here.**
