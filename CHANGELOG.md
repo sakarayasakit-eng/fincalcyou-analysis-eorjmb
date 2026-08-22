@@ -1,5 +1,16 @@
 # fincalcyou — Changelog
 
+## 2026-08-11 - Cycle 4
+### New calculators (pure-math, formulas verified in Node)
+- CAGR (`/pages/cagr-calculator.html`) - compound annual growth rate + total return.
+- APY & Savings (`/pages/apy-savings-calculator.html`) - effective annual yield from nominal rate + compounding frequency; balance + interest.
+- Debt Consolidation (`/pages/debt-consolidation-calculator.html`) - current debts vs one consolidation loan; total cost + net saving.
+### Internal linking
+- Wired all 3 into sitemap, directory, and cross-linked the debt + investment clusters. Zero orphans.
+### Next
+- Country finance hubs (only where unique verified content); performance/accessibility pass; then re-run WebIntelPro.
+
+
 ## 2026-08-11 - Cycle 3
 ### New calculators (pure-math, formulas verified in Node)
 - Mortgage Refinance (`/pages/mortgage-refinance-calculator.html`) - current vs new loan, monthly saving, break-even months, interest comparison.

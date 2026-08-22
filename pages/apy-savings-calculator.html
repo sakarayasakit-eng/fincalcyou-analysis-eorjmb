@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#f4f6f7" />
+  <title>APY &amp; Savings Calculator — Effective Interest Rate (2026)</title>
+  <meta name="description" content="Free APY calculator. Turn a nominal savings rate and compounding frequency into the effective annual yield (APY), and see your balance and interest over time. No signup." />
+  <meta name="keywords" content="apy calculator, effective interest rate calculator, savings calculator, annual percentage yield, effective annual rate, nominal vs effective rate" />
+  <link rel="canonical" href="https://fincalcyou.com/pages/apy-savings-calculator.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://fincalcyou.com/pages/apy-savings-calculator.html" />
+  <meta property="og:title" content="APY &amp; Savings Calculator — Effective Interest Rate" />
+  <meta property="og:description" content="Convert a nominal rate and compounding frequency into APY, and project your savings balance and interest. Free, no signup." />
+  <meta property="og:image" content="https://fincalcyou.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="fin·calc" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://fincalcyou.com/og-image.png" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"What is APY?","acceptedAnswer":{"@type":"Answer","text":"APY (annual percentage yield) is the effective interest rate you actually earn in a year once compounding is included. Because interest earns interest, APY is a little higher than the quoted nominal rate — the more often it compounds, the higher the APY."}},
+    {"@type":"Question","name":"What is the difference between nominal rate and APY?","acceptedAnswer":{"@type":"Answer","text":"The nominal rate is the stated yearly rate before compounding. APY folds in how often interest is added. For example, 5% nominal compounded monthly gives an APY of about 5.12%. When comparing savings accounts, compare APYs, not nominal rates."}},
+    {"@type":"Question","name":"How is APY calculated?","acceptedAnswer":{"@type":"Answer","text":"APY = (1 + nominal rate / n)^n - 1, where n is the number of compounding periods per year. Daily compounding gives a slightly higher APY than monthly, which is higher than annual, for the same nominal rate."}},
+    {"@type":"Question","name":"Why compare APY instead of the headline rate?","acceptedAnswer":{"@type":"Answer","text":"Two accounts can quote the same nominal rate but pay different amounts if they compound at different frequencies. APY normalises that into a single figure, so it is the fair number to compare when choosing where to save."}}
+  ]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://fincalcyou.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://fincalcyou.com/pages/"},{"@type":"ListItem","position":3,"name":"APY & Savings Calculator","item":"https://fincalcyou.com/pages/apy-savings-calculator.html"}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"APY & Savings Calculator","url":"https://fincalcyou.com/pages/apy-savings-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any (web-based)","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"isAccessibleForFree":true}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="landing.css" />
+</head>
+<body>
+  <main>
+    <header>
+      <a href="../index.html" class="brand">fin<span class="dot">·</span>calc</a>
+      <nav><a href="../index.html">Home</a><a href="index.html">Guides</a></nav>
+    </header>
+    <h1>APY &amp; Savings Calculator</h1>
+    <p style="font-size:0.72rem;color:#7a8299;margin-top:6px;"><time class="last-updated" datetime="2026-08-11">Updated: August 2026 · Estimates only — check your bank's terms.</time></p>
+    <p class="intro">A savings account's headline rate isn't what you actually earn — compounding makes the real figure, the <strong>APY</strong>, a little higher. Enter your deposit, the nominal rate and how often it compounds to see the effective annual yield, your future balance, and the interest earned. It works in any currency.</p>
+
+    <aside class="keyfacts" aria-label="Key facts">
+      <h2>Key facts</h2>
+      <dl>
+        <dt>What it does</dt><dd>Converts a nominal rate + compounding frequency into APY, and projects the balance and interest on a deposit.</dd>
+        <dt>Method</dt><dd>APY = (1 + rate &divide; n)<sup>n</sup> &minus; 1; balance = deposit &times; (1 + rate &divide; n)<sup>(n &times; years)</sup>.</dd>
+        <dt>Coverage</dt><dd>Any currency. Frequencies from annual to daily. Lump-sum deposit (no regular top-ups).</dd>
+        <dt>Cost</dt><dd>Free &mdash; no signup, no login, no tracking. Runs entirely in your browser.</dd>
+      </dl>
+    </aside>
+
+<style id="fc-embed-css">
+.fc-embed{display:block;background:#fff;border:1px solid #e3e8ee;border-radius:16px;padding:16px;margin:14px 0;color:#1a2733;font-family:Inter,-apple-system,Segoe UI,Roboto,sans-serif}
+.fc-embed .fc-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:560px){.fc-embed .fc-grid{grid-template-columns:1fr}}
+.fc-embed label{display:block;font-size:11px;color:#5c6b7a;margin-bottom:5px;text-transform:uppercase;letter-spacing:.05em}
+.fc-embed .fc-in{display:flex;align-items:center;gap:6px;background:#f4f6f7;border:1px solid #e3e8ee;border-radius:9px;padding:7px 9px}
+.fc-embed .fc-in span{color:#5c6b7a;font-size:13px}
+.fc-embed .fc-in input,.fc-embed .fc-in select{flex:1;width:100%;background:transparent;border:0;color:#1a2733;font-size:15px;font-weight:600;outline:none;min-width:0}
+.fc-embed .fc-head{font-size:12px;color:#5c6b7a;margin-top:16px}
+.fc-embed .fc-head strong{display:block;font-size:32px;color:#0e7a4a;font-weight:800;line-height:1.1;margin-top:2px}
+.fc-embed .fc-mini{display:flex;gap:18px;margin-top:10px;font-size:12px;color:#5c6b7a;flex-wrap:wrap}
+.fc-embed .fc-mini b{display:block;color:#1a2733;font-size:15px}
+.fc-embed .fc-note{font-size:11px;color:#5c6b7a;margin-top:10px}
+</style>
+<div class="fc-embed" id="ap">
+  <div class="fc-grid">
+    <div><label>Deposit</label><div class="fc-in"><span>$</span><input aria-label="Deposit amount" id="ap-dep" type="number" min="0" step="any" value="10000"></div></div>
+    <div><label>Nominal rate (% p.a.)</label><div class="fc-in"><input aria-label="Nominal annual rate" id="ap-rate" type="number" min="0" step="0.01" value="5"><span>%</span></div></div>
+    <div><label>Compounding</label><div class="fc-in"><select aria-label="Compounding frequency" id="ap-freq"><option value="1">Annually</option><option value="2">Semi-annually</option><option value="4">Quarterly</option><option value="12" selected>Monthly</option><option value="365">Daily</option></select></div></div>
+    <div><label>Years</label><div class="fc-in"><input aria-label="Years" id="ap-yrs" type="number" min="0" step="any" value="3"><span>yrs</span></div></div>
+  </div>
+  <div class="fc-head">Effective annual yield (APY)<strong id="ap-apy">5.12%</strong></div>
+  <div class="fc-mini">
+    <div>Balance after term<b id="ap-bal">$11,615</b></div>
+    <div>Interest earned<b id="ap-int">$1,615</b></div>
+    <div>Nominal rate<b id="ap-nom">5.00%</b></div>
+  </div>
+  <div class="fc-note">APY is what you truly earn once compounding is counted — always higher than the nominal rate. Compare accounts by APY, not the headline rate. <a href="fixed-deposit-calculator.html" style="color:#0e7a4a">Fixed deposit calculator &rarr;</a></div>
+</div>
+<script>
+(function(){
+  var nf=new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0});
+  function money(v){return nf.format(Math.round(v));}
+  function calc(){
+    var dep=+document.getElementById('ap-dep').value||0,rate=+document.getElementById('ap-rate').value||0,
+        n=+document.getElementById('ap-freq').value||1,yrs=+document.getElementById('ap-yrs').value||0;
+    var r=rate/100;
+    var apy=Math.pow(1+r/n,n)-1;
+    var bal=dep*Math.pow(1+r/n,n*yrs);
+    document.getElementById('ap-apy').textContent=(apy*100).toFixed(2)+'%';
+    document.getElementById('ap-nom').textContent=rate.toFixed(2)+'%';
+    document.getElementById('ap-bal').textContent=money(bal);
+    document.getElementById('ap-int').textContent=money(bal-dep);
+  }
+  document.getElementById('ap').addEventListener('input',calc);
+  calc();
+})();
+</script>
+
+    <section>
+      <h2>Why APY beats the headline rate</h2>
+      <p>Banks quote a nominal rate, but you actually earn a little more because interest is added several times a year and then earns interest itself. That real figure is the APY. The more frequently an account compounds, the higher its APY for the same nominal rate — which is why two accounts advertising the same rate can pay different amounts. When you're choosing where to save, the APY is the number to compare.</p>
+    </section>
+
+    <section>
+      <h2>Worked example</h2>
+      <p>A <strong>5%</strong> nominal rate compounded <strong>monthly</strong> gives an APY of about <strong>5.12%</strong>; compounded daily it's about 5.13%; compounded once a year it's exactly 5.00%. On a <strong>$10,000</strong> deposit at 5% monthly for <strong>3 years</strong>, you'd end with about <strong>$11,615</strong> — roughly <strong>$1,615</strong> of interest. Change the frequency above to see how compounding lifts the yield.</p>
+    </section>
+
+    <section>
+      <h2>Getting the most from savings interest</h2>
+      <ul>
+        <li><strong>Compare APYs, not nominal rates</strong> — it's the only apples-to-apples figure across accounts.</li>
+        <li><strong>More frequent compounding helps,</strong> though the difference between monthly and daily is small; the rate itself matters far more.</li>
+        <li><strong>Watch for taxes and inflation</strong> — your real return is the APY minus tax on the interest and minus inflation.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Methodology &amp; assumptions</h2>
+      <p class="note">APY = (1 + nominal rate &divide; n)<sup>n</sup> &minus; 1, and balance = deposit &times; (1 + nominal rate &divide; n)<sup>(n &times; years)</sup>, where n is the compounding periods per year. It assumes a single lump-sum deposit with no additional contributions or withdrawals, a constant rate, and no tax. Real accounts may round or apply tax; treat this as a planning estimate. See our <a href="../methodology.html">methodology</a> and <a href="../editorial-policy.html">editorial policy</a>.</p>
+    </section>
+
+    <section>
+      <h2>Frequently Asked Questions</h2>
+      <h3>Is APY always higher than the nominal rate?</h3>
+      <p>Yes, whenever interest compounds more than once a year. With annual compounding, APY equals the nominal rate.</p>
+      <h3>Does this include monthly deposits?</h3>
+      <p>No — it's for a lump sum. For regular contributions, use the compound-interest or SIP calculator.</p>
+      <h3>APY vs APR?</h3>
+      <p>APY is for money you earn (savings); APR is for money you borrow. Both express an annual rate, but APR usually excludes compounding.</p>
+    </section>
+
+    <div class="cta-box">
+      <h3>Saving toward a goal?</h3>
+      <p>See how a lump sum plus regular contributions grows with compound interest over time.</p>
+      <a href="compound-interest-calculator.html" class="cta-btn">Open the compound interest calculator →</a>
+    </div>
+
+    <section>
+      <h2>Related calculators</h2>
+      <ul>
+        <li><a href="fixed-deposit-calculator.html">Fixed Deposit &amp; CD Calculator</a></li>
+        <li><a href="compound-interest-calculator.html">Compound Interest Calculator</a></li>
+        <li><a href="cagr-calculator.html">CAGR Calculator</a></li>
+        <li><a href="sip-calculator.html">SIP &amp; Monthly Investment Calculator</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Sources</h2>
+      <p class="note">Uses the standard APY (effective annual rate) and compound-balance formulas. Figures are estimates for planning and exclude tax — confirm the rate and compounding with your bank. See our <a href="../methodology.html">methodology</a> and <a href="../editorial-policy.html">editorial policy</a>.</p>
+    </section>
+
+    <footer><p>fin·calc · Made for better financial decisions. Free. No signup. No tracking. · <a href="../about.html">About</a> · <a href="../contact.html">Contact</a> · <a href="../methodology.html">Methodology</a> · <a href="../editorial-policy.html">Editorial</a> · <a href="../privacy.html">Privacy</a> · <a href="../terms.html">Terms</a></p></footer>
+  </main>
+</body>
+</html>
